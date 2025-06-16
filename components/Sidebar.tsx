@@ -14,29 +14,37 @@ export default function Sidebar() {
 
   return (
     <aside className="w-56 h-screen bg-background dark:bg-dark-background border-r border-border p-6 flex flex-col gap-6 shadow-inner">
-      <div className="text-2xl font-heading text-steel dark:text-dark-steel tracking-wider leading-tight">
-        EXALTED<br />ESSENCE
+      <div className="flex flex-col items-center gap-2">
+        <img
+          src="/caste/default.png"
+          className="w-16 h-16 object-contain"
+        />
+        <div className="text-2xl font-heading text-steel dark:text-dark-steel tracking-wider leading-tight">
+          EXALTED <br />ESSENCE
+        </div>
       </div>
 
-      <nav className="flex flex-col gap-3 text-foreground dark:text-dark-foreground font-medium">
+      <nav className="flex flex-col gap-3 font-medium">
         {navItems.map((item) => {
           const isActive = pathname === item.href;
           return (
             <Link
               key={item.href}
               href={item.href}
-              className={`px-4 py-2 rounded-md transition-all ${
-                isActive
-                  ? 'bg-ice border-l-4 border-steel text-steel font-semibold shadow-inner'
-                  : 'hover:bg-steel hover:text-steel dark:hover:text-dark-steel'
-              }`}
-            >
-              {item.label}
-            </Link>
+              className={`px-4 py-2 rounded-md transition-colors duration-200
+               ${
+                   isActive
+                      ? 'bg-ice border-l-4 border-steel text-steel font-semibold shadow-inner'
+                      : 'hover:bg-steel/20 hover:text-foreground dark:hover:bg-dark-steel/30 dark:hover:text-dark-foreground text-foreground dark:text-dark-foreground'
+             }`}
+>
+  {item.label}
+</Link>
           );
         })}
       </nav>
     </aside>
   );
 }
+
 
