@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===============================
+   ✨ Custom Theme Variables
+   =============================== */
+
+:root {
+  --background: #f4f4f4;
+  --foreground: #1c1c1c;
+  --ice: #d1e2ed;
+  --steel: #498caa;
+  --border: #c3cbd4;
+  --highlight: #dbc9a3;
+
+  --aura-solar: #facc15;
+  --aura-lunar: #a78bfa;
+  --aura-abyssal: #64748b;
+  --aura-sidereal: #7dd3fc;
+}
+
+.dark {
+  --background: #1c1c1c;
+  --foreground: #ededed;
+  --steel: #6ca0c8;
+  --dark-background: #1c1c1c;
+  --dark-foreground: #ededed;
+  --dark-steel: #6ca0c8;
+}
+
+/* ===============================
+   🌄 Background & Body Styles
+   =============================== */
+
+body {
+  @apply font-body text-foreground bg-background;
+  background-image: url('/textures/frosted-paper-light.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.dark body {
+  @apply text-dark-foreground bg-dark-background;
+  background-image: url('/textures/frosted-paper-dark.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ===============================
+   🧠 Typography Overrides
+   =============================== */
+
+h1, h2, h3, h4 {
+  @apply font-heading;
+}
+
+/* ===============================
+   📦 Utility Layer Customizations
+   =============================== */
+
+.btn {
+  @apply rounded-md px-4 py-2 text-sm font-medium transition;
+}
+
+.btn-primary {
+  @apply bg-steel text-white hover:bg-ice;
+}
+
+.btn-outline {
+  @apply border border-steel text-steel hover:bg-steel hover:text-white;
+}
+
+.dark .btn-outline {
+  @apply border-dark-steel text-dark-steel hover:bg-dark-steel hover:text-dark-background;
+}
