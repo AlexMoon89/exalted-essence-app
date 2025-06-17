@@ -21,7 +21,7 @@ export default function HomePage() {
 
       <div className="rounded-xl border border-highlight bg-white/80 dark:bg-dark-foreground/10 shadow-md backdrop-blur-md p-6 transition-all">
         <h2 className="text-2xl font-heading text-steel dark:text-dark-steel mb-4 uppercase tracking-wide">
-          Start Your Journey
+          Start your journey
         </h2>
         <ul className="list-disc list-inside text-base space-y-1">
           <li>
@@ -36,7 +36,7 @@ export default function HomePage() {
           </li>
           <li>
             <a href="/wiki" className="text-aura-sidereal font-semibold hover:underline">
-              Browse the Lore
+              Browse the Wiki
             </a>
           </li>
         </ul>

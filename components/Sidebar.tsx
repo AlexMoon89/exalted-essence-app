@@ -14,12 +14,13 @@ export default function Sidebar() {
 
   return (
     <aside className="w-56 h-screen bg-background dark:bg-dark-background border-r border-border p-6 flex flex-col gap-6 shadow-inner">
-      <div className="flex flex-col items-center gap-2">
+      <div className="flex flex-col items-center gap-3">
         <img
-          src="/caste/default.png"
-          className="w-16 h-16 object-contain"
+          src="/castes/default.jpg"
+          alt="Exalted Essence Logo"
+          className="w-32 h-32 object-cover mx-auto rounded"
         />
-        <div className="text-2xl font-heading text-steel dark:text-dark-steel tracking-wider leading-tight">
+        <div className="text-2xl font-heading text-steel dark:text-dark-steel tracking-wider leading-tight text-center">
           EXALTED <br />ESSENCE
         </div>
       </div>
@@ -31,11 +32,11 @@ export default function Sidebar() {
             <Link
               key={item.href}
               href={item.href}
-              className={`px-4 py-2 rounded-md transition-colors duration-200
+              className={`px-4 py-2 rounded-md transition-colors text-steel font-semibold duration-200
                ${
                    isActive
                       ? 'bg-ice border-l-4 border-steel text-steel font-semibold shadow-inner'
-                      : 'hover:bg-steel/20 hover:text-foreground dark:hover:bg-dark-steel/30 dark:hover:text-dark-foreground text-foreground dark:text-dark-foreground'
+                      : 'hover:bg-ice hover:text-aura-sidereal dark:hover:bg-dark-steel dark:hover:text-dark-foreground text-foreground dark:text-dark-foreground'
              }`}
 >
   {item.label}
