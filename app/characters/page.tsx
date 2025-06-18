@@ -1,8 +1,20 @@
 'use client';
+
 import { User } from 'lucide-react';
 import Image from 'next/image';
 
-const sampleCharacters = [
+// Define the character shape
+type Character = {
+  name: string;
+  exaltType: string;
+  caste: string;
+  essence: number;
+  anima: string;
+  player: string;
+  image: string | null;
+};
+
+const sampleCharacters: Character[] = [
   {
     name: 'Nia Oren',
     exaltType: 'Solar',
@@ -55,17 +67,17 @@ function getCasteImage(char: { exaltType: string; caste: string }): string {
 
   switch (exaltType.toLowerCase()) {
     case 'solar':
-      return `/castes/Caste${caste.replace(/\s+/g, '')}3.png`; // e.g., Zenith → CasteZenith3.png
+      return `/castes/Caste${caste.replace(/\s+/g, '')}3.png`;
     case 'lunar':
-      return `/${'castes/' + caste.replace(/\s+/g, '')}Caste.png`; // e.g., Full Moon → FullMoonCaste.png
+      return `/castes/${caste.replace(/\s+/g, '')}Caste.png`;
     case 'dragon-blooded':
-      return `/castes/Dragon${caste.replace(/\s+/g, '')}1.png`; // e.g., Fire → DragonFire1.png
+      return `/castes/Dragon${caste.replace(/\s+/g, '')}1.png`;
     case 'sidereal':
-      return `/castes/${caste.replace(/\s+/g, '')}Caste.png`; // e.g., Saturn → SaturnCaste.png
+      return `/castes/${caste.replace(/\s+/g, '')}Caste.png`;
     case 'getimian':
-      return `/castes/GetimianCaste${caste.replace(/\s+/g, '')}.png`; // e.g., Spring → GetimianCasteSpring.png
+      return `/castes/GetimianCaste${caste.replace(/\s+/g, '')}.png`;
     default:
-      return `/castes/default.png`; // fallback image if needed
+      return `/castes/default.png`;
   }
 }
 
@@ -77,7 +89,7 @@ export default function CharactersPage() {
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {sampleCharacters.map((char, i) => {
+        {sampleCharacters.map((char: Character, i: number) => {
           const imageSrc = char.image || getCasteImage(char);
           return (
             <div

@@ -40,6 +40,10 @@ export default function HomePage() {
             </a>
           </li>
         </ul>
+        <div className="mt-8 p-4 bg-gray-100 dark:bg-gray-800 rounded">
+          <div><strong>SUPABASE URL:</strong> {process.env.NEXT_PUBLIC_SUPABASE_URL || 'undefined'}</div>
+          <div><strong>SUPABASE KEY:</strong> {process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'undefined'}</div>
+        </div>
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-56 h-screen bg-background dark:bg-dark-background border-r border-border p-6 flex flex-col gap-6 shadow-inner">
+    <aside className="w-56 h-screen bg-gradient-to-r from-ice to-[#dbc9a3] dark:bg-dark-background border-r border-border p-6 flex flex-col gap-6 shadow-inner">
       <div className="flex flex-col items-center gap-3">
         <img
           src="/castes/default.jpg"
