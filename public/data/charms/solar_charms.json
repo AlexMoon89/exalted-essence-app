@@ -1,0 +1,106 @@
+[
+  {
+    "name": "UNFETTERED SUN EVASION",
+    "ability": ["Athletics"],
+    "prerequisites": "Athletics 5",
+    "description": "Commit 2 motes. For the rest of the scene, the Solar cannot be targeted by the ensnare, pull, or knockdown gambits, and moving through difficult terrain is reflexive.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Blurred-in-Light Technique",
+        "effect": "(Repurchase)At Essence 4, the Solar may name one additional gambit she can no longer be targeted by."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "MEDITATION ON RIVALRY",
+    "ability": ["Awareness"],
+    "prerequisites": "Awareness 1",
+    "description": "The Solar receives divine intuition when investigating an unlawful act. Ask the Storyteller one question from a provided list. Additional questions cost 1 mote each.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "UNCONQUERED SUN’S SIGHT",
+    "ability": ["Awareness"],
+    "prerequisites": "Awareness 3",
+    "description": "Commit 1 mote. For the scene, the Solar recognizes deception against things toward which she has Intimacies. She may ask if someone is lying or what is concealed; the Storyteller must tell the truth.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Refracted Light Analysis",
+        "effect": "Repurchase equal to Essence level. The Solar names allies and detects deception related to their Intimacies. Gain 1 anima when ally benefits."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "BEHEMOTH-SLAYING ATTITUDE",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 4 or War 4",
+    "description": "Commit 2 motes. For the scene, enemies with Legendary Size take −3 dice to attack the Solar, and he ignores the penalty to withering attacks against such foes. Battle groups gain +1 Drill. Gain 1 anima.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Humbaba-Wrestling Prowess",
+        "effect": "At Close Combat 5 or War 5, allows the Solar to dominate grapples and remove extra cost to gambits against Legendary Size enemies."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [272]
+  },
+  {
+    "name": "GLORIOUS SOLAR ARSENAL",
+    "ability": ["Close Combat", "Physique", "Ranged Combat"],
+    "prerequisites": "Close Combat 1, Physique 1, or Ranged Combat 1",
+    "description": "Commit 1 mote to summon a weapon or armor made of sunlight with the artifact tag. Deals aggravated damage to creatures of darkness; armor has +2 Soak. Simple action to activate. Gain 1 anima.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Perfected Shining Summons",
+        "effect": "At Essence 2 and Close Combat, Physique or Ranged Combat 3, this Charm becomes reflexive. Commit 2 motes to summon both armor and weapon."
+      },
+      {
+        "name": "Solar",
+        "title": "Golden Champion Glory",
+        "effect": "At Close Combat, Physique or Ranged Combat 5, Essence 2: Activating the Charm grants a reflexive Build Power action (focus, inspire, or rally) once per round."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [272]
+  },
+  {
+    "name": "ORICHALCUM BATTLE SOUL",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 2",
+    "description": "Commit 2 motes while fighting for an Intimacy or Virtue. For the scene, the Solar’s body gains the artifact tag. Gain 2 Power for Major inspiration, 1 Power for Minor. Gain 1 anima.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Adamant Soul Enhancement",
+        "effect": "At Essence 3, spend 1 anima at Step 7 to add 1–2 dice to decisive attack according to inspiration strength."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "STAR-CLEAVING CRATER",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 4",
+    "description": "Enhances knockback and other relocation effects by +1 range band. Targets must resist environmental damage based on distance or take damage. Can resist with Athletics or Physique.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Upgrade",
+        "effect": "At Essence 3, increases damage dice to all Close Combat dice."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  }
+]

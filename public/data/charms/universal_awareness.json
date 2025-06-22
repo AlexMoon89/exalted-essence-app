@@ -1,39 +1,39 @@
 [
-  {
+    {
     "name": "ALL-ENCOMPASSING SORCERER’S SIGHT",
     "ability": ["Awareness"],
     "prerequisites": "Spirit-Cutting Glance, Sagacity 4 or Awareness 4",
-    "description": "The Exalt commits 1 mote for the scene to perceive Essence, including dematerialized spirits and borders between realms. Artifacts glow, hearthstones burn, and all Essence use is visible as if the user had an anima. The user may roll Sagacity to analyze spirit magics, sorcery, demesnes, Wyld, or Underworld phenomena or identify Charm use. Difficulty varies by effect.",
+    "description": "The Exalt commits 1 mote for the scene to perceive Essence, including dematerialized spirits and borders between realms. Artifacts glow, hearthstones burn, and all Essence use is visible as if the user had an anima. The user may roll Sagacity to analyze spirit magics, sorcery, demesnes, Wyld, or Underworld phenomena or identify Charm use. Difficulty varies by effectThe Exalt may gaze into the world’s Essence and unravel the patterns of magic that make up Creation. The secrets of Creation’s mystical workings, spirit magics, and sorcery are unveiled. Commit 1 mote for the scene. The Exalt perceives the presence of Essence, including dematerialized spirits and borders between worlds such as the Wyld or shadowlands as gauzy distortions. Attuned artifacts appear as though lit from within, and hearthstones burn like embers. Whenever a character uses Essence to power Charms or any other effects, these are always visible to the user as though the character had an active anima. They may make Sagacity rolls to try to understand spirit magics, sorcerous workings, and other strange phenomena like those produced by demesnes, the Wyld, and the Underworld or to identify the use of a Charm. Such effects may have variable difficulty — typically 2 + the creator’s Essence or a difficulty modified by the effect’s nature and complexity.",
     "modes": [
       {
         "name": "Alchemical",
         "title": "Essence Flow Detection",
-        "effect": "The Storyteller indicates unusual Essence fluctuations or concentrations within a day’s journey, and their direction."
+        "effect": "The Storyteller names any unusual fluctuations or strong concentrations of Essence within a day’s journey, and the direction from which they’re coming. This may indicate the location of a demesne, the entrance to a First Age tomb, or the site of a mighty sorcerous working"
       },
       {
         "name": "Solar",
         "title": "Eye of the Unconquered Sun",
-        "effect": "See through illusions and magical disguises; adds Essence in bonus successes to pierce deception. Difficulty is typically 5."
+        "effect": "The Exalt may see through illusions, magical disguises, and shapeshifting effects that conceal her enemies, adding her Essence in bonus successes to the roll to pierce the deception. Unless stated otherwise, seeing through magical deceptions is a difficulty 5 feat."
       },
       {
         "name": "Lunar",
         "title": "Scent of Midnight Dweomers",
-        "effect": "Determine the nature of a spirit or fae. Difficulty increases if disguised. Gives Essence as bonus successes to track targets marked by the Charm."
+        "effect": "The Exalt may determine the nature of a spirit or fae using this Charm. Disguise magic increases the difficulty. Gain her Essence as bonus successes on a roll to track a spirit scented with this Charm."
       },
       {
         "name": "Dragon-Blooded",
         "title": "Secret Wind Revelation",
-        "effect": "Gain one bonus success on rolls to detect demons or the undead."
+        "effect": "The Exalt gains a bonus success on rolls to detect the presence or influence of demons or the undead."
       },
       {
         "name": "Liminal",
         "title": "Dark Mother’s Insight",
-        "effect": "Gain two bonus successes to detect ghosts, shadowlands, soulsteel artifacts, and necromantic workings when touching something related."
+        "effect": "The Exalt gains two bonus successes to rolls to detect ghostly presences, shadowlands, soulsteel artifacts, and necromantic workings. She must touch something connected to the presence in order to benefit from the bonus successes."
       },
       {
         "name": "Sidereal",
         "title": "Telltale Symphony",
-        "effect": "Gain Essence in bonus successes to detect spirits, artifacts, and sorcery. Same bonus applies to understanding fate-interacting magic."
+        "effect": "The Exalt gains her Essence in bonus successes to rolls to detect spirits, artifacts, and sorcerous workings. She also gains this bonus on rolls to understand magic that interacts with fate, such as Sidereal and Getimian Charms."
       },
       {
         "name": "Getimian",

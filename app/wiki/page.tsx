@@ -26,9 +26,15 @@ export default function WikiPage() {
   ).sort();
 
   const filteredEntries = entries
-  .filter((entry) =>
-    (entry.category ?? '').toLowerCase() === selectedCategory.toLowerCase()
-  )
+  .filter((entry) => {
+    const normalizedCategory = (entry.category ?? '').toLowerCase();
+    const selected = selectedCategory.toLowerCase();
+    if (selected === 'charms') {
+      // Mostrar charms universales + solares (y futuros como 'lunar', etc.)
+      return normalizedCategory.includes('charm');
+    }
+    return normalizedCategory === selected;
+  })
   .filter((entry) =>
     entry.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
     entry.description.toLowerCase().includes(searchQuery.toLowerCase())
@@ -39,11 +45,11 @@ export default function WikiPage() {
   });
 
   return (
-    <div className="max-w-6xl mx-auto p-6 space-y-6 text-white">
+    <div className="max-w-6xl mx-auto p-6 space-y-6 text-aura-abyssal dark:text-dark-foreground">
       <h1 className="text-4xl font-bold text-center mb-4 flex items-center justify-center gap-3 bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text">
-        <Sparkle className="w-10 h-10 text-aura-solar" />
+        <Sparkle className="w-10 h-10 text-gray-400" />
         All Encompassing Essence Wiki
-        <Sparkles className="w-10 h-10 text-aura-solar" />
+        <Sparkles className="w-10 h-10 text-gray-400" />
       </h1>
 
       {/* Category Tabs */}
@@ -87,8 +93,8 @@ export default function WikiPage() {
             onClick={() => setSelectedAbility(null)}
             className={`px-3 py-1 rounded-full text-sm ${
               selectedAbility === null
-                ? 'bg-aura-solar text-background font-bold'
-                : 'bg-muted text-muted-foreground hover:bg-ice hover:text-aura-lunar'
+                ? 'bg-ice text-aura-lunar font-bold'
+                : 'bg-muted text-muted-foreground hover:bg-aura-solar hover:text-[#ededed]'
             }`}
           >
             All Abilities
@@ -99,7 +105,7 @@ export default function WikiPage() {
               onClick={() => setSelectedAbility(ability)}
               className={`px-3 py-1 rounded-full text-sm ${
                 selectedAbility === ability
-                  ? 'bg-aura-solar text-background font-bold'
+                  ? 'bg-steel text-ice font-bold'
                   : 'bg-muted text-muted-foreground hover:bg-ice hover:text-aura-lunar'
               }`}
             >
@@ -123,7 +129,7 @@ export default function WikiPage() {
               onClick={() => setOpenEntry(entry)}
               className="cursor-pointer bg-steel/30 p-4 rounded-lg shadow hover:bg-steel/50 transition"
             >
-              <h3 className="text-xl text-aura-solar font-semibold">{entry.name}</h3>
+              <h3 className="text-xl bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text font-semibold">{entry.name}</h3>
               <p className="text-sm text-aura-abyssal line-clamp-3">{entry.description}</p>
               <p className="text-xs mt-2 text-gray-400">Tags: {entry.tags.join(', ')}</p>
               <p className="text-xs text-gray-500">
@@ -146,11 +152,11 @@ export default function WikiPage() {
             </button>
 
             <div className="p-6 space-y-4">
-              <h2 className="text-3xl font-bold text-aura-solar">{openEntry.name}</h2>
-
-              <div className="text-sm text-gray-400 space-y-1">
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text">{openEntry.name}</h2>
+              <div className="text-sm text-steel space-y-1">
                 <p><strong>Category:</strong> {openEntry.category}</p>
                 {openEntry.ability && <p><strong>Ability:</strong> {openEntry.ability}</p>}
+                {openEntry.full?.prerequisites && <p><strong>Prerequisites:</strong> {openEntry.full?.prerequisites}</p>}
                 {openEntry.essenceCost && <p><strong>Essence Cost:</strong> {openEntry.essenceCost}</p>}
                 {openEntry.mode && <p><strong>Mode:</strong> {openEntry.mode}</p>}
                 {openEntry.sourcebook && (
@@ -158,17 +164,12 @@ export default function WikiPage() {
                 )}
               </div>
 
-              <div className="space-y-4 text-gray-300 text-lg">
+              <div className="space-y-4 text-aura-abyssal">
                 <p>{openEntry.description}</p>
-
-                {openEntry.full?.prerequisites && (
-                  <p><strong>Prerequisites:</strong> {openEntry.full.prerequisites}</p>
-                )}
-
                 {(openEntry.full?.modes?.length ?? 0) > 0 && (
                   <div>
-                    <strong>Modes:</strong>
-                    <ul className="mt-2 space-y-1 list-disc list-inside text-sm text-aura-lunar">
+                    <strong className="bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text">Modes:</strong>
+                    <ul className="mt-2 space-y-1 list-disc list-inside text-sm text-aura-abyssal">
                       {openEntry.full?.modes?.map(
                         (mode: { name: string; title: string; effect: string }, i: number) => (
                           <li key={i}>
@@ -183,12 +184,12 @@ export default function WikiPage() {
 
               {openEntry.tags.length > 0 && (
                 <div>
-                  <strong className="text-sm text-gray-400">Tags:</strong>
+                  <strong className="text-sm text-steel">Tags:</strong>
                   <div className="mt-1 flex flex-wrap gap-2">
                     {openEntry.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="bg-aura-lunar/20 text-aura-lunar px-2 py-1 rounded-full text-xs"
+                        className="bg-ice text-aura-lunar font-semibold px-2 py-1 rounded-full text-xs"
                       >
                         {tag}
                       </span>

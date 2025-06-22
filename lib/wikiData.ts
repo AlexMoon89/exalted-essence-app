@@ -1,4 +1,3 @@
-// lib/wikiData.ts
 export type WikiEntry = {
   slug: string;
   name: string;
@@ -11,7 +10,6 @@ export type WikiEntry = {
   ability?: string;
   pageRef?: string;
 
-  // ✅ Add this entire block inside the object, not below it
   full?: {
     prerequisites?: string;
     modes?: {
@@ -22,7 +20,6 @@ export type WikiEntry = {
   };
 };
 
-// 🔥 This function loads all universal charms from your public/data/charms folder
 export async function loadUniversalCharmsAsWikiEntries(): Promise<WikiEntry[]> {
   const indexRes = await fetch('/data/charms/index.json', { cache: 'no-store' });
   const files: string[] = await indexRes.json();
@@ -36,27 +33,33 @@ export async function loadUniversalCharmsAsWikiEntries(): Promise<WikiEntry[]> {
 
   const flattened = allCharms.flat();
 
-  // ✅ Deduplicate by charm name
-  const unique = new Map();
+  const unique = new Map<string, any>();
   for (const charm of flattened) {
-    if (!unique.has(charm.name)) {
-      unique.set(charm.name, charm);
+    const slug = charm.name.toLowerCase().replace(/\s+/g, '-');
+    if (!unique.has(slug)) {
+      unique.set(slug, charm);
     }
   }
 
-  return Array.from(unique.values()).map((charm: any) => ({
-    slug: charm.name.toLowerCase().replace(/\s+/g, '-'),
-    name: charm.name,
-    category: 'Charms',
-    description: charm.description,
-    tags: charm.modes?.map((m: any) => m.name) || [],
-    ability: charm.ability?.join(', ') ?? '',
-    sourcebook: charm.source,
-    pageRef: charm.page?.join(', ') ?? '',
-    // ✅ Add extra fields for modal use
-    full: {
-      prerequisites: charm.prerequisites,
-      modes: charm.modes,
-    }
-  }));
+  return Array.from(unique.values()).map((charm: any) => {
+    const slug = charm.name.toLowerCase().replace(/\s+/g, '-');
+
+    const isSolar = charm.modes?.some((m: any) => m.name === 'Solar');
+    const category = isSolar ? 'Solar Charm' : 'Charms';
+
+    return {
+      slug,
+      name: charm.name,
+      category,
+      description: charm.description,
+      tags: charm.modes?.map((m: any) => m.name) || [],
+      ability: charm.ability?.join(', ') ?? '',
+      sourcebook: charm.source,
+      pageRef: charm.page?.join(', ') ?? '',
+      full: {
+        prerequisites: charm.prerequisites,
+        modes: charm.modes,
+      }
+    };
+  });
 }

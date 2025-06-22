@@ -35,7 +35,7 @@
 
 body {
   @apply font-body text-foreground bg-background;
-  background-image: url('/textures/frosted-paper-light.jpg');
+  background-image: url('/textures/grunge-wall-texture.jpg');
   background-size: cover;
   background-attachment: fixed;
 }
