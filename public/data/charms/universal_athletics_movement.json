@@ -1,0 +1,167 @@
+[
+  {
+    "name": "EAGLE-WING STYLE",
+    "ability": ["Athletics", "Movement"],
+    "prerequisites": "Athletics 5, Essence 3",
+    "description": "The Exalt’s anima lifts them into the air in pursuit of their goals, allowing transcendent flight. Commit 2 motes. For the scene, the Exalt may use their reflexive movement to fly up to two range bands above the ground. They may engage in aerial combat with other enemies and effortlessly climb surfaces by flying near them. They may ignore any difficult terrain and hazards they are able to fly over.",
+    "modes": [
+      {
+        "name": "Lunar",
+        "title": "Flight of the Sparrow",
+        "effect": "The Exalt may fly indefinitely at any range above the ground."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Soaring Zephyr Flight",
+        "effect": "Spend 2 anima. While the Exalt soars, they may fly over enemies and afflict them with the wake of their frigid anima. Targets must reflexively resist a severe cold hazard (p. 145). While in Air Aura, the Exalt flies as per Lunar Mode."
+      },
+      {
+        "name": "Abyssal",
+        "title": "On Wings of Night",
+        "effect": "The soaring Abyssal treats herself as a mounted combatant for the purposes of purchasing gambits (p. 141). This does not apply if the Abyssal is already mounted. At night, the Abyssal flies as per Lunar mode."
+      },
+      {
+        "name": "Solar",
+        "title": "Bonfire Anima Wings",
+        "effect": "While in combat, the Exalt may fly toward another flying enemy no matter how many range bands above the ground they are and remain at the same height while they battle. If she is no longer fighting, she returns to the ground without harm. At Iconic anima, the Solar flies as per Lunar Mode."
+      },
+      {
+        "name": "Liminal",
+        "title": "Writhing Viscera Tendrils",
+        "effect": "Spend 1 anima and take a Health level of damage. The Liminal may grapple foes and bring them along with her while leaving her arms free. While in Flesh Nature (p. 252), the Exalt flies as per Lunar Mode."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "GRACEFUL CRANE STANCE",
+    "ability": ["Athletics"],
+    "prerequisites": "Athletics 1",
+    "description": "The Exalt gains perfect balance, able to stand on wire, a crumbling parapet, or the top of a pine tree without issue. Commit 1 mote. For the rest of the scene, the Exalt can stand on or run along things too narrow or weak to support them normally, with no chance of falling or breaking through. They never have to roll to avoid falling. Increase the cost of the knockdown gambit by her Essence.",
+    "modes": [
+      {
+        "name": "Upgrade",
+        "title": "Spider-Foot Style",
+        "effect": "While Graceful Crane Stance is active, the Exalt may scale sheer surfaces, run across all liquids as if it were solid ground, and even runs upside down along the ceiling. This effect comes to an end when the Exalt stands still."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Mist Over Ice",
+        "effect": "The Exalt may walk across water as if it were solid ground and may stand still on its surface without falling through. She leaves no footprints behind."
+      },
+      {
+        "name": "Liminal",
+        "title": "Ghostly Passage",
+        "effect": "The Exalt may walk across water as if it were solid ground and may stand still on its surface without falling through. She leaves no footprints behind."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Perfect Climbing Attitude",
+        "effect": "The Exalt may carve handholds from stone or earthen surfaces, allowing them to remain still or for others to climb behind them. Handholds count as equipment for climbing, granting a two-dice bonus. The handholds persist while the mote remains committed."
+      },
+      {
+        "name": "Alchemical",
+        "title": "Personal Gravity Manipulation Apparatus",
+        "effect": "For the duration of the scene, whenever she takes a movement action, “down” is wherever the Exalt wants it to be, within close range. This allows her to walk up walls or stand on ceilings. She may jump from one non-ground surface to another using this Charm."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [187]
+  },
+  {
+    "name": "LIGHTNING SPEED",
+    "ability": ["Athletics"],
+    "prerequisites": "Athletics 4",
+    "description": "The Exalt becomes a blur of motion, anima streaming in their wake as they flash from one point to another. Spend 1 mote. Double 8s on a movement action involving running or swimming or to any venture roll involving foot racing, chases, or swift escapes. This does not apply to attacks made following a Rush. If used when moving toward an enemy, the Exalt gains 1 Power.",
+    "modes": [
+      {
+        "name": "Upgrade",
+        "title": "Racing Hare Method",
+        "effect": "Instead, spend 2 motes to do one of the following: Move three range bands along the ground as a simple movement action; quickly sprint to a location within a few days, such as a neighboring village or point of interest, to arrive before the end of the scene; once per interval, automatically overcome an additional obstacle on a travel venture using her speed."
+      },
+      {
+        "name": "Upgrade",
+        "title": "Living Wind Approach",
+        "effect": "Spend 1 mote. The Exalt instantly travels the distance she could move with a reflexive or simple movement action, ignoring any obstacles or hazards between her and her destination."
+      },
+      {
+        "name": "Solar",
+        "title": "Winning Stride Discipline",
+        "effect": "If the Exalt succeeds on a roll enhanced by Lightning Speed, she may either activate Lightning Speed once again in the same scene at no cost or gain 1 Power."
+      },
+      {
+        "name": "Infernal",
+        "title": "WindBorn Stride",
+        "effect": "If the Exalt succeeds on a roll enhanced by Lightning Speed, she may either activate Lightning Speed once again in the same scene at no cost or gain 1 Power."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Bellows Pumping Stride",
+        "effect": "The Exalt may leave a fiery environmental hazard with difficulty 3, Damage 2 per round in the Exalt’s wake when using Lightning Speed or Racing Hare Method that affects anyone within close range of the intervening range bands or the Exalt’s destination. Lasts for her Essence in rounds."
+      },
+      {
+        "name": "Liminal",
+        "title": "Clambering Horror Chase",
+        "effect": "The character may take a Health level of damage to sprint as a reflexive move action, instead."
+      },
+      {
+        "name": "Lunar",
+        "title": "Instinct-Driven Beast Movement",
+        "effect": "Lightning Speed and Racing Hare Method apply to any form of movement in animal form. When in animal form, Lightning Speed additionally grants one automatic success on travel ventures."
+      },
+      {
+        "name": "Sidereal",
+        "title": "Inexorable Advance",
+        "effect": "Lightning Speed ignores all wound or mobility penalties on an attack as part of a rush action against the Exalt’s enemy. She moves instantaneously without crossing the space in between."
+      },
+      {
+        "name": "Getimian",
+        "title": "Unavoidable Problem",
+        "effect": "Lightning Speed ignores all wound or mobility penalties on an attack as part of a rush action against the Exalt’s enemy. She moves instantaneously without crossing the space in between."
+      },
+      {
+        "name": "Alchemical",
+        "title": "Trajectory Enhancement Assembly",
+        "effect": "The character can move two range bands on a reflexive move action."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [188]
+  },
+  {
+    "name": "MONKEY LEAP TECHNIQUE",
+    "ability": ["Athletics"],
+    "prerequisites": "Athletics 2",
+    "description": "The Exalt leaps with speed and grace, carrying them soaring into the air, or from rooftop to rooftop. The Exalt may leap vertically one range band into the air as a movement action. Additionally, she may leap forward horizontally to leap across rooftops, move stylishly through the air, and avoid appropriate hazards and obstacles, bypassing them without a roll.",
+    "modes": [
+      {
+        "name": "Upgrade",
+        "title": "Soaring Crane Leap",
+        "effect": "Commit 1 mote for one scene. While active, the Exalt floats, she may choose to fall only one range band per round, she is immune to fall damage, and she may use her reflexive movement action to float one range band across while airborne."
+      },
+      {
+        "name": "Upgrade",
+        "title": "Mountain-Crossing Leap Technique",
+        "effect": "Spend two motes to leap forward three range bands, or two into the sky straight above as a simple movement action which can be flurried. When jumping upward, she may remain at the apex of her jump long enough to take her combat action before falling back to the ground. Upon landing, the Exalt ignores falling damage and craters the ground where she lands, knocking prone all extras within close range and damaging the ground below her."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Effortlessly Rising Flame",
+        "effect": "The Exalt may reflexively rise from prone when this Charm is activated."
+      },
+      {
+        "name": "Liminal",
+        "title": "Rising Corpse Approach",
+        "effect": "The Exalt may reflexively rise from prone when this Charm is activated."
+      },
+      {
+        "name": "Alchemical",
+        "title": "Alter Trajectory",
+        "effect": "The Exalt may change direction while she’s in midair."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  }
+]

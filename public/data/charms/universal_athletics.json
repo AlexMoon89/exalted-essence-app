@@ -1,0 +1,136 @@
+[
+  {
+    "name": "[Ability] Excellency",
+    "ability": ["[Ability]"],
+    "prerequisites": "[Ability] 1",
+    "description": "Whatever the Exalt attempts, she does so with superhuman ability. When purchasing this Charm, choose an Ability. Spend 1 mote. This applies on Step 1 during combat. Add bonus dice equal to the Ability’s rating to any applicable roll involving the chosen Ability. You may add Close Combat dice to Close Combat attacks or Craft dice to Craft rolls to construct an artifact, but you may not use Stealth dice to add to a Close Combat attack or Ranged Combat to add dice to a Navigate roll. You may buy this Charm for multiple Abilities but must choose a new Ability each time. This is a full Charm purchase and not a repurchase. Special: This Charm may be applied to resistance rolls (such as to resist a hazard or trap) or to reflexively created actions, e.g. a reflexive Build Power action, regardless of Step.",
+    "modes": [
+      {
+        "name": "Alchemical",
+        "title": "Excellency Variation",
+        "effect": "When making the roll, also choose an Attribute (typically the one paired with the Ability for this action). If your Attribute is higher than the chosen Ability, you may add it as a dice bonus instead."
+      },
+      {
+        "name": "Getimian",
+        "title": "Excellency Variation",
+        "effect": "When making the roll, also choose an Attribute (typically the one paired with the Ability for this action). If your Attribute is higher than the chosen Ability, you may add it as a dice bonus instead."
+      },
+      {
+        "name": "Lunar",
+        "title": "Excellency Variation",
+        "effect": "When making the roll, also choose an Attribute (typically the one paired with the Ability for this action). If your Attribute is higher than the chosen Ability, you may add it as a dice bonus instead."
+      },
+      {
+        "name": "Liminal",
+        "title": "Excellency Variation",
+        "effect": "When making the roll, also choose an Attribute (typically the one paired with the Ability for this action). If your Attribute is higher than the chosen Ability, you may add it as a dice bonus instead."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "Flickering Shadow Evasion",
+    "ability": ["Athletics"],
+    "prerequisites": "Athletics 2",
+    "description": "Attacks strike empty space, the Exalt’s dodge is so fast as to be nearly imperceptible. Spend 2 motes on Step 2. On Step 4, roll your choice of Attribute + Athletics, and add your successes to your Defense against the attack.",
+    "modes": [
+      {
+        "name": "Liminal",
+        "title": "Beyond Death’s Grasp",
+        "effect": "Add an additional success in Step 4 against undead opponents."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "Flow Like Blood",
+    "ability": ["Athletics"],
+    "prerequisites": "Athletics 4 or Close Combat 4",
+    "description": "The Exalt moves in time with the flow of battle, slipping between swords with dismaying ease. Commit 1 mote for the scene. The Exalt adds 1 to her Defense against attacks at close range and steals 1 Power from her attacker after successfully defending. First, generate Power from the attacker’s Overwhelming rating, then steal Power.",
+    "modes": [
+      {
+        "name": "Alchemical",
+        "title": "Onslaught Deflection Analysis",
+        "effect": "While active, spend 1 mote on Step 2 to add the Exalt’s Essence rating to their Defense against a single attack."
+      },
+      {
+        "name": "Lunar",
+        "title": "Cunning Prey Reversal",
+        "effect": "On Step 5, if the Lunar successfully defended, she steals the attacker’s Overwhelming rating in Power."
+      },
+      {
+        "name": "Liminal",
+        "title": "Sanguine Flood Escape",
+        "effect": "While active, spend a Health level on Step 2, add 1 or the Exalt’s wound penalty to their Defense against a single attack."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "Mongoose-and-Cobra Escape",
+    "ability": ["Athletics"],
+    "prerequisites": "Athletics 2",
+    "description": "The Exalt avoids a blow and leaps away, putting space between her and her enemy. Spend 1 mote on Step 4 after successfully defending against an attack to move one range band as a reflexive action.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Sunlight Glinting on Steel",
+        "effect": "A Solar shines brightly, stunning onlookers and adding her Essence to her Defense until the start of her next action."
+      },
+      {
+        "name": "Lunar",
+        "title": "Becoming Water’s Envy",
+        "effect": "A Lunar may use Mongoose-and-Cobra Escape even when grappled. Doing so immediately ends the grapple."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Hopping Firecracker Evasion",
+        "effect": "A Dragon-Blood creates difficult terrain between her and her opponent."
+      },
+      {
+        "name": "Sidereal",
+        "title": "Absent Self",
+        "effect": "On the next round, when her target acts, the Sidereal may spend 1 mote or a set of Stunt dice and choose to interrupt initiative and take her action at any point before Step 3."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Spectral Deception",
+        "effect": "An Abyssal leaves behind a spectral image of herself while fading into the shadows. Reflexively make an outmaneuver Build Power roll accordingly."
+      },
+      {
+        "name": "Infernal",
+        "title": "Skyfire-Seizing Flare",
+        "effect": "An Infernal’s spite manifests as a wisp of green flame that detonates just as she leaps away, activating on Step 8. This flame ignites anything flammable and must be reflexively resisted as an environmental hazard, Difficulty 3, dealing Essence + 3 damage against anyone in close range. Each time Skyfire-Seizing Flare is used in a scene, lower its damage by one. Once this reaches zero, this mode cannot be used until the next scene, when it refreshes."
+      },
+      {
+        "name": "Alchemical",
+        "title": "Vector Improvisation Methodology",
+        "effect": "The Alchemical gains her Essence in dice to her next Rush attack against the target she dodged."
+      },
+      {
+        "name": "Getimian",
+        "title": "Water-and-Ice Understanding",
+        "effect": "A Getimian can move one range band in any direction she likes and may do so regardless of obstructions. She may spend an additional mote to move her target in any direction, instead."
+      },
+      {
+        "name": "Liminal",
+        "title": "Homunculus’s Grasp",
+        "effect": "A Liminal may maintain a grapple even while dodging by disarticulating parts of her anatomy."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "Reed in the Wind",
+    "ability": ["Athletics"],
+    "prerequisites": "Athletics 2",
+    "description": "The Exalt moves with grace, flowing around every attack. Spend 1 mote on Step 2. The Exalt increases Defense by 1 and gains 1 Power if she successfully dodges an attack from a nontrivial foe.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  }
+]

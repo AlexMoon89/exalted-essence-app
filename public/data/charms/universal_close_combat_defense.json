@@ -1,0 +1,110 @@
+[
+  {
+    "name": "BULWARK STANCE",
+    "ability": ["Close Combat", "Defense"],
+    "prerequisites": "Close Combat 2",
+    "description": "The Exalt moves into a fluid defensive stance, turning away attacks easily. Spend 1 mote on Step 2. You may either clear any penalties affecting your Defense or reset your Hardness after a concentrated attack.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Dipping Swallow Defense",
+        "effect": "Also increase Defense by 1 for this attack."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Dipping Swallow Defense",
+        "effect": "Also increase Defense by 1 for this attack."
+      },
+      {
+        "name": "Infernal",
+        "title": "Dipping Swallow Defense",
+        "effect": "Also increase Defense by 1 for this attack."
+      },
+      {
+        "name": "Lunar",
+        "title": "Golden Tiger Block",
+        "effect": "Also increase Defense by 1 for this attack."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "FLOW LIKE BLOOD",
+    "ability": [],
+    "prerequisites": "Athletics 4 or Close Combat 4",
+    "description": "The Exalt moves in time with the flow of battle, slipping between swords with dismaying ease. Commit 1 mote for the scene. The Exalt adds 1 to her Defense against attacks at close range and steals 1 Power from her attacker after successfully defending. First, generate Power from the attacker’s Overwhelming rating, then steal Power.",
+    "modes": [
+      {
+        "name": "Alchemical",
+        "title": "Onslaught Deflection Analysis",
+        "effect": "While active, spend 1 mote on Step 2 to add the Exalt’s Essence rating to their Defense against a single attack."
+      },
+      {
+        "name": "Lunar",
+        "title": "Cunning Prey Reversal",
+        "effect": "On Step 5, if the Lunar successfully defended, she steals the attacker’s Overwhelming rating in Power."
+      },
+      {
+        "name": "Liminal",
+        "title": "Sanguine Flood Escape",
+        "effect": "While active, spend a Health level on Step 2, add 1 or the Exalt’s wound penalty to their Defense against a single attack."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "HEAVENLY GUARDIAN DEFENSE",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 5, Essence 2",
+    "description": "The Exalt puts her weapon between herself and a hazard, blocking the environment itself. Spend 2 motes. The Exalt applies her Defense against a single instance of a hazard, a trap, a disease, a great fall, or some other source of harm that she could not normally apply her Defense against. She compares her Defense rating to the difficulty of the hazard. If it is the same or greater, she ignores the effects as if she had passed the roll to resist it. Once per session, characters can use a Stunt to improvise with this Charm, allowing them to escape a collapsing building or parry the ground while falling from a great height. If appropriate, mundane weapons may be destroyed by being used to block the environment.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [194]
+  },
+  {
+    "name": "LOYAL GUARDIAN APPROACH",
+    "ability": ["Close Combat", "Integrity"],
+    "prerequisites": "Close Combat 4 or Integrity 4",
+    "description": "It is the prerogative of the Exalted to stand vigil over those she holds dear, standing between them and all harm. Commit 1 mote for the scene. The Exalt may take reflexive defend other actions on behalf of any other character within close range.",
+    "modes": [
+      {
+        "name": "Alchemical",
+        "title": "Essence Shield",
+        "effect": "The Alchemical increases their Defense and Soak by 1 when shielding another person with the defend other action."
+      },
+      {
+        "name": "Lunar",
+        "title": "Sun-and-Moon Dance",
+        "effect": "While defending a Solar, Abyssal, or Infernal, spend 1 additional mote on Step 2 to add the Lunar’s Intimacy value toward them to her Defense."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Hearth-Defending Vigil",
+        "effect": "While defending a member of their Hearth, spend 1 additional mote on Step 2 to ignore all penalties to Defense for a single action."
+      },
+      {
+        "name": "Strawmaiden Janest",
+        "title": "Others Before Self",
+        "effect": "Janest gains 1 Defense when protecting another, and gains 1 Power if defending a non-combatant. At Essence 2, she may apply this Charm to any number of targets within close range."
+      },
+      {
+        "name": "Solar",
+        "title": "Sunlight Aegis Stance",
+        "effect": "A Solar adds 3 to Defense when protecting their ward from a creature of darkness."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "PORTENTOUS WARDING DEFENSE",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 3",
+    "description": "The Exalt moves with purpose, firmly barring the way of an attack. When attacked, spend 2 motes on Step 2. On Step 4, roll your choice of Attribute + Close Combat, and add your successes to your Defense against the attack.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  }
+]

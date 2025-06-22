@@ -1,0 +1,172 @@
+[
+  {
+    "name": "BATTLE PLAN RUMINATION",
+    "ability": ["War"],
+    "prerequisites": "War 3",
+    "description": "The Exalt recalls famous battles she’s studied, and shapes her own strategy based on generals of the past. Spend 1 mote. If a roll during a warfare dramatic scene fails, the Exalt may use this Charm to immediately reroll it. If the reroll result is lower, she takes the higher result of her original roll and increases the successes by two.",
+    "modes": [
+      {
+        "name": "Dragon-Blooded",
+        "title": "In Our Foremothers’ Footsteps",
+        "effect": "The player whose character is the lead tactician in the dramatic scene chooses another player. They decide on a significant battle both characters’ forebears took part in, and the roles those family members played in it. Add the second character’s relevant Ability to the tactic’s dice pool."
+      },
+      {
+        "name": "Infernal",
+        "title": "Last War’s Lessons",
+        "effect": "Perhaps her pastlife choices caused her death or allowed the enemy to regroup, but the Infernal will make different choices in this incarnation. Add three automatic successes to a Sabotage tactic."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [206]
+  },
+  {
+    "name": "CUNNING WARRIOR REGIMEN",
+    "ability": ["War"],
+    "prerequisites": "War 3",
+    "description": "Under the Exalt’s instruction, her soldiers learn to seize opportunities whenever they appear on the battlefield. Commit 2 motes for one week of downtime. With at least five hours of instruction during this week of downtime (which may be used during a series of dramatic scenes), the Exalt may train a battle group, granting them an outnumber quality of the Exalt’s choice. The Exalt may condense the training to one dramatic scene, but the battle group retains the outnumber quality for only a single battle. A group can only learn one outnumber quality through this Charm, or two if they possess elite Drill.",
+    "modes": [
+      {
+        "name": "Infernal",
+        "title": "Puissance Mimicry Intuition",
+        "effect": "The Infernal prepares her troops for battle. Committing one additional mote, she mystically imbues them with an additional outnumber quality shared by their opponent."
+      },
+      {
+        "name": "Lunar",
+        "title": "Wolf’s Lair Tactics",
+        "effect": "While fighting on territory they are familiar with, such as their homeland or an area thoroughly scouted as part of tactics roll (p. 164), the battle group gains an additional outnumber quality of the Lunar’s choosing (p. 319) for the duration of the war scene or combat."
+      },
+      {
+        "name": "Sidereal",
+        "title": "Foretold Strategy",
+        "effect": "Rather than granting a battle group access to an outnumber quality, the Sidereal teaches countermeasures. During a future battle, the group may retroactively reveal the outnumber quality they have learned to overcome, becoming immune to its effects."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [216]
+  },
+  {
+    "name": "FEARLESS VANGUARD TECHNIQUE",
+    "ability": ["War"],
+    "prerequisites": "War 3",
+    "description": "When the Exalt leads her soldiers into combat, she reveals the hidden depths of their courage and resolve. Commit 1 mote for the scene. During a dramatic scene, the Exalt’s soldiers gain a two-success bonus to Resolve against social influence that would frighten, distract, or confuse them so long as she leads them. If she is present when her battle groups make rout checks, she gains two successes to the roll, which do not apply to the dice limit. When she commands her troops, they gain two bonus dice to attacks.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Brave Legionnaire Incitement",
+        "effect": "The Exalt’s soldiers treat their Major Virtue as Courage. Increase the dice bonus to three."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Death Before Dishonor",
+        "effect": "The Exalt’s soldiers treat their Major Virtue as Courage. Increase the dice bonus to three."
+      },
+      {
+        "name": "Infernal",
+        "title": "Fury Brought Forth",
+        "effect": "The Exalt’s soldiers treat their Major Virtue as Courage. Increase the dice bonus to three."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Imperial Devotion",
+        "effect": "The Exalt’s soldiers treat their Minor Virtue as Loyalty to their commander."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [216]
+  },
+  {
+    "name": "LEAGUE OF IRON PREPARATION",
+    "ability": ["War"],
+    "prerequisites": "War 3",
+    "description": "The Exalt may quickly train even the most inveterate militia into a fighting force to be reckoned with. Commit 2 motes for a scene. With a dramatic scene of drilling and instruction, a group of noncombatants or conscripts can be trained to fight competently; they become a battle group treated as tertiary Command. As an unrolled Recruitment venture, the Exalt may spend a week of downtime in a dramatic scene drilling a unit trained with this Charm, allowing her to select one of the following benefits. Each benefit provided by this Charm can only be applied to a given unit once:\n• Increase their attack pool by two dice.\n• Gain one additional outnumber quality.\n• Designate Loyalty to the Exalt or a target of her choosing as their Minor Virtue.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Tiger-Warrior Training Technique",
+        "effect": "With just a single scene, the Exalt may train noncombatants or conscripts to become soldiers. As additional benefits, the Exalt may select:\n• Soldiers become Champions with veteran Drill.\n• Gain one additional outnumber quality.\n• Designate Loyalty to the Exalt or a target of her choosing as their Major Virtue."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Hardened Killer Training Style",
+        "effect": "As Solar Mode. Alternatively, the Exalt may put soldiers through a scene of training they will not survive. They arise that night as war ghosts (p. 339) with a Major Virtue of Loyalty to the Exalt."
+      },
+      {
+        "name": "Infernal",
+        "title": "Demon-Blooded Endowment",
+        "effect": "Mortal units may select one additional benefit from below when trained:\n• Soldiers gain the god-blooded quality, treating the Yozis as their patron. The Infernal may commit a mote to activate this quality.\n• Soldiers gain the durant aegis quality, using the Infernal’s Essence rating.\n• Gain one additional outnumber quality."
+      },
+      {
+        "name": "Lunar",
+        "title": "Lessons of the Winter Wolf",
+        "effect": "Units of beastfolk may select one additional benefit when trained:\n• Soldiers gain veteran Drill.\n• Gain one additional outnumber quality.\n• The unit may ignore up to three dice in penalties from deprivation or fatigue."
+      },
+      {
+        "name": "Sidereal",
+        "title": "Auspicious Recruitment Drive",
+        "effect": "Fate leads soldiers to a Sidereal’s command; an army can be easily mustered. The Exalt may recruit people for a chosen cause, calling together a unit of conscripts with Size equal to the lesser of her Essence or three and regular Drill. The unit gains one benefit immediately but may not designate the Sidereal herself as the subject of Loyalty. Instead designate others, the cause, or a resplendent destiny. The unit gains a Minor Tie of devotion to their cause; they may disband when the goal is achieved."
+      },
+      {
+        "name": "Upgrade",
+        "title": "Divine Army Supremacy",
+        "effect": "Training a unit now takes a scene or a day of downtime. Can also train spirits, animals, or non-humans who retain their characteristics but gain Drill like a regular unit. Additional benefits:\n• Gain one outnumber quality.\n• Units with regular Drill gain veteran; veteran gain elite.\n• Designate a specialized enemy (e.g. undead, fae); unit increases their Drill by the Exalt's Essence against that enemy.\n• Unit no longer fears death and gains 3 successes on rout checks. Requires at least veteran Drill."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [216, 217]
+  },
+  {
+    "name": "MOUSE CONQUERS THE LION",
+    "ability": ["War"],
+    "prerequisites": "War 4",
+    "description": "Under the guidance of Exalted tactics, a dozen good soldiers may stem the tide of an enemy legion. Commit 1 mote for the scene. The Exalt’s battle group counts as having elite Drill for the purposes of accuracy and damage. It also gains additional outnumber qualities of the commander’s choice equal to her Essence. Enemies making decisive attacks against the battle group suffer a three-die penalty to their attacks and damage.",
+    "modes": [
+      {
+        "name": "Infernal",
+        "title": "Opened Eye of the Hurricane",
+        "effect": "Commit an additional mote. When fighting alone, the Infernal removes outnumber qualities of her choice equal to her Essence from the opponent battle group."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [217]
+  },
+  {
+    "name": "PANIC THE WOUNDED BEAST",
+    "ability": ["War"],
+    "prerequisites": "Battalion Breaking-Shout, Essence 3",
+    "description": "When the Exalt takes the battlefield, enemies flee and fall at every swipe of the sword. Spend 2 motes on Step 7 of a decisive attack against a battle group. The group must make a difficulty 5 rout check, regardless of Drill.",
+    "modes": [
+      {
+        "name": "Abyssal",
+        "title": "Swinging the Scythe",
+        "effect": "If the battle group fails its rout check, the Exalt gains one Power, or two if the group had elite Drill."
+      },
+      {
+        "name": "Infernal",
+        "title": "Sacred Kamilla’s Inhalation",
+        "effect": "If the battle group fails its rout check, the Exalt gains one Power, or two if the group had elite Drill."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [217]
+  },
+  {
+    "name": "RALLY THE BROKEN COMPANY",
+    "ability": ["War"],
+    "prerequisites": "War 3",
+    "description": "Like hope born amidst tumult, an Exalted commander may restore the fighting spirit of the weary, worn, and wounded. Spend 1 mote. The Exalt makes a reflexive rout check on behalf of an allied battle group. Extra successes on the roll are added to the battle group’s next attack as bonus dice.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Phoenix Banner Resurgence",
+        "effect": "The Solar may spend extra successes to heal the battle group, trading two successes for each level healed."
+      },
+      {
+        "name": "Sidereal",
+        "title": "Foretold Victory Blessing",
+        "effect": "The Sidereal may set aside any number of extra successes. Instead of adding to the next attack, they are reflexively rolled the next time the group is forced to make a rout check. These persist until the end of the session."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [217]
+  }
+]

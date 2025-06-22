@@ -1,0 +1,119 @@
+[
+  {
+    "name": "GUARDED MIND MEDITATION",
+    "ability": ["Integrity"],
+    "prerequisites": "Integrity 2",
+    "description": "The Exalt flenses herself of emotion and expression, shedding her passions to become inscrutable. Commit 1 mote for the scene. The Exalt increases her Resolve against read intentions actions by her Essence. She gains one automatic success on social influence actions which take advantage of her lack of emoting. While in this state she may always treat her Virtues as applying to Resolve against any persuade action.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [199]
+  },
+  {
+    "name": "INTEGRITY-PROTECTING PRINCIPLE",
+    "ability": ["Integrity"],
+    "prerequisites": "Integrity 2",
+    "description": "The Exalt is the embodiment of order, protecting them from the twisting power of chaotic forces. Spend 1 mote. For the rest of the scene, the Exalt and their possessions become immune to the twisting effects created by the environment, such as those created by the Wyld. If used in a venture, this protects the equipment for the time scale between obstacles. The Wyld cannot mutate them or transform their possessions. Against the twisting powers wielded by the fae, the Exalt either gains her Essence in automatic successes to resist or increases the difficulty of being targeted by her Essence. This does not protect them from direct attacks by Wyld creatures or the non-transformative perils of the Wyld.",
+    "modes": [
+      {
+        "name": "Alchemical",
+        "title": "Order-Asserting Emanation",
+        "effect": "The Exalt’s certainty about how the world should be affects the Wyld around her. Creatures of the Wyld who come into close range suffer a two-dice penalty on attack rolls."
+      },
+      {
+        "name": "Solar",
+        "title": "Chaos-Repelling Pattern",
+        "effect": "Everything within short range is completely immune to environmental twisting effects, the Exalt’s allies also gain their Essence in successes to resist enemy twisting effects. This will prevent the environment from twisting around them, creating a small island of stability wherever the Exalt goes."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Chaos-Warding Principle",
+        "effect": "The Exalt’s Hearthmates gain the benefits of this Charm as long as they remain within medium range of each other."
+      },
+      {
+        "name": "Liminal",
+        "title": "Stable Heart Melody",
+        "effect": "Anyone connected by the Liminal’s Thread of Life may gain the benefits of this Charm. They are additionally protected against environmental hazards in shadowlands or the Underworld."
+      },
+      {
+        "name": "Lunar",
+        "title": "Chaos-Defying Embrace",
+        "effect": "The Exalt may extend this effect to a character within medium range she has a positive Major Tie or Virtue toward or to her Solar mate."
+      },
+      {
+        "name": "Infernal",
+        "title": "Emerald Hellfire Aegis",
+        "effect": "In addition to the Wyld, the Infernal is protected against the twisting magic of hell and its demons."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Walker of the Sunless Realm",
+        "effect": "In addition to the Wyld, the Abyssal is protected against the dark magic of the Underworld and ghostly denizens."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [199]
+  },
+  {
+    "name": "RESOLVE BOLSTERING DECLARATION",
+    "ability": ["Integrity"],
+    "prerequisites": "Integrity 3",
+    "description": "The Exalt’s confidence in her ally’s position lends them the strength to stand firm. Spend 1 mote and name an ally who is the target of a social action. The Exalt makes a declaration in their friend’s favor. This may be a simple statement of confidence, like “I trust you to do the right thing,” or a deeper conversation, whatever feels appropriate to the scene. Increase the cost of purchasing additional social actions by two.",
+    "modes": [
+      {
+        "name": "Dragon-Blooded",
+        "title": "Staunch Ally",
+        "effect": "The Exalt increases her ally’s base Resolve by 1."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [199]
+  },
+  {
+    "name": "RIGHTEOUS LION SPIRIT",
+    "ability": ["Integrity"],
+    "prerequisites": "Integrity 4, Essence 2",
+    "description": "The deepest passions of the Exalted are the stuff of myth and opera, beyond any other’s ability to corrupt. Upon learning this Charm, the Exalt strengthens one of her Major Intimacies, making it unbreakable. She cannot be forced to act against it by any outside influence — only through her own choice may she betray those feelings. Regaining this effect once broken or changing the targeted Intimacy requires a dramatic action that qualifies as a major Milestone.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [199]
+  },
+  {
+    "name": "DESTINY-MANIFESTING METHOD",
+    "ability": ["Integrity"],
+    "prerequisites": "",
+    "description": "Twisting effects that alter the mind, body, or soul find less purchase on the Exalted. Whenever the Exalt is unwillingly affected by a twisting effect, fate always provides her with a condition to shatter the effect. No curse is irreversible. While the resolution of the twisting effect is not automatically made apparent to the Exalt, Storytellers should ensure they become aware of a way to remove the effect before the end of the session in which it is inflicted.",
+    "modes": [
+      {
+        "name": "Liminal",
+        "title": "Unbroken Argent Thread",
+        "effect": "The Liminal may purchase this Charm an additional time to cover her Thread of Life."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [200]
+  },
+  {
+    "name": "SPIRIT-MAINTAINING MANEUVER",
+    "ability": ["Integrity"],
+    "prerequisites": "Integrity 3",
+    "description": "The Exalt’s will is so great, she may cast aside mundane and sorcerous influences over her mind. Spend 2 motes reflexively on Step 4 to cause an influence action or similar effect targeting the Exalt to automatically fail as though the target had not achieved enough successes to overcome her Resolve. Read intentions actions may not be contested with this Charm. This may only be used once per session.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [200]
+  },
+  {
+    "name": "STUBBORN BOAR DEFENSE",
+    "ability": ["Integrity"],
+    "prerequisites": "Integrity 2",
+    "description": "When the Sun and Moon set their course in the heavens, who can convince them to stray? Spend 2 motes after resisting or refusing a social influence action. Increase the base difficulty of similar influence by two for the rest of the session.",
+    "modes": [
+      {
+        "name": "Getimian",
+        "title": "Obdurate Thwarted Destiny",
+        "effect": "Halve the bonus dice (round up) awarded to the influencing character when the Getimian ignores influence."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [200]
+  }
+]

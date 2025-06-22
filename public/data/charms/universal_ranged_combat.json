@@ -1,0 +1,184 @@
+[
+  {
+    "name": "ARROW STORM ATTACK",
+    "ability": ["Ranged Combat"],
+    "prerequisites": "Ranged Combat 5",
+    "description": "Blotting out the sun with her volleys, the Exalt routs legions. Spend 1 mote on Step 5 of a Ranged Combat attack against a battle group. The Exalt increases her damage dice or the Power generated on the attack by the battle group’s Size. At Essence 3, the bonus damage becomes successes on Step 7, instead.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Cascade of Cutting Terror",
+        "effect": "At Essence 2, a Solar may spend 2 Anima to reduce the target battle group’s Defense to 1 on Step 4."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [191]
+  },
+  {
+    "name": "DOUBLE DISTANCE TECHNIQUE",
+    "ability": ["Ranged Combat"],
+    "prerequisites": "Ranged Combat 2",
+    "description": "The Exalt’s attacks fly far and true. The Exalt extends the reach of one of her ranged weapons by one range band. This cannot supplement attacks made with pure Essence (such as attack spells or Glorious Exalted Bolt).",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Triple Distance Technique",
+        "effect": "The Solar may spend 1 mote to extend the range an additional band, to a maximum of extreme range."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [191]
+  },
+  {
+    "name": "GLORIOUS EXALTED BOLT",
+    "ability": ["Ranged Combat", "Sagacity"],
+    "prerequisites": "Ranged Combat 2 or Sagacity 2",
+    "description": "The Exalt forms a blazing bolt of Essence aligned with their nature to strike their enemies. Commit 1 mote on Step 1. This does not count as the Exalt’s Charm on that Step. For the duration of the scene, make ranged Essence attacks at medium range using either Sagacity or Ranged Combat. Treat as a heavy ranged weapon with medium range, the artifact and powerful tags. Spend 1 anima to increase range to long. This may be used during a clash.",
+    "modes": [
+      {
+        "name": "Alchemical",
+        "title": "Essence Pulse Cannon",
+        "effect": "The Exalt’s forearm transforms into a weapon itself, storing a charge of Essence in its bore. If the Alchemical uses Glorious Exalted Bolt to enact the knockback gambit, reduce the cost by two."
+      },
+      {
+        "name": "Solar",
+        "title": "Blazing Solar Bolt",
+        "effect": "Commit 1 additional mote to increase the attack’s damage by two."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Elemental Bolt Attack",
+        "effect": "Spend an additional mote on Step 7. Create an environmental hazard in the target’s range band which persists until the start of the next round. Targets hit must make a reflexive Physique roll at difficulty 3 to resist environmental damage equal to the Exalt’s Essence plus two."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Crypt Bolt Attack",
+        "effect": "Ignore 1 Soak, and mundane armor is destroyed as long as a decisive damage roll generates at least one success. These must be successes on the roll, not successes from the Charm or its damage rating."
+      },
+      {
+        "name": "Infernal",
+        "title": "Radiant Fury Revenge",
+        "effect": "The Infernal gains a two-dice bonus to damage if she has a negative Intimacy towards the target."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [191]
+  },
+  {
+    "name": "NO ARROW WASTED",
+    "ability": ["Ranged Combat"],
+    "prerequisites": "Ranged Combat 3",
+    "description": "The Exalt’s arrow always hits a useful target, even if it’s not their primary one. On Step 5 of a ranged combat action, if the Exalt’s original attack failed to defeat her target’s Defense, spend 1 mote and 1 anima. Declare a different target and roll a ranged attack against that target instead. The redirected attack may target objects in the environment as well as other combatants. This attack cannot be modified by Charms.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [191]
+  },
+  {
+    "name": "PHANTOM ARROW",
+    "ability": ["Ranged Combat"],
+    "prerequisites": "Ranged Combat 2",
+    "description": "The Exalt never need fear exhausting her supply of ammunition, for her Essence is a never-ending font of it. Commit 1 mote. For as long as the mote remains committed, the Exalt draws ammunition from her anima. This reduces all Ranged Combat penalties by one, including flurry penalties, to a minimum of zero. No narrative effect can force the Exalt to be out of ammunition.",
+    "modes": [
+      {
+        "name": "Sidereal",
+        "title": "Generalized Ammunition Technique",
+        "effect": "A Sidereal may fire literally anything she can pick up from a ranged weapon. While most improvised ammunition functions as normal shots or arrows, certain things (such as a venomous snake) may have additional effects (such as poisoning the target)."
+      },
+      {
+        "name": "Solar",
+        "title": "Inexhaustible Solar Bolts",
+        "effect": "A Solar’s anima ammunition adds 1 Overwhelming, and will never strike an unintended target, dissolving into specks of light before contact."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [191]
+  },
+  {
+    "name": "REFLEX SHOT TECHNIQUE",
+    "ability": ["Ranged Combat"],
+    "prerequisites": "Ranged Combat 1",
+    "description": "The Exalt’s instincts align in a perfect moment, allowing her to take careful aim even when she doesn’t have the time to do so. Spend 1 mote. The Exalt uses her reflexive move action while simultaneously taking an aim action. This does not count as the Exalt’s Charm on that Step.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [209]
+  },
+  {
+    "name": "REVOLVING BOW DISCIPLINE",
+    "ability": ["Ranged Combat"],
+    "prerequisites": "Ranged Combat 3",
+    "description": "The Exalt fires shot after shot with focus and speed. Spend 2 motes on Step 1. After resolving a Ranged Combat attack, the character makes a second Ranged Combat attack against the same target or a different one. This attack is treated as though it were part of a flurry. The initial attack does not suffer the dice penalty.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Trance of Unhesitating Speed",
+        "effect": "The second attack is made without a dice penalty."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Trance of Unhesitating Speed",
+        "effect": "The second attack is made without a dice penalty."
+      },
+      {
+        "name": "Infernal",
+        "title": "Trance of Unhesitating Speed",
+        "effect": "The second attack is made without a dice penalty."
+      },
+      {
+        "name": "Lunar",
+        "title": "Hunter’s Eye Precision",
+        "effect": "The second attack may be substituted for any other Finesse-based combat action, instead."
+      },
+      {
+        "name": "Sidereal",
+        "title": "Every-Direction Arrow",
+        "effect": "Reduce the flurry penalty on the second attack to one die."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [209]
+  },
+  {
+    "name": "SHARPSHOOTER’S CLEVER TRICKS",
+    "ability": ["Ranged Combat"],
+    "prerequisites": "Ranged Combat 2",
+    "description": "With a flourish, the Exalt fires a shot or hurls her weapon with intent to distract. Commit 1 mote for the scene. When the Exalt purchases this Charm, choose two of its unique modes. Repurchase (Ranged Combat 4): Gain an additional mode.",
+    "modes": [
+      {
+        "name": "Universal",
+        "title": "Archer’s Keen Eye",
+        "effect": "Reduce all penalties from the environment, poor visibility, or other hazards on Ranged Combat attacks by the Exalt’s Essence, to a minimum of zero."
+      },
+      {
+        "name": "Universal",
+        "title": "Clever Projectile Technique",
+        "effect": "Reduce the cost of gambits using Ranged Combat by one, to a minimum of one. The Exalt gains two bonus dice to using the distract gambit with Ranged Combat."
+      },
+      {
+        "name": "Universal",
+        "title": "Sharpshooter’s Devious Ploy",
+        "effect": "The Exalt may use Build Power actions with Ranged Combat by making non-attack warning shots or distracting volleys. This action benefits from the weapon’s Overwhelming rating, but no other equipment bonuses."
+      },
+      {
+        "name": "Universal",
+        "title": "Trick Arrow Shot",
+        "effect": "The Exalt may enact the ensnare and pull gambits without a weapon that has the corresponding weapon tags. She may spend 1 mote on Step 1 to use ensnare to entangle a battle group or character with legendary size. This does not count as her Charm for that step."
+      },
+      {
+        "name": "Sidereal",
+        "title": "Strange Quiver Trick",
+        "effect": "The Sidereal transforms her ammunition midflight, granting it two of the following tags: artifact, disarming, flame, piercing, pulling, or powerful. The Sidereal may commit 1 mote to gain this effect indefinitely but chooses a tag up front."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [209]
+  },
+  {
+    "name": "STREAMING ARROW STANCE",
+    "ability": ["Ranged Combat"],
+    "prerequisites": "Ranged Combat 4",
+    "description": "One by one, her projectiles turn away attacks and her warning shots make enemies think twice about getting close. Commit 1 mote for the scene. While Streaming Arrow Stance is active, the Exalt calculates her Defense using Ranged Combat instead of Close Combat or Athletics. How the character does this is up to the player; perhaps she blocks with the bow itself, throws weapons to defer foes, or fires arrows that knock other projectiles out of the air, etc.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [209]
+  }
+]

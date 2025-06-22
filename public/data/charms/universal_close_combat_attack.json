@@ -1,0 +1,237 @@
+[
+  {
+    "name": "ARSENAL-SUMMONING GESTURE",
+    "ability": ["Close Combat", "Ranged Combat", "Physique"],
+    "prerequisites": "Close Combat 2 or Ranged Combat 2 or Physique 2",
+    "description": "The Exalt’s weapons and armor respond to her will, flying to her at her call. When the Exalt takes this Charm, choose whether it applies to weapons or armor. Spend 1 mote to summon your weapon or armor, or 2 motes to summon both. If the weapon or armor in question is within short range, Arsenal-Summoning Gesture is a reflexive action. If it is not, Arsenal-Summoning Gesture is a simple action. Spend 1 mote to banish your weapon or armor into Elsewhere, a non-space where your arsenal waits to be called upon as if it were in short range. Repurchase: This Charm applies to both weapons and armor.",
+    "modes": [
+      {
+        "name": "Dragon-Blooded",
+        "title": "Elemental Embodiment Expertise",
+        "effect": "A Dragon-Blood may dissolve her weapon in an embodiment of her aspect’s element. When she recalls the weapon, she may do so from any embodiment of her element within medium range, gaining a Power boost equal to her Essence."
+      },
+      {
+        "name": "Liminal",
+        "title": "Implanted Weapon Mastery",
+        "effect": "The Liminal stores her weapons within her undead frame, violently disgorging them when needed. She may take a Health level of damage while activating this Charm to gain a Power boost equal to her Essence. This damage is waived if the Liminal is in Flesh Nature."
+      },
+      {
+        "name": "Alchemical",
+        "title": "Integrated Armory Systems",
+        "effect": "Alchemicals can rapidly deploy weapons from hidden compartments, always treating Arsenal Summoning Gesture as a reflexive action."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [192]
+  },
+  {
+    "name": "DRAGON COIL TECHNIQUE",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 3",
+    "description": "The Exalt’s mighty limbs hold her opponent fast. Spend 1 mote on Step 1. Double 9s on a withering attack to initiate a grapple, gain dominance in a grapple or take the attack action while grappling an opponent. In a successful grapple initiated by Dragon Coil Technique, a grappled opponent loses two dice on attempts to escape. Repurchase: The character may initiate grapples with a weapon, so long as it has the flexible, improvised, or pulling tags.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Crashing Wave Throw",
+        "effect": "When using the throw action (p.148), the Solar may spend Power to boost the damage dice."
+      },
+      {
+        "name": "Lunar",
+        "title": "Foe-Hammer Technique",
+        "effect": "The Lunar may use the throw action to hurl a grappled target at another enemy within close range. When rolling damage dice, apply it against the Soak of both the thrown character and the target. Both characters take any damage rolled."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [192]
+  },
+  {
+    "name": "EXCELLENT STRIKE",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 3",
+    "description": "The Exalt’s strikes find their mark regardless of any obstacles. Spend 1 mote on Step 3. Double the extra successes after applying Defense but before any bonus successes are applied. Additionally, ignore penalties hindering a single Close Combat attack, excluding self-imposed penalties and penalties that cannot be removed.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Impediment to Opportunity",
+        "effect": "Add any penalties ignored by this Charm as bonuses to the attack instead."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Blade of Misfortune",
+        "effect": "Add any penalties ignored by this Charm as bonuses to the attack instead."
+      },
+      {
+        "name": "Sidereal",
+        "title": "Someone Else’s Destiny",
+        "effect": "If the attack is successful, the Sidereal may spend one additional mote to inflict any penalties she ignored through Excellent Strike on the target’s next action."
+      },
+      {
+        "name": "Infernal",
+        "title": "Agony-Empowered Strike",
+        "effect": "If the Infernal waived a three-die penalty or greater, she gains it as a dice bonus to her damage."
+      },
+      {
+        "name": "Liminal",
+        "title": "Shade-Reaping Spirit",
+        "effect": "Against undead foes, the Liminal treats ties against Defense as having a single success."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [192]
+  },
+  {
+    "name": "FISTS OF IRON TECHNIQUE",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 3",
+    "description": "The Exalt throws punches like sledgehammers and kicks like mighty pistons. At the start of any combat scene, the Exalt may choose that his unarmed attacks count as medium or heavy weapons (p. 341), rather than light. Spend 1 mote on Step 1 to change this as a reflexive action. This does not count as the Exalt’s Charm on that step. When activating this Charm, also choose one universal or melee tag to apply to the Exalt’s unarmed attacks while Fists of Iron is active, excluding artifact. The tag does not change when the weapon classification changes. This may be used during a clash.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Adamantine Fists of Battle",
+        "effect": "Spend an additional mote on activation to grant the Exalt’s unarmed attacks the artifact tag."
+      },
+      {
+        "name": "Lunar",
+        "title": "Claws of the Silver Moon",
+        "effect": "Spend an additional mote on activation to grant the Exalt’s unarmed attacks the artifact tag."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Writhing Blood Chain Technique",
+        "effect": "The Exalt’s unarmed attacks gain two additional universal or melee tags of your choice when the Charm is activated and can make attacks out to short range."
+      },
+      {
+        "name": "Infernal",
+        "title": "Vicious Devil-Arms Technique",
+        "effect": "The Exalt’s unarmed attacks gain two additional universal or melee tags of your choice when the Charm is activated and can make attacks out to short range."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [192]
+  },
+  {
+    "name": "GUARD-BREAKING TECHNIQUE",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 2",
+    "description": "Her blows send the enemy reeling. Spend 1 mote on Step 5. On a withering attack, reduce the target’s Defense by one until the start of their next turn. On a decisive attack, reduce the target’s Soak by one until the start of their next turn. If the target has Soak 6 or higher, instead halve the target’s Soak (round down). This Charm does not stack with itself.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Blinding Glare",
+        "effect": "The Solar catches light off her weapon, disorienting her foe. In addition to reducing the target’s Defense or Soak, also apply a one-success penalty to the target’s attacks until the end of their next turn."
+      },
+      {
+        "name": "Alchemical",
+        "title": "Efficient Strike Calibration",
+        "effect": "Spend an additional mote on Step 7 to add two dice to the damage of a decisive attack."
+      },
+      {
+        "name": "Lunar",
+        "title": "Foot-Trapping Counter",
+        "effect": "The target must remain in the same range band as the Lunar until the end of the Lunar’s next turn."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [193]
+  },
+  {
+    "name": "HEAVEN THUNDER HAMMER",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 5",
+    "description": "The Exalt’s blows land with devastating force, sending her enemies flying. Spend 1 mote on Step 7 of a decisive Close Combat attack. At the end of the attack, the target is knocked back one range band and falls prone. If the attack inflicted three or more levels of damage, the target is knocked back two range bands instead. This may be used during a clash.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Sledgehammer Punch",
+        "effect": "This Charm can be used with a withering Close Combat attack, counting extra successes as damage for determining knockback."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Sledgehammer Punch",
+        "effect": "This Charm can be used with a withering Close Combat attack, counting extra successes as damage for determining knockback."
+      },
+      {
+        "name": "Infernal",
+        "title": "Hot on Your Heels",
+        "effect": "The Infernal may spend one additional mote to appear at anywhere within close range of where the target lands."
+      },
+      {
+        "name": "Liminal",
+        "title": "Banishing Fist",
+        "effect": "When used against an undead character, the target must use a miscellaneous action to make a difficulty 5 Force + Integrity roll to willingly approach the Liminal. This effect lasts for the rest of the scene."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [193]
+  },
+  {
+    "name": "MANY-ATTACKS TECHNIQUE",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 3",
+    "description": "The Exalt blurs into action, attacking with a furious series of blows. Spend 2 motes on Step 1. After resolving a Close Combat attack, the character makes a second Close Combat attack against the same target or a different one. This attack is treated as though it were part of a flurry. The initial attack is not penalized.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Iron Whirlwind Attack",
+        "effect": "The second attack is made without a dice penalty."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Iron Whirlwind Attack",
+        "effect": "The second attack is made without a dice penalty."
+      },
+      {
+        "name": "Infernal",
+        "title": "Violence Begets Violence",
+        "effect": "Reduce the flurry penalty to one die. If the first attack killed the target or reduced them to a new wound penalty, the second attack gains a one-success bonus."
+      },
+      {
+        "name": "Lunar",
+        "title": "Octopus and Spider Barrage",
+        "effect": "The second attack may be substituted for any other Finesse-based combat action, instead."
+      },
+      {
+        "name": "Sidereal",
+        "title": "Harmony of Blows",
+        "effect": "The Sidereal may trade extra successes on Step 5 of the first attack for bonus dice on the second."
+      },
+      {
+        "name": "Strawmaiden Janest",
+        "title": "Busy Harvest",
+        "effect": "Janest’s mode functions as Solar mode."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [193]
+  },
+  {
+    "name": "SWIFT COUNTERATTACK",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 3",
+    "description": "Reading her enemy’s movements, the Exalt unleashes a deadly counterattack. Spend 1 mote and 1 Power on Step 8. The character makes a Close Combat counterattack targeting one enemy who attacked her this round. She must be able to strike her target within the range of her weapon. This counts towards the action limit.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Ready in Eight Directions",
+        "effect": "The Exalt instead commits 1 mote until the end of the scene and may make additional counterattacks at the cost of 2 Power each. The additional attacks do not count toward the action limit."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Hundred Razor Circle",
+        "effect": "The Exalt instead commits 1 mote until the end of the scene and may make additional counterattacks at the cost of 2 Power each. The additional attacks do not count toward the action limit."
+      },
+      {
+        "name": "Infernal",
+        "title": "Devilish Retribution",
+        "effect": "The Exalt instead commits 1 mote until the end of the scene and may make additional counterattacks at the cost of 2 Power each. The additional attacks do not count toward the action limit."
+      },
+      {
+        "name": "Lunar",
+        "title": "Foe-Baiting Sidestep",
+        "effect": "As part of the counterattack, as long as the Lunar and her target are within the same range band, she switches places with him. Lower the target’s Hardness by one, as though he had been the subject of a withering attack."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [193]
+  }
+]

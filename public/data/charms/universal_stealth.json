@@ -1,0 +1,155 @@
+[
+  {
+    "name": "A Drop Amongst the Ocean",
+    "ability": ["Stealth"],
+    "prerequisites": "Stealth 3",
+    "description": "The Exalt masks her brilliance for a time, disappearing among the crowds of mortals around her. Commit 1 mote. So long as the mote remains committed and the Exalt remains within or close to a large group of people, she becomes functionally invisible; others can see her, but pass her off as simply “a face in the crowd.” Awareness Charms and similar powers may allow others to find the Exalt, as will violent or disruptive actions, but she always receives a chance to resist their roll with Attribute + Stealth.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [214]
+  },
+  {
+    "name": "Doubt-Sealing Heist",
+    "ability": ["Stealth"],
+    "prerequisites": "Stealth 3",
+    "description": "The Exalt leaves no trace when she takes that which is not hers. Commit 1 mote when the Exalt successfully steals an object. For as long as the mote remains committed, no one will notice the stolen item is missing.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Flawless Pickpocketing Technique",
+        "effect": "An Exalt may steal something even in plain sight without being noticed. This provokes a roll off if an observer has an effect that would perfectly counter this."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Thieving Raiton Talons",
+        "effect": "An Exalt may steal something even in plain sight without being noticed. This provokes a roll off if an observer has an effect that would perfectly counter this."
+      },
+      {
+        "name": "Infernal",
+        "title": "Faster Than Sight",
+        "effect": "An Exalt may steal something even in plain sight without being noticed. This provokes a roll off if an observer has an effect that would perfectly counter this."
+      },
+      {
+        "name": "Getimian",
+        "title": "Mine By Right",
+        "effect": "Whatever a Getimian steals has always been the Getimian’s possession, and therefore no theft has taken place (though the authorities may have questions for whoever was in possession of it before, i.e., the actual owner)."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [214]
+  },
+  {
+    "name": "Evidence Placing Method",
+    "ability": ["Stealth"],
+    "prerequisites": "Stealth 4",
+    "description": "Spend 1 mote. The Exalt places a piece of physical evidence somewhere in their current location without being observed. If she is placing it on another person, gain three bonus successes on the Stealth roll.",
+    "modes": [
+      {
+        "name": "Getimian",
+        "title": "As It Always Was",
+        "effect": "Items the Getimian Exalted place have always existed; increase the difficulty of attempts to prove otherwise by the Exalt’s Essence."
+      },
+      {
+        "name": "Sidereal",
+        "title": "Impeccable Timing",
+        "effect": "The Sidereal Exalt places her evidence where it will be discovered at the worst possible moment for her target. Gain three automatic successes on a social action to influence a person or group’s attitude toward the target."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [214]
+  },
+  {
+    "name": "Flawlessly Impenetrable Disguise",
+    "ability": ["Stealth"],
+    "prerequisites": "Stealth 3",
+    "description": "The Exalt clothes herself in another’s garb or employs trickery to pass as someone she is not. Commit 1 mote when assembling a disguise. If this disguise is general (a servant, a trader, a soldier, etc.) it remains impenetrable to mortal senses for as long as the mote remains committed. Resist magical senses with Attribute + Stealth. If the disguise is of a specific person, significant characters may attempt to discover the ruse, resisted by the Exalt’s Attribute + Stealth.",
+    "modes": [
+      {
+        "name": "Infernal",
+        "title": "Eldritch Secrets Mastery",
+        "effect": "The Infernal may hide her nature as a creature of darkness while disguised."
+      },
+      {
+        "name": "Lunar",
+        "title": "Essential Mirror Nature",
+        "effect": "The Lunar copies the anima (and, if applicable, the caste mark or aspect markings) of a specific kind of Exalted. Until she uncommits this mote, her own anima and caste mark are suppressed."
+      },
+      {
+        "name": "Alchemical",
+        "title": "Guise of Humanity",
+        "effect": "While this Charm is active, the Alchemical’s implants and augmentations recede into her body and alter her skin, making her appear like the other people around her."
+      },
+      {
+        "name": "Liminal",
+        "title": "Guise of Humanity",
+        "effect": "While this Charm is active, the Liminal’s obvious undead nature becomes flush with living health, making her appear like the other people around her."
+      },
+      {
+        "name": "Solar",
+        "title": "Perfect Mirror",
+        "effect": "A Solar may commit 2 motes. Under magical scrutiny, she creates a false Essence rating, may hide her nature as a Solar Exalt, and may model small supernatural details, such as glowing skin, crystalline hair, or dragon eyes."
+      },
+      {
+        "name": "Sidereal",
+        "title": "Masque of the Uncanny",
+        "effect": "At Essence 3, a Sidereal may commit an additional mote to choose a type of spirit, ghost, Fair Folk, or other Exalted as her disguise, gaining a three-success bonus to pass herself off accordingly. Her Charms, anima, and other aesthetics change appearance to accommodate this deception."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [214]
+  },
+  {
+    "name": "Guiding Shadow Shroud",
+    "ability": ["Stealth"],
+    "prerequisites": "Stealth 3",
+    "description": "Commit 1 mote. The Exalt may activate her Stealth Excellency, Perfect Shadow Stillness, or similar self-only Stealth Charms on behalf of other characters, helping them to move undetected. If they stay within close range of the Exalt, they reduce penalties to Stealth rolls by two. Motes spent on any self-only Stealth Charm used on behalf of an ally do not increase the character’s anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [214]
+  },
+  {
+    "name": "Perfect Shadow Stillness",
+    "ability": ["Stealth"],
+    "prerequisites": "Stealth 2",
+    "description": "Quiet the breath. Quiet the heart. Be still. Be silent. The Exalt doubles 9s on all Stealth rolls to remain undetected. If she didn’t move on her last turn, she doubles 8s instead. This includes the outmaneuver Build Power action.",
+    "modes": [
+      {
+        "name": "Abyssal",
+        "title": "Quiet as Death",
+        "effect": "While in darkness, the Abyssal doubles 8s, or 7s if she didn’t move."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [215]
+  },
+  {
+    "name": "Seasoned Criminal Method",
+    "ability": ["Stealth"],
+    "prerequisites": "Stealth 2",
+    "description": "The Exalt steps into the shadowy realm of the criminal underworld, wearing deception like a cloak. Commit 1 mote and choose one of the following modes. Special: The character gains all of the modes attached to this Charm upon purchase.",
+    "modes": [
+      {
+        "name": "Universal",
+        "title": "Familiarity",
+        "effect": "Appear to be a member of a criminal organization, allowing her to use any appropriate Intimacies to leverage against members of the organization."
+      },
+      {
+        "name": "Universal",
+        "title": "Dissonance",
+        "effect": "Officials attempting to identify or track the Exalt reduce their Awareness and Embassy pools by two."
+      },
+      {
+        "name": "Universal",
+        "title": "Vulnerability",
+        "effect": "Appear vulnerable, attracting those who would take advantage. Lower the target’s Resolve by one whenever you leverage your vulnerability."
+      },
+      {
+        "name": "Universal",
+        "title": "Receptivity",
+        "effect": "Appear to be an interested buyer or patron of criminal activities (drug buyer or seller, gambler, etc.). Others will offer appropriate information regarding such activities when asked."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [215]
+  }
+]

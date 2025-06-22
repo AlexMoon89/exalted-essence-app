@@ -1,0 +1,72 @@
+[
+  {
+    "name": "MASTER PHYSICIAN TECHNIQUE",
+    "ability": ["Sagacity", "Medicine"],
+    "prerequisites": "Sagacity 3",
+    "description": "Through efficacious treatments, the Exalt may tend grievous injuries and defeat pestilences. Commit 1 mote for the duration of treatment. Using appropriate tools, the Exalt may spend a scene treating a patient, accomplishing one of the following effects:\n• Treat a diagnosed disease. Treat as a venture with three obstacles and a time scale of three sessions or scenes of downtime. Mundane diseases are typically difficulty 3, while particularly deadly, esoteric, or supernatural diseases may be difficulty 5 to achieve the same effect. Some supernatural diseases such as the Great Contagion may not be treated by this Charm.\n• Treat injuries. Make a Sagacity roll with double 9s against difficulty equal to the total levels of damage in their patient’s Health track. Success allows the patient to treat the scene as if it were a recovery scene and regain all lost Health levels. This may heal aggravated damage.\n\nBody-Sculpting Essence Method (Upgrade, Sagacity 5, Essence 3): The Exalt may restore a patient to health in the time it takes to lace boots. Complete a treatment action which would take a scene in a handful of moments. Once per story, unless reset by treating injuries or disease without using this upgrade.\n\nBody-Purifying Admonitions (Upgrade, Sagacity 4): Using precision strikes to their patient’s pressure points, the Exalt may force deadly poison from the body. Spend 1 mote. As a simple action, the Exalt nullifies a mundane poison hazard’s damage to immediately cure a patient receiving treatment. Against supernatural and esoteric poisons, she must make a Sagacity roll with a difficulty equal to the hazard’s damage rating. Failure refunds the mote.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Plague-Banishing Incitation",
+        "effect": "The Exalt demands the malaise leave the patient’s body, initiating a miraculous recovery. When treating a diagnosed disease, spend an additional mote. The Exalt immediately cures the disease allowing the patient to recover by the next scene."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Gaia’s Bounty",
+        "effect": "The Exalt adds two automatic successes when using medicinal herbs or exotic flora as tools to treat her patients."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Plague-Halting Gesture",
+        "effect": "Spend 1 mote. The Exalt may choose to immediately halt the progress of a disease, rendering it dormant rather than cure it. For the rest of the story, they may reflexively resume its effects on the target at will."
+      },
+      {
+        "name": "Lunar",
+        "title": "Plague-Devouring Kiss",
+        "effect": "The Exalt devours a malaise afflicting their patient. Spend 1 mote to instantly cure a mundane disease by transferring it onto themself."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [213]
+  },
+  {
+    "name": "FLAWLESS DIAGNOSIS TECHNIQUE",
+    "ability": ["Sagacity"],
+    "prerequisites": "Sagacity 3",
+    "description": "The Exalt’s expertise reveals the truths of bodies living and dead. By examining a subject closely, the Exalt may flawlessly diagnose what ails them, or discern what lead to their death. Spend 1 mote as a simple action. Within moments, the Exalt may automatically diagnose a mundane illness, allowing her to determine what the illness is, its typical symptoms, and whether it is supernatural or not. For unknown, esoteric, or supernatural illnesses, make a Sagacity roll for the same result. Although they may not always know what disease their patient carries, the Exalt will never misdiagnose it.\n\nAlternatively, the Exalt may use this Charm while examining a corpse, allowing her to automatically determine how recently they died, the cause of death, or other unusual qualities of the corpse. If the corpse is unusual, tampered with, or slain through esoteric means, the Exalt must make a Sagacity roll to determine the same result. If applicable, the Exalt gains her Essence in bonus dice on the next roll to treat the diagnosed illness, or to further investigate the corpse.",
+    "modes": [
+      {
+        "name": "Abyssal",
+        "title": "Deathbringer’s Understanding",
+        "effect": "The Exalt never needs to roll to determine cause of death."
+      },
+      {
+        "name": "Liminal",
+        "title": "Postmortem Analysis",
+        "effect": "The Exalt never needs to roll to determine cause of death."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "WELLNESS-RESTORING MEDITATION",
+    "ability": ["Sagacity"],
+    "prerequisites": "Sagacity 5",
+    "description": "Through a regimen of therapeutic treatments and excellent care, the Exalt may help their patients recover from even the most difficult injuries. Commit 1 mote. Over the course of three recovery scenes, the Exalt may assist a patient in recovering from a dramatic injury, either through miraculous restoration or wellness training to help the patient incorporate their disability into their daily life. A patient blinded in battle might grow accustomed to operating without sight, or have his eyesight restored through efficacious treatments. The Exalt must dedicate a few hours of downtime per recovery scene to treating the dramatic injury with the appropriate tools or description.",
+    "modes": [
+      {
+        "name": "Dragon-Blooded",
+        "title": "Rebirth of Flesh and Ivy",
+        "effect": "Ivy and vines spring from the Exalt’s anima to set broken limbs and grow casts of bark upon the skin. Scars resemble wood more than flesh, with strands of green woven into tissue. The Dragon-Blood may apply this Charm to up to her Essence in additional Hearthmates."
+      },
+      {
+        "name": "Infernal",
+        "title": "Price of Mercy",
+        "effect": "The Infernal may commit an additional mote to grant the target demonic mutations that obviate a dramatic wound, adjusting to these new limbs in a single recovery scene. If they accept, they are in the Infernal’s debt and cannot outright refuse her next significant request."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [231]
+  }
+]

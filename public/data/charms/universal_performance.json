@@ -1,0 +1,128 @@
+[
+  {
+    "name": "DISTRACTING PATTER TECHNIQUE",
+    "ability": ["Performance"],
+    "prerequisites": "Performance 3 or Stealth 2",
+    "description": "The Exalt’s engaging banter lets her accomplish stealthy feats in plain sight. Every gesture she makes serves the story she’s telling; while the crowd’s eyes are on her left hand, her right tucks a pilfered object up her sleeve. Commit 1 mote. The Exalt intentionally draws attention to herself — making a speech, telling an involved story, or reciting an epic poem. For the duration of the scene, reduce the difficulty of her Stealth rolls by 3. If purchased as a Performance Charm, reduce the difficulty of her allies’ Stealth rolls instead.",
+    "modes": [
+      {
+        "name": "Dragon-Blooded",
+        "title": "Partners in Crime",
+        "effect": "The Dragon-Blood keeps the crowd’s attention so her partner can do the sneaking. Commit 1 mote and add the Exalt’s Performance to Stealth rolls made by her Hearthmates for the duration of the scene. This does not count towards their dice limit."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [231]
+  },
+  {
+    "name": "FLAWLESS BRUSH DISCIPLINE",
+    "ability": ["Performance"],
+    "prerequisites": "Performance 2",
+    "description": "The Exalt may quickly compose a fiery letter or a lengthy manifesto in perfect, elegant script. Gain double 9s on a single written Performance action. This rapidly decreases the time it takes to produce a written work to instantly if it would take minutes or over the duration of a dramatic scene if it would take longer. The Exalt may copy written work with the same speed.",
+    "modes": [
+      {
+        "name": "Universal",
+        "title": "Signature-Stealing Calligraphy (Upgrade, Performance 4)",
+        "effect": "As long as the Exalt has access to at least one example of the target’s writing, they may make a Performance roll to make a forgery of their writing. If the writing contains social influence, it uses the same roll. The forgery may only be detected by superhuman or magical senses at difficulty 7."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "GREATNESS-INSPIRING AURA",
+    "ability": ["Performance"],
+    "prerequisites": "Performance 4 or Presence 4",
+    "description": "When the Exalt walks into danger undaunted, they cannot help but uplift any who follow. Commit 1 mote for the scene. The Exalt adds a two-success bonus to inspire rolls to Build Power. Allies within short range who have a positive Intimacy toward the Exalt may use her Performance or Presence when making their own inspire actions, drawing on the Exalt’s own eloquence and bearing.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "MASTERFUL PERFORMANCE EXERCISE",
+    "ability": ["Performance"],
+    "prerequisites": "Performance 2",
+    "description": "The Exalt instills her performance with Essence, touching the hearts of all who see and hear. Commit 1 mote. For the duration of her performance, anyone who wishes to interrupt or otherwise interfere with the Exalt doing so must accept a hard bargain. In addition, the Exalt doubles 9s for any rolls relevant to the performance or influencing others with it. The effects last for as long as the mote is committed.",
+    "modes": [
+      {
+        "name": "Universal",
+        "title": "Repurchase",
+        "effect": "This Charm may be used with writing, the following effects replacing the above: The Exalt’s calligraphy and style are powerful works of art, inspiring respect and awe for the word itself. Any character who wishes to tear down or otherwise deface the Essence-imbued message must accept a hard bargain to do so."
+      },
+      {
+        "name": "Solar",
+        "title": "Artful Disengagement",
+        "effect": "At Essence 3, Solar may instead commit 2 motes to activate this Charm during combat. Anyone who resists may continue to attack her or her allies only if they incorporate their actions into the Solar’s performance. This inflicts a two-dice penalty to their actions. If they refuse to perform, they may make attack actions but cannot gain Power."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "MEMETIC DOGMA DISCIPLINE",
+    "ability": ["Performance"],
+    "prerequisites": "Performance 3",
+    "description": "The Exalt gives a fiery speech, her Essence subtly influencing and directing her audience to spread the word. Spend 1 mote when making a social influence roll as part of a Performance action. Characters she successfully influences add the Exalt’s Essence in extra successes with which to purchase influence effects when spreading the Exalt’s message to others. They may add these extra successes to appropriate venture rolls, as well.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [203]
+  },
+  {
+    "name": "POETIC EXPRESSION STYLE",
+    "ability": ["Performance"],
+    "prerequisites": "Performance 3",
+    "description": "Through careful expressions and subtle movements, the Exalt may communicate through body language alone. Commit 1 mote for the scene. For each action the mote remains committed, the Exalt may perfectly convey a single sentence to their target nonverbally, such as “open the gates now, or I will return with an army,” though this does not allow for poesy, such as “Fill your hands with steel and prepare to dance, you devils!” Suffer a two-success penalty to social influence rolls done this way.",
+    "modes": [
+      {
+        "name": "Lunar",
+        "title": "Glance Oration Technique",
+        "effect": "Communicate across a language barrier or in the form of an animal using this Charm. This removes the success penalty."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Speech Without Words",
+        "effect": "This Charm’s effects may be utilized by all Hearthmates and the Dragon-Blood’s Essence in additional characters to communicate with one another at no extra cost. This signaling may not be noticed without superhuman or magical senses contested by the Exalt’s Attribute + Integrity."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [231]
+  },
+  {
+    "name": "SPIRIT-MANIFESTING WORD",
+    "ability": ["Performance"],
+    "prerequisites": "Performance 4 or Sagacity 4",
+    "description": "The Exalt calls upon her status as one of the chosen, and demands a spirit appear. Spend 1 mote. The Exalt uses an influence action to demand a spirit materialize, treating the difficulty of the Performance or Sagacity roll increased by the spirit’s Essence rather than Intimacies or Virtues. If successful, the target manifests for the remainder of the scene. Alternatively, a single spirit ally may effortlessly materialize at no cost or without its own magic for one scene.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "SOUL-STIRRING CANTATA",
+    "ability": ["Performance"],
+    "prerequisites": "Performance 2",
+    "description": "The Exalt’s music invigorates the hearts of those around her, urging them to bold action. Commit 1 mote. Treat all Minor Intimacies belonging to characters who can hear the Exalt as Major Intimacies instead for the duration of the Exalt’s performance. All influenced characters are additionally immune to fear-based effects. While using this Charm, the Exalt can’t flurry; she must focus on her art.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "SUBTLE EXPRESSION METHOD",
+    "ability": ["Performance"],
+    "prerequisites": "Performance 2",
+    "description": "The Exalt knows how to conceal ideas behind innocuous words and incomprehensible ciphers, on the page and in speech. Spend 1 mote. Through writing or speaking for the duration of the scene, the Exalt may speak in code, which can only be understood by a single recipient. Other readers or listeners either perceive innocuous statements or an incomprehensible cipher. Attempts to decipher the message may be contested by the Exalt’s Attribute + Performance roll with her Essence in automatic successes. Alternatively, anyone who shares a designated Principle with the Exalt may understand their messages.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Letter-Within-A-Letter Technique",
+        "effect": "The Exalt’s communiques may only be deciphered by magic."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Cryptic Essence Cipher",
+        "effect": "The Exalt may allow any of their Hearthmates to automatically understand their communications."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [231]
+  }
+]

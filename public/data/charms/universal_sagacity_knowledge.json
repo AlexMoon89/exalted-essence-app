@@ -1,0 +1,110 @@
+[
+  {
+    "name": "ARCHIVE MIND MENTALITY",
+    "ability": ["Sagacity"],
+    "prerequisites": "Sagacity 3",
+    "description": "The Exalt’s mind is as an enormous library, each moment of her life and each lesson she has learned assiduously filed and tracked like so many precious volumes. The Exalt’s memory is perfect, allowing her to recall anything she has witnessed with absolute clarity. This requires only a moment’s concentration, though attempts to reexamine past events for clues may require a roll. The player asks the Storyteller for details her character may remember. She may also use Stunt dice to edit in details she thinks are appropriate.",
+    "modes": [
+      {
+        "name": "Lunar",
+        "title": "Counting the Elephant’s Wrinkles",
+        "effect": "A Lunar is always aware if a memory she recounts has been tampered with."
+      },
+      {
+        "name": "Dragon-Blooded or Liminal",
+        "title": "Ancestral Recall",
+        "effect": "A Dragon-Blooded may spend an hour of downtime in meditation to recall events from their ancestors’ lives, though these details are often hazy. Liminal Exalted may commune with any ghost to tap into the memories they had in life. Use a dramatic scene."
+      },
+      {
+        "name": "Sidereal",
+        "title": "The Benefit of Hindsight",
+        "effect": "A Sidereal may make changes to scenes they recall by dramatic editing with Stunt dice. This does not materially alter the flow of a scene’s events, nor may they harm others within the dream."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [210]
+  },
+  {
+    "name": "ESSENCE-LENDING METHOD",
+    "ability": ["Sagacity"],
+    "prerequisites": "Sagacity 1",
+    "description": "With a touch, the Exalt may share their spiritual reserves with allies. Spend any number of motes. The Exalt transfers these motes from their pool to a person they are touching. If the target cannot accept all the motes transferred, they have until their next action to spend them before they dissipate. Temporary motes do not increase the target’s anima rating.",
+    "modes": [
+      {
+        "name": "Liminal",
+        "title": "Wound-Accepting Technique",
+        "effect": "For an additional mote, the Exalt may instead heal up to her Essence in damaged Health levels in her target, taking that damage herself. It is possible to be Incapacitated by this Charm."
+      },
+      {
+        "name": "Solar",
+        "title": "Essence Font Technique",
+        "effect": "The Exalt generates three additional motes which may be transferred to the target in place of their own. These motes dissipate immediately if not transferred."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Dragon-Kin Empowerment",
+        "effect": "This Charm extends to short range with Hearthmates. The Dragon-Blood may instead transfer 1 anima for every 2 motes spent. A target cannot gain temporary anima."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Essence-Draining Method",
+        "effect": "The Exalt may drain up to her Essence in motes from their target instead. In combat, declare this Charm on Step 1. This requires an unarmed Close Combat attack."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [210]
+  },
+  {
+    "name": "HARMONIOUS ACADEMIC METHODOLOGY",
+    "ability": ["Sagacity"],
+    "prerequisites": "Sagacity 3",
+    "description": "The Exalt is a master instructor able to pass on esoteric truths and incredible talents to their students. They pass on knowledge that would otherwise take years to learn. Commit 2 motes for the duration when teaching Storyteller characters. Treat as a special Research venture with three obstacles and a time scale of scenes each representing a couple days of instruction. Upon completion, the Exalt may select one of the following options for all students: Move a single topic from the target’s Secondary Pool to Primary; Add an additional topic to their Secondary Pool based on one of the Exalt’s Abilities. Additionally, the Exalt may give the target a Minor Intimacy towards the Exalt or change the target’s Minor Virtue to one of the Exalt’s own Virtues. This Charm may only affect the same students once per story. The Exalt may instruct up to twice her Essence in students.",
+    "modes": [
+      {
+        "name": "Liminal",
+        "title": "Flowing Mind Practice",
+        "effect": "The Exalt may select two options with each activation."
+      },
+      {
+        "name": "Solar",
+        "title": "Legendary Scholar’s Curriculum",
+        "effect": "The Exalt may instruct a group of students equal to the Exalt’s Essence plus Sagacity."
+      },
+      {
+        "name": "Lunar",
+        "title": "Tale-Spinning Mastery",
+        "effect": "The Exalt may instruct a group of students equal to the Exalt’s Essence plus Finesse if they share a common culture."
+      },
+      {
+        "name": "Sidereal",
+        "title": "Professorial Mien",
+        "effect": "The Exalt may select an additional option so long as the student’s Sagacity (or appropriate pool) is less than hers."
+      },
+      {
+        "name": "Getimian",
+        "title": "Red-and-Green Reality Intuition",
+        "effect": "The Exalt may select an additional option so long as the student’s Sagacity (or appropriate pool) is less than hers."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [211]
+  },
+  {
+    "name": "SPIRIT-CUTTING GLANCE",
+    "ability": ["Sagacity"],
+    "prerequisites": null,
+    "description": "See p. 190.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [190]
+  },
+  {
+    "name": "SWIFT-HANDS CASTING",
+    "ability": ["Sagacity"],
+    "prerequisites": "Sagacity 2",
+    "description": "The Exalt’s arcane gestures do not distract her from speaking or performing other tasks. She can easily carry on a conversation or make a battle plan while shaping her spell. The Exalt may flurry Focus Will so long as it is with any non-attack action.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [212]
+  }
+]

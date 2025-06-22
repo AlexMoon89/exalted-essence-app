@@ -1,0 +1,153 @@
+[
+  {
+    "name": "AS THE CROW FLIES",
+    "ability": ["Navigate"],
+    "prerequisites": "Navigate 1",
+    "description": "The Exalt always knows the shortest mundane route between where she is and where she wants to be, even if unconventional. She may cut corners a number of times equal to her Essence during a travel venture without suffering the consequences.",
+    "modes": [
+      {
+        "name": "Liminal",
+        "title": "Wandering Outcast Journey",
+        "effect": "Commit 1 mote. In shadowlands or the Underworld, the Liminal may cut corners one additional time above her Essence without suffering consequences."
+      },
+      {
+        "name": "Sidereal",
+        "title": "Finding the Golden Path",
+        "effect": "Commit 1 mote. Name a destination on the same plane of existence. When journeying toward it, the time scale is reduced by one step."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "BEAST-UPLIFTING HARMONY",
+    "ability": ["Navigate"],
+    "prerequisites": "Familiar Merit, Navigate 3",
+    "description": "Enhances the Exalt’s familiar with up to Essence number of benefits, such as improving dice pools, speech, health levels, magical traits. The charm can be repurchased for additional familiars.",
+    "modes": [
+      {
+        "name": "Sidereal",
+        "title": "Godly Companion",
+        "effect": "The familiar becomes a minor god and may travel between Yu-Shan and Creation to deliver/retrieve messages or objects. Gains dematerialize, immortal (god), and magical beast qualities."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "CALLING THE RIDER’S COMPANION",
+    "ability": ["Navigate"],
+    "prerequisites": "Navigate 3",
+    "description": "Spend 1 mote to summon a mount, which arrives quickly, usually by end of scene. Reduces environmental penalties to riding by two. If the mount is a familiar, it appears instantly. Mount lasts until session end.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "FATHOMS-FED SPIRIT",
+    "ability": ["Navigate"],
+    "prerequisites": "Navigate 1",
+    "description": "Removes venture obstacles to ports the Exalt has been to. Cannot be knocked overboard. May commit 1 mote to reduce sailing hazards by Essence while engaged in sailing.",
+    "modes": [
+      {
+        "name": "Getimian",
+        "title": "Once-Visited Port Recollection",
+        "effect": "May treat any port visited in Origin as known, reducing the journey’s time scale by 1."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [201]
+  },
+  {
+    "name": "HARDSHIP-SURVIVING SPIRIT",
+    "ability": ["Navigate", "Physique"],
+    "prerequisites": "Navigate 2 or Physique 2",
+    "description": "Commit 1 mote to double 9s on resisting mundane heat/cold. Automatically finds provisions for herself and others regardless of climate.",
+    "modes": [
+      {
+        "name": "Lunar",
+        "title": "Beast Hide Adaptation",
+        "effect": "While in shape of region-native animal, Lunar gets benefits of this Charm at no cost."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [201]
+  },
+  {
+    "name": "HIDDEN SHORTCUT REVELATION",
+    "ability": ["Navigate"],
+    "prerequisites": "Navigate 2",
+    "description": "Spend 1 mote to reveal location of hidden passages/portals in long range. Must still fulfill activation requirements. If hidden by flawless magic, Exalt adds Essence bonus successes to roll-off.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [182]
+  },
+  {
+    "name": "IMMORTAL MARINER’S ADVANTAGE",
+    "ability": ["Navigate"],
+    "prerequisites": "Navigate 2",
+    "description": "Commit 1 mote to gain three automatic successes on all mundane sailing tasks. Doesn’t apply to contested rolls like boarding or ramming.",
+    "modes": [
+      {
+        "name": "Sidereal",
+        "title": "Blessing the Hull",
+        "effect": "Enemies boarding must pass Fortitude + Integrity (diff. 3) or be thrown overboard; diff. 5 for supernatural beings. If thrown, gain 1 anima."
+      },
+      {
+        "name": "Infernal",
+        "title": "Sea-Devil Insight",
+        "effect": "While on vessel, it is immune to Malfeas hazards such as acidic seas."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [202]
+  },
+  {
+    "name": "RIDER-AND-MOUNT UNITY",
+    "ability": ["Navigate"],
+    "prerequisites": "Navigate 3",
+    "description": "While mounted, Exalt may use movement and defense Charms on behalf of mount.",
+    "modes": [
+      {
+        "name": "Dragon-Blooded",
+        "title": "Great Heart Companion",
+        "effect": "The mount is immune to anima damage and counts as Hearthmate for Charm effects."
+      },
+      {
+        "name": "Solar",
+        "title": "King-of-Horses Surety",
+        "effect": "Mount cannot be knocked down; unhorse gambits cost +3 against Solar."
+      },
+      {
+        "name": "Lunar",
+        "title": "Blood-of-the-Moon Blessing",
+        "effect": "When mount is attacked, Lunar may take 1 Health level, reducing raw damage by 3 dice."
+      },
+      {
+        "name": "Sidereal",
+        "title": "Ride the Dragon",
+        "effect": "Commit 2 motes to give mount a draconic form capable of flight at double speed. Afterward it suffers -5 dice penalty until a full day’s rest."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [202]
+  },
+  {
+    "name": "SWIFT ARTILLERY TECHNIQUE",
+    "ability": ["Navigate"],
+    "prerequisites": "Navigate 4",
+    "description": "Spend 1 mote during fire ordnance action. Reduces flurry/environmental penalties by 2. Doesn’t count toward ordnance action limit. May create Essence ammo by spending 1 mote or 1 anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [202]
+  },
+  {
+    "name": "TRACKLESS REGION NAVIGATION",
+    "ability": ["Navigate"],
+    "prerequisites": "Navigate 3",
+    "description": "Commit 1 mote to reduce Navigate penalties by Essence. Always finds shelter. Gains Essence dice to overcome travel obstacles; does not count toward dice limit. Immune to injury/fatigue obstacles during travel ventures.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [202]
+  }
+]

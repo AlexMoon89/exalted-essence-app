@@ -1,0 +1,190 @@
+[
+  {
+    "name": "MORALE-BOOSTING MEAL",
+    "ability": ["Craft", "Embassy"],
+    "prerequisites": "Craft or Embassy 2",
+    "description": "The Exalt creates or orchestrates a shared meal, instilling unity and vigor. Spend 2 motes. If taken as a Craft Charm, the Exalt prepares the food. As an Embassy Charm, they guide conversation and setting. All who partake may either double 9s on a roll of their choice or start the next combat with 1 Power.",
+    "modes": [
+      {
+        "name": "Alchemical",
+        "title": "Shared Network",
+        "effect": "Alchemicals sharing the meal may reflexively exchange Charms as per the Rite of Reconfiguration or reflexively gain an Evocation on an ally’s artifact that also shared the meal."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Sweeten-the-Tap Method",
+        "effect": "Applies to libations. The Dragon-Blood and her Hearthmates double 9s on social influence actions for the rest of the scene."
+      },
+      {
+        "name": "Liminal",
+        "title": "Stirring Memorial Banquet",
+        "effect": "Anyone partaking doubles 9s on social influence actions involving the emotions matching the Liminal’s passive anima for the scene."
+      },
+      {
+        "name": "Infernal",
+        "title": "Poison the Well",
+        "effect": "The Infernal chooses two targets at the meal and doubles 9s on social actions increasing enmity between them for the scene."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [195]
+  },
+  {
+    "name": "CLOAKING THE WORKMAN'S TOUCH",
+    "ability": ["Craft"],
+    "prerequisites": "Craft 3",
+    "description": "Through finesse and Essence, the Exalt can conceal her workmanship. Spend 1 mote. Anyone examining the item suffers +3 difficulty on rolls to detect whether the item is crafted or how it was constructed. If used on an item also affected by Flawless Counterfeit Technique, this penalty becomes difficulty 8.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [195]
+  },
+  {
+    "name": "FLAWLESS COUNTERFEIT TECHNIQUE",
+    "ability": ["Craft", "Stealth"],
+    "prerequisites": "Craft 4 or Stealth 3",
+    "description": "Spend 1 mote to create an exact replica of a mundane item after a dramatic scene of study and crafting. The duplicate is visually indistinguishable and requires a difficulty 7 roll to detect. At Essence 2, the Exalt may infuse matching Essence, requiring a flawless magical detection to succeed instead.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [195]
+  },
+  {
+    "name": "CLEVER IMPROVISATION METHOD",
+    "ability": ["Craft"],
+    "prerequisites": "Craft 2",
+    "description": "Allows the Exalt to conjure a temporary tool from available materials without a roll, spending 1 mote. The tool exists only for the duration of the task and breaks after use unless Stunt dice are used to extend its life or enhance materials.",
+    "modes": [
+      {
+        "name": "Alchemical",
+        "title": "Efficient Improvisation of Materials",
+        "effect": "Adds gears and metal to the item. May use it up to the Exalt’s Essence additional times."
+      },
+      {
+        "name": "Liminal",
+        "title": "Contributions of Flesh",
+        "effect": "Adds sinew, bone, or hair to the item. May use it up to the Exalt’s Essence additional times."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Many-Hands Technique",
+        "effect": "If using Hearthmate components, the item lasts until the next major milestone."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [195]
+  },
+  {
+    "name": "QUICKENING THE FORGE",
+    "ability": ["Craft"],
+    "prerequisites": "Craft 3",
+    "description": "Reduces the time scale of crafting ventures by one step while 2 motes are committed.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Supreme Perfection of Style",
+        "effect": "Select one craft type; reduce time scale by two steps, minimum once per scene. Gain more specialties at Essence 3/5."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Blazing Dragon-Smith Arete",
+        "effect": "Double time reduction when working with elemental materials based on Aspect."
+      },
+      {
+        "name": "Lunar",
+        "title": "Inchoate Wonders Realized",
+        "effect": "Transforms raw materials into a usable illusionary item. The fake collapses at story’s end unless completed."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [196]
+  },
+  {
+    "name": "SUDDEN TRAP ATTACK",
+    "ability": ["Craft"],
+    "prerequisites": "Craft 3",
+    "description": "Spend 1 mote. Creates or retroactively declares a one-use trap within medium range. Traps are treated as difficulty 3–5 hazards and may cause damage or immobilize targets. Roll to escape or break free. Resettable only by successful use.",
+    "modes": [
+      {
+        "name": "Abyssal",
+        "title": "Bone-and-Sinew Contraption",
+        "effect": "Traps made from or hidden within corpses; if hidden, increase trap difficulty by one."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [196]
+  },
+  {
+    "name": "TERRAIN-ALTERING ADVANTAGE",
+    "ability": ["Craft"],
+    "prerequisites": "Craft 5",
+    "description": "Spend 1 mote on Step 1. The Exalt manipulates nearby objects or elements into environmental hazards or difficult terrain using a prepare Build Power roll with two bonus successes. These effects last one round, sustained by spending Power.",
+    "modes": [
+      {
+        "name": "Dragon-Blooded",
+        "title": "Elemental Fury",
+        "effect": "Add elemental effects to hazard. Extends duration to Essence in rounds and increases damage by 1."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [196]
+  },
+  {
+    "name": "DURABILITY-ENHANCING PROCEDURE",
+    "ability": ["Craft"],
+    "prerequisites": "Craft 3",
+    "description": "Spend 2 motes during crafting. The item becomes resistant to wear and time: Increase damage/breaking difficulty by Exalt’s Essence (min 3), and lifespan increases tenfold (e.g., food doesn’t spoil, weapons don’t dull).",
+    "modes": [
+      {
+        "name": "Abyssal",
+        "title": "Eternal Embalming Preparation",
+        "effect": "May embalm corpses against decay permanently."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [195]
+  },
+  {
+    "name": "EFFICIENT CRAFTING TECHNIQUE",
+    "ability": ["Craft"],
+    "prerequisites": "Craft 2",
+    "description": "Spend 1 mote to reduce penalties (by 3) caused by insufficient tools or workspaces during a crafting venture.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Artisan Needs No Tools",
+        "effect": "Waives all workspace/tool penalties at Essence 2."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Stone-Carving Fingers",
+        "effect": "May craft earthen materials barehanded without penalties."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [195]
+  },
+  {
+    "name": "WONDER-CRAFTING INITIATION",
+    "ability": ["Craft", "Sagacity"],
+    "prerequisites": "Craft 2 or Sagacity 2",
+    "description": "Allows crafting of artifacts. Spend 1 mote per obstacle roll in such projects. Requires a dramatic scene apprenticing to a mentor. May also be used to build manses if the character has adequate geomantic knowledge or hearthstone reference.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Strengthening Touch",
+        "effect": "Spend 1 mote when finishing an item to increase its destruction difficulty by 3 and add one obstacle to feats of strength to destroy it."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Ruin Resurrection Method",
+        "effect": "Spend 1 mote while repairing. Automatically overcomes an Excessively Damaged obstacle (difficulty up to 3). Can reconstruct from destroyed fragments."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Follow the Dragons",
+		"effect": "Through innate resonance with dragon lines, spend 1 mote while making an obstacle roll to build an elemental manse (p. 158). Whoever bears the hearthstone in an artifact may add an elemental-related effect to the hearthstone’s inherent property. For example: reducing environmental damage from magical fire-based hazards by two."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [196]
+ }
+]

@@ -2,21 +2,41 @@
 
 import { useState, useEffect } from 'react';
 import { Sparkle, Sparkles, X } from 'lucide-react';
-import { wikiEntries, type WikiEntry } from '@/lib/wikiData';
+import { type WikiEntry, loadUniversalCharmsAsWikiEntries } from '@/lib/wikiData';
 
 const categories = ['Charms', 'Martial Arts', 'Spells', 'Merits', 'Artifacts', 'Resources'];
 
 export default function WikiPage() {
   const [selectedCategory, setSelectedCategory] = useState('Charms');
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedAbility, setSelectedAbility] = useState<string | null>(null);
   const [openEntry, setOpenEntry] = useState<WikiEntry | null>(null);
+  const [entries, setEntries] = useState<WikiEntry[]>([]);
 
-  const filteredEntries = wikiEntries
-    .filter((entry) => entry.category === selectedCategory)
-    .filter((entry) =>
-      entry.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      entry.description.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+  useEffect(() => {
+    async function loadData() {
+      const charms = await loadUniversalCharmsAsWikiEntries();
+      setEntries(charms);
+    }
+    loadData();
+  }, []);
+
+  const allAbilities = Array.from(
+    new Set(entries.flatMap((entry) => entry.ability?.split(',').map((a) => a.trim()) || []))
+  ).sort();
+
+  const filteredEntries = entries
+  .filter((entry) =>
+    (entry.category ?? '').toLowerCase() === selectedCategory.toLowerCase()
+  )
+  .filter((entry) =>
+    entry.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    entry.description.toLowerCase().includes(searchQuery.toLowerCase())
+  )
+  .filter((entry) => {
+    if (!selectedAbility) return true;
+    return entry.ability?.includes(selectedAbility);
+  });
 
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-6 text-white">
@@ -26,11 +46,15 @@ export default function WikiPage() {
         <Sparkles className="w-10 h-10 text-aura-solar" />
       </h1>
 
+      {/* Category Tabs */}
       <div className="flex flex-wrap gap-4 justify-center bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text">
         {categories.map((cat) => (
           <button
             key={cat}
-            onClick={() => setSelectedCategory(cat)}
+            onClick={() => {
+              setSelectedCategory(cat);
+              setSelectedAbility(null); // Reset ability filter
+            }}
             className={`px-4 py-2 rounded-full ${
               selectedCategory === cat
                 ? 'bg-ice text-steel font-semibold'
@@ -42,6 +66,7 @@ export default function WikiPage() {
         ))}
       </div>
 
+      {/* Search Bar */}
       <div className="text-center">
         <input
           type="text"
@@ -55,6 +80,36 @@ export default function WikiPage() {
         </p>
       </div>
 
+      {/* Ability Filters */}
+      {selectedCategory === 'Charms' && allAbilities.length > 0 && (
+        <div className="flex flex-wrap justify-center gap-2 mt-4">
+          <button
+            onClick={() => setSelectedAbility(null)}
+            className={`px-3 py-1 rounded-full text-sm ${
+              selectedAbility === null
+                ? 'bg-aura-solar text-background font-bold'
+                : 'bg-muted text-muted-foreground hover:bg-ice hover:text-aura-lunar'
+            }`}
+          >
+            All Abilities
+          </button>
+          {allAbilities.map((ability) => (
+            <button
+              key={ability}
+              onClick={() => setSelectedAbility(ability)}
+              className={`px-3 py-1 rounded-full text-sm ${
+                selectedAbility === ability
+                  ? 'bg-aura-solar text-background font-bold'
+                  : 'bg-muted text-muted-foreground hover:bg-ice hover:text-aura-lunar'
+              }`}
+            >
+              {ability}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* Grid of Entries */}
       <div className="pt-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
           {filteredEntries.length === 0 && (
@@ -69,7 +124,7 @@ export default function WikiPage() {
               className="cursor-pointer bg-steel/30 p-4 rounded-lg shadow hover:bg-steel/50 transition"
             >
               <h3 className="text-xl text-aura-solar font-semibold">{entry.name}</h3>
-              <p className="text-sm text-aura-abyssal">{entry.description}</p>
+              <p className="text-sm text-aura-abyssal line-clamp-3">{entry.description}</p>
               <p className="text-xs mt-2 text-gray-400">Tags: {entry.tags.join(', ')}</p>
               <p className="text-xs text-gray-500">
                 Source: {entry.sourcebook} – {entry.pageRef}
@@ -79,6 +134,7 @@ export default function WikiPage() {
         </div>
       </div>
 
+      {/* Modal */}
       {openEntry && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 md:p-8">
           <div className="bg-background dark:bg-dark-background rounded-lg shadow-xl w-full max-w-2xl md:max-w-3xl max-h-[90vh] overflow-y-auto relative">
@@ -102,7 +158,28 @@ export default function WikiPage() {
                 )}
               </div>
 
-              <p className="text-gray-300 text-lg">{openEntry.description}</p>
+              <div className="space-y-4 text-gray-300 text-lg">
+                <p>{openEntry.description}</p>
+
+                {openEntry.full?.prerequisites && (
+                  <p><strong>Prerequisites:</strong> {openEntry.full.prerequisites}</p>
+                )}
+
+                {(openEntry.full?.modes?.length ?? 0) > 0 && (
+                  <div>
+                    <strong>Modes:</strong>
+                    <ul className="mt-2 space-y-1 list-disc list-inside text-sm text-aura-lunar">
+                      {openEntry.full?.modes?.map(
+                        (mode: { name: string; title: string; effect: string }, i: number) => (
+                          <li key={i}>
+                            <strong>{mode.name} – {mode.title}:</strong> {mode.effect}
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  </div>
+                )}
+              </div>
 
               {openEntry.tags.length > 0 && (
                 <div>

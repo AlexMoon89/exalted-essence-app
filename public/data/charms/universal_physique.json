@@ -1,0 +1,225 @@
+[
+  {
+    "name": "ARMORED SCOUT’S INVIGORATION",
+    "ability": ["Physique (Might)"],
+    "prerequisites": "Physique 3",
+    "description": "The Exalt’s impressive strength and stamina makes her at home in her armor, even in the direst circumstances. An Exalt with this Charm no longer suffers a mobility penalty from wearing armor and is as comfortable in full plate as they are in silken pajamas. They suffer no additional penalties for taking physical actions (such as running, climbing, or swimming) while wearing armor.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [204]
+  },
+  {
+    "name": "TEN OX MEDITATION",
+    "ability": ["Physique (Might)"],
+    "prerequisites": "Physique 2",
+    "description": "Pouring Essence into her muscles, the Exalt performs impossible physical feats. Spend 1 mote. When the character attempts a feat of strength, reduce the difficulty of the roll by her Essence plus one, to a minimum of one. If this reduces the difficulty below the need to roll, the attempt automatically succeeds.",
+    "modes": [
+      {
+        "name": "Universal",
+        "title": "Thunder’s Might",
+        "effect": "The Exalt may spend an additional mote to attempt a feat of strength that would normally require a venture in a single roll instead."
+      },
+      {
+        "name": "Universal",
+        "title": "Triumph-Forged God Body",
+        "effect": "The Exalt may spend an additional mote to perform a single Extreme feat of Strength without needing to roll."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [204]
+  },
+  {
+    "name": "BODY MENDING MEDITATION",
+    "ability": ["Physique (Resistance)"],
+    "prerequisites": "Physique 4",
+    "description": "Circulating Essence through her body, the Exalt wills herself to heal. Commit 1 mote. The Exalt automatically heals one level of damage each at the start and end of each scene, regardless of her activity or exertion. Once per scene, she may spend 2 motes when incapacitated to heal one level of damage, returning to the fight.",
+    "modes": [
+      {
+        "name": "Lunar",
+        "title": "Halting the Scarlet Flow",
+        "effect": "Reduce the cost to heal and return to a fight to 1 mote."
+      },
+      {
+        "name": "Infernal",
+        "title": "Thirst for Vengeance",
+        "effect": "When the Exalt spends motes to return to the fight, she also gains 2 Power."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [205]
+  },
+  {
+    "name": "CAPTIVATING BATTLEFIELD DISPLAY",
+    "ability": ["Physique (Resistance)"],
+    "prerequisites": "Physique 4 or Presence 4, Essence 2",
+    "description": "The Exalt’s incredible display draws all eyes — and weapons — to him. Spend 1 mote on Step 2 of an attack targeting an ally. The target’s attack now hits the Exalt instead. The Exalt may spend an additional mote to allow that ally to attack the target on step 8 of this resolution as a counterattack, even if she’s already acted this round. This extra attack does not count towards the action limit. The ally may not augment this attack with Charms.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [205]
+  },
+  {
+    "name": "IRON KETTLE BODY",
+    "ability": ["Physique (Resistance)"],
+    "prerequisites": "Physique 2",
+    "description": "The Exalt braces herself and endures an otherwise lethal attack. Spend 1 or 2 motes on Step 7. Against this attack, increase the Exalt’s Soak by 1 or 2 depending on the motes spent. The Exalt may also apply her Soak against environmental damage effects that were created by a Charm or other magic.",
+    "modes": [
+      {
+        "name": "Universal",
+        "title": "Repurchase",
+        "effect": "At Essence 2, the Exalt may commit the motes instead and enjoy the Soak increase for the duration of the scene."
+      },
+      {
+        "name": "Solar",
+        "title": "Adamant Skin Concentration",
+        "effect": "The Exalt may apply her increased Soak against any environmental damage regardless of source."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Injury Absorbing Method",
+        "effect": "The Exalt may apply her increased Soak against any environmental damage regardless of source."
+      },
+      {
+        "name": "Infernal",
+        "title": "Hardened Devil Body",
+        "effect": "The Exalt may apply her increased Soak against any environmental damage regardless of source."
+      },
+      {
+        "name": "Lunar",
+        "title": "Stone Rhino’s Skin",
+        "effect": "Increase the Lunar’s Soak by two without spending an additional mote."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [205]
+  },
+  {
+    "name": "MALADY-RESISTING MEDITATION",
+    "ability": ["Physique (Resistance)"],
+    "prerequisites": "Physique 2",
+    "description": "The Exalt’s Essence pervades her body, hardening her against toxins and disease. Commit 1 mote. The Exalt gains her Essence in dice to all rolls to resist poisons, venoms, infectious diseases, and similar maladies. In addition, she may accept a hard bargain to temporarily nullify the effects of whatever she suffers from for her Essence in turns.",
+    "modes": [
+      {
+        "name": "Universal",
+        "title": "Immunity to Everything Technique",
+        "effect": "Reduce the difficulty to resist all mundane diseases, venoms, toxins, etc., to 1. If the character’s total dice pool would automatically succeed, she does not need to roll. The difficulty of all other maladies is reduced by the Exalt’s Essence, but must still be rolled, unless this reduced the difficulty to 0."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [205]
+  },
+  {
+    "name": "OX BODY TECHNIQUE",
+    "ability": ["Physique (Resistance)"],
+    "prerequisites": "None",
+    "description": "By virtue of her Exalted health, the character endures greater levels of injury. The Exalt increases her base Soak by one. She also gains an additional −1 Health level.",
+    "modes": [
+      {
+        "name": "Lunar",
+        "title": "Mode",
+        "effect": "The Exalt gains an additional −1 and −2 Health level. Lunars may purchase this a number of times equal to Fortitude."
+      },
+      {
+        "name": "Infernal",
+        "title": "Mode",
+        "effect": "The Exalt gains an additional −1 and −2 Health level."
+      },
+      {
+        "name": "Alchemical",
+        "title": "Mode",
+        "effect": "The Exalt gains an additional 0 Health level. This may be purchased a number of times equal to Fortitude."
+      },
+      {
+        "name": "Liminal",
+        "title": "Mode",
+        "effect": "The Exalt gains an additional 0 Health level. This may be purchased a number of times equal to Fortitude."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Mode",
+        "effect": "The Exalt gains their choice of an additional 0 or two −1 Health levels."
+      },
+      {
+        "name": "Solar",
+        "title": "Mode",
+        "effect": "The Exalt gains their choice of an additional 0 or two −1 Health levels."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Mode",
+        "effect": "The Exalt gains an additional −1 Health level."
+      },
+      {
+        "name": "Getimian",
+        "title": "Mode",
+        "effect": "The Exalt replaces the default additional −1 Health level with a 0 Health level."
+      },
+      {
+        "name": "Sidereal",
+        "title": "Mode",
+        "effect": "The Exalt replaces the default additional −1 Health level with a 0 Health level."
+      },
+      {
+        "name": "Strawmaiden Janest",
+        "title": "Mode",
+        "effect": "Janest gains Ox Body as a Solar Mode."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [205]
+  },
+  {
+    "name": "POWER GATHERING TEMPER",
+    "ability": ["Physique (Resistance)"],
+    "prerequisites": "Physique 3",
+    "description": "The Exalt’s endurance turns a staggering blow into an opportunity. Spend 1 mote on Step 5. The Exalt gains a number of Power equal to the amount the attacking enemy gained after a successful withering attack or 1 Power for every 2 Power an attacker spends on a decisive attack.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Essence-Gathering Temper",
+        "effect": "The Exalt also recovers 1 mote for every 2 Power the attacker gains on a withering attack."
+      },
+      {
+        "name": "Strawmaiden Janest",
+        "title": "Reap What is Sown",
+        "effect": "The Exalt also recovers 1 mote for every 2 Power the attacker gains on a withering attack."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [205]
+  },
+  {
+    "name": "SPIRIT STRENGTHENS THE SKIN",
+    "ability": ["Physique (Resistance)"],
+    "prerequisites": "Physique 2",
+    "description": "When all other defenses fail, the Exalt may infuse her body with ablative Essence. Spend up to 3 motes on Step 5. Each mote reduces the attack’s damage pool by one die. Against environmental damage levels or dice, the Exalt may spend up to 6 motes. In this instance, every 2 motes spent reduces 1 level of damage.",
+    "modes": [
+      {
+        "name": "Alchemical",
+        "title": "Impenetrable Shell",
+        "effect": "The Alchemical may activate this on Step 2. When the enemy’s weapon matches her caste’s magical material, decrease its damage rating by one."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Rust-and-Splinters Defense",
+        "effect": "Mundane weapons used in this attack suffer a two-dice penalty until they can be properly cleaned and mended. If Spirit Strengthens the Skin reduces the attack to zero damage, the weapon shatters, instead."
+      },
+      {
+        "name": "Lunar",
+        "title": "Once Bitten Technique",
+        "effect": "If the Lunar activates this Charm later in the scene against an attack with the same type of weapon, she reduces its total cost by one mote. Artifact weapons are unique for the purposes of this Charm."
+      },
+      {
+        "name": "Infernal",
+        "title": "Rival-Slaying Retribution",
+        "effect": "The Infernal adds any damage dice canceled by this Charm to her next attack against her attacker."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "The Dragon’s Scales",
+        "effect": "The Dragon-Blood may use this Charm to grant herself immunity to environmental damage that matches her Aura. For an additional mote, she may apply this protection to all Hearthmates within close range."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [205]
+  }
+]

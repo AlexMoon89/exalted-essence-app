@@ -1,0 +1,166 @@
+
+[
+  {
+    "name": "BUREAU-BREAKING METHOD",
+    "ability": ["Embassy"],
+    "prerequisites": "Embassy 3",
+    "description": "Through ripples in the Essence of human connection, the Exalt may bring the wheels of government to a grinding halt by sabotaging a small portion of the bureaucracy. Spend 1 mote. The Exalt must spend a scene sabotaging a venture or bureaucratic task, using an Embassy roll if necessary. On success, this introduces a number of new obstacles on bureaucratic ventures equal to the Exalt’s Essence or successes on the roll (maximum five), whichever is higher. The Storyteller may decide this causes the venture to fail outright.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Indolent Official Charm",
+        "effect": "The Exalt may sabotage a venture just by speaking about it, whether or not they know it is occurring."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Thrashing Carp Serenade",
+        "effect": "The Exalt may activate this Charm when Hearthmates or loyal agents engage in sabotage in her stead."
+      },
+      {
+        "name": "Lunar",
+        "title": "Gnawing Mouse Malaise",
+        "effect": "Commit 1 mote while sabotaging an organization the Exalt or a shape holds authority in. All its ventures are +2 difficulty until the story’s end or commitment ends."
+      },
+      {
+        "name": "Liminal",
+        "title": "Haunted Official’s Psychodrama",
+        "effect": "Anyone with a Virtue or Intimacy that matches the Liminal’s emotion automatically fails a roll to overcome an obstacle. Others may attempt the roll if unaffected."
+      },
+      {
+        "name": "Sidereal",
+        "title": "Paralyzed Committee Infliction",
+        "effect": "Commit 1 mote for the story. Declare a target group without sabotage. All their ventures are affected. May be contested with appropriate magic."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Despair-Inducing Failure",
+        "effect": "Commit 1 mote for the story. Increases difficulty of the group’s ventures by two. If sabotage is revealed, the effect ends. Officials involved die when failing and their ghosts haunt the site."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "DEFT OFFICIAL’S WAY",
+    "ability": ["Embassy"],
+    "prerequisites": "Embassy 2",
+    "description": "The Exalt storms the labyrinthine halls of bureaucracy, cleaving through impediments. Spend 1 mote while navigating. Choose one effect: make an extra venture roll once per session; reduce a venture’s difficulty by one; or ignore cutting corners consequences once per venture.",
+    "modes": [
+      {
+        "name": "Getimian",
+        "title": "Another Life’s Lessons",
+        "effect": "Spend an additional mote. May add any number of common advantages to the roll, up to two successes."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "ILLIMITABLE MASTER FENCE",
+    "ability": ["Embassy", "Stealth"],
+    "prerequisites": "Embassy 2 or Stealth 2",
+    "description": "The Exalt assesses economic activity and inserts herself into local trade. During a dramatic scene observing economic activity, spend 1 mote to ask a question. Additional questions cost 1 mote each.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "JADE LEAVES A TRAIL",
+    "ability": ["Embassy", "Awareness"],
+    "prerequisites": "Awareness 2 or Embassy 2",
+    "description": "The Exalt senses powerful actors behind scenes, tracing finances and favors. During investigation, spend 1 mote to ask questions about affiliations, deception, beneficiaries, suspicious wealth, debts, or hidden ledgers.",
+    "modes": [
+      {
+        "name": "Liminal",
+        "title": "Blood Money Method",
+        "effect": "Ask whether the target’s wealth comes from crime, violence, or murder."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [189, 197]
+  },
+  {
+    "name": "MOTIVE-DISCERNING TECHNIQUE",
+    "ability": ["Embassy", "Integrity"],
+    "prerequisites": "Embassy 2 or Integrity 2",
+    "description": "The Exalt reads her target’s motives and feelings. During interaction, spend 1 mote to ask one of several questions about emotions, Virtues, Intimacies, hidden factors, or influence methods.",
+    "modes": [
+      {
+        "name": "Dragon-Blooded",
+        "title": "Blood-to-Blood Intuition",
+        "effect": "May ask: How are the character and I related?"
+      },
+      {
+        "name": "Liminal",
+        "title": "Scent of Regret",
+        "effect": "May ask: What lingering regrets does the character hold?"
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [198]
+  },
+  {
+    "name": "THE PERFECT BARGAIN",
+    "ability": ["Embassy"],
+    "prerequisites": "Embassy 3",
+    "description": "The Exalt is a master of negotiation. Commit 1 mote for the duration of negotiations. While bartering or discussing trade, the difficulty of social rolls cannot exceed 5.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [198]
+  },
+  {
+    "name": "THE PERFECT PRICE",
+    "ability": ["Embassy"],
+    "prerequisites": "Embassy 2",
+    "description": "The Exalt intuits what an item is worth to someone else. She automatically knows what a target would want in exchange or what they'd give for something. Gains 1 bonus success when leveraging this information.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [198]
+  },
+  {
+    "name": "SECOND CHANCE APPROACH",
+    "ability": ["Embassy", "Presence"],
+    "prerequisites": "Embassy 2 or Presence 2",
+    "description": "The Exalt recovers a soured social interaction. Commit 1 mote for the scene. Reduce difficulty of social rolls against characters with negative Intimacies toward her by two. Double 9s on rolls to create positive Intimacies.",
+    "modes": [
+      {
+        "name": "Liminal",
+        "title": "Ally to Life Acknowledgement",
+        "effect": "May apply benefits to people with negative Intimacies toward the undead."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [198]
+  },
+  {
+    "name": "STRANGE TONGUE UNDERSTANDING",
+    "ability": ["Embassy"],
+    "prerequisites": "Embassy 2",
+    "description": "The Exalt understands unfamiliar languages. Commit 1 mote for the scene. Can comprehend simple speech. Complex interaction or text requires a roll. Difficulty of being influenced in that language increases by 2.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Mingled Tongue Technique",
+        "effect": "Both characters understand each other as if speaking the same language."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Infinite Blasphemy Glossolalia",
+        "effect": "The Exalt can converse with any creature of darkness as if they shared a language."
+      },
+      {
+        "name": "Sidereal",
+        "title": "Blue Vervain Binding",
+        "effect": "The Exalt may activate this Charm on behalf of someone else, granting them understanding."
+      },
+      {
+        "name": "Infernal",
+        "title": "Unshattered Pillar’s Perfection",
+        "effect": "The Infernal speaks an ancient language all understand, but it cannot inspire or draw on positive Intimacies."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [198]
+  }
+]
+

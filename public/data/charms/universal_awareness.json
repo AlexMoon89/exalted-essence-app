@@ -1,0 +1,211 @@
+[
+  {
+    "name": "ALL-ENCOMPASSING SORCERER’S SIGHT",
+    "ability": ["Awareness"],
+    "prerequisites": "Spirit-Cutting Glance, Sagacity 4 or Awareness 4",
+    "description": "The Exalt commits 1 mote for the scene to perceive Essence, including dematerialized spirits and borders between realms. Artifacts glow, hearthstones burn, and all Essence use is visible as if the user had an anima. The user may roll Sagacity to analyze spirit magics, sorcery, demesnes, Wyld, or Underworld phenomena or identify Charm use. Difficulty varies by effect.",
+    "modes": [
+      {
+        "name": "Alchemical",
+        "title": "Essence Flow Detection",
+        "effect": "The Storyteller indicates unusual Essence fluctuations or concentrations within a day’s journey, and their direction."
+      },
+      {
+        "name": "Solar",
+        "title": "Eye of the Unconquered Sun",
+        "effect": "See through illusions and magical disguises; adds Essence in bonus successes to pierce deception. Difficulty is typically 5."
+      },
+      {
+        "name": "Lunar",
+        "title": "Scent of Midnight Dweomers",
+        "effect": "Determine the nature of a spirit or fae. Difficulty increases if disguised. Gives Essence as bonus successes to track targets marked by the Charm."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Secret Wind Revelation",
+        "effect": "Gain one bonus success on rolls to detect demons or the undead."
+      },
+      {
+        "name": "Liminal",
+        "title": "Dark Mother’s Insight",
+        "effect": "Gain two bonus successes to detect ghosts, shadowlands, soulsteel artifacts, and necromantic workings when touching something related."
+      },
+      {
+        "name": "Sidereal",
+        "title": "Telltale Symphony",
+        "effect": "Gain Essence in bonus successes to detect spirits, artifacts, and sorcery. Same bonus applies to understanding fate-interacting magic."
+      },
+      {
+        "name": "Getimian",
+        "title": "Forgotten World Echoes",
+        "effect": "Identical to Sidereal version: Essence in bonus successes to detect spirits, artifacts, and sorcery, and to understand fate-related magic."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [189]
+  },
+  {
+    "name": "AMBUSH SENSING PREMONITION",
+    "ability": ["Awareness"],
+    "prerequisites": "Awareness 3",
+    "description": "The Exalt can preempt ambushes. Commit 1 mote as a simple action (scene-long) or react on Step 4 to a surprise attack by spending 1 mote. Negates non-magical surprise attack bonuses.",
+    "modes": [
+      {
+        "name": "Dragon-Blooded",
+        "title": "Distant March Intuition",
+        "effect": "After the attack, intuit the Size, Drill, and presence of any battle group commander within long range."
+      },
+      {
+        "name": "Liminal",
+        "title": "Lichyard Sentinel Attitude",
+        "effect": "May apply this Charm to allies linked by Thread of Life within short range and defend them reflexively."
+      },
+      {
+        "name": "Sidereal",
+        "title": "Prior Warning",
+        "effect": "Describe a prior contingency action taken to prepare for the danger, e.g., packing antivenin or grabbing a rope."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [189]
+  },
+  {
+    "name": "CRAFTY OBSERVATION METHOD",
+    "ability": ["Awareness"],
+    "prerequisites": "Awareness 3",
+    "description": "Invoke when examining evidence. Spend 1 mote per question asked during the scene. Questions include who was involved, what happened, timing, and identification methods.",
+    "modes": [
+      {
+        "name": "Sidereal",
+        "title": "Heavenly Sentinel Eye",
+        "effect": "May ask: How has this event disturbed destiny?"
+      },
+      {
+        "name": "Liminal",
+        "title": "Cracked Tomb Epiphany",
+        "effect": "May ask: What has disturbed the natural cycle of life and death here?"
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [189]
+  },
+  {
+    "name": "ENHANCED SENSES",
+    "ability": ["Awareness"],
+    "prerequisites": "Awareness 1",
+    "description": "Each purchase upgrades a sense. Gives double 9s for relevant Awareness rolls. Can be repurchased for different senses. If two senses apply, gain double 8s.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [189]
+  },
+  {
+    "name": "EVIDENCE-DISCERNING METHOD",
+    "ability": ["Awareness"],
+    "prerequisites": "Awareness 3",
+    "description": "Spend 1 mote per question when examining someone's possessions. Learn about the target’s Intimacies, social class, personal traits, presentation, and signatures.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Divine Induction Technique",
+        "effect": "May ask: To whom does the target answer?"
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [189]
+  },
+  {
+    "name": "JADE LEAVES A TRAIL",
+    "ability": ["Awareness", "Embassy"],
+    "prerequisites": "Awareness 2 or Embassy 2",
+    "description": "Spend 1 mote per question while investigating corruption or manipulation. Track influence, deception, beneficiaries, sudden wealth, debts, or hidden accounts.",
+    "modes": [
+      {
+        "name": "Liminal",
+        "title": "Blood Money Method",
+        "effect": "May ask: Did the target’s wealth come from unwholesome sources like crime, violence, or murder?"
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [190]
+  },
+  {
+    "name": "SAGACIOUS READING OF INTENT",
+    "ability": ["Awareness", "Sagacity"],
+    "prerequisites": "Awareness 3 or Sagacity 3",
+    "description": "Commit 1 mote. After reviewing a text, reveals an Intimacy influencing the author. Use Awareness or Sagacity rolls if deception is attempted.",
+    "modes": [
+      {
+        "name": "Liminal",
+        "title": "Reading Unwritten Passions",
+        "effect": "Compare the text’s emotional tone to target's emotion using passive anima power."
+      },
+      {
+        "name": "Solar",
+        "title": "Discerning Savant’s Eye",
+        "effect": "Action auto succeeds unless contested by magic."
+      },
+      {
+        "name": "Sidereal",
+        "title": "Unwritten Words Revelation",
+        "effect": "Learns a fact about the writing — where, emotional state, or who else observed it."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [190]
+  },
+  {
+    "name": "SPIRIT-CUTTING GLANCE",
+    "ability": ["Awareness", "Sagacity"],
+    "prerequisites": "Awareness 3 or Sagacity 2",
+    "description": "Commit 1 mote. See dematerialized beings and attack them. May trigger upgrades or interactions using additional motes or effects.",
+    "modes": [
+      {
+        "name": "Sagacity",
+        "title": "Demon-Wracking Shout",
+        "effect": "Spend 1 mote on Step 1. Dematerialized target struck is forced to materialize for scene and suffers -1 to Hardness, Soak, and Defense."
+      },
+      {
+        "name": "Solar",
+        "title": "Uncanny Perception Technique",
+        "effect": "Feels warning sensation when a spirit enters medium range. Concealed spirits must contest Awareness."
+      },
+      {
+        "name": "Infernal",
+        "title": "Wayward Divinity Oversight",
+        "effect": "Automatically perceives lower Essence demons and gods without activating the Charm (can’t attack them unless activated)."
+      },
+      {
+        "name": "Liminal",
+        "title": "Psychopomp’s Judgment",
+        "effect": "Struck ghosts or dematerialized undead become visible to others and targetable. If Demon-Wracking Shout is applied, effects are increased."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [190]
+  },
+  {
+    "name": "WITNESS RAPPORT TECHNIQUE",
+    "ability": ["Awareness"],
+    "prerequisites": "Awareness 1",
+    "description": "Commit 1 mote while questioning a witness. Trivial NPCs answer truthfully. For others, player is alerted to deception and gains bonus for read intentions rolls.",
+    "modes": [
+      {
+        "name": "Repurchase",
+        "title": "Judge’s Ear Technique",
+        "effect": "When knowingly lied to, liar must choose: Exalt knows they lied, or penalties to future deception rolls. Penalties stack to Awareness + Essence and reset each story."
+      },
+      {
+        "name": "Liminal",
+        "title": "Speak No Ills Insight",
+        "effect": "If lie is about the dead or contradicts matching Virtue/Intimacy, -3 to future deception dice pools."
+      },
+      {
+        "name": "Dragon-Blooded",
+        "title": "Shadow-Immolating Talon",
+        "effect": "Gain 3 bonus successes to read intentions when making a decisive attack against a liar."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [191]
+  }
+]

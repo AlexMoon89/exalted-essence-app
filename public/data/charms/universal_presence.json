@@ -1,0 +1,190 @@
+[
+  {
+    "name": "BATTALION-BREAKING SHOUT",
+    "ability": ["Presence"],
+    "prerequisites": "War 3 or Presence 3",
+    "description": "With a battle cry that could break the resolve of demons, the Exalt robs a group of its cohesion. Spend 1 mote and target an enemy battle group within short range. The target battle group must immediately make a rout check. Whether they succeed or fail, reduce their effective Drill by one. This penalty lasts until a commander takes a difficulty 5 War or Presence based action to restore order.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Demon-Scattering Shout",
+        "effect": "Rallying a demonic battle group is difficulty 7 instead."
+      },
+      {
+        "name": "Infernal",
+        "title": "Demon-Scattering Shout",
+        "effect": "Rallying a demonic battle group is difficulty 7 instead."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [204]
+  },
+  {
+    "name": "CAT’S PUFFED TAIL",
+    "ability": ["Presence"],
+    "prerequisites": "Presence 1",
+    "description": "Like a cat appearing bigger to frighten a foe, the Exalt looms over his enemies. Spend 1 mote. On Step 1 of a combat action, gain two bonus successes on a Force-based or inspire Build Power roll. This does not count as her Charm use for that step. This Charm may also be used during a social influence action, granting two bonus successes on an attempt to instill, persuade, or dissuade an opponent.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [204]
+  },
+  {
+    "name": "DREAD TIGER’S SYMMETRY",
+    "ability": ["Presence"],
+    "prerequisites": "Presence 3",
+    "description": "The Exalt is a singular and terrifying being, awesome to behold. People and animals instinctively shy away from her. Commit 1 mote for the scene. The Exalt adds her Essence in bonus dice and gains double 9s on any threatening influence actions. If a character has a Tie of fear toward the Exalt, add bonus dice equal to its intensity. The bonus dice from Ties do not count toward the limit. Mundane animals and extras flee from the Exalt outright, unless compelled to remain through training or magic.",
+    "modes": [
+      {
+        "name": "Upgrade",
+        "title": "Terrifying Apparition of Glory",
+        "effect": "At Active anima, gain double 8s. At Iconic anima, gain 1 Power whenever an enemy is successfully influenced using this Charm."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Heart-Stopping Mien",
+        "effect": "When intimidation succeeds, the Exalt gains 1 Power, and may inflict two dice of damage against the target. This becomes four dice if they possess a Tie of fear to her. Soak does not apply to this damage."
+      },
+      {
+        "name": "Lunar",
+        "title": "Menacing Predator’s Posture",
+        "effect": "Ties of fear to the Exalt’s shapes grant the same benefit. In a predatory animal shape or hybrid form, gain three bonus dice in addition."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [204]
+  },
+  {
+    "name": "GLORIOUS PRESENCE TECHNIQUE",
+    "ability": ["Presence"],
+    "prerequisites": "Presence 2",
+    "description": "Even the least of the Exalted are overwhelming to look upon. The Exalt doubles 9s on a roll to instill respect, awe, or obedience. If her anima is at the Iconic level, she doubles 8s.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Authority-Radiating Stance",
+        "effect": "Until the end of the scene, characters successfully influenced gain a two-dice bonus to resist fear while acting on the Solar’s orders."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [204]
+  },
+  {
+    "name": "HARMONIOUS PRESENCE MEDITATION",
+    "ability": ["Presence"],
+    "prerequisites": "Presence 3",
+    "description": "The Exalt embodies magnetism and grace, charming every courtier she meets. No matter her behavior, all people listen when she speaks. Commit 1 mote for one scene. For the duration, the Exalt may add an automatic success to all social influence, excluding read intentions actions. She ignores up to three dice of mundane situational penalties to her social influence actions that arise from her unfamiliarity with customs, fashion, or past actions.",
+    "modes": [
+      {
+        "name": "Upgrade",
+        "title": "Majestic Radiant Presence",
+        "effect": "Commit 1 additional mote. Characters attempting to oppose the Exalt socially or physically must accept a hard bargain to do so. At Active anima, waive the additional commitment."
+      },
+      {
+        "name": "Solar",
+        "title": "Blazing Glorious Icon",
+        "effect": "At Active anima, add an additional automatic success on all social influence actions. At Iconic anima, waive this Charm’s cost."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Elegant Tyrant’s Majesty",
+        "effect": "Against the undead, subordinates, or characters with a Tie of fear toward the Exalt, add an additional automatic success on all social influence actions. At Active anima, this applies to all characters."
+      },
+      {
+        "name": "DragonBlooded",
+        "title": "Friend-to-All-Nations Attitude",
+        "effect": "Gain two dice on an instill action to give the target a positive Tie toward the Exalt, her Hearthmates, or an organization to which she belongs."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [207]
+  },
+  {
+    "name": "IRRESISTIBLE PRESENCE TECHNIQUE",
+    "ability": ["Presence"],
+    "prerequisites": "Presence 5, Essence 3",
+    "description": "The Exalt dominates the will of her target with the force of her soul’s presence. Spend 2 motes to make a special Presence-based influence action as simple action with the target’s Essence added to his Resolve. On success, he is hypnotized for one round, unable to take any actions. The Exalt may issue a single instruction in a short, clear sentence which the target will carry out immediately; if the target rejects the influence, the Exalt gains the dice bonus against them for the rest of the session. Afterward, he will have no memory of being commanded. This may only be used once per story.",
+    "modes": [
+      {
+        "name": "Abyssal",
+        "title": "Mind-Seizing Gaze",
+        "effect": "The Exalt may issue a number of instructions equal to her extra successes as short, clear sentences instead. The target remains hypnotized until all instructions are complete."
+      },
+      {
+        "name": "Infernal",
+        "title": "Mind-Seizing Gaze",
+        "effect": "The Exalt may issue a number of instructions equal to her extra successes as short, clear sentences instead. The target remains hypnotized until all instructions are complete."
+      },
+      {
+        "name": "Solar",
+        "title": "Mind-Seizing Gaze",
+        "effect": "The Exalt may issue a number of instructions equal to her extra successes as short, clear sentences instead. The target remains hypnotized until all instructions are complete."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [204]
+  },
+  {
+    "name": "LISTENER-SWAYING ARGUMENT",
+    "ability": ["Presence"],
+    "prerequisites": "Presence 2",
+    "description": "The Exalt’s passionate arguments can reach even hearts of stone. Spend 1 mote on Step 4 to reduce the cost of purchasing persuade and dissuade to one success. If an Intimacy or Virtue raises the difficulty of the influence, add one additional success on Step 4.",
+    "modes": [
+      {
+        "name": "Upgrade",
+        "title": "Fulminating Word",
+        "effect": "The target must accept a hard bargain to resist the Exalt’s influence — they cannot choose to ignore it."
+      },
+      {
+        "name": "Solar",
+        "title": "Impassioned Discourse Technique",
+        "effect": "If the Exalt possesses a Principle relevant to her persuade or dissuade action, gain double 9s."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [204]
+  },
+  {
+    "name": "SUSPICION-ALLAYING GESTURE",
+    "ability": ["Presence", "Stealth"],
+    "prerequisites": "Presence 2 or Stealth 2",
+    "description": "With clever misdirection, the Exalt casts suspicion intended for her onto someone else. Commit 1 mote for the duration of the scene when encountering someone suspicious of the Exalt. The Exalt deftly misdirects that suspicion, pinning it on another person. This automatically succeeds against trivial and non-magical targets; significant characters (demons, gods, Exalted, etc.) may take a Fortitude + Awareness action, opposed by the Exalt’s Presence or Stealth, to break through the illusion.",
+    "modes": [
+      {
+        "name": "Solar",
+        "title": "Hindward Bullseye Brand",
+        "effect": "The Exalt chooses a specific target for the suspicions of others, pinning all blame on them without needing to roll. If this would be contested by another flawless effect, roll off."
+      },
+      {
+        "name": "Getimian",
+        "title": "Skein in the Wilderness Pursuit",
+        "effect": "The Exalt conjures a version of her pursuer from her Origin to serve as the person of interest. If her pursuer captures their illusory quarry, they persist for a heartbeat and then fade. When this happens, the Exalt may reflexively make a Presence-based social influence roll, expending successes only to instill or strengthen the following Principle: “I question whether reality is real.”"
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [204]
+  },
+  {
+    "name": "UNDERLING-PROMOTING PRACTICE",
+    "ability": ["Presence", "War"],
+    "prerequisites": "Presence 3 or War 3",
+    "description": "The Exalt blesses her underlings with a small measure of her own power, greatly increasing their natural abilities. Commit 1 mote and designate one of the Exalt’s mortal followers or commit 2 motes and designate a group. Choose a single Ability. For as long as those motes remain committed, the Exalt’s underlings substitute the Exalt’s Attribute + Ability dice pool in place of their own for applicable rolls.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [204]
+  },
+  {
+    "name": "WORSHIPFUL LACKEY ACQUISITION",
+    "ability": ["Presence", "War"],
+    "prerequisites": "Presence 3 or War 3",
+    "description": "The Exalt knows how to leverage her social weight to accrue aides, advisors, and lackeys of all stripes. Spend 1 mote. The Exalt gathers a group of hangers-on to aid her, creating a temporary tertiary Followers Merit. The Exalt may specify what sort of lackeys she wants (spies, socialites, mercenaries, etc.). All lackeys behave as if their Minor Virtue was Loyalty for the Exalt unless she does something to betray them or otherwise casts them off. If the lackeys are of a type suited to fighting, the Exalt may lead them into combat, where they function as tertiary Command.",
+    "modes": [
+      {
+        "name": "Upgrade",
+        "title": "Soldier Acquisition Method",
+        "effect": "This Charm creates secondary Followers. If used to create a battle group, this creates the Command Merit appropriate to her Essence rating."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [204]
+  }
+]
