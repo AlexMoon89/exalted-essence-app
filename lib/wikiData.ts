@@ -38,6 +38,8 @@ export async function loadAllCharmsAsWikiEntries(): Promise<WikiEntry[]> {
     else if (file.startsWith('sidereal_')) sourceType = 'Sidereal';
     else if (file.startsWith('dragon_blooded')) sourceType = 'Dragon Blooded';
     else if (file.startsWith('alchemical_')) sourceType = 'Alchemical';
+    else if (file.startsWith('getimian_')) sourceType = 'Getimian';
+    else if (file.startsWith('infernal_')) sourceType = 'Infernal';
 
     const category = `${sourceType} Charm`;
 

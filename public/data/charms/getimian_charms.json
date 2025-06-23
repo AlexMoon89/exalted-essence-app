@@ -1,0 +1,483 @@
+[
+  {
+    "name": "ALCHEMIC POWER RESERVE",
+    "ability": ["General"],
+    "prerequisites": "None",
+    "description": "When violence breaks out, the Getimian consumes reagents and creates a powerful elixir to aid her allies. Spend 1 mote. When rolling Join Battle, treat the successes as though it were a Build Power roll. The Getimian creates a dose of alchemical elixir. This potion may be given to any ally within close range as a simple action. An ally consumes it as a reflexive action and gains the built Power. This transfer may not be used on the first round.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "FATE-UNWINDING DENIAL",
+    "ability": ["General"],
+    "prerequisites": "None",
+    "description": "The Getimian denies fate’s will, reshaping the outcome of events. When a target of her social influence chooses a hard bargain, the Getimian may spend 1 mote or a set of banked Stunt dice. The player determines the consequences of the bargain, with agreement from the Storyteller. If the target refuses her influence outright, the Getimian gains two additional dice above the usual. Also, gain 1 anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "SPACE-AND-TIME UNDERSTANDING",
+    "ability": ["General"],
+    "prerequisites": "Essence 3",
+    "description": "The Getimian understands the shape of reality, and how to best take advantage of it. Whenever the character takes any move action, including sprint and rush, she may spend 1 mote to cross the distance instantly and without any trace of her passage. This does not count as her Charm use for that step. She may bypass obstacles, environmental hazards, difficult terrain, traps, and so on with this instant movement. This movement may be in any direction.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "SUMMONED FROM TIME",
+    "ability": ["General"],
+    "prerequisites": "Essence 3",
+    "description": "The Getimian calls forth allies and resources from a forgotten time and place. Spend up to the Getimian’s Essence in motes. She instantly summons a Merit from her Origin, paying one mote for a tertiary Merit, two motes for a secondary Merit, or three motes for a primary Merit. It persists until the end of the session, though the character may use an Exalt milestone to purchase it permanently.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+    {
+    "name": "BENT REALITY STANCE",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 4, Essence 3",
+    "description": "Twisting space to her will, the Getimian makes striking her disorienting and difficult. Spend 2 motes on Step 2. An enemy attacking the Getimian must be able to make two attacks in order to strike her. If they can, only one attack may apply against her. If they cannot, treat their attack as though it were part of a flurry, but increase the dice penalty by two.",
+    "modes": [
+      {
+        "name": "Flowing",
+        "title": "",
+        "effect": "If the attack misses, steal 1 Power from the target. Gain an additional anima."
+      },
+      {
+        "name": "Still",
+        "title": "",
+        "effect": "If the attack hits, gain 2 Power. Gain an additional anima."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [239]
+  },
+  {
+    "name": "DEVIL-QUEEN’S COURT",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 3",
+    "description": "The Getimian binds others to her, creating a 'court' from allies and characters with positive Intimacies. She may draw from a dice pool equal to the number of those characters. These dice don’t count toward dice limits and may be used based on Charm activation type. Each die can be used once per scene.",
+    "modes": [
+      {
+        "name": "Flowing",
+        "title": "",
+        "effect": "Commit 2 Flowing motes. Add dice to any roll involving movement, persuasion, or Close Combat."
+      },
+      {
+        "name": "Still",
+        "title": "",
+        "effect": "Commit 2 Still motes. Add dice to any roll involving subtlety, stealth, or precision, including Ranged Combat."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [239]
+  },
+  {
+    "name": "DEVIL-QUEEN’S INTRIGUES",
+    "ability": ["Finesse"],
+    "prerequisites": "Upgrade, Finesse 4",
+    "description": "Upgrade to Devil-Queen’s Court that lets the Getimian spend Flowing or Still motes to use pool dice more flexibly. With Flowing, dice modify allies’ rolls. With Still, she gains sensory access to court members.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [239]
+  },
+  {
+    "name": "DEVIL-QUEEN’S MAJESTY",
+    "ability": ["Finesse"],
+    "prerequisites": "Upgrade, Essence 3, Finesse 5",
+    "description": "Further upgrade to Devil-Queen’s Court. Allows replacing the court with trivial characters, transforming them into secondary Command. Flowing mode lets her summon court members. Still mode lets her teleport to them and act.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [239]
+  },
+  {
+    "name": "DISTILLED-EMOTION ELIXIR",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 3",
+    "description": "The Getimian makes a potion that causes an emotional shift. Spend 1 mote to instill an Intimacy via social influence. If successful, the Getimian bottles it into a potion to be used later.",
+    "modes": [
+      {
+        "name": "Flowing",
+        "title": "",
+        "effect": "The Intimacy is a Tie relative to passion, fury, righteousness, or indignation."
+      },
+      {
+        "name": "Still",
+        "title": "",
+        "effect": "The Intimacy is a Principle relative to lawfulness, justice, vengeance, or order."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [239]
+  },
+  {
+    "name": "HERE-AND-EVERYWHERE APPROACH",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 4",
+    "description": "Spend 2 motes to split the character across two locations for a venture. Make two different Ability rolls. Each roll is valid for the venture, but no additional Charms may enhance them.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [240]
+  },
+  {
+    "name": "FORGETTING THE LIE",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 5, Sleeper-Guiding Whisper",
+    "description": "Spend 1 mote to instill false memories as Intimacies via social influence. These are not emotional but representative of deceptive memories.",
+    "modes": [
+      {
+        "name": "Flowing",
+        "title": "",
+        "effect": "Commit 1 more mote to make the memory contagious. Those affected can instill it into others once."
+      },
+      {
+        "name": "Still",
+        "title": "",
+        "effect": "Anchor the memory; it cannot be removed unless the Getimian wills it or magic forces it."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [240]
+  },
+  {
+    "name": "SLEEPER-GUIDING WHISPER",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 3",
+    "description": "Gain extra dice on a social influence action that creates a shadow Minor Intimacy. The Getimian may later make the target forget the interaction.",
+    "modes": [
+      {
+        "name": "Flowing",
+        "title": "",
+        "effect": "Persuade action may be taken for free if Resolve is beaten."
+      },
+      {
+        "name": "Still",
+        "title": "",
+        "effect": "Instill action may be taken for free. Target can't hard bargain. Resisting gives the Getimian bonus dice."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [240]
+  },
+  {
+    "name": "UNAVOIDABLE CONFRONTATION",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 2",
+    "description": "Spend 1 mote on Step 3. When rushing, trade bonus dice to reduce an enemy’s Defense or Hardness by 2.",
+    "modes": [
+      {
+        "name": "Flowing",
+        "title": "",
+        "effect": "Increase Overwhelming value of the attack by 1 on Step 5."
+      },
+      {
+        "name": "Still",
+        "title": "",
+        "effect": "If the attack hits, steal 1 Power from the target."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [240]
+  },
+   {
+    "name": "CULTURE-HERO USURPATION",
+    "ability": ["Force"],
+    "prerequisites": "Force 5, Perspective-Consuming Grandeur, Essence 5",
+    "description": "The Getimian goes beyond merely rewriting another’s heart and begins to rewrite their legend. Spend 3 motes and name a target of major renown. Make an opposed Presence roll against their Integrity. If successful, the Getimian seizes her target’s presence and stature in society and consumes it. It cannot be re-invoked against the same target until the end of the story.",
+    "modes": [
+      {
+        "name": "Flowing",
+        "title": "",
+        "effect": "Once per session, the Getimian may assert that she is responsible for something that her target did, owns something belonging to the target, or take the target’s place in a relationship. She pries that history away from her target, gaining a relevant Merit or becoming the focus of a relevant Intimacy. She may do this even if the roll fails."
+      },
+      {
+        "name": "Still",
+        "title": "",
+        "effect": "Once per session, the Getimian may name an action the target took, something that belongs to the target, or a relationship the target has with a third party. The named detail fades from memory, with only the Getimian and the target remembering it. Physical objects get lost or claimed by others who are no longer aware of who it belongs to. She may do this even if the roll fails."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [241]
+  },
+  {
+    "name": "FINDING THE CHORUS",
+    "ability": ["Force"],
+    "prerequisites": "Force 3",
+    "description": "The Getimian binds those closest into her personal history for but a heartbeat, letting them see her as she was meant to be. Commit 1 mote for the scene. Until the mote is uncommitted, all observers gain a temporary Minor Intimacy toward the Getimian.",
+    "modes": [
+      {
+        "name": "Flowing",
+        "title": "",
+        "effect": "The Getimian inflames the hearts of those around her, drawing them to her comparative coolness. The Intimacy is one of love, affection, or loyalty, etc."
+      },
+      {
+        "name": "Still",
+        "title": "",
+        "effect": "The Getimian stills the world around her, making her inner fires seem to rage and burn brightly. The Intimacy is one of awe, fear, or reverence, etc."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [241]
+  },
+  {
+    "name": "ICON-OBLITERATING PASSION",
+    "ability": ["Force"],
+    "prerequisites": "Force 5, Essence 4",
+    "description": "The Getimian’s surety of self becomes a sword, wielded expertly against Heaven and all its lackeys. Spend 2 motes on Step 5. If you make a successful decisive attack against a god or elemental, you may activate this Charm for 1 mote instead. The Getimian may strike dematerialized enemies. The target must immediately materialize and cannot dematerialize for the remainder of the scene.",
+    "modes": [
+      {
+        "name": "Flowing",
+        "title": "",
+        "effect": "If this Charm slays a god, the Getimian redefines reality within that god’s purview. All changes made with this Charm are subject to Storyteller approval and create obvious anomalies in fate."
+      },
+      {
+        "name": "Still",
+        "title": "",
+        "effect": "Sever the god from their sources of worship and power, permanently weakening them. If slain, the god fades from the memories of her worshipers, her entreaties to heaven are lost, and her temples lie cold and empty."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [241]
+  },
+  {
+    "name": "IDEOLOGY REDEFINITION TRICK",
+    "ability": ["Force"],
+    "prerequisites": "Force 3",
+    "description": "The Getimian reaches out and snuffs the flames of conviction in her enemies’ hearts. Commit 1 mote for the scene and choose a target the Getimian interacts with socially. The target’s Virtues cannot be used to increase the difficulty of social actions against them and cannot be applied to other effects. Only one target at a time may be affected by this Charm.",
+    "modes": [
+      {
+        "name": "Flowing",
+        "title": "",
+        "effect": "Trying to influence the target provokes an uncontrollable anguish. Any actions they take must be flurried."
+      },
+      {
+        "name": "Still",
+        "title": "",
+        "effect": "When influenced, the target’s soul reaches for the empty place where those Virtues should be, straining the target’s health. She takes a level of damage unless she succeeds on a Fortitude + Physique or Integrity roll, difficulty equal to the Getimian’s Essence."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [241]
+  },
+  {
+    "name": "PERSPECTIVE-CONSUMING GRANDEUR",
+    "ability": ["Force"],
+    "prerequisites": "Force 4",
+    "description": "Tearing down the walls around the human soul, the Getimian infects her target with her own point of view. Commit 1 mote and name a target and a detail about the Getimian’s Origin — the target remembers it as if it were real for the duration. Gain additional benefits as per mode.",
+    "modes": [
+      {
+        "name": "Flowing",
+        "title": "",
+        "effect": "Until the mote is uncommitted, the target gains a Major Intimacy toward either the Getimian or something she represents."
+      },
+      {
+        "name": "Still",
+        "title": "",
+        "effect": "Until the mote is uncommitted, replace the target’s Major Virtue with one of the Getimian’s choice."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [241]
+  },
+  {
+    "name": "REALITY EMBELLISHMENT APPROACH",
+    "ability": ["Force"],
+    "prerequisites": "Force 3",
+    "description": "The Getimian taps into her never-achieved greatness, refracting it into Creation. Commit 1 mote. While active, gain two bonus dice for all social influence attempts. Emotional effects vary by mode.",
+    "modes": [
+      {
+        "name": "Flowing",
+        "title": "",
+        "effect": "The target character cannot be intimidated for the remainder of the scene."
+      },
+      {
+        "name": "Still",
+        "title": "",
+        "effect": "Name a character and make a statement about her to a third party (need not be true); by the end of the scene, everyone present will have heard it except the target."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [241]
+  },
+  {
+    "name": "THE FILIAL CHAIN",
+    "ability": ["Force"],
+    "prerequisites": "Force 5, Essence 3",
+    "description": "Spend 1 mote and choose a target present. If the target speaks against or opposes the Getimian, she may impose a shadow Intimacy of obligation on the target. While under this effect, apply additional modes.",
+    "modes": [
+      {
+        "name": "Flowing",
+        "title": "",
+        "effect": "The Getimian may resist social influence applied by the target. If she chooses a hard bargain, the target suffers consequences instead."
+      },
+      {
+        "name": "Still",
+        "title": "",
+        "effect": "The Getimian may redirect influence targeting herself to a character with a shadow Intimacy. The target must resist or suffer damage or empower the Getimian’s next action."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [241]
+  },
+  {
+    "name": "THRONE-SMASHING AMBITION",
+    "ability": ["Force"],
+    "prerequisites": "Force 4, Essence 2",
+    "description": "The Getimian shifts reality to curse her target. On a successful decisive attack, she may instead apply a curse.",
+    "modes": [
+      {
+        "name": "Flowing",
+        "title": "",
+        "effect": "Reverse a target’s social standing. Imposes dice penalty to social actions equal to the Getimian’s Force. Lasts until the end of the story or until the mote is uncommitted."
+      },
+      {
+        "name": "Still",
+        "title": "",
+        "effect": "Downgrade the target’s social Merit (e.g., Backing), resisted with an Embassy roll. Merit is lost until major milestone achieved."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [241]
+  },
+  {
+    "name": "WALL-DENYING FURY",
+    "ability": ["Force"],
+    "prerequisites": "Force 3",
+    "description": "Spend 1 mote to take a simple move action through an impassable obstacle. Cannot be flurried with an attack. Gain an additional anima. Different effects occur depending on the mode.",
+    "modes": [
+      {
+        "name": "Flowing",
+        "title": "",
+        "effect": "The obstacle detonates violently. It may become an environmental hazard dealing Force in damage, difficulty equal to Essence+2 to resist. The area becomes difficult terrain."
+      },
+      {
+        "name": "Still",
+        "title": "",
+        "effect": "The obstacle reshapes permanently into something drawn from the Getimian’s Origin."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [242]
+  },
+   {
+    "name": "CONSTANT PROBLEM TACTIC",
+    "ability": ["Fortitude"],
+    "prerequisites": "Fortitude 3, Essence 2",
+    "description": "The Getimian’s presence is a never-ending curse. Spend 1 mote. Choose a target the Getimian has either successfully influenced socially or dealt at least two levels of damage to. The target must contend with the Getimian depending on the mode.",
+    "modes": [
+      {
+        "name": "Flowing",
+        "title": "Combat Pursuit",
+        "effect": "In a combat scene apply this as a Step 5 Charm. Whenever the target takes a move action away from the Getimian, apply this effect. The Exalt instantly moves to be within close range of the target, regardless of the distance her target traveled, even if she used her movement this turn."
+      },
+      {
+        "name": "Still",
+        "title": "Instant Tracking",
+        "effect": "The Getimian may make an Awareness roll. If successful, she knows where her target is. Spend the mote, and the Exalt appears instantly in the same scene as the target. She transports only herself."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [243]
+  },
+  {
+    "name": "COURAGE-DECANTING ALCHEMY",
+    "ability": ["Fortitude"],
+    "prerequisites": "Fortitude 3",
+    "description": "The Getimian expresses her valor, giving it physical form that it might fuel the courage of others. Commit 1 mote for the scene. The Getimian creates an elixir of courage that may be imbibed by another character, or by the Getimian herself. When someone does so, they gain the effects listed below.",
+    "modes": [
+      {
+        "name": "Flowing",
+        "title": "Battle Ferocity",
+        "effect": "When in battle, the character gains a three-dice bonus to Close Combat rolls as long as she is pursuing or upholding an Intimacy or Virtue. If she takes any other actions, they suffer a one-die penalty."
+      },
+      {
+        "name": "Still",
+        "title": "Steadfast Belief",
+        "effect": "For the purposes of calculating the character’s Resolve, treat a Minor Virtue or Intimacy as if they were Major instead, or increase the benefits of a Major Virtue or Intimacy (character’s choice) by one."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [243]
+  },
+  {
+    "name": "FOLDING SPACE",
+    "ability": ["Fortitude"],
+    "prerequisites": "Fortitude 5, Essence 3",
+    "description": "Collapsing space between two points, the Getimian and her cohorts arrive at their destination in a blink. Spend 2 motes. The Getimian gathers space between her current location and another destination within Creation she has previously been either in reality or in her Origin and then slingshots herself and her allies there. She may bypass up to her Essence in obstacles in a travel venture and declare an advantage from her Origin. Gain an additional anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [243]
+  },
+  {
+    "name": "ONE-ON-ONE IMPRISONMENT",
+    "ability": ["Fortitude"],
+    "prerequisites": "Fortitude 5, Essence 3",
+    "description": "The Getimian binds an enemy to herself, entrapping them in the prison of her presence. Spend 2 motes and choose one target within short range of the Exalt. This shifts reality, transporting the Getimian and her target temporarily into a bubble of reality manifested from her Origin. For two rounds in combat or for two social influence actions, the Exalt and her target can only affect and be affected by each other. No other environmental or situational bonuses, penalties, or dangers apply, and they cannot be detected or interacted with by any other character. Once this effect ends, the Getimian cannot use this Charm again until the start of the next scene. This may be used during a clash.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [243]
+  },
+  {
+    "name": "SPATIAL DISJUNCTION",
+    "ability": ["Fortitude"],
+    "prerequisites": "Fortitude 3",
+    "description": "Tearing a rift in reality, the Getimian makes approaching her impossible. Spend 1 mote. Until the start of the Getimian’s next turn, treat the space between her and an enemy as either one range band closer or further. If this would put the Getimian out of range of the attack, the target may still roll but suffers a success penalty equal to half the Getimian’s Fortitude, rounded up.",
+    "modes": [
+      {
+        "name": "Flowing",
+        "title": "Melee Step Bonus",
+        "effect": "This is a Step 3 Charm. If this puts the target immediately into melee range, gain three bonus dice to the attack roll."
+      },
+      {
+        "name": "Still",
+        "title": "Power Drain",
+        "effect": "This is a Step 4 Charm. If the attack hits, steal 1 Power from the target."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [243]
+  },
+  {
+    "name": "TRUTH IS RELATIVE",
+    "ability": ["Fortitude"],
+    "prerequisites": "Fortitude 3",
+    "description": "The Getimian strips the blinders from others, forcing them to confront the comfortable lies they tell themselves. Commit 1 mote and touch a target. The next time the target makes a statement or acts in support of an Intimacy, this Charm’s effects activate.",
+    "modes": [
+      {
+        "name": "Flowing",
+        "title": "Boost Then Break",
+        "effect": "The target gains the Exalt’s Flowing motes in dice for the action, but afterward must succeed on a Fortitude + Integrity roll with a difficulty equal to the Getimian’s Force. Failure causes the Intimacy to reverse its emotional underpinnings; love becomes hate, desire becomes disgust, ambition becomes apathy, etc."
+      },
+      {
+        "name": "Still",
+        "title": "Intimacy Collapse",
+        "effect": "The target loses the Exalt’s Still motes in dice from his roll and must succeed on a Fortitude + Integrity roll with difficulty equal to the Getimian’s Finesse to prevent the Intimacy from downgrading (if Major) or disappearing (if Minor)."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [243]
+  },
+  {
+    "name": "UNFORGED MASTERWORKS",
+    "ability": ["Fortitude"],
+    "prerequisites": "Fortitude 3",
+    "description": "The Getimian draws on her memories of the world as it should be and pulls forth — for just a few moments — a shining exemplar of that reality. Commit 1 mote for the scene. The Getimian creates a secondary Artifact weapon, regardless of her Essence rating. This temporary weapon gains a unique inherent ability of the player and Storyteller’s design. If she cancels the committed mote and reactivates this Charm in the same scene, the same weapon appears.",
+    "modes": [
+      {
+        "name": "Flowing",
+        "title": "Extra Conversion",
+        "effect": "Every extra she strikes down with this weapon vanishes and reappears as the Getimian’s Origin’s version of him. Treat this as a temporary Followers Merit if the Getimian uses this Charm on multiple targets. At the end of the scene, all loyal extras created by this Charm vanish with the artifact weapon."
+      },
+      {
+        "name": "Still",
+        "title": "Defensive Counterattack",
+        "effect": "When she successfully defends against a decisive attack, she may make an influence action against her opponent on Step 8, as if it were a counterattack."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [243]
+  }
+]

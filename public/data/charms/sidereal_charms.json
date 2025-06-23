@@ -1,0 +1,305 @@
+[
+  {
+    "name": "AVOIDANCE",
+    "ability": ["Athletics"],
+    "prerequisites": "Athletics 4, Essence 2",
+    "description": "Faced with trouble, the Sidereal remembers, “I was never here in the first place!” Spend 2 motes. The Sidereal disappears, retroactively declaring she was never present in the scene; this can be used to duck out of battle in Step 2, escape a bad situation, or avoid social consequences. Characters forget she was ever there as per Arcane Fate (p. 56). If she has already taken any significant actions in the scene, the cost increases to 4 motes. If all characters in the scene forget her, gain 2 anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [266]
+  },
+  {
+    "name": "INVISIBLE MOTION",
+    "ability": ["Athletics"],
+    "prerequisites": "Athletics 4, Essence 2",
+    "description": "All motion is equal for the Sidereal, and neither gravity nor logic may gainsay them. Spend 1 mote. The Sidereal moves up to one range band in any direction without traveling through the space between. She cannot move through solid walls, but can slip through any other opening, no matter how small. She may take this action even if she has already moved that turn.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [266]
+  },
+  {
+    "name": "EFFICIENT SECRETARY TECHNIQUE",
+    "ability": ["Awareness", "Sagacity"],
+    "prerequisites": "Awareness 2 or Sagacity 2",
+    "description": "For an overworked Sidereal, nothing is so vital as a meticulous assistant. Commit 1 mote. The Sidereal manifests a fist-sized spider construct, which serves as a tertiary Ally or Familiar. It gains a two-success bonus on actions to serve as the Sidereal’s secretary and answers any general question about Creation or Yu-Shan unless the answer is deliberately hidden. The secretary always assists the Sidereal with any action as though it had made a teamwork roll, contributing two successes to the rolls in which it assists. It cannot assist with anything combat-related.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [266]
+  },
+  {
+    "name": "LAST VISION",
+    "ability": ["Awareness"],
+    "prerequisites": "Awareness 4",
+    "description": "Sometimes, the ending is a very good place to begin. Spend 1 mote. The Sidereal may see the last moments of a corpse within medium range. This reveals the character’s last scene and always provides at least one important clue or connection. If the corpse is older than a day, this requires an Awareness roll at difficulty 3 for up to a week, 5 for up to a year, and 7 for anything more.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [266]
+  },
+  {
+    "name": "OF TRUTHS BEST UNSPOKEN",
+    "ability": ["Awareness", "Sagacity"],
+    "prerequisites": "Awareness 3 or Sagacity 3",
+    "description": "The Sidereal may search out misfortune yet to pass — all the better to prepare for it. Spend 1 mote. Name a character, place, or group after three hours of meditation in downtime under a starry sky. This reveals the greatest tragedy soon to befall the target. She may spend motes one for one to ask additional questions about the tragedy, such as how she can intervene and what price the target would pay to avoid it. These questions may be asked retroactively, and the character may use Stunt dice in place of motes, as well as using a dramatic edit to take an action to either prevent this tragedy or enable it. Gain an additional anima when using Stunt dice this way.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [266]
+  },
+  {
+    "name": "HEARTLESS MAIDEN TRANCE",
+    "ability": ["Close Combat", "Physique", "War"],
+    "prerequisites": "Close Combat 5 or Physique 5, or War 5, Essence 3",
+    "description": "The Sidereal shrouds their heart in emptiness, freeing them from mortal fragility. Commit 2 motes for the session. The Sidereal ignores all penalties from fatigue, disease, poison, exposure, hunger, and thirst — even the need to breathe. She also gains one temporary Bruised Health level, which heals at the beginning of each scene. In exchange, she cannot benefit from any positive Intimacies or her Virtues or use influence to appeal to the emotions of others. This Charm cannot be ended prematurely.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [266]
+  },
+  {
+    "name": "MENDING WARPED DESIGNS",
+    "ability": ["Craft"],
+    "prerequisites": "Craft 2",
+    "description": "Smoothing the tangled weave of fate, the Sidereal restores order where it has been split asunder. Spend 2 motes. Choose a wound, curse, or other effect caused by something beyond Creation, such as a demon, ghost, or Fair Folk. The Sidereal heals one level of damage or repairs one effect. If the effect was created by a character with higher Essence or expended considerable resources, roll Craft. Gain an additional anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [267]
+  },
+  {
+    "name": "CASH AND MURDER GAMES",
+    "ability": ["Embassy", "Presence"],
+    "prerequisites": "Embassy 4 or Presence 4",
+    "description": "The Sidereal weaves fate into an invisible chain between her targets. Spend 2 motes. Roll Embassy or Presence as a special influence action against two characters. Success gives each character a Minor Tie toward the other based on a social context of the Sidereal’s choice — student and teacher, business rivals, and so on. Actions that support this Tie transform one die into an automatic success, pushing the targets toward the chosen context. Discerning the artificial nature of the Tie requires a difficulty 5 Fortitude + Integrity roll. When the two targets finally fall into their arranged relationship, gain 1 anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [267]
+  },
+  {
+    "name": "END DEBATE",
+    "ability": ["Embassy"],
+    "prerequisites": "Embassy 5, Essence 3",
+    "description": "With a single motion like the snip of shears, the Sidereal brings a topic to its inevitable conclusion. Spend 2 motes. All characters within the scene must end all argument and discussion about the current topic, growing unnaturally silent. The Sidereal, or a character she chooses, is allowed to make one final influence roll to settle the matter. The topic cannot be broached again until the next session (or five days of downtime).",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [267]
+  },
+   {
+    "name": "ICY HAND",
+    "ability": ["Presence", "Embassy"],
+    "prerequisites": "Embassy 3 or Presence 3",
+    "description": "The Sidereal’s touch is cold as the reaper — and all who shirk their duty are wheat. Spend 1 mote. The Sidereal makes a special Embassy or Presence-based influence roll against a character. If successful, he must attend to all his official duties and obligations in good faith for the rest of the session, or the rest of the story for trivial characters. If he accepts a hard bargain to resist, the Sidereal gains the bonus to all actions to track, expose, or humiliate the target for the session, rather than just her next roll against him.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [267]
+  },
+  {
+    "name": "LOVER’S OATH",
+    "ability": ["Embassy"],
+    "prerequisites": "Embassy 4, Essence 3",
+    "description": "The Sidereal may sanctify a promise between allies and lovers in the eyes of heaven. Spend 2 motes and 1 anima. Two willing characters gain Major Intimacies toward one another that can’t be degraded or altered except by the characters themselves. If they are within close range, they may automatically protect their partner as if they had taken a defend other action. At the start of their turns, they may reflexively exchange Power at up to medium range, or long range as a simple action. This binding lasts for the rest of the story.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "WILLING ASSUMPTION OF CHAINS",
+    "ability": ["Embassy", "Sagacity"],
+    "prerequisites": "Embassy 5 or Sagacity 5, Essence 3",
+    "description": "Whether a reward or bribe, it is the Sidereal’s right to make divine appointments. Spend 1 mote. The Sidereal offers a new job or purview to a god. For relatively innocuous positions, this happens automatically, but for bigger changes requires an Embassy or Sagacity roll at difficulty 3 to a maximum of 7 for truly meaningful or influential offices in the Celestial Bureaucracy. If they accept, the spirit develops any Charms and powers necessary for its role and owes the Sidereal a single, life-altering favor, cashed in at her leisure. Gain an additional anima when the spirit accepts, and another when the favor is called in. Reckless abuse of this Charm can slow the Celestial Bureaucracy and invites censure from the Sidereal’s colleagues.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [267]
+  },
+  {
+    "name": "DEFERRED WOUNDS",
+    "ability": ["Integrity"],
+    "prerequisites": "Integrity 3",
+    "description": "Unable to afford any distraction, the Sidereal delays an injury to a more convenient time. Commit 1 mote. Roll Integrity to defer the damage from an attack or non-combat damage into the future. Three successes delays the effect until the next scene, five successes delays it until up to the end of the session, and seven successes delays it until the end of the next session. At the appointed time, the Sidereal suffers the effect — hopefully, having made appropriate arrangements. Failure indicates the Sidereal does not know the appointed time. The Storyteller chooses instead.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [268]
+  },
+  {
+    "name": "FORCE DECISION",
+    "ability": ["Integrity", "Presence"],
+    "prerequisites": "Integrity 4 or Presence 4",
+    "description": "Doubt is a decadence the Sidereal cannot afford; those who cannot choose will be chosen for. Spend 1 mote when a character considers a hard bargain to avoid social influence. The Storyteller provides two hard bargains, which the Sidereal chooses between on the target character’s behalf. If the Storyteller can’t think of an alternative bargain, the Sidereal’s player should propose one. If the target refuses influence, the Sidereal may spend Stunt dice to make it a hard bargain instead.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [268]
+  },
+  {
+    "name": "UNAVOIDABLE SORROW",
+    "ability": ["Integrity", "Sagacity"],
+    "prerequisites": "Integrity 3 or Sagacity 3, Essence 2",
+    "description": "Sometimes, the Sidereal must hasten that which is already writ in fate. Spend 2 motes. The target suffers an immediate interval for an environmental hazard or disease, rolling to resist damage or avoid worsening symptoms. This doesn’t count against the effect’s duration. Upgrade (Essence 3): This Charm can be used on an environmental hazard in the scene, subjecting all targets to an immediate interval of its effects.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [268]
+  },
+  {
+    "name": "FORTUITOUS WANDERING",
+    "ability": ["Navigate"],
+    "prerequisites": "Navigate 3",
+    "description": "The Sidereal is wherever she is needed, and has been there the whole time, thank you. Spend 1 mote or banked Stunt dice. The Sidereal may appear in a scene she was not otherwise present in or travel a short narrative distance (such as the distance between two neighboring towns) in an instant. This is not teleportation, but the retroactive declaration that she was heading there already. If the Sidereal would have normally needed a roll to get into the scene, such as a Stealth roll to infiltrate a fortress, she makes it immediately after appearing — she is definitely there but might have attracted unwanted attention in the process.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "IN THE NICK OF TIME",
+    "ability": ["Navigate"],
+    "prerequisites": "Navigate 4, Essence 2",
+    "description": "Fate conspires to deliver the Sidereal faster than logic should allow. Commit 2 motes when you learn about a change in circumstances, such as an impending Fair Folk raid or the fall of the city of Thorns. Regardless of the distance, you and your allies are able to arrive soon enough to matter — you might not arrive before an attack begins, but you will be there before it ends, with a chance to turn the tides or minimize damage. If the Sidereal does not have 2 motes available, they may instead pay its cost in Stunt dice.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "ORDAINED BRIDLE OF MERCURY",
+    "ability": ["Navigate"],
+    "prerequisites": "Navigate 3",
+    "description": "The Sidereal wraps their target with a ribbon of saffron light, binding them into service. Spend 1 mote. With a touch, transform a mortal into a Follower or an animal into a Familiar, rated tertiary or secondary based on the target’s nature and skill. This lasts for the rest of the story unless they are deliberately endangered or mistreated.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [269]
+  },
+  {
+    "name": "WILDERNESS-COMMANDING PRACTICE",
+    "ability": ["Navigate"],
+    "prerequisites": "Navigate 5, Essence 3",
+    "description": "With a sigh of stardust, the Sidereal coaxes nature into reshaping itself. Commit 2 motes. The Sidereal may undertake a special project to reshape natural features such as mountains, forests, and rivers. Unless she wishes otherwise, these changes never create immediate danger. She may spend two Stunt dice to reduce the time scale by one for a single roll.",
+    "modes": [
+      {
+        "name": "Sidereal",
+        "title": "Settlement Movement Technique",
+        "effect": "The Sidereal can use a shape wilderness project to move a named settlement up to 100 miles from its original position. Obstacles for moving large cities are difficulty 5 or higher, especially if the change is opposed by supernatural characters."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [269]
+  },
+  {
+    "name": "ABANDONED WORDS CURSE",
+    "ability": ["Performance", "Presence"],
+    "prerequisites": "Presence or Performance 4, Essence 2",
+    "description": "The Sidereal knots her target’s tongue with the threads of fate. Spend 1 mote. Make a Presence or Performance roll against a target’s Resolve; if successful, the Sidereal strips them of the ability to speak a chosen language until the end of the story or up to one year of downtime (whichever is longer). Targets deprived of all language can still communicate through gestures (but not sign language) at a four-die penalty. Failure on the roll inflicts a die penalty to verbal social interactions equal to the Exalt’s Essence. Nontrivial targets can make a difficulty 5 Finesse + Integrity roll at the end of each scene to recover a lost language.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [269]
+  },
+  {
+    "name": "DEFENSE OF SHINING JOY",
+    "ability": ["Performance"],
+    "prerequisites": "Performance 1",
+    "description": "The Sidereal moves to auspicious music, weaving song and sword into a single serenade. The Sidereal may use Performance instead of Athletics to calculate her Evasion. Whenever the character makes a flurry with a Performance action, she may spend 1 mote to negate the penalty. This does not count as a Charm use. Gain an additional anima when she takes advantage of this penalty negation.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [270]
+  },
+  {
+    "name": "FAULTLESS CEREMONY",
+    "ability": ["Performance"],
+    "prerequisites": "Performance 4",
+    "description": "The Sidereal draws the eyes of Heaven, parting storm clouds over a festival and forcing assassins to sheathe their blades. Spend 2 motes. No mundane outside influence will interrupt or spoil the scene. Anyone who attempts to initiate violence must succeed at a difficulty 5 Fortitude + Integrity roll. The Sidereal may spend any number of Stunt dice on Step 4 to subtract one success for every set of two Stunt dice spent from any attack. Gain 2 additional anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [270]
+  },
+  {
+    "name": "SHIELD OF MARS",
+    "ability": ["Presence", "Physique"],
+    "prerequisites": "Presence 3 or Physique 3",
+    "description": "Grabbing hold of a baleful fate, the Sidereal pawns it off on someone unsuspecting. Spend 2 motes on Step 4. Redirect the attack to a character other than the Sidereal or her attacker within short range. If the new target has a Hardness equal to or lower than the Sidereal’s Essence +2, this happens automatically. Otherwise, make a Physique or Presence roll against a difficulty equal to their current Hardness. The Sidereal can transfer exposure to a poison or illness at difficulty 3, foisting it on someone else in short range.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [270]
+  },
+  {
+    "name": "UNSWERVING JUGGERNAUT PRINCIPLE",
+    "ability": ["Physique"],
+    "prerequisites": "Physique 4, Essence 2",
+    "description": "Fate parts in front of the frenzied Sidereal; lesser chains must follow suit. Commit 2 motes. Announce a destination or goal; while the Sidereal pursues it to the exclusion of all else, she may reroll all dice that do not show successes once per action and cannot be grappled, dismounted, or physically restrained. If she ends this Charm without reaching her goal, she suffers a level of aggravated damage and cannot use this Charm again during the next session.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [270]
+  },
+  {
+    "name": "SHUN THE SMILING LADY",
+    "ability": ["Presence"],
+    "prerequisites": "Presence 3",
+    "description": "Fate connects all those who love — and the Sidereal can snip those threads. Commit 1 mote. Roll Presence against a character’s Resolve. Success suppresses any Intimacies based on love toward that character, preventing them from being used in social influence. Nontrivial characters can overcome this effect with a difficulty 5 Fortitude + Integrity roll, remembering their love for the target for a single action.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [270]
+  },
+  {
+    "name": "UNDER THE CRIMSON BANNER",
+    "ability": ["Presence", "War"],
+    "prerequisites": "Presence 3 or War 3, Essence 2",
+    "description": "Those who rally under the Sidereal’s banner are empowered to fight back against all who invade Creation. Commit 2 motes. The Sidereal and allies who fight alongside them gain a Major Intimacy against creatures from beyond Creation such as the Fair Folk, demons, and ghosts. They gain a three-success bonus to resist curses and other shaping effects from such creatures or increase the difficulty to curse them by three. If the Sidereal is part of a battle group, they add her Essence in bonus successes to resist rout checks.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [270]
+  },
+  {
+    "name": "SHADOW-PIERCING NEEDLE",
+    "ability": ["Ranged Combat"],
+    "prerequisites": "Ranged Combat 3",
+    "description": "The Sidereal forges Essence into a crimson needle, holding their foe in place by their shadow. Spend 1 mote on Step 3. If the ranged attack succeeds, the Sidereal also pierces the target’s shadow, staking them in place for the scene. They cannot move more than one range band from their current position. As a miscellaneous action, they can make a difficulty 3 Force + Physique roll to claw an additional range band away, or difficulty 7 to break the effect entirely.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [271]
+  },
+  {
+    "name": "TRANSCENDENT HATCHET OF FATE",
+    "ability": ["Ranged Combat"],
+    "prerequisites": "Ranged Combat 4, Essence 3",
+    "description": "Fate is fickle, and may be shaped into an abhorrent weapon. Spend 2 motes on Step 7. When making a decisive attack, the Sidereal reduces the total damage by up to three levels to instead twist her opponent’s fate. One level inflicts a minor inconvenience, two levels inflict a considerable setback, and three levels inflict a terrible (but never fatal) outcome. These effects occur in no more than one year of downtime, but always by the end of the story.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [271]
+  },
+  {
+    "name": "NAME-PILFERING PRACTICE",
+    "ability": ["Stealth"],
+    "prerequisites": "Stealth 3, Essence 2",
+    "description": "Borrowing even an inch from a target’s thread of fate, the Sidereal absconds with their name. Commit 1 mote for the rest of the story. The Sidereal makes a Stealth roll against the Resolve of a character in the scene. If successful, the target suffers Arcane Fate as if they were a Sidereal and has a three-success penalty on rolls to lead or interact with governments and organizations for as long as the Sidereal commits the mote. Gain an additional anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [271]
+  },
+  {
+    "name": "THOUGHT-SWIPING DISTRACTION",
+    "ability": ["Stealth"],
+    "prerequisites": "Stealth 2",
+    "description": "The Sidereal skims her target’s thoughts, momentarily blanking out his mind. Spend 1 mote. The Sidereal makes a Stealth roll against his Resolve, with success revealing a brief overview of the topics currently weighing on his mind. This can be used to inflict a two-dice penalty on a target within short range; in combat, this is done on Step 2 and no roll is required.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [271]
+  },
+  {
+    "name": "WALKING OUTSIDE FATE",
+    "ability": ["Stealth"],
+    "prerequisites": "Stealth 3",
+    "description": "Loosening her own strand of fate from the world’s weave, the Sidereal steps halfway out of Creation’s boundaries. Commit 1 mote. Characters with Essence equal to or lower than the Sidereal cannot detect her presence; nontrivial characters can attempt a difficulty 5 (Fortitude + Integrity or Awareness) roll, but even then, they cannot make out the Sidereal’s exact identity and suffer a two-dice penalty on rolls to attack or track her. If the character’s anima exceeds 5, this Charm ends.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [271]
+  },
+    {
+    "name": "HEARTLESS MAIDEN TRANCE",
+    "ability": ["War"],
+    "prerequisites": "",
+	"description": "",    
+	"modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [266]
+  },
+    {
+    "name": "UNDER THE CRIMSON BANNER",
+    "ability": ["War"],
+    "prerequisites": "",
+    "description": "",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [270]
+  }
+]

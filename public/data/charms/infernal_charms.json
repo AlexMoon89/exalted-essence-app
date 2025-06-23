@@ -1,0 +1,430 @@
+[
+  {
+    "name": "DEVIL-BODY INCARNATION",
+    "ability": [],
+    "prerequisites": "None",
+    "description": "The Infernal reshapes herself into a form that reflects her innermost nature — sometimes demonic, sometimes sublime, but always powerful and strange. Commit 1 mote and spend 2 anima. The Infernal’s Devil-Body is built by choosing two of the following benefits when learning this Charm. Repurchase (Essence 3 and Essence 5): Gain one additional effect for each repurchase. • Wicked Armaments: You gain a natural melee or ranged weapon with your choice of weight and artifact plus one of the following tags: balanced, chopping, defensive, disarming, flame, flexible, piercing, pulling, powerful, reaching. • Overwhelming Mien: You radiate an intense emotion that overwhelms characters who approach within short range. Nontrivial characters can resist with a difficulty 5 Fortitude + Integrity roll or gain a Minor Intimacy based on your chosen emotion until the end of the scene. • Towering Stature: You grow up to twice your normal size, reducing the difficulty of feats of strength by three. You can’t be grappled by smaller characters unless their attempt is supplemented by Charms or other powers, as though you had the legendary size quality. • Devil Senses: You can perceive everything out to long range, seeing and hearing through mundane walls, structures, and obstructions as if they weren’t there. Attempts to hide from you suffer a dice penalty equal to your Essence. • Force of Nature: You transform your surroundings out to medium range into difficult terrain befitting your aesthetic. Allies may move through this terrain unimpeded. • Hideous Speed: You gain a special form of movement: flight, swimming without the need to breathe, or the ability to pass through earth and stone.",
+    "modes": [
+      {
+        "name": "Infernal",
+        "title": "Devil-Body Transformation",
+        "effect": "Allows the Infernal to choose two demonic transformations to manifest physically, such as enormous size, unnatural weaponry, emotion-radiating aura, supernatural speed, and supernatural senses. Can be repurchased to add more."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "JOY IN VIOLENCE",
+    "ability": ["Athletics", "Awareness"],
+    "prerequisites": "Athletics 2 or Awareness 2",
+    "description": "Blood quickens blood, and the Infernal’s instincts are attuned to the rush of oncoming battle. Spend 1 mote when rolling Join Battle. The Infernal takes her turn for the first round of combat before any other characters, including ambushes and other interruptions. This does not reveal hidden characters. If she can perceive an enemy, she must use her turn to attack or approach them. Gain an additional anima.",
+    "modes": [
+      {
+        "name": "Infernal",
+        "title": "Battle Rush Intuition",
+        "effect": "Act first in the first round of combat after spending a mote at Join Battle."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [244]
+  },
+  {
+    "name": "SKIN-FLAYING WIND DANCE",
+    "ability": ["Athletics"],
+    "prerequisites": "Athletics 2",
+    "description": "When the Infernal runs, searing hell-winds surround her. Commit 1 mote. The Infernal must end each of her turns at least one range band away from where she started and cannot return to previous locations unless forced. While doing so, increase Defense by one. Any character who begins their turn in close range is subject to an environmental hazard (1 damage, difficulty 3).",
+    "modes": [
+      {
+        "name": "Infernal",
+        "title": "Hellwind Dash",
+        "effect": "Grants increased Defense while moving between range bands and damages nearby enemies every turn. Wrathful upgrade increases hazard's difficulty to 5."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [244]
+  },
+  {
+    "name": "NAKED SOUL INSIGHT",
+    "ability": ["Awareness", "Embassy"],
+    "prerequisites": "Awareness 4 or Embassy 4",
+    "description": "Spend 1 mote. Ask the Storyteller a question about the character’s deepest desires — their fantasies, wishes, and goals. The Storyteller will provide an honest, useful answer. When the Infernal leverages that desire to influence the character, she may ignore the Resolve increase from their Major Virtue.",
+    "modes": [
+      {
+        "name": "Infernal",
+        "title": "Desire Revelation",
+        "effect": "Allows the Infernal to ask about a character’s deepest desire and use that to bypass resistance to influence."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [244]
+  },
+  {
+    "name": "WITNESS TO DARKNESS",
+    "ability": ["Awareness"],
+    "prerequisites": "Awareness 2",
+    "description": "The Infernal’s eyes blacken, opening her sight to the secret world of darkness. Commit 1 mote. The Infernal ignores all penalties based on darkness and gains a three-dice bonus if there is no light source within medium range. Direct sunlight, however, inflicts a one-die penalty.",
+    "modes": [
+      {
+        "name": "Infernal",
+        "title": "Darksight",
+        "effect": "Allows the Infernal to see perfectly in darkness, gaining bonuses in dim light and penalties in intense light."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [244]
+  },
+   {
+    "name": "DEATH OF ALL HAPPINESS",
+    "ability": ["Close Combat", "Ranged Combat"],
+    "prerequisites": "Close or Ranged Combat 5, Essence 3",
+    "description": "Wracking her victim with overwhelming dread, the Infernal wipes all happiness from their mind. Spend 2 motes and 2 anima on Step 5. If the attack deals any damage, the target loses the benefits of any positive Intimacies for the rest of the session, and any influence from or against them based on joy, peace, love, or passion suffers a three-die penalty. This effect is permanent against trivial characters.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [245]
+  },
+  {
+    "name": "HIDEOUS HUNDRED-LIMB STRIKE",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 5, Essence 3",
+    "description": "The Infernal lashes out at her enemies without mercy or cessation. Spend 1 mote and 1 Power on Step 1 while Corona of Fury is active. The Infernal may make a Close Combat attack against one target she has not already attacked this round, which may include clashes. This does not count toward her action limit for the round.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [245]
+  },
+  {
+    "name": "WRATH-STOKED ONSLAUGHT",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 3",
+    "description": "Wreathing her weapon in emerald devil-fire, the Infernal strikes a deadly blow. Spend 2 motes on Step 6 of a decisive attack. The Infernal gains an additional die of damage for every 2 Power spent on the attack. This may be used during a clash. Gain an additional anima.",
+    "modes": [
+      {
+        "name": "Wrathful",
+        "title": "",
+        "effect": "If she spends at least 7 Power, add an additional die of damage."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [246]
+  },
+  {
+    "name": "CLAIMING THE DEVIL’S DUE",
+    "ability": ["Craft"],
+    "prerequisites": "Craft 5",
+    "description": "Laying hands on an item, the Infernal bathes it in the vicious essence of hell. Spend 1 mote. A mundane object the Infernal can touch radiates with wisps of green hellfire for the rest of the story. Characters who attempt to touch, wield, or use it are sickened and suffer a three-die penalty for the rest of the scene. This does not affect her Circle or demonic characters (including other Infernals) with higher Essence than the Infernal’s own. At Essence 2, she may spend an additional mote to affect a mundane structure instead. Gain an additional anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [246]
+  },
+  {
+    "name": "GOLDEN YEARS TARNISHED BLACK",
+    "ability": ["Embassy", "Presence"],
+    "prerequisites": "Presence 4 or Embassy 4",
+    "description": "With nothing more than a poisonous insinuation, the Infernal transforms happy memories into misery. Spend 1 mote. Roll Presence or Embassy against Resolve. On success, the Infernal may poison a target’s memories about a person, place, or group. Positive Intimacies based on the chosen topic are one step weaker than normal, and Minor Intimacies invert, becoming negative Minor Intimacies. This effect lasts for one session, plus another session for each extra success. Gain an additional anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [246]
+  },
+  {
+    "name": "OUR LITTLE SECRET",
+    "ability": ["Embassy", "Presence", "Stealth"],
+    "prerequisites": "Embassy 2, Presence 2, or Stealth 2",
+    "description": "Wrapping a victim in a web of secrecy, the Infernal ensures the utmost discretion. Spend 1 mote. The Infernal may make a Presence, Embassy, or Stealth dissuade roll against a character; if successful, the character cannot discuss, imply, or otherwise communicate anything the Infernal has discussed with them in the current scene. Against nontrivial characters, this effect lasts for the rest of the session.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [246]
+  },
+  {
+    "name": "UNBREAKABLE LAWS OF HELL",
+    "ability": ["Embassy"],
+    "prerequisites": "Embassy 4",
+    "description": "The Infernal knows the secrets of hell’s bizarre laws — mortal rules are hers to command at her will. Commit 1 mote. The Infernal may strengthen an existing law or rule they know about in their current locale or organization for the session; willingly violating it requires a difficulty 5 Fortitude + Integrity roll, or difficulty 7 for demons and the Infernal’s worshipers.\n\nRepurchase (Essence 3): The Infernal spends 2 motes to create a law for the scene, making an influence action against all characters present in the scene. These laws are subject to the usual rules for unacceptable influence and can’t require characters to perform deliberately impossible tasks.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [246]
+  },
+  {
+    "name": "ACQUAINTED WITH DECEPTION",
+    "ability": ["Integrity"],
+    "prerequisites": "Integrity 3",
+    "description": "The Infernal is accustomed to the lies of demons; no other deceptions compare. Commit 1 mote for the scene. The Infernal automatically knows when a character is lying, although they do not know which part may be a lie and which the truth. Against lies backed by magic, the Infernal and target make an opposed Essence roll-off to determine whose power is dominant.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [246]
+  },
+  {
+    "name": "BODY OBEYS EGO",
+    "ability": ["Integrity"],
+    "prerequisites": "Integrity 3",
+    "description": "So powerful is the Infernal’s ego that their physique cannot help but conform to their self-image. Commit 1 mote. The Infernal may suppress one ongoing effect that transforms or weakens her body, such as her wound penalties, dramatic injuries, or forced transformations. While active, this Charm allows her to ignore that effect (and fundamentally similar effects), waiving any penalties and allowing her to act as normal.",
+    "modes": [
+      {
+        "name": "Wrathful",
+        "title": "Wrathful Variant",
+        "effect": "Once per scene, the Exalt may spend 1 mote to heal a level of non-aggravated damage."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [246]
+  },
+  {
+    "name": "BROKEN SILENCE LAUGHTER DEFENSE",
+    "ability": ["Integrity", "Presence"],
+    "prerequisites": "Presence 3 or Integrity 3",
+    "description": "The Infernal’s loud and wicked laugh spoils an attack with the force of their manic glee. Spend 1 mote. On Step 6, the Infernal may subtract one success from a damage roll for every die that shows a 1. If she had not spoken or otherwise vocalized yet in the scene, the mote cost is waived and the attack loses one additional success. Gain an additional anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [246]
+  },
+  {
+    "name": "COSMIC TRANSCENDENCE OF (VIRTUE)",
+    "ability": ["Integrity"],
+    "prerequisites": "Integrity 1, Essence 2",
+    "description": "The Infernal expands her consciousness, attaining an alien intellect that lets her see beyond the constraints of her humanity. The Infernal’s understanding of her essential self and character drives improves to the point where she may coldly and discretely scrutinize them. Her ego may rationalize all manner of action toward or against a Virtue she possesses. So long as the player justifies the reasoning of adherence to a higher standard of the Virtue, the Infernal may ignore penalties to her Resolve from acting against the Virtue, and increase the bonuses by two. This Charm is permanent and may be purchased for both Virtues.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [247]
+  },
+  {
+    "name": "ENDLESS NIGHTMARE VIGILANCE",
+    "ability": ["Integrity", "Physique"],
+    "prerequisites": "Integrity 3 or Physique 3, Essence 2",
+    "description": "The Infernal’s ever-burning anger is as restful as any pleasant dream. The Infernal no longer needs to sleep and is immune to any effect that would force her to sleep. She may also shrug off the effects of Knockdown, Ensnare, or similar effects that would force her to stop moving by spending 1 mote. For 2 motes, she may return to the fight from Incapacitated as though her Circle had given her 10 Power.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [248]
+  },
+  {
+    "name": "INEVITABLE BETRAYAL INSIGHT",
+    "ability": ["Integrity"],
+    "prerequisites": "Integrity 4",
+    "description": "It is the burden of the Infernal Exalted to know that all things will betray them, given the chance. Spend 2 motes on Step 2 when attacked by a character to whom the Infernal has an Intimacy — positive or negative. The Infernal increases her Defense by three and ignores any penalties from surprise or ambushes. Any Intimacy toward that character instantly becomes negative if not already, and the Infernal’s next decisive attack against them reduces their effective Hardness by two.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [247]
+  },
+  {
+    "name": "INTOLERABLE BURNING TRUTHS",
+    "ability": ["Integrity"],
+    "prerequisites": "Integrity 3, Essence 2",
+    "description": "The Infernal’s understanding of love and hate transcends the crude passions of humanity. Commit one mote for the scene. The Infernal may alter her personality, choosing from one of several effects each aligned with a worldview: Mother Before Daughter, Trust Is Naïve, Existence Is Agony, Never Forgive, Hate Springs Eternal. These effects influence social interactions, defense, or combat abilities based on the Infernal’s Intimacies and Virtues.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [247]
+  },
+  {
+    "name": "WILL-CRUSHING FORCE",
+    "ability": ["Integrity"],
+    "prerequisites": "Integrity 3, Essence 3",
+    "description": "The Infernal lashes out to maim her foe — not his flesh, but his very soul. Spend 2 motes and 1 anima. The Infernal makes a decisive attack substituting Attribute + Integrity for her normal dice pool against a character at up to medium range, treating her Essence as an accuracy bonus. If successful, rather than take damage, the target loses access to their Minor Virtue and treats their Major Virtue as Minor. This effect lasts for the rest of the session.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [248]
+  },
+  {
+    "name": "DESERT-AND-FLAME ENDURANCE",
+    "ability": ["Navigate", "Physique"],
+    "prerequisites": "Physique 3 or Navigate 3",
+    "description": "The Infernal strides free and comfortable, even in the most desolate of lands. Commit 1 mote. The Infernal is immune to penalties and hazards from desolate environments, like desert heat, arctic cold, and the native perils of hell. This does not protect from dangers in verdant locales such as jungles, forests, and lush isles.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [247]
+  },
+  {
+    "name": "OASIS-SCOURING MALEDICTION",
+    "ability": ["Navigate"],
+    "prerequisites": "Taste-of-Hell Infliction, Navigate 5, Essence 5",
+    "description": "Spreading their dark influence over a region, the Infernal transforms it into a blighted hellscape. Spend 3 motes or 5 anima in an area affected by Taste-of-Hell Infliction to expand it to a major region, defined as a negotiation between player and Storyteller. The curse lasts for one year plus extra time based on successes. It becomes nearly uninhabitable and spiritually toxic to gods.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [248]
+  },
+  {
+    "name": "TASTE-OF-HELL INFLICTION",
+    "ability": ["Navigate"],
+    "prerequisites": "Navigate 5, Essence 2",
+    "description": "This Charm initiates a scene duration magical ritual that transforms an area into a barren desert over five days. Infernals and demons benefit from motes and immunity to hostile magic in this region. Additional sorcerous perks apply. Too many uses draw Heaven’s notice.",
+    "modes": [
+      {
+        "name": "Infernal",
+        "title": "Dune-Drowned Oasis Ritual",
+        "effect": "At Essence 4, the Infernal may preserve specific parts within the transformed area, spawning a secondary Hearthstone of their choice."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [248]
+  },
+  {
+    "name": "DEVIL EMPEROR EDICT",
+    "ability": ["Presence", "Performance"],
+    "prerequisites": "Presence 5 or Performance 5",
+    "description": "Spend 1 mote when making an influence roll based on intimidation or authority. If the target refuses a hard bargain, they suffer a level of automatic damage and the Infernal gains a dice bonus on their next action. This can only affect a target once per scene. Gain 1 anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [248]
+  },
+  {
+    "name": "SYMPHONY OF SINFUL PRAYERS",
+    "ability": ["Performance", "Sagacity"],
+    "prerequisites": "Performance 3 or Sagacity 3",
+    "description": "Spend 1 mote to learn the condition and concerns of characters connected via Merits. The Infernal may ask a follow-up question or direct her attention to the prayers of a specific character.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [248]
+  },
+  {
+    "name": "WISH-GRANTING WICKEDNESS",
+    "ability": ["Performance"],
+    "prerequisites": "Performance 5, Essence 3",
+    "description": "Spend 3 motes to grant someone’s wish — in the form of a temporary Merit. The Merit lasts until the story's end. Refusing requires a hard bargain. If they accept, they become indebted, unable to refuse the Infernal’s next persuade roll via hard bargain.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [249]
+  },
+  {
+    "name": "CEASELESS DEMON HUNGER",
+    "ability": ["Physique"],
+    "prerequisites": "Physique 2",
+    "description": "The Infernal can safely consume any mundane substance as nourishment. Destroyed upon ingestion. Gain 1 anima if this disgusts a nearby character.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [247]
+  },
+  {
+    "name": "SCARS BECOME ARMOR",
+    "ability": ["Physique"],
+    "prerequisites": "Physique 4, Essence 2",
+    "description": "Commit 1 mote. On Step 7, gain 1 soak after taking damage, or 2 soak for 3+ damage. This soak can reduce damage to zero.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [248]
+  },
+  {
+    "name": "VENOM BLOOD REVENGE",
+    "ability": ["Physique"],
+    "prerequisites": "Physique 4",
+    "description": "Spend 1 mote on Step 8 as a counterattack. Close enemies must pass a Physique check (difficulty 3 + damage taken) or take 4 dice of environmental damage from the Infernal’s acidic blood.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [248]
+  },
+  {
+    "name": "VIRIDIAN RUST DEFENSE",
+    "ability": ["Physique"],
+    "prerequisites": "Physique 3",
+    "description": "Commit 1 mote while armored to gain +2 Soak. On Step 4, pay 1 Power to destroy a mundane weapon. On Step 6, spend 2 motes or 1 anima to de-attune an artifact or magical weapon until end of scene.",
+    "modes": [
+      {
+        "name": "Wrathful",
+        "title": "Weapon De-Attunement",
+        "effect": "Spend 2 motes or 1 anima on Step 6 to forcibly de-attune an artifact or magical weapon until end of scene."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [248]
+  },
+  {
+    "name": "BLINDED BY HELLFIRE",
+    "ability": ["Ranged Combat"],
+    "prerequisites": "Ranged Combat 2",
+    "description": "Spend 1 mote on Step 5. On withering attacks, target suffers attack penalties equal to Power generated. On decisive attacks, apply penalties equal to wound penalties +1 to all actions and Defense. Cannot use two rounds in a row.",
+    "modes": [
+      {
+        "name": "Infernal",
+        "title": "Green Sun Nimbus Flare",
+        "effect": "At Ranged Combat 4, affected target cannot benefit from concealment and reduces cover Defense boost by one (minimum 0)."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [245]
+  },
+  {
+    "name": "CONSTRUCTIVE CONVERGENCE OF PRINCIPLES",
+    "ability": ["Sagacity"],
+    "prerequisites": "Essence 2, Sagacity 3",
+    "description": "Replicates Solar Charm Wyld-Shaping Technique, with added capability of shaping land altered by Taste-of-Hell Infliction.",
+    "modes": [
+      {
+        "name": "Infernal",
+        "title": "Ascendent Objectivity Stance",
+        "effect": "At Essence 3, replicates Wyld Cauldron Technology upgrade."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [250]
+  },
+  {
+    "name": "DARK MIRACLE MIMICRY",
+    "ability": ["Sagacity"],
+    "prerequisites": "Sagacity 4, Essence 2",
+    "description": "Commit 1 mote to copy a magical ability (spell, Charm, etc.) from a character with a negative Intimacy. Must pay cost normally. Effect ends when mote is uncommitted.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [250]
+  },
+  {
+    "name": "INNER DEVIL UNCHAINED",
+    "ability": ["Sagacity"],
+    "prerequisites": "Sagacity 5",
+    "description": "Spend 2 motes to transform a mortal into a demon-like being with a 3-die bonus to one category of actions. Transformation is hideous and permanent unless magically reversed.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [250]
+  },
+  {
+    "name": "MIND-HAND MANIPULATION",
+    "ability": ["Sagacity"],
+    "prerequisites": "Sagacity 2",
+    "description": "Commit 1 mote for a scene to use Sagacity in place of Physique/Ranged Combat when telekinetically manipulating objects. Can attack, grapple, and affect incorporeal beings. Additional benefits at Essence 2 and 4.",
+    "modes": [
+      {
+        "name": "Infernal",
+        "title": "Unseen Force Application",
+        "effect": "Sagacity 4, Essence 2: Commit 1 extra mote to manipulate objects at long range undetectably."
+      },
+      {
+        "name": "Infernal",
+        "title": "Self-Sealing Vivisection Gesture",
+        "effect": "Sagacity 5, Essence 2: Commit 1 extra mote. Telekinetic blade gains artifact and piercing tags. May cause a dramatic injury instead of Incapacitation."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [251]
+  },
+  {
+    "name": "SHADOW SPITE CURSE",
+    "ability": ["Sagacity"],
+    "prerequisites": "Sagacity 3",
+    "description": "Spend 1 mote. Target loses 1 success per 1 rolled on a dice roll. On failure from attack, they suffer a 3-die penalty to influence actions for rest of scene. Gain 1 anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [251]
+  },
+  {
+    "name": "SKIN-TWISTING METAMORPHOSIS",
+    "ability": ["Sagacity"],
+    "prerequisites": "Sagacity 3",
+    "description": "Spend 1 mote to curse a target via unarmed attack, causing a 3-die penalty to an Ability. Requires divine or Exalted medicine (difficulty 7) to cure. Gain 1 anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [251]
+  },
+  {
+    "name": "NEMESIS SELF IMAGINED ANEW",
+    "ability": ["Stealth"],
+    "prerequisites": "Stealth 2, Essence 2",
+    "description": "Commit 1 mote and choose a visible target. Gain a Major Intimacy of spite. Read intent rolls against target are cheaper, and the Infernal can adopt and mirror their Intimacies or Virtues, accessing related memories. Revert when mote is uncommitted.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [251]
+  },
+  {
+    "name": "EVERY MAN A DEVIL",
+    "ability": ["War"],
+    "prerequisites": "War 5, Essence 2",
+    "description": "Spend 1 mote during a dramatic training scene. Transform battle group (Size = Essence + 1) to gain up to 3 supernatural qualities. When the Infernal leads them, he gets double 9s on command and rout checks.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [251]
+  }
+]

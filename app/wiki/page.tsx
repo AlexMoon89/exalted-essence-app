@@ -5,7 +5,7 @@ import { Sparkle, Sparkles, X } from 'lucide-react';
 import { type WikiEntry, loadAllCharmsAsWikiEntries } from '@/lib/wikiData';
 
 const categories = ['Charms', 'Martial Arts', 'Spells', 'Merits', 'Artifacts', 'Resources'];
-const exaltTypes = ['Solar', 'Lunar', 'Abyssal', 'Alchemical', 'Dragon Blooded', 'Sidereal', 'Universal'];
+const exaltTypes = ['Solar', 'Lunar', 'Abyssal', 'Alchemical', 'Dragon Blooded', 'Sidereal', 'Infernal', 'Getimian', 'Universal'];
 
 export default function WikiPage() {
   const [selectedCategory, setSelectedCategory] = useState('Charms');
