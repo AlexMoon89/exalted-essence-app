@@ -2,20 +2,23 @@
 
 import { useState, useEffect } from 'react';
 import { Sparkle, Sparkles, X } from 'lucide-react';
-import { type WikiEntry, loadUniversalCharmsAsWikiEntries } from '@/lib/wikiData';
+import { type WikiEntry, loadAllCharmsAsWikiEntries } from '@/lib/wikiData';
 
 const categories = ['Charms', 'Martial Arts', 'Spells', 'Merits', 'Artifacts', 'Resources'];
+const exaltTypes = ['Solar', 'Lunar', 'Abyssal', 'Alchemical', 'Dragon Blooded', 'Sidereal', 'Universal'];
 
 export default function WikiPage() {
   const [selectedCategory, setSelectedCategory] = useState('Charms');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedAbility, setSelectedAbility] = useState<string | null>(null);
+  const [selectedExaltType, setSelectedExaltType] = useState<string | null>(null);
+  const [selectedCharmCategory, setSelectedCharmCategory] = useState<string | null>(null);
   const [openEntry, setOpenEntry] = useState<WikiEntry | null>(null);
   const [entries, setEntries] = useState<WikiEntry[]>([]);
 
   useEffect(() => {
     async function loadData() {
-      const charms = await loadUniversalCharmsAsWikiEntries();
+      const charms = await loadAllCharmsAsWikiEntries();
       setEntries(charms);
     }
     loadData();
@@ -25,24 +28,34 @@ export default function WikiPage() {
     new Set(entries.flatMap((entry) => entry.ability?.split(',').map((a) => a.trim()) || []))
   ).sort();
 
+  const allCharmCategories = Array.from(
+    new Set(entries.map((entry) => entry.category))
+  ).sort();
+
   const filteredEntries = entries
-  .filter((entry) => {
-    const normalizedCategory = (entry.category ?? '').toLowerCase();
-    const selected = selectedCategory.toLowerCase();
-    if (selected === 'charms') {
-      // Mostrar charms universales + solares (y futuros como 'lunar', etc.)
-      return normalizedCategory.includes('charm');
-    }
-    return normalizedCategory === selected;
-  })
-  .filter((entry) =>
-    entry.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    entry.description.toLowerCase().includes(searchQuery.toLowerCase())
-  )
-  .filter((entry) => {
-    if (!selectedAbility) return true;
-    return entry.ability?.includes(selectedAbility);
-  });
+    .filter((entry) => {
+      if (!entry.category) return false;
+      const normalized = entry.category.toLowerCase();
+      if (selectedCategory === 'Charms') return normalized.includes('charm');
+      return normalized === selectedCategory.toLowerCase();
+    })
+    .filter(
+      (entry) =>
+        entry.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        entry.description.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    .filter((entry) => {
+      if (!selectedAbility) return true;
+      return entry.ability?.includes(selectedAbility);
+    })
+    .filter((entry) => {
+      if (!selectedExaltType) return true;
+      return entry.tags.includes(selectedExaltType);
+    })
+    .filter((entry) => {
+      if (!selectedCharmCategory) return true;
+      return entry.category === selectedCharmCategory;
+    });
 
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-6 text-aura-abyssal dark:text-dark-foreground">
@@ -59,7 +72,9 @@ export default function WikiPage() {
             key={cat}
             onClick={() => {
               setSelectedCategory(cat);
-              setSelectedAbility(null); // Reset ability filter
+              setSelectedAbility(null);
+              setSelectedExaltType(null);
+              setSelectedCharmCategory(null);
             }}
             className={`px-4 py-2 rounded-full ${
               selectedCategory === cat
@@ -71,6 +86,50 @@ export default function WikiPage() {
           </button>
         ))}
       </div>
+
+      {/* Filters */}
+      {selectedCategory === 'Charms' && (
+        <div className="flex flex-wrap justify-center gap-4 mt-4">
+          <select
+            value={selectedAbility || ''}
+            onChange={(e) => setSelectedAbility(e.target.value || null)}
+            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-aura-lunar dark:bg-dark-steel dark:text-dark-foreground dark:border-dark-border transition-colors"
+          >
+            <option value="">All Abilities</option>
+            {allAbilities.map((ability) => (
+              <option key={ability} value={ability}>
+                {ability}
+              </option>
+            ))}
+          </select>
+
+          <select
+            value={selectedExaltType || ''}
+            onChange={(e) => setSelectedExaltType(e.target.value || null)}
+            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-aura-lunar dark:bg-dark-steel dark:text-dark-foreground dark:border-dark-border transition-colors"
+          >
+            <option value="">All Exalt Types</option>
+            {exaltTypes.map((type) => (
+              <option key={type} value={type}>
+                {type}
+              </option>
+            ))}
+          </select>
+
+          <select
+            value={selectedCharmCategory || ''}
+            onChange={(e) => setSelectedCharmCategory(e.target.value || null)}
+            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-aura-lunar dark:bg-dark-steel dark:text-dark-foreground dark:border-dark-border transition-colors"
+          >
+            <option value="">All Charm Categories</option>
+            {allCharmCategories.map((cat) => (
+              <option key={cat} value={cat}>
+                {cat}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
 
       {/* Search Bar */}
       <div className="text-center">
@@ -85,35 +144,6 @@ export default function WikiPage() {
           Showing <strong>{selectedCategory}</strong> matching “{searchQuery}”
         </p>
       </div>
-
-      {/* Ability Filters */}
-      {selectedCategory === 'Charms' && allAbilities.length > 0 && (
-        <div className="flex flex-wrap justify-center gap-2 mt-4">
-          <button
-            onClick={() => setSelectedAbility(null)}
-            className={`px-3 py-1 rounded-full text-sm ${
-              selectedAbility === null
-                ? 'bg-ice text-aura-lunar font-bold'
-                : 'bg-muted text-muted-foreground hover:bg-aura-solar hover:text-[#ededed]'
-            }`}
-          >
-            All Abilities
-          </button>
-          {allAbilities.map((ability) => (
-            <button
-              key={ability}
-              onClick={() => setSelectedAbility(ability)}
-              className={`px-3 py-1 rounded-full text-sm ${
-                selectedAbility === ability
-                  ? 'bg-steel text-ice font-bold'
-                  : 'bg-muted text-muted-foreground hover:bg-ice hover:text-aura-lunar'
-              }`}
-            >
-              {ability}
-            </button>
-          ))}
-        </div>
-      )}
 
       {/* Grid of Entries */}
       <div className="pt-4">
@@ -170,13 +200,11 @@ export default function WikiPage() {
                   <div>
                     <strong className="bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text">Modes:</strong>
                     <ul className="mt-2 space-y-1 list-disc list-inside text-sm text-aura-abyssal">
-                      {openEntry.full?.modes?.map(
-                        (mode: { name: string; title: string; effect: string }, i: number) => (
-                          <li key={i}>
-                            <strong>{mode.name} – {mode.title}:</strong> {mode.effect}
-                          </li>
-                        )
-                      )}
+                      {openEntry.full?.modes?.map((mode, i) => (
+                        <li key={i}>
+                          <strong>{mode.name} – {mode.title}:</strong> {mode.effect}
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 )}

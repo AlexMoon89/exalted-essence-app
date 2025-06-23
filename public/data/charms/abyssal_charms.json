@@ -1,0 +1,375 @@
+[
+  {
+    "name": "DEATH APPROACHES",
+    "ability": ["Athletics"],
+    "prerequisites": "Athletics 4",
+    "description": "The deathknight bears down on her target with killing intent. Spend 1 mote on Step 3 when the Abyssal moves toward and attacks an enemy, including rushes. On a withering attack, the target loses Power equal to the extra successes rolled, rather than the Abyssal gaining Power. She gains 1 Power as though her Overwhelming were 1 and she’d missed, regardless of what weapon she uses. On a decisive attack, if she deals any damage to the target on Step 7, they also lose 3 Power.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "EBON LIGHTNING FLASH",
+    "ability": ["Athletics"],
+    "prerequisites": "Athletics 5, Essence 2",
+    "description": "The Abyssal’s terrible speed leaves only corpses in her wake. Spend 1 mote on Step 1. Choose a target within the scene who has less Power than the Abyssal. Cross the distance to be within attack range instantly. A withering attack causes the target to lose 1 Power, even on a miss, or she may choose to gain 1 mote if she hits. A decisive attack adds her Essence in dice to damage on Step 5. This counts as the Abyssal’s move action for the round. This may be used during a clash.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "CORPSE QUESTIONING TECHNIQUE",
+    "ability": ["Awareness"],
+    "prerequisites": "Awareness 1",
+    "description": "The Abyssal imbues a cadaver with their Essence, granting enough unlife to speak in feeble gasps and answer whatever questions they wish. Spend 1 mote. For one scene, a corpse at close range sits up and speaks, answering any question it knows the answer to honestly in the languages that it knew when alive, though lacking the deceased’s personality.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [218]
+  },
+  {
+    "name": "WICKEDNESS-UNVEILING METHOD",
+    "ability": ["Awareness", "Integrity"],
+    "prerequisites": "Awareness or Integrity 2",
+    "description": "The deathknight’s darkness calls to that of others. Death whispers their misdeeds into the Abyssal’s ear. The Exalt gains double 8s on a read intentions action. The Exalt may spend 1 mote to ask one of several questions. Additional questions cost 1 mote each. At the Storyteller’s discretion, each question answered may reveal a single relevant Intimacy.",
+    "modes": [
+      {
+        "name": "Abyssal",
+        "title": "Soul-Invading Gaze (Repurchase)",
+        "effect": "Spend 1 mote to roll Awareness against the target’s Resolve. Against ghosts, gain three bonus dice. On success, the Exalt may reveal goals or Intimacies. Failure refunds the mote."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Guilt’s Spectral Wake (Repurchase)",
+        "effect": "Spend 1 mote. Gain double 8s on locating a concealed killer with Awareness or Integrity roll. Gain double 7s against mass murderers, etc."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [218, 219]
+  },
+  {
+    "name": "GHOSTLY SENTINEL TECHNIQUE",
+    "ability": ["Awareness"],
+    "prerequisites": "Awareness 4, Essence 2",
+    "description": "Wraiths of smoke and spectral metal emerge from the deathknight’s outstretched fingertips to watch over distant locations. Commit up to 3 motes. The Exalt may see through the wraiths using her senses wherever they are present and may use her Awareness Charms through them. Wraiths are immaterial and can move up to long range of the Exalt.",
+    "modes": [
+      {
+        "name": "Abyssal",
+        "title": "Roving Shadow Scouts (Upgrade)",
+        "effect": "The wraiths persist regardless of distance. Moving a wraith beyond long range requires the Exalt’s reflexive move action."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [219]
+  },
+  {
+    "name": "ARTFUL MAIMING ONSLAUGHT",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 2",
+    "description": "The Abyssal elevates the infliction of pain to an art form. Each strike leaves a grievous wound that causes a one-success penalty for the rest of the scene. This stacks up to three times. Only the Exalted heal these scars naturally. This may be used during a clash and grants an anima.",
+    "modes": [
+      {
+        "name": "Abyssal",
+        "title": "Soul-Cleaving Wound (Upgrade)",
+        "effect": "Spend 1 mote and 5 anima. Decisive attack adds five-success damage bonus unless the target accepts a dramatic injury that lowers their Essence by 1 while healing. At Essence 0, they are comatose."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [220]
+  },
+  {
+    "name": "IRON MAIDEN’S KISS",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 5, Essence 3",
+    "description": "The Abyssal encases an enemy in spectral armor. Spend 2 motes on Step 1 to make a gambit to trap the target for a duration based on extra successes. Each turn they suffer two aggravated damage. At death, the Exalt may raise them as a war ghost.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [220]
+  },
+  {
+    "name": "SOUL-DRINKING BITE",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 2",
+    "description": "The Abyssal feeds on a victim’s lifeblood while grappling. Spend 1 mote on Step 3 of a decisive attack. The victim loses motes equal to damage and the Abyssal gains them up to her Essence. Outside combat, feeding grants 1 mote and inflicts Essence damage.",
+    "modes": [
+      {
+        "name": "Abyssal",
+        "title": "Blood-Drinking Palm (Upgrade)",
+        "effect": "Pay 1 Power to use Soul-Drinking Bite on an unarmed attack. Can be used during a clash."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [220]
+  },
+  {
+    "name": "VOID AVATAR EMBODIMENT",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 5, Essence 5",
+    "description": "The Abyssal cloaks herself in necrotic flame. Commit 3 motes at Active anima. Doubles 9s on movement and combat. Once per round may clash in response to attacks. Adds Hardness and generates fear in enemies, causing groups to flee and trivial foes to rout.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [220]
+  },
+  {
+    "name": "ALL-CONSUMING ENTROPY ATTACK",
+    "ability": ["Craft"],
+    "prerequisites": "Craft 3",
+    "description": "With a touch, the Abyssal destroys objects. Spend 1 mote to destroy a mundane hand-held object. Larger objects require a Craft roll. A disarm gambit is needed if the object is held or worn.",
+    "modes": [
+      {
+        "name": "Abyssal",
+        "title": "Annihilating Gaze (Upgrade)",
+        "effect": "Destroy perceived objects. Target cannot apply Defense to disarm. May suspend destruction by committing an additional mote."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [220]
+  },
+  {
+    "name": "HAUNTING MONUMENTAL ARTIFICE",
+    "ability": ["Craft"],
+    "prerequisites": "Craft 5",
+    "description": "Imbued with deathly Essence, necklaces and monuments attract the attention of the dead. Shades may touch these trinkets as if they were still alive, and dwell within buildings to acquire physical form once night falls. Spend 1 mote while making an object or completing a mundane crafting venture. The result is imbued with haunting deathly Essence that attracts the undead to its location. Personal-scale mundane items may be interacted with by ghosts as if they were materialized. At night, ghosts may materialize within buildings, boats, and similar large-scale objects constructed using this Charm.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "GHOST-EMPEROR EDICT",
+    "ability": ["Embassy", "Presence"],
+    "prerequisites": "Embassy 3 or Presence 3",
+    "description": "The Abyssal may proclaim edicts empowered by the most ancient laws of the Underworld, binding spectral nations and afterlives to their will. Commit 1 mote. Undertake a venture to alter the mystical laws of the Underworld that a particular group must obey. Success allows the Exalt to create a law that all targets are compelled to follow, suffering the effects of an Eclipse oath if they knowingly violate the law. Laws might include offering hospitality to guests, never striking an enemy without giving them warning, always walking on the left side of the road, etc.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [221]
+  },
+  {
+    "name": "KILLING WORDS TECHNIQUE",
+    "ability": ["Embassy", "Presence"],
+    "prerequisites": "Embassy or Presence 4, Essence 2",
+    "description": "The Abyssal’s words carry the entropic power of death itself. Those who are moved by their words either suffer a subtle, life-draining weakness or spectacular unnatural stigmata that brings death. Spend 1 mote. This Charm supplements a written or spoken influence, granting double 9s. If successful, the target of the influence must accept either five Health levels of environmental damage or a dramatic injury reflecting the Exalt’s choice of unnatural withering or violent stigmata. Trivial targets may be slain outright. Once per story, unless reset by accomplishing a personal milestone goal or Exalt milestone as a result of this Charm.",
+    "modes": [
+      {
+        "name": "Abyssal",
+        "title": "Soul-Flaying Gaze (Upgrade, Embassy or Presence 5)",
+        "effect": "The Exalt gains double 8s and may supplement non-verbal social influence with this Charm."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [221]
+  },
+  {
+    "name": "REVERENT MORTUARY WITNESS",
+    "ability": ["Embassy", "Presence"],
+    "prerequisites": "Embassy or Presence 3",
+    "description": "Those who pray to the deathknight for guidance may find their prayers answered by a spectral vision or disembodied voice. Commit 1 mote while present in a place of death. When a worshiper prays to her, the Exalt may visit them as a spectral apparition or as a disembodied voice, able to see, hear, and speak as if physically present in the scene. The Exalt may also use this Charm to communicate with her Followers or use Command if she has them. In disembodied form, the Exalt may float up to one range band off the ground and may be perceived and attacked through magic such as Spirit-Cutting Glance, even if disembodied. If the Exalt’s real body is attacked, this Charm ends immediately.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [221]
+  },
+  {
+    "name": "MURDER-SAINT DEDICATION",
+    "ability": ["Integrity"],
+    "prerequisites": "Integrity 2",
+    "description": "The Abyssal hardens her soul against the suffering of the living. She is dedicated to her grim cause. The Exalt increases her base Resolve by two against social influence to instill or strengthen positive Ties to the living, or to dissuade her from violence against them.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "STEPPING OUTSIDE EXISTENCE",
+    "ability": ["Navigate"],
+    "prerequisites": "Navigate 4, Essence 3",
+    "description": "The death knight rips open a vortex of darkness that allows them to travel through the mad somnolence of dead titans to a location remembered by the Abyssal and the Neverborn. Spend 3 motes. The Exalt creates a portal to a previously observed location that immediately disappears after use. During travel, the Abyssal must roll Fortitude + Integrity against difficulty 3 or suffer a penalty to social rolls due to disturbing visions.",
+    "modes": [
+      {
+        "name": "Abyssal",
+        "title": "Journey into Nightmares (Upgrade, Essence 5)",
+        "effect": "The Abyssal may hold the portal open for allies for up to three turns. Allies must roll Fortitude + Integrity vs difficulty 7 or suffer a dramatic injury. The deathknight may spend motes to exempt Circlemates and others."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [222]
+  },
+  {
+    "name": "UNHALLOWED GHOST SHIP",
+    "ability": ["Navigate"],
+    "prerequisites": "Navigate 2",
+    "description": "The deathknight calls forth waterlogged wraiths to claim a vessel as her flagship. Spend 1 mote while aboard a ship to claim it. Spectral sailors may serve as crew in place of the living, becoming material for the task.",
+    "modes": [
+      {
+        "name": "Abyssal",
+        "title": "Mist-Veiled Galleon (Upgrade, Essence 2)",
+        "effect": "Commit 1 mote for a scene to cloaked the ship in mist, imposing a three-dice penalty to vision-based rolls at sea."
+      },
+      {
+        "name": "Abyssal",
+        "title": "Seeking Bleak Harbor (Upgrade, Navigate 5, Essence 3)",
+        "effect": "Spend 1 mote and roll Navigate at difficulty 7. On success, the ship travels to the Underworld. Exalt may choose destination based on a positive Tie."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [222]
+  },
+  {
+    "name": "ELEGY FOR THE FALLEN",
+    "ability": ["Performance"],
+    "prerequisites": "Performance 2",
+    "description": "The Abyssal may lead others in a nighttime ceremony to honor the dead. This practice may take the form of high ritual, a mournful song or dance, or even a celebratory wake. Commit 1 mote at night or in a place of death. The Exalt leads a ceremony to honor an individual ghost or a community of ghosts with a group of revelers using a dramatic scene. The ghost increases their pools by three dice and may utilize the Abyssal’s Charms. The Abyssal pays the mote cost for the Charms as normal. The celebration must last at least an hour of downtime.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [223]
+  },
+  {
+    "name": "WITHERING DIRGE",
+    "ability": ["Performance"],
+    "prerequisites": "Performance 5, Essence 3",
+    "description": "The Abyssal channels deathly Essence into a performance so powerful it may draw the souls of the living from their bodies. Commit 1 mote. For one song, the Exalt makes a Performance roll against the Resolve of all listeners. Success inflicts one Health level of damage each turn the Abyssal performs until the target is Incapacitated. Trivial characters who are affected die. Those affected are unable to take action but listen to the song. Resisting listeners suffer a fatigue penalty. Attacking the Abyssal ends the Charm. May only be used once per scene.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [223]
+  },
+  {
+    "name": "DEATH NEEDS NOTHING",
+    "ability": ["Physique"],
+    "prerequisites": "Physique 5",
+    "description": "Commit 1 mote for the scene. The Exalt gains immunity to all magical forms of poison, illness, deprivation, or fatigue. If she provokes Cruel Banquet, she also gains 1 anima.",
+    "modes": [
+      {
+        "name": "Abyssal",
+        "title": "Breathless Ghost Emulation (Upgrade, Essence 3)",
+        "effect": "The Abyssal does not need to pay the cost for this Charm, instead treating it as a permanent effect."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [223]
+  },
+  {
+    "name": "CADAVEROUS TORPOR TECHNIQUE",
+    "ability": ["Physique"],
+    "prerequisites": "Physique 5, Essence 2",
+    "description": "Allows the Abyssal to fake death. Spend 1 mote when Incapacitated or receiving a dramatic injury. The Exalt appears dead. Only magical senses can detect they’re alive. The Exalt picks a condition to wake. Revives with Health levels equal to Essence if Incapacitated.",
+    "modes": [
+      {
+        "name": "Abyssal",
+        "title": "Mandate of Death (Upgrade, Essence 4)",
+        "effect": "If activated when Incapacitated, the Exalt may disappear and reform next session at a place of death or attuned Abyssal manse/demesne. Effects that destroy ghosts bypass this Charm and kill permanently."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [223]
+  },
+  {
+    "name": "CORPSE-COMMANDING ATTITUDE",
+    "ability": ["Presence"],
+    "prerequisites": "Presence 3",
+    "description": "Spend 1 mote. As a simple action, reanimate a nearby corpse as walking dead with unwavering obedience. Only one may be active at a time. Alternatively, spend 1 mote to gain bonus dice to social influence against undead. Influence may affect mindless undead.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [223]
+  },
+  {
+    "name": "DEATH-PACT ASCENSION",
+    "ability": ["Presence"],
+    "prerequisites": "Presence 4, Essence 2",
+    "description": "Spend 1 mote. Guarantees a person becomes a ghost (nemissary) with a Minor Tie to the Abyssal if they die completing a task. Cannot be permanently killed while the Tie remains. Reflexively end effect anytime. Suicidal tasks valid.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [223]
+  },
+  {
+    "name": "FIRST BLOOD IMPULSE",
+    "ability": ["Ranged Combat"],
+    "prerequisites": "Ranged Combat 1",
+    "description": "Spend 1 mote when Join Battle is rolled. Gain 1 Power and act first. In ambush, increase weapon Accuracy and Overwhelming by one and gain 1 anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [223]
+  },
+  {
+    "name": "HUNDRED PACES BITE",
+    "ability": ["Ranged Combat"],
+    "prerequisites": "Ranged Combat 3",
+    "description": "Spend 1 mote on Step 5. On decisive attacks, gain 1 mote when using Cruel Banquet or force the target to lose Power equal to damage rolled before weapon damage is applied. Choose one effect only.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [223]
+  },
+  {
+    "name": "LIFE-MOCKING ASSEMBLY",
+    "ability": ["Sagacity", "War"],
+    "prerequisites": "Sagacity 3 or War 3",
+    "description": "Spend 1 mote. Roll Sagacity or War to raise zombies. For each extra success, a walking dead group is formed up to available corpses. Single corpse needs no roll. Failure still raises a small battle group.",
+    "modes": [
+      {
+        "name": "Abyssal",
+        "title": "Corpse-Beast Revivification (Upgrade, Sagacity 4)",
+        "effect": "May reanimate animal corpses, which gain undead and mindless traits. Legendary size creatures take a session."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [223]
+  },
+  {
+    "name": "PESTILENCE-BEARING TOUCH",
+    "ability": ["Sagacity"],
+    "prerequisites": "Sagacity 3",
+    "description": "Spend 1 mote. Touch infects target with a mundane disease at Major Intensity. The Abyssal chooses a signature disease or any they've cured using Plague-Halting Gesture.",
+    "modes": [
+      {
+        "name": "Abyssal",
+        "title": "Plague Knows Its Master (Upgrade, Sagacity 4)",
+        "effect": "Exalt may spread supernatural diseases they've cured. Immune to all but supernatural disease penalties."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [224]
+  },
+  {
+    "name": "STIFLED CRY EXERCISE",
+    "ability": ["Stealth"],
+    "prerequisites": "Stealth 3",
+    "description": "Commit 1 mote. Target within medium range cannot make noise, and all combat sounds are muffled with penalties on hearing rolls. Ineffective against opponents with higher Essence.",
+    "modes": [
+      {
+        "name": "Abyssal",
+        "title": "Atrocity Without Witness (Upgrade, Essence 2)",
+        "effect": "When used in ambush, make Stealth vs. target Resolve. On success, bystanders freeze and forget the scene after. Ineffective against higher Essence targets."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [224]
+  },
+  {
+    "name": "SHADOW CLOAK TECHNIQUE",
+    "ability": ["Stealth"],
+    "prerequisites": "Stealth 2",
+    "description": "Commit 1 mote. Vision-based rolls to see Exalt suffer three-success penalty. In darkness, night, Underworld, the penalty increases and extends to short range.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [224]
+  },
+  {
+    "name": "ARISE AND SLAUGHTER",
+    "ability": ["War"],
+    "prerequisites": "War 4",
+    "description": "Commit 1 mote. If corpses are nearby, roll War to raise battle group of undead or heal undead battle group. Auto-successes if many corpses are present. Failure still raises basic undead. Undead fall after scene ends.",
+    "modes": [
+      {
+        "name": "Abyssal",
+        "title": "The Risen Hunger (Upgrade, War 5)",
+        "effect": "Undead battle groups can heal with damage dealt and persist indefinitely if they consume corpses after scene ends."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [224]
+  },
+  {
+    "name": "SHADOWED WARFARE METHODOLOGY",
+    "ability": ["War"],
+    "prerequisites": "War 2",
+    "description": "Commit 1 mote. Transforms battlefield into shadowland for the Exalt and allies for manifesting Charms or ghostly magic. At night or in Underworld, success is automatic unless countered by magic.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [224]
+  }
+]

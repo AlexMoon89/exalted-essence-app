@@ -74,3 +74,17 @@ h1, h2, h3, h4 {
 .dark .btn-outline {
   @apply border-dark-steel text-dark-steel hover:bg-dark-steel hover:text-dark-background;
 }
+
+/* Highlight selected option */
+select option:checked {
+  /* Gradients are not supported on option backgrounds in most browsers */
+  background-color: var(--ice); /* Tailwind gray-300 */
+  color: var(--aura-lunar);
+  font-weight: bold;
+}
+
+/* Optional: highlight on hover (not always supported) */
+select option:hover {
+  background-color: var(--aura-lunar);
+  color: var(--aura-lunar);
+}

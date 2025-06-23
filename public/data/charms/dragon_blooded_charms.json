@@ -1,0 +1,487 @@
+[
+  {
+    "name": "DRAGON SURMOUNTS THE WATERFALL",
+    "ability": ["Athletics"],
+    "prerequisites": "Athletics 3",
+    "description": "The Dragon-Blood is a legendary swimmer, capable of incredible grace and movement while submerged. Commit 1 mote for the scene. While this Charm is active, the Exalt may take normal move actions while submerged. She may use her reflexive move action to swim without needing to roll and may rush and sprint under water without issue. She may also apply any movement Charm to submerged movement. This does not afford her any protections from drowning.",
+    "modes": [
+      {
+        "name": "Dragon Blooded",
+        "title": "Special",
+        "effect": "Using this Charm allows the Exalt to access Water Aura."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "SAFETY AMONG ENEMIES",
+    "ability": ["Athletics"],
+    "prerequisites": "Athletics 5, Essence 3",
+    "description": "The Dragon-Blood forms a tunnel of wind around their enemy’s attack, redirecting it toward another target. Spend 1 mote on Step 4. If a decisive attack misses the Exalt, they may redirect it at another character within range of the original attack. Roll the attack again, which resets the steps of combat to 1 but with all the same Charms applied to the original attack steps. The Exalt may expend up to 5 of the target’s Power to inflict damage on the character their attack is redirected toward.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "ALL-ENCOMPASSING EARTH SENSE",
+    "ability": ["Awareness"],
+    "prerequisites": "Awareness 3",
+    "description": "The Dragon-Blood can sense the vibrations of a soldier taking a step as easily as a leaf falling from a branch. Commit 1 mote. The Exalt automatically perceives a hidden danger or concealed character out to medium range as long as they are on the same surface, or short range above on structures or scenery resting on the ground, such as a roof or a tree branch. If the target is hidden flawlessly, contest it with a roll off using Awareness. The Dragon-Blood gains double 8s on this roll. This may not sense threats that are airborne, waterborne, or taking other measures to avoid moving across a solid service. Hearthmates within range may benefit from this enhanced perception.",
+    "modes": [
+      {
+        "name": "Dragon Blooded",
+        "title": "Special",
+        "effect": "Using this Charm allows the Exalt to access Earth Aura."
+      },
+      {
+        "name": "Dragon Blooded",
+        "title": "Feeling the Dragon’s Bones (Upgrade)",
+        "effect": "By spending an additional mote, the Exalt applies this effect out to extreme range. This also reveals any hidden traps for structures. Double 7s on any contested rolls."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197, 232]
+  },
+  {
+    "name": "FIVEFOLD RESONANCE SENSE",
+    "ability": ["Awareness", "Sagacity"],
+    "prerequisites": "Awareness 1 or Sagacity 1",
+    "description": "The Dragon-Blood closes their eyes and stills their mind. By meditating, they may sense the presence of the elements nearby, scrutinizing their nature. Commit 1 mote. The Exalt meditates for a scene, allowing them to glean information based on the mode used. The Exalt may receive three bonus dice on a single roll to act on information provided by this Charm. Alternatively, apply the bonus on an Awareness, Sagacity, or Navigate roll to detect or track jade, elementals, demesnes and manses, or other forms of elemental magic.",
+    "modes": [
+      {
+        "name": "Dragon Blooded",
+        "title": "Air",
+        "effect": "Predict the weather within the next day, sensing impending storms or the direction of the wind."
+      },
+      {
+        "name": "Dragon Blooded",
+        "title": "Fire",
+        "effect": "Sense nearby fires the size of a bonfire or larger, or pockets of accumulated heat, like from an enemy camp at night."
+      },
+      {
+        "name": "Dragon Blooded",
+        "title": "Water",
+        "effect": "Sense the qualities of bodies of water, such as salinity, toxicity, currents, or disturbances caused by storms and boats."
+      },
+      {
+        "name": "Dragon Blooded",
+        "title": "Earth",
+        "effect": "Observe geological qualities of the area, predicting tremors or earthquakes. Observe the presence of large caverns or underground structures, as well as buried things."
+      },
+      {
+        "name": "Dragon Blooded",
+        "title": "Wood",
+        "effect": "Sense the qualities of the vegetation nearby, and gatherings of living creatures such as animal packs or villages."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [231, 232]
+  },
+  {
+    "name": "SENSE-RIDING TECHNIQUE",
+    "ability": ["Awareness"],
+    "prerequisites": "Awareness 5, Essence 3",
+    "description": "The Dragon-Blood etches an earthly imprint of their Essence onto another living being’s consciousness, riding their senses from afar. Commit 2 motes and choose one target the Exalt can perceive. The Exalt may see and hear through the target as if they were physically present, wherever they go. They use their own dice pools to perceive through the target. This effect ends after Essence + Finesse days of downtime, or if the target leaves the same overall location as the Exalt (such as the same town or city). Hearthmates may ignore these limitations.",
+    "modes": [
+      {
+        "name": "Dragon Blooded",
+        "title": "Earth",
+        "effect": "If the target is not a Hearthmate, ignore the locational limitation."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [232]
+  },
+   {
+    "name": "CURRENT SWEEPS TO SEA",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 3",
+    "description": "The Dragon-Blood may call upon water from a nearby source or from their own anima to form tendrils around their arms to strike enemies with at range. Spend 1 mote on Step 1. Also spend 1 anima if there is no large source of water within short range, such as a river or cistern. This creates a lash of water which allows the character to initiate a grapple, as well as access the pull gambit, out to short range. Treat this as an unarmed attack.",
+    "modes": [
+      {
+        "name": "Dragon Blooded",
+        "title": "Air",
+        "effect": "If the lash is used to inflict the knockback gambit, decrease the cost by one."
+      },
+      {
+        "name": "Dragon Blooded",
+        "title": "Earth",
+        "effect": "If the lash is used to inflict the knockdown gambit, decrease the cost by one."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "DRAGON-GRACED WEAPON",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 3",
+    "description": "The Exalt blesses her weapon or fists with elemental fury. Commit 1 mote. For the duration of the scene, the Exalt’s weapon is wrapped in an element matching her Aura. At Essence 2, she may bless a Hearthmate’s weapon with this Charm.",
+    "modes": [
+      {
+        "name": "Dragon Blooded",
+        "title": "Air",
+        "effect": "Its attacks are deadly cold. When it deals damage, the target suffers a cumulative −1 die penalty to physical rolls for the rest of the scene, to a maximum of −5."
+      },
+      {
+        "name": "Dragon Blooded",
+        "title": "Earth",
+        "effect": "The weapon grows heavy with the earth’s grace. Increase damage by 1."
+      },
+      {
+        "name": "Dragon Blooded",
+        "title": "Fire",
+        "effect": "Flames surround the blade, empowering the wielder. Increase Overwhelming by 1."
+      },
+      {
+        "name": "Dragon Blooded",
+        "title": "Water",
+        "effect": "The weapon twists and flows. It gains the flexible tag. If it already has one, gain a bonus die to attack rolls, which does not count toward the limit."
+      },
+      {
+        "name": "Dragon Blooded",
+        "title": "Wood",
+        "effect": "Reaching vines sprout from it. It gains the disarming tag. If it already has it, gain a bonus die to attack rolls, which does not count toward the limit."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "DROWNING EMBRACE",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 5, Essence 3",
+    "description": "While clinching her target, the Dragon-Blood forces her victim to drown on dry land. Spend 1 mote while the Exalt has dominance in a grapple. She may attempt a special 5 Power drown gambit as part of a grapple attack. If successful, the target falls unconscious as their lungs fill with water. This does not work on targets that do not need to breathe. At Essence 5, ignore this restriction.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "ROOT-AND-HAND MERGING",
+    "ability": ["Close Combat"],
+    "prerequisites": "Close Combat 5",
+    "description": "Roots sprout from the Exalt’s skin and bind the weapon to her. Commit 1 mote for the scene. While the mote is committed, the weapon gains the natural tag, and her Defense increases by 1 while she uses it. She may choose to activate this Charm on Step 2 in response to a disarm attempt.",
+    "modes": [
+      {
+        "name": "Dragon Blooded",
+        "title": "Wood",
+        "effect": "This does not count as her Charm for that step."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+    {
+    "name": "FLAW-FINDING EXAMINATION",
+    "ability": ["Craft", "War"],
+    "prerequisites": "Craft 2 or War 2",
+    "description": "The Exalt spots weaknesses in her target’s defenses and gear. When using the reveal weakness gambit, reduce its cost by one, to a minimum of one. Hearthmates within close range of the Dragon-Blood may use her Craft or War in place of theirs when they apply this gambit.",
+    "modes": [
+      {
+        "name": "Dragon Blooded",
+        "title": "Earth",
+        "effect": "The Exalt and her allies benefitting from this Charm gain two additional dice to applying the gambit."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [233]
+  },
+  {
+    "name": "PASSION-INFLAMING ARTISTRY",
+    "ability": ["Craft", "Performance"],
+    "prerequisites": "Craft 3 or Performance 3",
+    "description": "The Exalt imbues her work with the passionate essence of flame. Spend 1 mote. Create a crafting venture with three obstacles at difficulty 3 and a time scale of once per scene. During each roll, the character may use extra successes on a special advantage, treating it as a future influence roll. When this venture is complete, the Exalt presents her handiwork to her target as a beautiful gift, applying the successes as influence against the target’s Resolve.",
+    "modes": [
+      {
+        "name": "Dragon Blooded",
+        "title": "Special",
+        "effect": "Using this Charm allows the Exalt to access Fire Aura."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [233]
+  },
+  {
+    "name": "STONES-FROM-RUBBLE RESTORATION",
+    "ability": ["Craft"],
+    "prerequisites": "Craft 3",
+    "description": "The Dragon-Blood knows where a broken object’s pieces fit. When undergoing a repair venture, reduce the difficulty of all rolls by 1 to a minimum of 1. If the object is said to be beyond repair, the Exalt may spend 1 mote or banked Stunt dice to veto and learn how to fix it.",
+    "modes": [
+      {
+        "name": "Dragon Blooded",
+        "title": "Earth",
+        "effect": "Waive the cost."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [233]
+  },
+  {
+    "name": "THOUGHTFUL GIFT TECHNIQUE",
+    "ability": ["Embassy"],
+    "prerequisites": "Embassy 2",
+    "description": "When offering a gift or bribe, gain double 9s for persuade or instill actions. The target is never offended, and Resources rating may grant bonus dice if wealth is relevant.",
+    "modes": [
+      {
+        "name": "Dragon Blooded",
+        "title": "Fire",
+        "effect": "Automatically instill a temporary, positive Minor Intimacy to herself, once per scene."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [233]
+  },
+  {
+    "name": "WIND-CARRIED-WORDS TECHNIQUE",
+    "ability": ["Embassy", "Performance"],
+    "prerequisites": "Embassy 3 or Performance 3",
+    "description": "Spend 1 mote to send a spoken message to a target within the same narrative location. Cannot be overheard by mundane means. Magical interception is difficulty 7. Messages may travel further to Hearthmates.",
+    "modes": [
+      {
+        "name": "Dragon Blooded",
+        "title": "Special",
+        "effect": "Using this Charm allows the Exalt to access Air Aura."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [233]
+  },
+  {
+    "name": "WITH ONE MIND",
+    "ability": ["Embassy", "War"],
+    "prerequisites": "Embassy 5 or War 5, Essence 4",
+    "description": "Commit 1 mote to form a telepathic bond with a character or all Hearthmates. Participants share senses and may perform reflexive defend other actions. Hearthmates can share Power among each other.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [234]
+  },
+  {
+    "name": "GRANITE CURTAIN OF SERENITY",
+    "ability": ["Integrity"],
+    "prerequisites": "Integrity 2",
+    "description": "Spend 1 mote. Against emotional or fear-inducing social influence, increase Resolve by two.",
+    "modes": [
+      {
+        "name": "Dragon Blooded",
+        "title": "Special",
+        "effect": "Using this Charm allows the Exalt access to Earth Aura."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [234]
+  },
+  {
+    "name": "OATH OF THE TEN THOUSAND DRAGONS",
+    "ability": ["Integrity"],
+    "prerequisites": "Integrity 3",
+    "description": "Swear loyalty to a character or task. Spend 1 mote. Resist influence that interferes with that Tie by increasing difficulty by 2 and treating loyalty as Major Virtue.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [234]
+  },
+  {
+    "name": "UNFLAGGING VENGEANCE MEDITATION",
+    "ability": ["Integrity"],
+    "prerequisites": "Integrity 5, Essence 2",
+    "description": "Spend 1 mote. Swear vengeance toward a target who harmed an Intimacy’s subject. Form a Major Intimacy of hatred. Gain +1 to Soak and Hardness from their attacks.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [234]
+  },
+  {
+    "name": "BENEDICTION OF THE LIVING SHIP",
+    "ability": ["Navigate"],
+    "prerequisites": "Navigate 5, Essence 3",
+    "description": "Commit 2 motes. The Exalt’s ship becomes living and grants better healing, endless food, and disease resistance on board. One-success bonus to resist poison/disease. Once per story.",
+    "modes": [
+      {
+        "name": "Dragon Blooded",
+        "title": "Wood or Water",
+        "effect": "Reduce the mote cost by 1. Using this Charm allows access to Wood Aura."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [234]
+  },
+    {
+    "name": "BLAZING CHARGER ATTACK",
+    "ability": ["Navigate"],
+    "prerequisites": "Navigate 3",
+    "description": "The Dragon-Blooded’s steed moves faster than wildfire. Double 9s on mounted Rush attacks. Once per round, when an enemy moves away from her while mounted, she may spend 1 mote to reflexively close the distance between them even if she has already moved this round.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [235]
+  },
+  {
+    "name": "ELEMENTAL PROTECTION TECHNIQUE",
+    "ability": ["Physique"],
+    "prerequisites": "Physique 2",
+    "description": "The Dragon-Blood harmonizes their body with one of the five elements, rendering them impervious to any harm from it. Commit 1 mote. Gain 2 additional Soak and Hardness against attacks made using a single element (such as the fiery breath of an elemental). This always applies to her current Aura. The Exalt may lower the damage of any environmental hazards of the appropriate element by two. If lowered to zero, the Exalt may ignore the effect entirely. This effect may only be used once per scene. At Essence 2, choose an additional element when activating this Charm. At Essence 3, extend this Charm’s effect to all Hearthmates and her Essence in additional allies. Other Hearthmates may activate this Charm to offer protection against multiple elements.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [235]
+  },
+  {
+    "name": "ENTOMBED MIND TECHNIQUE",
+    "ability": ["Presence"],
+    "prerequisites": "Presence 5",
+    "description": "With a low, droning voice, the Dragon-Blood may lull listeners into a dreamless sleep. Spend 1 mote. Instead of normal influence, the Dragon-Blood’s words force targets to sleep. The target must make a Fortitude + Integrity roll at a difficulty equal to the Exalt’s Essence + 2. If they fail, they fall into a deep sleep for the rest of the scene unless roused by allies. If they succeed, they suffer a two-dice penalty to physical actions for the rest of the scene while they struggle with sluggishness. Trivial listeners sleep instantly.",
+    "modes": [
+      {
+        "name": "Dragon Blooded",
+        "title": "Earth",
+        "effect": "Increase the difficulty of the Integrity roll and the penalty by 1."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [235]
+  },
+  {
+    "name": "ARBOR SENTINEL TECHNIQUE",
+    "ability": ["Ranged Combat"],
+    "prerequisites": "Ranged Combat 2",
+    "description": "The Dragon-Blood lowers their bow to the ground and calls on once-living wood to remember what it was. It grows into a small tree, which blossoms unending flowered arrows. Commit 1 mote. The Exalt’s bow becomes a tree that provides them with the benefits of heavy cover, cannot be disarmed, and provides them with never-ending ammunition. This effect ends if the Exalt moves. Special: Using this Charm allows the Exalt to access Wood Aura.",
+    "modes": [
+      {
+        "name": "Dragon Blooded",
+        "title": "Fire",
+        "effect": "This effect applies to firewands instead. Instead of providing cover, the Exalt’s enemies must reflexively resist an environmental hazard with difficulty 4, 3 damage per round."
+      },
+      {
+        "name": "Dragon Blooded",
+        "title": "Earth",
+        "effect": "The Exalt stomps the earth, causing a pillar to rise from the ground from which to attack their enemies. This vantage point grants a two-dice bonus to Ranged Combat actions and provides light cover. It shatters when commitment ends."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [236]
+  },
+  {
+    "name": "ELEMENTAL BURST TECHNIQUE",
+    "ability": ["Ranged Combat", "Sagacity"],
+    "prerequisites": "Ranged Combat 5 or Sagacity 5, Essence 3",
+    "description": "The Dragon-Blood concentrates their elemental Essence into an explosive tempest of power. Spend 1 mote on Step 1. The Exalt makes a decisive attack in an area of effect (p. 146). The type of damage this deals is based on the Exalt’s Aura. This may only be used once per scene and resets when the Exalt changes Aura. The attack is treated as an artifact ranged weapon, per Glorious Exalted Bolt (p. 208).",
+    "modes": [
+      {
+        "name": "Dragon Blooded",
+        "title": "Air",
+        "effect": "Lightning arcs from foe to foe. For every enemy hit by the attack, increase damage by one die, to a maximum of her Essence, against each target."
+      },
+      {
+        "name": "Dragon Blooded",
+        "title": "Earth",
+        "effect": "Boulders smash all enemies from their feet. All targets that suffer any damage from the attack must make a reflexive Fortitude + Athletics roll against the Exalt’s Essence in difficulty or become prone."
+      },
+      {
+        "name": "Dragon Blooded",
+        "title": "Fire",
+        "effect": "Flames bathe the enemy in an inferno. The targeted area catches alight, becoming an environmental hazard that inflicts 2 damage per round. It burns for her Essence in rounds unless extinguished."
+      },
+      {
+        "name": "Dragon Blooded",
+        "title": "Water",
+        "effect": "Tendrils of water thieve weapons from hands. Enemies with less Power than the Exalt are disarmed if they take any damage."
+      },
+      {
+        "name": "Dragon Blooded",
+        "title": "Wood",
+        "effect": "Poison lashes the foes. Any enemies that take damage from this Charm are poisoned and must make Fortitude + Physique rolls at standard difficulty at the start of their turns or lose 2 Power."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [236]
+  },
+  {
+    "name": "DRAGON VORTEX ATTACK",
+    "ability": ["Sagacity", "War"],
+    "prerequisites": "Sagacity 5 or War 5, Essence 5",
+    "description": "The Dragon-Blood calls upon ancestral power to shake the foundation of Creation with a radiating storm of the primal elements. Spend 3 motes. The Exalt creates a one-time environmental hazard that radiates outward to close range plus additional range bands equal to the Exalt’s Essence. The Exalt and her Hearthmates are immune to the effects of the hazard. The hazard is reflexively resisted at difficulty 3, inflicting 6 damage, with additional effects based on mode. Each Hearthmate may contribute 1 anima to increase the difficulty of the hazard by 1 to a maximum of 10. This Charm can be used once per story.",
+    "modes": [
+      {
+        "name": "Dragon Blooded",
+        "title": "Air",
+        "effect": "Summon driving rain and hail. If they suffer any damage from the hazard, enemies cannot take movement actions until the end of their next turn."
+      },
+      {
+        "name": "Dragon Blooded",
+        "title": "Earth",
+        "effect": "A target that takes three or more damage falls into a chasm one range band deep and lands prone, suffering damage as if they fell from medium range. Climbing out of the chasm counts as difficult terrain."
+      },
+      {
+        "name": "Dragon Blooded",
+        "title": "Fire",
+        "effect": "If flammable material is present, the fire continues to burn as an environmental hazard with difficulty 5, 4 damage per round within its range, which burns for the rest of the session. These flames won’t burn the Dragon-Blood or any allies spared from the vortex."
+      },
+      {
+        "name": "Dragon Blooded",
+        "title": "Water",
+        "effect": "A wave washes over enemies with tsunami force. If the targets take damage from the hazard, they are knocked back one range band and fall prone."
+      },
+      {
+        "name": "Dragon Blooded",
+        "title": "Wood",
+        "effect": "Targets damaged are exposed to a poison with 1 damage per round, and a duration of the Dragon-Blood’s Essence in rounds. The area of the hazard becomes difficult terrain until the plant growth has been cleared. The Exalt and any allies spared from the vortex are unimpeded by this terrain."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [236]
+  },
+  {
+    "name": "FLOWING GOD-DRAGON STANCE",
+    "ability": ["Stealth"],
+    "prerequisites": "Stealth 5, Essence 3",
+    "description": "The Dragon-Blood sheds the restrains of her flesh-and-blood form and becomes a thing of water. Commit 2 motes. Her body becomes water and slips free of restraints and may pass through any obstruction that is not waterproof. Gain her Essence in automatic successes to all Stealth rolls made while in this form, and if she submerges herself in water, she cannot be detected at all. If she activates this Charm while in a grapple, the grapple immediately ends.",
+    "modes": [
+      {
+        "name": "Dragon Blooded",
+        "title": "Water",
+        "effect": "This does not count as her Charm activation."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [237]
+  },
+  {
+    "name": "ROSE-AMONG-THORNS DISTINCTION",
+    "ability": ["Stealth"],
+    "prerequisites": "Stealth 3",
+    "description": "The Exalt makes herself approachable, an underworld type like anyone else. Spend 1 mote. After the Exalt spends a dramatic scene engaging with criminals and gangsters, she spends this mote to create a temporary Minor Intimacy to the group. This Intimacy lasts until the character next reaches a minor milestone and may be leveraged, strengthened, or eroded as normal. While she has this Intimacy, members of the group treat her as one of their own without question.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [237]
+  },
+  {
+    "name": "STORM-CALLING STRATEGIES",
+    "ability": ["War"],
+    "prerequisites": "War 3",
+    "description": "The Dragon-Blood darkens the horizon with thunderstorms, gale-force winds, or snowfalls that precede their army. Commit 1 mote. The Exalt enacts this Charm as a tactic for a single battle. Enemy battle groups suffer a three-dice environmental penalty on all physical actions taken in combat. Individuals suffer a two-dice penalty instead. Allies are unaffected.",
+    "modes": [
+      {
+        "name": "Dragon Blooded",
+        "title": "Anathema-Slaying Tempest (Air Aura Upgrade, Essence 3)",
+        "effect": "If the Exalt possesses 5 Power at the start of a round, they may expend it to inflict a one-time environmental hazard against an enemy battle group reflexively resisted with difficulty 5 and damage equal to Essence + Force, representing a bolt of lightning, avalanche, or similar danger."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [237]
+  },
+  {
+    "name": "RAMPARTS OF OBEDIENT EARTH",
+    "ability": ["War"],
+    "prerequisites": "War 3",
+    "description": "The battlefield is clay, sculpted in accordance with the Exalt’s tactical genius. They tear open sinkholes among the ranks of their enemies or wrench up great fortifications of stone from the earth to halt their foes. Commit 1 mote. The Exalt enacts this Charm as a stratagem for a battle. The Exalt may enact an elemental stratagem with one of the following effects: Sinkhole: The Dragon-Blood opens a hole or constructs an obstacle of stone between the enemy ranks. The ground out to short range around a target battle group becomes difficult terrain. The target battle group acts last in the round. The battle group’s commander may attempt to oppose this delay, by making an opposed War roll. Barricade: The Dragon-Blood wrenches up the earth into barriers and walls to fortify their position. The Exalt may instantly enact a Back to the Sea action (p. 164) without needing to roll.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [237]
+  },
+    {
+    "name": "WITH ONE MIND",
+    "ability": ["War"],
+    "prerequisites": "War 3",
+    "description": "See p. 233",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [237]
+  }
+]

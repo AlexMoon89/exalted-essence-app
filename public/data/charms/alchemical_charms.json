@@ -1,0 +1,350 @@
+[
+  {
+    "name": "AUGMENTED ATTRIBUTE",
+    "ability": ["General"],
+    "prerequisites": "Any Excellency",
+    "description": "Improvements to the Alchemical’s mind and body allow her to think and move faster than mortals and other Exalted alike. Each purchase of this Charm upgrades a single Attribute (Force, Finesse, or Fortitude). On Step 1, the Alchemical treats the relevant Attribute as one higher when adding dice with an Excellency, to a maximum of five dice. Upgrade (Essence 2): She gains double 9s on rolls involving her chosen Attribute whenever she uses the mode on her Excellency.",
+    "modes": [
+      {
+        "name": "Alchemical",
+        "title": "Augmented Attribute",
+        "effect": "Upgrade a chosen Attribute to treat it as one higher when adding dice via Excellencies. Essence 2 upgrade adds double 9s on applicable rolls."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "PORTABLE UTILITY COMPARTMENT",
+    "ability": ["General"],
+    "prerequisites": "Any Augmented Attribute",
+    "description": "Spend 1 mote. A compartment opens on the Exalt’s body, and any mundane tools she needs are within. Out of combat, this Charm adds two automatic successes to a related roll. In combat, this Charm supplements a Build Power action, adding 2 Power to the result of the roll.",
+    "modes": [
+      {
+        "name": "Alchemical",
+        "title": "Portable Utility Compartment",
+        "effect": "Create needed mundane tools. Adds 2 successes to non-combat rolls or +2 Power to Build Power in combat."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "ARTIFICER’S KEEN EYE",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 2",
+    "description": "Items the Alchemical creates as part of a venture gain a two-dice bonus when used. Repurchase (Finesse 3): Add an additional equipment tag of your choice to weapons or armor the Alchemical creates.",
+    "modes": [
+      {
+        "name": "Alchemical",
+        "title": "Artificer’s Keen Eye",
+        "effect": "Gives +2 dice bonus on using crafted items. Repurchase allows adding a custom equipment tag to items."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "BATTLE FORM MIMICRY",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 5, Essence 2",
+    "description": "Commit 1 mote. When a target uses a Charm to attack the Alchemical, she may temporarily learn that Charm. Until the fight ends, she may spend 1 Anima plus the Charm’s cost to use it.",
+    "modes": [
+      {
+        "name": "Alchemical",
+        "title": "Battle Form Mimicry",
+        "effect": "Mimic opponent’s Charm during combat and reuse it by paying 1 Anima and any mote cost."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "BETTER THAN NEW",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 3",
+    "description": "Gain two bonus successes on a successful roll to repair an item. These may be used to add a new advantage to the object. Gain 1 anima when taking advantage of this Charm.",
+    "modes": [
+      {
+        "name": "Alchemical",
+        "title": "Better Than New",
+        "effect": "+2 successes on repairs, bonus can be used to enhance the item. Gain 1 anima on success."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [197]
+  },
+  {
+    "name": "BONE-AND-STEEL DESTRUCTION",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 4",
+    "description": "Spend 2 motes on Step 3. Gain 2 Power on withering attack success, or halve the target's Soak on a decisive attack. Target’s Soak reduced by 2 for the next rounds equal to Essence.",
+    "modes": [
+      {
+        "name": "Alchemical",
+        "title": "Bone-and-Steel Destruction",
+        "effect": "+2 Power on withering attack or halve Soak on decisive. Soak penalized afterward based on Essence."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [226]
+  },
+  {
+    "name": "CONTINGENCY PREPARATION AXIOM",
+    "ability": ["Finesse"],
+    "prerequisites": "Efficient Planning Matrix, Essence 2",
+    "description": "Spend 2 motes. Retry a failed roll immediately using a different Ability’s dice pool. In combat, resets the action to Step 1 and new Charms may be used.",
+    "modes": [
+      {
+        "name": "Alchemical",
+        "title": "Contingency Preparation Axiom",
+        "effect": "Upon failure, retry with different Ability/approach. In combat, resets action and allows new Charms."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [226]
+  },
+  {
+    "name": "EFFICIENT PLANNING MATRIX",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 2",
+    "description": "Spend 1 mote. Reduce number of obstacles in a venture by one or reduce time scale. ST has final say.",
+    "modes": [
+      {
+        "name": "Alchemical",
+        "title": "Efficient Planning Matrix",
+        "effect": "Accelerates project completion by reducing obstacles or shortening time needed."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [226]
+  },
+  {
+    "name": "FINE-TUNING",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 2",
+    "description": "Add two bonus successes to prepare Build Power action. Gain 1 anima when benefiting from this Charm.",
+    "modes": [
+      {
+        "name": "Alchemical",
+        "title": "Fine-Tuning",
+        "effect": "+2 successes to Build Power preparation. Gain 1 Anima on success."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [226]
+  },
+  {
+    "name": "PHASE SHIFTING APPARATUS",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 3",
+    "description": "Spend 1 mote on Step 4 to reflexively move a range band immaterially. Out of combat, commit 1 mote to turn immaterial for a scene. At Essence 3, upgrade to double 9s on clashes and hazard mitigation.",
+    "modes": [
+      {
+        "name": "Alchemical",
+        "title": "Phase Shifting Apparatus",
+        "effect": "Immaterial move during combat or scene-long phasing. Essence 3 upgrade improves clash/hazard rolls."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [226]
+  },
+   {
+    "name": "SUBTLE CONCEPT INTRODUCTION METHOD",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 3",
+    "description": "The Exalt plants seeds of an idea in her opponent’s mind. So subtle are her suggestions that the opponent thinks the idea was his own. Spend 1 mote. The Storyteller reveals the target’s Major Virtue. Double 9s on a subsequent social action to instill or persuade the opponent.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "ADVISOR’S SAGE INSTRUCTION",
+    "ability": ["Force"],
+    "prerequisites": "Force 4",
+    "description": "When an organization’s leadership steps down a poorly chosen path, it is the Exalt’s duty to steer them back onto the correct one. Spend 1 mote. The Exalt substitutes her own agenda for that of the group she’s advising. Trivial characters in the scene automatically accept her authority. Add the Alchemical’s Essence in dice to social action rolls to persuade non-trivial characters to adopt her cause as their own, doubling 8s. Gain an additional anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "CELESTIAL OVERSEER CONCORDAT",
+    "ability": ["Force"],
+    "prerequisites": "Force 2",
+    "description": "The Machine-God charged the Alchemicals with watching over all Exalted, everywhere. Spend 1 mote. The Alchemical is aware of the nature of other beings in medium range. She may ask one of the following questions: What is their purpose here? Are they attempting to conceal their nature? Is the person they’re speaking with aware of who they are? Does their business interfere with my own? Additional questions cost 1 mote each.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "EXHAUSTIVE INTERROGATION METHOD",
+    "ability": ["Force"],
+    "prerequisites": "Force 2",
+    "description": "Spend 1 mote. Double 8s on read intentions rolls when questioning a character. For each extra success, the character must answer one question with complete honesty. If they reject this influence, the Alchemical gains successes instead of dice as a bonus.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [228]
+  },
+  {
+    "name": "FUTURE-PROCLAIMING CANTICLE",
+    "ability": ["Force"],
+    "prerequisites": "Force 4",
+    "description": "Spend 1 mote to make a prediction about another character. This takes the form of a short statement which must be fulfilled during the current chapter, though the Storyteller has the final say over its implementation. If used on another player’s character, they may spend Stunt dice to fulfill the prediction. When the prediction comes to pass through Stunt dice, both Alchemical and recipient gain 1 anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "INSIGHTFUL MANAGERIAL APTITUDE",
+    "ability": ["Force"],
+    "prerequisites": "Force 2",
+    "description": "Commit 1 mote. The Alchemical names a goal she and her allies are working toward in the immediate scene. For the duration of the scene, reduce the difficulty of related rolls by one.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "LIFESIGN DETECTING SCAN",
+    "ability": ["Force", "Fortitude"],
+    "prerequisites": "Force 2 or Fortitude 2",
+    "description": "Spend 1 mote. The Alchemical scans an area out to medium range, learning the target’s location and distance even behind cover. If the target is perfectly concealed, gain two bonus successes on an opposed roll to detect them.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [228]
+  },
+  {
+    "name": "MACHINE-GOD PROTECTOR MODE",
+    "ability": ["Force"],
+    "prerequisites": "Force 5, Essence 3",
+    "description": "Spend 3 Anima. Instantly move within attack range of an enemy and make a reflexive attack. If the target attacked a member of the community, gain 2 Power and then gain Essence in Power after resolving the attack.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "MORALE BUILDING DECLARATION",
+    "ability": ["Force"],
+    "prerequisites": "Force 4",
+    "description": "Spend 1 mote. Up to the Exalt’s Essence in people gain two bonus dice on their next build power action. Outside of combat, grants two bonus successes on overcoming obstacle rolls. Gain an additional anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "OMNIPRESENT GUARDIAN DIRECTIVE",
+    "ability": ["Force"],
+    "prerequisites": "Force 3",
+    "description": "Spend 1 mote. When a battle group the Exalt is leading is attacked, transfer the damage to the Exalt instead.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "PERFECTED UNION PATTERNING",
+    "ability": ["Force"],
+    "prerequisites": "Force 3",
+    "description": "Spend 1 mote. Suggest a plan based on targets’ Intimacies and Virtues. Double 9s on rolls to persuade targets to follow suggestions.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "PRIORITY-DISCERNING PROTOCOL",
+    "ability": ["Force"],
+    "prerequisites": "Force 2",
+    "description": "Spend 1 mote. Learn ambitions and priorities of people in positions of power—up to Essence in targets (1 mote per target). Storyteller reveals targets’ Intimacies toward their organization.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "RELENTLESS TRACKING PROTOCOL",
+    "ability": ["Force", "Fortitude"],
+    "prerequisites": "Force 3 or Fortitude 3",
+    "description": "Commit 1 mote. While on a tracking venture, automatically know target’s location each interval. Ignore needs like food or rest while pursuing the quarry.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [229]
+  },
+  {
+    "name": "TRUTH-AND-LIES DETECTION",
+    "ability": ["Force"],
+    "prerequisites": "Force 2",
+    "description": "Commit 1 mote. For the scene, the player may ask whether a Storyteller character’s statements are true or false or assess emotion from body language. Storyteller must answer truthfully.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "BODY REWEAVING MATRIX",
+    "ability": ["Fortitude"],
+    "prerequisites": "Reinforced Chassis, Fortitude 4, Essence 2",
+    "description": "Heal 1 Health per mote spent, up to Exalt’s Essence + Fortitude. Cannot be flurried. If Incapacitated, commit 1 mote to generate 2 Power/turn toward returning to fight.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "IDENTITY OBFUSCATION MATRIX",
+    "ability": ["Fortitude"],
+    "prerequisites": "Fortitude 3",
+    "description": "Commit 1 mote to appear as another identity. Commit 2 motes to hide difficult-to-conceal implants. Repurchase: Spend 1 mote to perfectly mimic another character’s voice and inflection.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "MATERIAL RESISTANCE PROCEDURE",
+    "ability": ["Fortitude"],
+    "prerequisites": "Fortitude 2",
+    "description": "Spend 1 mote on Step 5. Add +2 Soak vs mundane weapons, or Essence to Soak vs magical material weapons matching caste.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "OUTLIER ANALYSIS METHOD",
+    "ability": ["Fortitude"],
+    "prerequisites": "Fortitude 2",
+    "description": "Gain 2 extra Stunt dice for Awareness, Embassy, or Sagacity rolls to solve problems. Gifting the dice grants 1 anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "OPTICAL SHROUD",
+    "ability": ["Fortitude"],
+    "prerequisites": "Fortitude 2",
+    "description": "Commit 1 mote to become invisible and gain 2 automatic Stealth successes. Commit second mote to gain Concealment in combat. Lasts scene or until ended.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "REINFORCED CHASSIS",
+    "ability": ["Fortitude"],
+    "prerequisites": "Fortitude 2",
+    "description": "Spend 1 mote. On Step 2, choose Soak or Defense. That stat cannot drop below 3 until start of next turn.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [230]
+  },
+  {
+    "name": "TERRAFORMING PROTOCOL",
+    "ability": ["Fortitude"],
+    "prerequisites": "Fortitude 3",
+    "description": "Spend 1 mote to ignore environment/terrain penalties for Essence rounds. Or commit 1 mote to create terrain hazard in close range of opponent.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "VERBATIM RECALL",
+    "ability": ["Fortitude"],
+    "prerequisites": "Fortitude 2",
+    "description": "Spend 1 mote. Recall and repeat conversations exactly, including voices. Gain Fortitude in automatic successes for memory or mimicry and may exceed dice limits by 2.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  }
+]

@@ -1,0 +1,345 @@
+[
+  {
+    "name": "ANT-AND-YEDDIM WISDOM",
+    "ability": ["Shapeshifting"],
+    "prerequisites": "None",
+    "description": "The Lunar may claim the shape of creatures with the tiny creature or legendary size qualities, granting her a success bonus to all relevant actions equal to her Essence.",
+    "modes": [
+      {
+        "name": "Lunar",
+        "title": "",
+        "effect": "Gain success bonus to appropriate actions (e.g., sneaking when tiny, smashing when giant) equal to Essence."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [325, 317]
+  },
+  {
+    "name": "CHIMERA-SOUL EXPRESSION",
+    "ability": ["Shapeshifting"],
+    "prerequisites": "None",
+    "description": "The Lunar becomes a chimera, fusing two or more animals in her spirit shape. This Charm is permanent.",
+    "modes": [
+      {
+        "name": "Lunar",
+        "title": "New Type",
+        "effect": "Choose a different animal type and gain that type’s benefits."
+      },
+      {
+        "name": "Lunar",
+        "title": "Family Tree",
+        "effect": "If combining similar animals, add two dice to animal type’s benefit when appropriate."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "CHANGING PHASES TRANSFORMATION",
+    "ability": ["Shapeshifting"],
+    "prerequisites": "Essence 2",
+    "description": "Commit 1 mote to redistribute your character’s Attributes for the scene; one Attribute is treated as 1 higher (max 5) for Excellencies.",
+    "modes": [
+      {
+        "name": "Lunar",
+        "title": "",
+        "effect": "Redistribute Attributes temporarily and boost one for Excellency usage."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "HYBRID BODY TRANSFORMATION",
+    "ability": ["Shapeshifting"],
+    "prerequisites": "None",
+    "description": "The Lunar becomes a beastfolk-like creature, gaining dice bonuses and special abilities tied to her spirit shape.",
+    "modes": [
+      {
+        "name": "Lunar",
+        "title": "Deadly Beast Transformation",
+        "effect": "Unarmed attacks are heavy weapons, Hardness and base Soak +1, 3 bonus dice to feats of strength, -1 Defense."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [341]
+  },
+  {
+    "name": "MANY-FACED MOON TRANSFORMATION",
+    "ability": ["Shapeshifting"],
+    "prerequisites": "None",
+    "description": "Spend 1 mote to subtly alter the appearance of your current shape (height, attributes, etc.). Changes persist until altered again.",
+    "modes": [
+      {
+        "name": "Lunar",
+        "title": "",
+        "effect": "Subtle shape changes — appearance, body type, sexual characteristics, etc."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "MANIFOLD HUNTER’S TACTICS",
+    "ability": ["Shapeshifting"],
+    "prerequisites": "None",
+    "description": "Gain additional methods from Lunar Advantages to learn new shapes.",
+    "modes": [
+      {
+        "name": "Lunar",
+        "title": "Argent Trickster’s Rook",
+        "effect": "Win shape in contest with wager."
+      },
+      {
+        "name": "Lunar",
+        "title": "Debt of Borrowed Skin",
+        "effect": "Collect shape as debt if debtor consents."
+      },
+      {
+        "name": "Lunar",
+        "title": "Face-Taker’s Gaze",
+        "effect": "Learn shape through shared Major Intimacy."
+      },
+      {
+        "name": "Lunar",
+        "title": "Heart-Drinking Allure",
+        "effect": "Copy shape from one who loves or lusts, via an intimate act."
+      },
+      {
+        "name": "Lunar",
+        "title": "Hero’s Heart Challenge",
+        "effect": "Defeat target and gain respect-based Major Intimacy."
+      },
+      {
+        "name": "Lunar",
+        "title": "Nest-Raiding Slyness",
+        "effect": "Infiltrate a target’s home and leave a mark."
+      },
+      {
+        "name": "Lunar",
+        "title": "Whispering Heart Revelation",
+        "effect": "Learn target’s deepest secret and keep shape even if secret is revealed."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [52, 260]
+  },
+  {
+    "name": "MOUNTAINOUS SPIRIT EXPRESSION",
+    "ability": ["Shapeshifting"],
+    "prerequisites": "None",
+    "description": "Commit 1 mote to make a shape enormous. At Essence 2, it may grow to legendary size. At Essence 3, this may apply to the Lunar herself.",
+    "modes": [
+      {
+        "name": "Lunar",
+        "title": "Essence 2 Upgrade",
+        "effect": "Form can grow to legendary size."
+      },
+      {
+        "name": "Lunar",
+        "title": "Essence 3 Repurchase",
+        "effect": "Apply the size effect to self."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [316, 317]
+  },
+  {
+    "name": "CUNNING ANGLERFISH DECOY",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 3 or Fortitude 3, Essence 2",
+    "description": "Create harmless duplicates of the Lunar. Spend more motes for additional decoys. Initial creation grants a free outmaneuver Build Power roll.",
+    "modes": [
+      {
+        "name": "Lunar",
+        "title": "Shedding the Spirit’s Skin",
+        "effect": "Duplicates may assume other known forms."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [261]
+  },
+  {
+    "name": "HUNGRY ALL-CONSUMING CLOUD",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 5",
+    "description": "Lunar becomes a swarm, gaining Health, AOE light attacks, and rush advantage.",
+    "modes": [
+      {
+        "name": "Lunar",
+        "title": "Wasp-and-Locust Legion",
+        "effect": "Transform into battle group with Finesse + War dice pool, Drill = Essence."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "HUNTER-BAFFLING QUARRY’S CURSE",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 3",
+    "description": "Marks a target with a fake Tell, making them appear to be the Lunar. Target suffers disguise penalties.",
+    "modes": [
+      {
+        "name": "Lunar",
+        "title": "Lasting Brand",
+        "effect": "Duration increased to days with committed mote."
+      },
+      {
+        "name": "Lunar",
+        "title": "False Moonrise Phantasm",
+        "effect": "Commit 1 mote to displace anima increase to marked target."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+   {
+    "name": "LAUGHING DEVIL DISTRACTION",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 2 or Force 2",
+    "description": "The Lunar cajoles and teases her target, driving them to rage and distraction. When the Lunar uses the distract gambit, extend its duration to her Essence in rounds. She also gains one bonus success to any inspire or rally Build Power action when she Stunts using provocation to empower her allies. If she grants 4 or more Power while benefiting from this Charm, gain 1 anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [261]
+  },
+  {
+    "name": "LIVING HIVE TRANSFORMATION",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 4, Essence 2",
+    "description": "The Lunar’s body begins to molt and change as her body partially transforms into a swarm of small animals. Commit 2 motes for the scene. Expend 1 anima on Step 8 to make a decisive counterattack with an unarmed strike or a natural weapon. She discounts the cost of the decisive attack by her Essence. She may also make counterattacks against any grapple techniques her enemy uses while in a clinch. Lunars may reflexively activate Living Hive Transformation when they activate Hybrid Body Transformation.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [261]
+  },
+  {
+    "name": "PREDATOR-AND-PREY MIRROR",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 2",
+    "description": "The Lunar hides her own nature behind a mask, tricking others into playing their role in nature’s bloody game. Commit 1 mote and choose a mode. For the duration of the scene, or until you uncommit the mote, you may leverage the impression the mode grants your character as if it were a Minor Intimacy.",
+    "modes": [
+      {
+        "name": "Lunar",
+        "title": "Predator",
+        "effect": "The Lunar presents herself as a natural predator for whoever she speaks to — to a corrupt bureaucrat, she might seem like an auditor; to a humble farmer, a bandit."
+      },
+      {
+        "name": "Lunar",
+        "title": "Prey",
+        "effect": "The Lunar presents herself as vulnerable, easy prey. Anyone not familiar with her capabilities will assume she’s an easy mark until she proves otherwise."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [262]
+  },
+  {
+    "name": "QUICKSILVER SECOND FACE",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 3, Essence 3",
+    "description": "The Lunar’s form is as mutable as water, flowing instantly to fit whatever shape she desires. Shifting into the Lunar’s spirit shape no longer has a mote cost. Assuming a form that the Lunar has already shifted into previously this scene also no longer costs a mote.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [262]
+  },
+  {
+    "name": "SHADOW TALON EXECUTION",
+    "ability": ["Finesse"],
+    "prerequisites": "Finesse 4",
+    "description": "With the merest cover, the Lunar vanishes from her target’s sight and reappears in a brutal flash. Spend 1 mote on Step 1 while benefitting from Stealth-created concealment. Treat the target as though they had been ambushed regardless of if the action is taken after the first round. Charms or other powers that negate surprise negate this effect.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [262]
+  },
+  {
+    "name": "BEAST-SOUL AWAKENING",
+    "ability": ["Force"],
+    "prerequisites": "Force 5, Essence 3",
+    "description": "The Lunar crafts a sacred place that postulants may test themselves against, to be rewarded with Luna’s grace. The Lunar engages in a venture involving transforming a location into a sacred testing ground. Mortals who complete the trial are transformed into beastfolk with special abilities. This project has two base obstacles and may have more up to the Lunar’s Essence. Extra obstacles allow additional traits for transformed characters. Those who pass gain the benefits of Sharing Luna’s Gifts.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [263]
+  },
+  {
+    "name": "BOUNDARY-MARKING MEDITATION",
+    "ability": ["Force", "Fortitude"],
+    "prerequisites": "Force 3 or Fortitude 3",
+    "description": "The Lunar claims a region of land and defines three environmental qualities (e.g., overgrown, labyrinthine, dark). Actions fitting those traits gain 1 automatic success. Opposing actions take a -2 dice penalty. The Lunar may revoke this benefit for individuals. Once per major milestone, the Lunar may change the qualities. Gain 1 anima when this Charm’s effects penalize or benefit a character.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [262]
+  },
+  {
+    "name": "BUTTERFLY EYES MIRAGE",
+    "ability": ["Force"],
+    "prerequisites": "Force 3",
+    "description": "Commit 1 mote when making eye contact and make an instill roll. If successful, name one thing the target cannot notice as long as the Lunar interacts with them. Used in combat reflexively. Concealing another character creates successful concealment. When concealing hazards, the target notices just in time. If the concealed object relates to a Major Intimacy, the target may resist with a hard bargain.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [263]
+  },
+  {
+    "name": "GRASPING PSEUDOPOD METHOD",
+    "ability": ["Force"],
+    "prerequisites": "Force 4, Essence 2",
+    "description": "Commit 1 mote for the duration of a grapple. The Lunar may flurry miscellaneous actions during a grapple with no dice penalty. She may use gambits but not other attacks. Outside of combat, can be used to restrain targets while multitasking, including using social influence.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [263]
+  },
+  {
+    "name": "INSIDIOUS LUNAR TRANSFORMATION",
+    "ability": ["Force", "Fortitude"],
+    "prerequisites": "Force 4 or Fortitude 4, Sharing Luna’s Gifts",
+    "description": "Commit 1 mote and roll against the target. Transform the target into any animal or human form the Lunar possesses. Lasts for one + successes in downtime days or until session end. The Lunar can cancel earlier. Can be countered by Charm-based curse removals.",
+    "modes": [
+      {
+        "name": "Lunar",
+        "title": "Witch-Among-Swine Spite",
+        "effect": "May use the Charm without sharing blood, provided the Lunar has a negative Major Intimacy toward the target."
+      },
+      {
+        "name": "Lunar",
+        "title": "Devourer of Form",
+        "effect": "May use the Charm without cost and regardless of distance after successfully completing a sacred hunt on the target."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [263]
+  },
+    {
+    "name": "RELENTLESS LUNAR FURY",
+    "ability": ["Fortitude"],
+    "prerequisites": "Fortitude 4",
+    "description": "Once wounded, the Lunar enters a berserk rage and draws power from her unending anger. Commit 1 mote on Step 7. For the rest of the scene, the Lunar reduces all wound penalties or other penalties from pain by one to a minimum of zero. On Step 5 of a decisive attack targeting her, she may spend 1 mote per damage die the enemy has in their pool, which grants the Lunar 1 Power per mote, as she empowers herself with rage. If this would cause her to exceed 10 Power, rather than donate it to allies or convert into anima, she may bank the extra Power as bonus damage successes on her next decisive attack against the target.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [265]
+  },
+  {
+    "name": "SHATTERED YOKE FURY",
+    "ability": ["Fortitude"],
+    "prerequisites": "Fortitude 3",
+    "description": "The Lunar’s presence is corrosive to hierarchy, authority, and decorum, giving voice to the oppressed. Whenever a character makes a hard bargain in the Lunar’s presence, that character gains an additional option: she may form a Major Intimacy of rage toward the character attempting to influence them as though an instill action were successful. Characters who choose this option must immediately act to express their anger, as if they were successfully influenced with persuade. Gain 1 anima.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [265]
+  },
+  {
+    "name": "SPIDER-AMID-ROSES DISCERNMENT",
+    "ability": ["Fortitude"],
+    "prerequisites": "Fortitude 3",
+    "description": "To the Lunar’s keen nose, toxins are as obvious as cloying perfume. Whenever the Lunar observes or handles a poisoned object (including food) or interacts with a diseased character, if the poison or disease has not been concealed with magic (such as a Charm) she automatically recognizes its toxic scent. If it has been concealed by a magical effect, the Lunar gains double 8s on any roll to identify it or discern its nature.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [265]
+  },
+    {
+    "name": "KRAKEN-ARM LASH",
+    "ability": ["Fortitude"],
+    "prerequisites": "Fortitude 3",
+    "description": "See p. 263",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [265]
+  }
+]

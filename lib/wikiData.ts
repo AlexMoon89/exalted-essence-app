@@ -20,46 +20,59 @@ export type WikiEntry = {
   };
 };
 
-export async function loadUniversalCharmsAsWikiEntries(): Promise<WikiEntry[]> {
+export async function loadAllCharmsAsWikiEntries(): Promise<WikiEntry[]> {
   const indexRes = await fetch('/data/charms/index.json', { cache: 'no-store' });
   const files: string[] = await indexRes.json();
+  const allEntries: WikiEntry[] = [];
+  const seenSlugs = new Set<string>();
 
-  const allCharms = await Promise.all(
-    files.map(async (file) => {
-      const res = await fetch(`/data/charms/${file}.json`, { cache: 'no-store' });
-      return res.ok ? await res.json() : [];
-    })
-  );
+  for (const file of files) {
+    const res = await fetch(`/data/charms/${file}`, { cache: 'no-store' });
+    const data = await res.json();
 
-  const flattened = allCharms.flat();
+    // Derive category from filename
+    let sourceType = 'Universal';
+    if (file.startsWith('solar_')) sourceType = 'Solar';
+    else if (file.startsWith('lunar_')) sourceType = 'Lunar';
+    else if (file.startsWith('abyssal_')) sourceType = 'Abyssal';
+    else if (file.startsWith('sidereal_')) sourceType = 'Sidereal';
+    else if (file.startsWith('dragon_blooded')) sourceType = 'Dragon Blooded';
+    else if (file.startsWith('alchemical_')) sourceType = 'Alchemical';
 
-  const unique = new Map<string, any>();
-  for (const charm of flattened) {
-    const slug = charm.name.toLowerCase().replace(/\s+/g, '-');
-    if (!unique.has(slug)) {
-      unique.set(slug, charm);
+    const category = `${sourceType} Charm`;
+
+    for (const entry of data) {
+      const slug = entry.name.toLowerCase().replace(/\s+/g, '-');
+      if (seenSlugs.has(slug)) continue; // Avoid duplicates
+      seenSlugs.add(slug);
+
+      const modeTags = (entry.modes || [])
+        .map((m: any) => m.name)
+        .filter(Boolean);
+
+      const abilityTags = Array.isArray(entry.ability)
+        ? entry.ability
+        : (entry.ability?.split(',').map((s: string) => s.trim()) ?? []);
+
+      const tagSet = new Set([...abilityTags, ...modeTags]);
+      if (!tagSet.has(sourceType)) tagSet.add(sourceType);
+
+      allEntries.push({
+        ...entry,
+        slug,
+        category,
+        tags: Array.from(tagSet),
+        ability: abilityTags.join(', '),
+        description: entry.description,
+        full: {
+          prerequisites: entry.prerequisites,
+          modes: entry.modes || [],
+        },
+        sourcebook: entry.source,
+        pageRef: entry.page?.join(', '),
+      });
     }
   }
 
-  return Array.from(unique.values()).map((charm: any) => {
-    const slug = charm.name.toLowerCase().replace(/\s+/g, '-');
-
-    const isSolar = charm.modes?.some((m: any) => m.name === 'Solar');
-    const category = isSolar ? 'Solar Charm' : 'Charms';
-
-    return {
-      slug,
-      name: charm.name,
-      category,
-      description: charm.description,
-      tags: charm.modes?.map((m: any) => m.name) || [],
-      ability: charm.ability?.join(', ') ?? '',
-      sourcebook: charm.source,
-      pageRef: charm.page?.join(', ') ?? '',
-      full: {
-        prerequisites: charm.prerequisites,
-        modes: charm.modes,
-      }
-    };
-  });
+  return allEntries;
 }
