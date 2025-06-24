@@ -1,13 +1,13 @@
-// app/layout.tsx
 import './globals.css';
 import { ReactNode } from 'react';
 import Sidebar from '../components/Sidebar';
-import ThemeToggle from '../components/ThemeToggle';
 import { ThemeProvider } from '../components/ui/theme-provider';
+import { SupabaseProvider } from '@/lib/supabase-provider';
+import TopBar from '@/components/TopBar';
 
 export const metadata = {
-  title: 'Exalted Essence Companion',
-  description: 'Fan-made character manager and lore browser for Exalted: Essence',
+  title: "Exalted Essence Companion",
+  description: "Fan-made character manager and lore browser for Exalted: Essence",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -20,17 +20,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
       <body className="flex min-h-screen bg-background text-foreground font-body">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Sidebar />
-          <main className="flex-1 p-6 bg-background dark:bg-dark-background text-foreground dark:text-dark-foreground">
-            <div className="flex justify-end mb-4">
-              <ThemeToggle />
-            </div>
-            {children}
-          </main>
-        </ThemeProvider>
+        <SupabaseProvider>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <Sidebar />
+            <main className="flex-1 p-6 bg-background dark:bg-dark-background text-foreground dark:text-dark-foreground">
+              <TopBar />
+              {children}
+            </main>
+          </ThemeProvider>
+        </SupabaseProvider>
       </body>
     </html>
   );
 }
-

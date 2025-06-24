@@ -2,9 +2,16 @@
 
 import { createBrowserClient } from '@supabase/ssr';
 import { useState } from 'react';
-import { SessionContextProvider } from '@supabase/auth-helpers-react'; // this still works for now
+import { SessionContextProvider } from '@supabase/auth-helpers-react';
+import { Session } from '@supabase/auth-js';
 
-export function SupabaseProvider({ children }: { children: React.ReactNode }) {
+export function SupabaseProvider({
+  children,
+  initialSession,
+}: {
+  children: React.ReactNode;
+  initialSession?: Session | null;
+}) {
   const [supabase] = useState(() =>
     createBrowserClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -13,7 +20,7 @@ export function SupabaseProvider({ children }: { children: React.ReactNode }) {
   );
 
   return (
-    <SessionContextProvider supabaseClient={supabase}>
+    <SessionContextProvider supabaseClient={supabase} initialSession={initialSession}>
       {children}
     </SessionContextProvider>
   );
