@@ -3,6 +3,8 @@
 import { User } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { NewCharacterModal } from '@/components/NewCharacterModal'; // or '@/components/NewCharacterModal' if you didn't use a subfolder
+
 
 type Character = {
   id: string;
@@ -40,9 +42,12 @@ function getCasteImage(char: { exaltType?: string; caste?: string }): string {
 export default function CharactersPage({ characters }: { characters: Character[] }) {
   return (
     <div className="p-10 text-foreground dark:text-dark-foreground">
-      <h1 className="font-heading text-4xl mb-6 text-steel dark:text-dark-steel">
-        Your Characters
-      </h1>
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="font-heading text-4xl text-steel dark:text-dark-steel">
+          Your Characters
+        </h1>
+        <NewCharacterModal />
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {characters.map((char) => {
@@ -89,3 +94,4 @@ export default function CharactersPage({ characters }: { characters: Character[]
     </div>
   );
 }
+

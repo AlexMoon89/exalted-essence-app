@@ -5,9 +5,12 @@ import { useRouter } from 'next/navigation';
 import { useUser } from '@/lib/useUser';
 import CharactersPage from '@/components/CharactersPage';
 import { getCharactersForUser } from '@/lib/getCharactersForUser';
+import { NewCharacterModal } from '@/components/NewCharacterModal';
+
 
 type Character = {
   id: string;
+  slug: string;
   name: string;
   exaltType: string;
   caste: string;
@@ -47,7 +50,7 @@ export default function ProtectedCharactersPage() {
     }
   }, [user, loading, router]);
 
-  if (loading || fetching) return <div className="p-6">Cargando personajes...</div>;
+  if (loading || fetching) return <div className="p-6">Loading Characters...</div>;
   if (user === null) return null;
   if (fetchError) return <div className="p-6 text-red-600">{fetchError}</div>;
 
