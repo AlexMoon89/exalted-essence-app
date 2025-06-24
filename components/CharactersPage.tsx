@@ -2,9 +2,11 @@
 
 import { User } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type Character = {
   id: string;
+  slug: string;
   name: string;
   exaltType: string;
   caste: string;
@@ -14,8 +16,10 @@ type Character = {
   image: string | null;
 };
 
-function getCasteImage(char: { exaltType: string; caste: string }): string {
+function getCasteImage(char: { exaltType?: string; caste?: string }): string {
   const { exaltType, caste } = char;
+
+  if (!exaltType || !caste) return '/castes/default.png';
 
   switch (exaltType.toLowerCase()) {
     case 'solar':
@@ -44,9 +48,10 @@ export default function CharactersPage({ characters }: { characters: Character[]
         {characters.map((char) => {
           const imageSrc = char.image || getCasteImage(char);
           return (
-            <div
+            <Link
               key={char.id}
-              className="rounded-xl border border-highlight bg-white/80 dark:bg-dark-foreground/10 shadow-sm backdrop-blur-sm p-6 space-y-3 transition hover:shadow-md"
+              href={`/characters/${char.slug}`}
+              className="block rounded-xl border border-highlight bg-white/80 dark:bg-dark-foreground/10 shadow-sm backdrop-blur-sm p-6 space-y-3 transition hover:shadow-md"
             >
               <div className="flex justify-between items-center">
                 <h2 className="font-heading text-2xl">{char.name}</h2>
@@ -77,7 +82,7 @@ export default function CharactersPage({ characters }: { characters: Character[]
                 <User className="h-4 w-4 text-steel" />
                 <span>{char.player}</span>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
