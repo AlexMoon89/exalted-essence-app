@@ -8,6 +8,14 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
+
 
 export default function CharacterDetailPage() {
   const { slug } = useParams();
@@ -101,14 +109,70 @@ export default function CharacterDetailPage() {
     <div className="p-6 max-w-5xl mx-auto text-foreground dark:text-dark-foreground space-y-10">
       {/* Header */}
       <div className="flex flex-col md:flex-row items-start gap-6 border-b pb-6">
-        <div className="w-48 h-48 relative rounded overflow-hidden border border-muted shadow-md">
-          <Image
-            src={character.image || getCasteImage(character)}
-            alt="Character portrait"
-            fill
-            className="object-contain"
-          />
-        </div>
+        <section>
+            <h2 className="text-xl text-steel font-semibold mb-1 text-center">Portrait</h2>
+          <div className="flex flex-col sm:flex-row gap-6 items-start">
+            <div className="w-48 h-48 relative rounded overflow-hidden border border-muted shadow-md">
+              <img
+                src={character.image_url || getCasteImage(character)}
+                alt="Character portrait"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {edit && (
+              <div className="space-y-2">
+                <Input
+                  type="file"
+                  accept="image/*"
+                  onChange={async (e) => {
+                    const file = e.target.files?.[0];
+                    if (!file) return;
+
+                    const fileName = `${character.id}-${Date.now()}.${file.name.split('.').pop()}`;
+                    const { data, error } = await supabase.storage
+                      .from('characters')
+                      .upload(fileName, file, { upsert: true });
+
+                    if (!error) {
+                      const { data: urlData } = supabase
+                        .storage
+                        .from('characters')
+                        .getPublicUrl(fileName);
+
+                      if (urlData?.publicUrl) {
+                        setCharacter((prev: any) => ({ ...prev, image_url: urlData.publicUrl }));
+                      }
+                    } else {
+                      console.error('Image upload failed:', error.message);
+                    }
+                  }}
+                />
+                <div className="text-steel space-y-2">
+                  <Button
+                    variant="outline"
+                    onClick={async () => {
+                      if (!character.image_url) return;
+                      const filePath = character.image_url.split('/storage/v1/object/public/characters/')[1];
+                      if (!filePath) return;
+
+                      const { error } = await supabase.storage
+                        .from('characters')
+                        .remove([filePath]);
+
+                      if (!error) {
+                        setCharacter((prev: any) => ({ ...prev, image_url: null }));
+                      } else {
+                        console.error('Failed to remove image:', error.message);
+                      }
+                    }}
+                  >
+                    Remove Image
+                  </Button>
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
 
         <div className="flex-1 space-y-3 text-steel dark:text-dark-steel">
           {edit ? (
@@ -127,9 +191,16 @@ export default function CharacterDetailPage() {
             <p>Anima: {character.anima}</p>
           </div>
 
-          <Button variant="outline" onClick={handleEditToggle}>
-            {edit ? 'Save' : 'Edit'}
-          </Button>
+          <div className="flex gap-2">
+            <Button variant="outline" onClick={handleEditToggle}>
+              {edit ? 'Save' : 'Edit'}
+            </Button>
+            {edit && (
+              <Button variant="outline" onClick={() => window.location.reload()}>
+                Cancel
+              </Button>
+            )}
+          </div>
         </div>
       </div>
 
@@ -189,8 +260,6 @@ export default function CharacterDetailPage() {
           </div>
         )}
       </section>
-
-      {/* Re-inserted updated Attributes and Abilities here (unchanged from last version) */}
 
       {/* Anima Effects */}
       <section>
@@ -345,52 +414,137 @@ export default function CharacterDetailPage() {
       {/* Weapons */}
       <section>
         <h2 className="text-xl text-steel font-semibold mb-1">Weapons</h2>
-        {[1, 2].map((w) => (
-          <div key={w} className="border border-muted rounded p-4 mb-4 text-aura-abyssal">
-            <h3 className="font-semibold mb-2">Weapon {w}</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {['type', 'accuracy', 'damage', 'overwhelming', 'defense'].map((field) => (
-                <div key={field}>
-                  <label className="block text-sm capitalize mb-1">{field}</label>
-                  {edit ? (
-                    <Input
-                      value={character[`weapon${w}_${field}`] || ''}
-                      onChange={(e) => setCharacter((prev: any) => ({
-                        ...prev,
-                        [`weapon${w}_${field}`]: e.target.value,
-                      }))}
-                    />
-                  ) : (
-                    <p>{character[`weapon${w}_${field}`] || '—'}</p>
-                  )}
+        {edit ? (
+          <div className="text-aura-abyssal space-y-4">
+            {character.weapons?.map((weapon: any, i: number) => (
+              <div key={i} className="border border-muted rounded p-4">
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="font-semibold">Weapon {i + 1}</h3>
+                  <Button
+                    variant="ghost"
+                    onClick={() => {
+                      const updated = [...character.weapons];
+                      updated.splice(i, 1);
+                      setCharacter((prev: any) => ({ ...prev, weapons: updated }));
+                    }}
+                  >
+                    Remove
+                  </Button>
                 </div>
-              ))}
-            </div>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  {['type', 'accuracy', 'damage', 'overwhelming', 'defense'].map((field) => (
+                    <div key={field}>
+                      <label className="block text-sm capitalize mb-1">{field}</label>
+                      <Input
+                        value={weapon[field] || ''}
+                        onChange={(e) => {
+                          const updated = [...character.weapons];
+                          updated[i][field] = e.target.value;
+                          setCharacter((prev: any) => ({ ...prev, weapons: updated }));
+                        }}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+            <Button
+              variant="outline"
+              onClick={() => setCharacter((prev: any) => ({
+                ...prev,
+                weapons: [
+                  ...(prev.weapons || []),
+                  { type: '', accuracy: '', damage: '', overwhelming: '', defense: '' },
+                ],
+              }))}
+            >
+              + Add Weapon
+            </Button>
           </div>
-        ))}
+        ) : (
+          <div className="space-y-4">
+            {character.weapons?.map((weapon: any, i: number) => (
+              <div key={i} className="border border-muted rounded p-4">
+                <h3 className="font-semibold mb-1">Weapon {i + 1}</h3>
+                <ul className="text-sm space-y-1">
+                  {['type', 'accuracy', 'damage', 'overwhelming', 'defense'].map((field) => (
+                    <li key={field}>
+                      <strong className="capitalize">{field}:</strong> {weapon[field] || '—'}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        )}
       </section>
 
       {/* Armor */}
       <section>
         <h2 className="text-xl text-steel font-semibold mb-1">Armor</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {['type', 'soak', 'hardness', 'mobility_penalty'].map((field) => (
-            <div key={field}>
-              <label className="block text-aura-abyssal text-sm capitalize mb-1">{field.replace('_', ' ')}</label>
-              {edit ? (
-                <Input
-                  value={character[`armor_${field}`] || ''}
-                  onChange={(e) => setCharacter((prev: any) => ({
-                    ...prev,
-                    [`armor_${field}`]: e.target.value,
-                  }))}
-                />
-              ) : (
-                <p>{character[`armor_${field}`] || '—'}</p>
-              )}
-            </div>
-          ))}
-        </div>
+        {edit ? (
+          <div className="space-y-4 text-aura-abyssal">
+            {character.armors?.map((armor: any, i: number) => (
+              <div key={i} className="border border-muted rounded p-4">
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="font-semibold">Armor {i + 1}</h3>
+                  <Button
+                    variant="ghost"
+                    onClick={() => {
+                      const updated = [...character.armors];
+                      updated.splice(i, 1);
+                      setCharacter((prev: any) => ({ ...prev, armors: updated }));
+                    }}
+                  >
+                    Remove
+                  </Button>
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {['type', 'soak', 'hardness', 'mobility_penalty'].map((field) => (
+                    <div key={field}>
+                      <label className="block text-sm capitalize mb-1">{field.replace('_', ' ')}</label>
+                      <Input
+                        value={armor[field] || ''}
+                        onChange={(e) => {
+                          const updated = [...character.armors];
+                          updated[i][field] = e.target.value;
+                          setCharacter((prev: any) => ({ ...prev, armors: updated }));
+                        }}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+            <Button
+              variant="outline"
+              onClick={() => setCharacter((prev: any) => ({
+                ...prev,
+                armors: [
+                  ...(prev.armors || []),
+                  { type: '', soak: '', hardness: '', mobility_penalty: '' },
+                ],
+              }))}
+            >
+              + Add Armor
+            </Button>
+          </div>
+        ) : (
+          <div className="space-y-4">
+            {character.armors?.map((armor: any, i: number) => (
+              <div key={i} className="border border-muted rounded p-4">
+                <h3 className="font-semibold text-steel mb-1">Armor {i + 1}</h3>
+                <ul className="text-sm space-y-1">
+                  {['type', 'soak', 'hardness', 'mobility_penalty'].map((field) => (
+                    <li key={field}>
+                      <strong className="capitalize">{field.replace('_', ' ')}:</strong> {armor[field] || '—'}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        )}
       </section>
 
       {/* Merits */}
@@ -407,21 +561,130 @@ export default function CharacterDetailPage() {
         )}
       </section>
 
-      {/* Charms */}
+            {/* Charms */}
       <section>
-        <h2 className="text-2xl font-bold text-steel mb-3">Charms</h2>
-        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {character.charms?.map((charm: any, i: number) => (
-            <li key={i} className="border border-border rounded-md p-4 bg-white/5">
-              <p className="font-semibold text-steel text-lg">{charm.name}</p>
-              <p className="text-sm text-aura-abyssal text-muted-foreground mt-1">
-                Mode: {charm.mode}<br />
-                Cost: {charm.cost}<br />
-                Page: {charm.page} • Step: {charm.step}
-              </p>
-            </li>
-          ))}
-        </ul>
+        <h2 className="text-2xl text-steel font-bold mb-3">Charms</h2>
+        {edit ? (
+          <div className="space-y-4">
+            {character.charms?.map((charm: any, i: number) => (
+              <div key={i} className="border border-border rounded-md p-4 bg-white/5 space-y-2">
+                <div className="flex justify-between items-center">
+                  <Input
+                    placeholder="Charm Name"
+                    value={charm.name}
+                    onChange={(e) => {
+                      const updated = [...character.charms];
+                      updated[i].name = e.target.value;
+                      setCharacter((prev: any) => ({ ...prev, charms: updated }));
+                    }}
+                  />
+                  <Button
+                    variant="ghost"
+                    onClick={() => {
+                      const updated = [...character.charms];
+                      updated.splice(i, 1);
+                      setCharacter((prev: any) => ({ ...prev, charms: updated }));
+                    }}
+                  >
+                    Remove
+                  </Button>
+                </div>
+                <Textarea
+                  placeholder="Effect / Description"
+                  value={charm.description || ''}
+                  onChange={(e) => {
+                    const updated = [...character.charms];
+                    updated[i].description = e.target.value;
+                    setCharacter((prev: any) => ({ ...prev, charms: updated }));
+                  }}
+                />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <Input
+                    placeholder="Mode"
+                    value={charm.mode}
+                    onChange={(e) => {
+                      const updated = [...character.charms];
+                      updated[i].mode = e.target.value;
+                      setCharacter((prev: any) => ({ ...prev, charms: updated }));
+                    }}
+                  />
+                  <Input
+                    placeholder="Cost"
+                    value={charm.cost}
+                    onChange={(e) => {
+                      const updated = [...character.charms];
+                      updated[i].cost = e.target.value;
+                      setCharacter((prev: any) => ({ ...prev, charms: updated }));
+                    }}
+                  />
+                  <Input
+                    placeholder="Page"
+                    type="number"
+                    value={charm.page}
+                    onChange={(e) => {
+                      const updated = [...character.charms];
+                      updated[i].page = Number(e.target.value);
+                      setCharacter((prev: any) => ({ ...prev, charms: updated }));
+                    }}
+                  />
+                  <Input
+                    placeholder="Step"
+                    type="number"
+                    value={charm.step}
+                    onChange={(e) => {
+                      const updated = [...character.charms];
+                      updated[i].step = Number(e.target.value);
+                      setCharacter((prev: any) => ({ ...prev, charms: updated }));
+                    }}
+                  />
+                </div>
+              </div>
+            ))}
+            <Button
+              variant="outline"
+              onClick={() => setCharacter((prev: any) => ({
+                ...prev,
+                charms: [
+                  ...(prev.charms || []),
+                  { name: '', mode: '', cost: '', page: 0, step: 0, description: '' },
+                ],
+              }))}
+            >
+              + Add Charm
+            </Button>
+          </div>
+        ) : (
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {character.charms?.map((charm: any, i: number) => (
+              <Dialog key={i}>
+                <DialogTrigger asChild>
+                  <li className="border border-border rounded-md p-4 bg-white/5 cursor-pointer">
+                    <p className="font-semibold text-lg line-clamp-1 bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text">{charm.name}</p>
+                    <p className="text-sm text-muted-foreground line-clamp-2">
+                      {charm.description || '—'}
+                    </p>
+                  </li>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>
+                      <span className="bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text">
+                        {charm.name}
+                      </span>
+                    </DialogTitle>
+                  </DialogHeader>
+                  <div className="text-sm space-y-2 text-aura-abyssal">
+                    <p><strong>Mode:</strong> {charm.mode}</p>
+                    <p><strong>Cost:</strong> {charm.cost}</p>
+                    <p><strong>Page:</strong> {charm.page} • <strong>Step:</strong> {charm.step}</p>
+                    <p><strong>Effect:</strong></p>
+                    <p className="whitespace-pre-wrap">{charm.description || '—'}</p>
+                  </div>
+                </DialogContent>
+              </Dialog>
+            ))}
+          </ul>
+        )}
       </section>
 
       {/* Milestones */}
