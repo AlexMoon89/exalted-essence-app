@@ -2,10 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import { createBrowserClient } from '@supabase/ssr';
+import { useRouter } from 'next/navigation';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 
 export default function ProfilePage() {
+  const router = useRouter();
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
@@ -19,7 +21,11 @@ export default function ProfilePage() {
     const loadProfile = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       const user = session?.user;
-      if (!user) return;
+
+      if (!user) {
+        router.push('/login?redirectTo=/profile'); // 👈 Redirigir si no hay usuario
+        return;
+      }
 
       setUserId(user.id);
 
@@ -34,20 +40,9 @@ export default function ProfilePage() {
     };
 
     loadProfile();
-  }, []);
-
-  const handleSave = async () => {
-    if (!userId) return;
-    const { error } = await supabase
-      .from('profiles')
-      .upsert({ id: userId, display_name: displayName });
-
-    if (!error) alert('Profile updated!');
-    else console.error('Error updating profile:', error.message);
-  };
+  }, [router, supabase]);
 
   if (loading) return <p className="p-6">Loading profile...</p>;
-  if (!userId) return <p className="p-6">You must be logged in to access this page.</p>;
 
   return (
     <div className="max-w-xl mx-auto p-6 space-y-4">
@@ -65,4 +60,14 @@ export default function ProfilePage() {
       <Button onClick={handleSave}>Save</Button>
     </div>
   );
+
+  async function handleSave() {
+    if (!userId) return;
+    const { error } = await supabase
+      .from('profiles')
+      .upsert({ id: userId, display_name: displayName });
+
+    if (!error) alert('Profile updated!');
+    else console.error('Error updating profile:', error.message);
+  }
 }

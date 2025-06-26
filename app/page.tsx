@@ -25,17 +25,17 @@ export default function HomePage() {
         </h2>
         <ul className="list-disc list-inside text-base space-y-1">
           <li>
-            <a href="/characters" className="text-aura-solar font-semibold hover:underline">
+            <a href="/characters" className="text-aura-abyssal font-semibold hover:text-aura-solar">
               View Characters
             </a>
           </li>
           <li>
-            <a href="/campaigns" className="text-aura-lunar font-semibold hover:underline">
+            <a href="/campaigns" className="text-aura-abyssal hover:text-aura-lunar font-semibold">
               Join a Campaign
             </a>
           </li>
           <li>
-            <a href="/wiki" className="text-aura-sidereal font-semibold hover:underline">
+            <a href="/wiki" className="text-aura-abyssal font-semibold hover:text-aura-sidereal">
               Browse the Wiki
             </a>
           </li>

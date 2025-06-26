@@ -1,13 +1,18 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useState, useEffect, useRef } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useUser } from '@/lib/useUser';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 
 export default function LoginPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const redirectTo = searchParams.get('redirectTo') || '/characters';
+
+  const hasRedirected = useRef(false); // ✅ evita múltiples redirecciones
+
   const { user, supabase, loading } = useUser();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -15,16 +20,16 @@ export default function LoginPage() {
   const [pending, setPending] = useState(false);
 
   useEffect(() => {
-    if (user) {
-      router.push('/characters');
+    if (user && !hasRedirected.current) {
+      hasRedirected.current = true;
+      router.push(redirectTo);
     }
-  }, [user, router]);
+  }, [user, redirectTo, router]);
 
   const handleLoginOrRegister = async () => {
     setError('');
     setPending(true);
 
-    // Intentar login
     const { data: loginData, error: loginError } = await supabase.auth.signInWithPassword({
       email,
       password,
@@ -32,23 +37,22 @@ export default function LoginPage() {
 
     if (loginData.session) {
       setPending(false);
-      // El efecto de arriba redirige
+      // Redirige manualmente si el efecto aún no se disparó
+      if (!hasRedirected.current) {
+        hasRedirected.current = true;
+        router.push(redirectTo);
+      }
       return;
     }
 
     if (loginError?.message === 'Invalid login credentials') {
-      // Intentar registro si el login falla
-      const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
-        email,
-        password,
-      });
+      const { error: signUpError } = await supabase.auth.signUp({ email, password });
 
       if (signUpError) {
         setError(signUpError.message);
         setPending(false);
         return;
       }
-      // El efecto de arriba redirige cuando el usuario se loguea
     } else if (loginError) {
       setError(loginError.message);
       setPending(false);
