@@ -53,7 +53,7 @@ export default function CharactersPage({ characters }: { characters: Character[]
         <NewCharacterModal />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {characters.map((char) => {
           const imageSrc = char.image || getCasteImage(char);
           return (
@@ -67,12 +67,13 @@ export default function CharactersPage({ characters }: { characters: Character[]
                 <span className="text-sm font-bold text-aura-abyssal">Essence {char.essence}</span>
               </div>
 
-              <div className="w-full h-32 relative rounded-md overflow-hidden border border-muted">
+              <div className="w-full h-40 relative rounded-md overflow-hidden border border-muted">
                 <Image
                   src={imageSrc}
                   alt={`${char.caste} symbol`}
                   fill
-                  className="object-contain p-2"
+                  className="w-full h-full object-contain"
+                  sizes="100vw"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                   }}
