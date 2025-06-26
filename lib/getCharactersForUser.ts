@@ -3,12 +3,17 @@ import { supabase } from './supabase';
 export async function getCharactersForUser(userId: string) {
   const { data, error } = await supabase
     .from('characters')
-    .select('id, slug, name, exalt_type, caste, essence, anima, image_url') // explicitly include all needed fields
+    .select(`
+      *,
+      profiles:owner_id (
+        display_name,
+        avatar_url
+      )
+    `)
     .eq('owner_id', userId);
 
   if (error) throw error;
 
-  // Optional: Normalize field names to match your `Character` type
   return data.map((char) => ({
     id: char.id,
     slug: char.slug,
@@ -17,7 +22,8 @@ export async function getCharactersForUser(userId: string) {
     caste: char.caste,
     essence: char.essence,
     anima: char.anima,
-    player: 'Unknown', // or update if stored
+    player: char.profiles?.display_name || 'Unknown',
     image: char.image_url,
+    profiles: char.profiles ?? {},
   }));
 }

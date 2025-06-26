@@ -31,10 +31,16 @@ export default function CharacterDetailPage() {
   useEffect(() => {
     const fetchCharacter = async () => {
       const { data, error } = await supabase
-        .from('characters')
-        .select('*')
-        .eq('slug', slug)
-        .single();
+      .from('characters')
+      .select(`
+        *,
+        profiles:owner_id (
+          display_name,
+          avatar_url
+        )
+      `)
+      .eq('slug', slug)
+      .single();
 
       if (!error) setCharacter(data);
       setLoading(false);
@@ -63,7 +69,9 @@ export default function CharacterDetailPage() {
     athletics, awareness, close_combat, craft, embassy, integrity,
     navigate, performance, physique, presence, ranged_combat,
     sagacity, stealth, war,
-    anima_passive, anima_active, anima_iconic
+    anima_passive, anima_active, anima_iconic,
+    image_url: character.image_url, // ✅ Add this line
+    charms: character.charms || []
   };
 
   const { error } = await supabase
@@ -133,19 +141,34 @@ export default function CharacterDetailPage() {
                       .from('characters')
                       .upload(fileName, file, { upsert: true });
 
-                    if (!error) {
-                      const { data: urlData } = supabase
-                        .storage
-                        .from('characters')
-                        .getPublicUrl(fileName);
-
-                      if (urlData?.publicUrl) {
-                        setCharacter((prev: any) => ({ ...prev, image_url: urlData.publicUrl }));
-                      }
-                    } else {
+                    if (error) {
                       console.error('Image upload failed:', error.message);
+                      return;
+                    }
+
+                    const { data: urlData } = supabase
+                      .storage
+                      .from('characters')
+                      .getPublicUrl(fileName);
+
+                    if (urlData?.publicUrl) {
+                      const imageUrl = urlData.publicUrl;
+
+                      // Guardamos inmediatamente en Supabase
+                      const { error: updateError } = await supabase
+                        .from('characters')
+                        .update({ image_url: imageUrl })
+                        .eq('id', character.id);
+
+                      if (updateError) {
+                        console.error('❌ Failed to update character:', updateError);
+                      } else {
+                        console.log('✅ Image URL updated in characters table');
+                        setCharacter((prev: any) => ({ ...prev, image_url: imageUrl }));
+                      }
                     }
                   }}
+
                 />
                 <div className="text-steel space-y-2">
                   <Button
@@ -185,11 +208,51 @@ export default function CharacterDetailPage() {
             <h1 className="text-4xl font-heading bg-gradient-to-r from-steel to-aura-solar text-transparent bg-clip-text">{character.name}</h1>
           )}
 
-          <div className="text-sm text-aura-abyssal space-y-1">
-            <p>{character.exalt_type} • {character.caste}</p>
-            <p>Essence: <span className="font-semibold">{character.essence}</span></p>
-            <p>Anima: {character.anima}</p>
-          </div>
+        <div className="text-sm text-aura-abyssal space-y-2">
+          {edit ? (
+            <>
+              <div className="flex gap-2 items-center">
+                <label className="w-20 font-medium">Exalt Type:</label>
+                <Input
+                  value={character.exalt_type}
+                  onChange={(e) => setCharacter({ ...character, exalt_type: e.target.value })}
+                />
+              </div>
+              <div className="flex gap-2 items-center">
+                <label className="w-20 font-medium">Caste:</label>
+                <Input
+                  value={character.caste}
+                  onChange={(e) => setCharacter({ ...character, caste: e.target.value })}
+                />
+              </div>
+              <div className="flex gap-2 items-center">
+                <label className="w-20 font-medium">Essence:</label>
+                <Input
+                  type="number"
+                  value={character.essence}
+                  onChange={(e) => setCharacter({ ...character, essence: Number(e.target.value) })}
+                />
+              </div>
+              <div className="flex gap-2 items-center">
+                <label className="w-20 font-medium">Anima:</label>
+                <Input
+                  value={character.anima}
+                  onChange={(e) => setCharacter({ ...character, anima: e.target.value })}
+                />
+              </div>
+            </>
+          ) : (
+            <>
+              <p>{character.exalt_type} • {character.caste}</p>
+              <p>Essence: <span className="font-semibold">{character.essence}</span></p>
+              <p>Anima: {character.anima}</p>
+            </>
+          )}
+
+          <p>
+            Player: <span className="font-semibold">{character.profiles?.display_name || 'Unknown'}</span>
+          </p>
+        </div>
 
           <div className="flex gap-2">
             <Button variant="outline" onClick={handleEditToggle}>

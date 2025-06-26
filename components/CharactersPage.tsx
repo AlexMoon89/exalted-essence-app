@@ -16,6 +16,10 @@ type Character = {
   anima: string;
   player: string;
   image: string | null;
+  profiles?: {
+    display_name?: string;
+    avatar_url?: string;
+  };
 };
 
 function getCasteImage(char: { exaltType?: string; caste?: string }): string {
@@ -43,7 +47,7 @@ export default function CharactersPage({ characters }: { characters: Character[]
   return (
     <div className="p-10 text-foreground dark:text-dark-foreground">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="font-heading text-4xl text-steel dark:text-dark-steel">
+        <h1 className="font-heading text-4xl bg-gradient-to-r from-steel to-aura-abyssal text-transparent bg-clip-text dark:text-dark-steel">
           Your Characters
         </h1>
         <NewCharacterModal />
@@ -59,8 +63,8 @@ export default function CharactersPage({ characters }: { characters: Character[]
               className="block rounded-xl border border-highlight bg-white/80 dark:bg-dark-foreground/10 shadow-sm backdrop-blur-sm p-6 space-y-3 transition hover:shadow-md"
             >
               <div className="flex justify-between items-center">
-                <h2 className="font-heading text-2xl">{char.name}</h2>
-                <span className="text-sm text-aura-solar">Essence {char.essence}</span>
+                <h2 className="font-heading text-steel text-2xl">{char.name}</h2>
+                <span className="text-sm font-bold text-aura-abyssal">Essence {char.essence}</span>
               </div>
 
               <div className="w-full h-32 relative rounded-md overflow-hidden border border-muted">
@@ -85,7 +89,9 @@ export default function CharactersPage({ characters }: { characters: Character[]
 
               <div className="flex items-center gap-2 text-sm mt-2">
                 <User className="h-4 w-4 text-steel" />
-                <span>{char.player}</span>
+                <p className="text-sm">
+                  Player: <span className="font-semibold text-steel">{char.profiles?.display_name || 'Unknown'}</span>
+                </p>
               </div>
             </Link>
           );

@@ -7,6 +7,7 @@ const navItems = [
   { href: '/characters', label: 'Characters' },
   { href: '/campaigns', label: 'Campaigns' },
   { href: '/wiki', label: 'Wiki' },
+  { href: '/profile', label: 'Profile' },
 ];
 
 export default function Sidebar() {
