@@ -38,6 +38,10 @@ export default function CharacterDetailPage() {
           display_name,
           avatar_url
         )
+        campaign:campaign_id (
+        name,
+        slug
+        )  
       `)
       .eq('slug', slug)
       .single();
@@ -249,8 +253,9 @@ export default function CharacterDetailPage() {
             </>
           )}
 
-          <p>
-            Player: <span className="font-semibold">{character.profiles?.display_name || 'Unknown'}</span>
+          <p> Player: <span className="font-semibold">{character.profiles?.display_name || 'Unknown'}</span>
+          </p>
+          <p> Campaign: <span className="font-semibold">{character.campaign?.name || 'Unassigned'}</span>
           </p>
         </div>
 

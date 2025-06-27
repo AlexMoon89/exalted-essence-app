@@ -7,6 +7,11 @@ import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { useSession } from '@supabase/auth-helpers-react';
 import Image from 'next/image';
+import { Dialog, DialogTrigger, DialogContent } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Select } from '@/components/ui/select';
+
+
 
 type Campaign = {
   id: string;
@@ -22,6 +27,7 @@ type Character = {
   name: string;
   player: string;
   image: string | null;
+  campaign_name?: string | null;
 };
 
 export default function CampaignDetailPage() {
@@ -35,6 +41,8 @@ export default function CampaignDetailPage() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [imageFile, setImageFile] = useState<File | null>(null);
+  const [myCharacters, setMyCharacters] = useState<Character[]>([]);
+  const [selectedCharId, setSelectedCharId] = useState<string | null>(null);
 
   useEffect(() => {
     async function loadCampaignAndCharacters() {
@@ -44,6 +52,16 @@ export default function CampaignDetailPage() {
         .eq('slug', slug)
         .single();
 
+      if (session?.user?.id) {
+        const { data: ownedChars } = await supabase
+          .from('characters')
+          .select('id, name, player, image')
+          .eq('user_id', session.user.id)
+          .or(`campaign_id.is.null,campaign_id.eq.`);
+
+        setMyCharacters(ownedChars || []);
+      }
+
       if (data) {
         setCampaign(data);
         setTitle(data.name);
@@ -52,7 +70,7 @@ export default function CampaignDetailPage() {
 
         const { data: charactersData } = await supabase
           .from('characters')
-          .select('*')
+          .select('id, name, player, image, campaign_id')
           .eq('campaign_id', data.id);
 
         setCharacters(charactersData || []);
@@ -105,6 +123,23 @@ export default function CampaignDetailPage() {
       .eq('slug', slug);
 
     if (error) console.error('Failed to save notes:', error.message);
+  };
+
+  const handleAddCharacterToCampaign = async () => {
+    if (!selectedCharId || !campaign?.id) return;
+
+    const { data, error } = await supabase
+      .from('characters')
+      .update({ campaign_id: campaign.id })
+      .eq('id', selectedCharId);
+
+    if (error) {
+      console.error('Error adding character:', error.message);
+      console.log('Supabase error object:', error);
+    } else {
+      console.log('Character successfully added:', data);
+      location.reload();
+    }
   };
 
   if (!campaign) return <div className="p-6">Loading...</div>;
@@ -178,10 +213,45 @@ export default function CampaignDetailPage() {
                 />
               )}
               <h3 className="font-semibold">{char.name}</h3>
-              <p className="text-sm text-muted-foreground">Player: {char.player}</p>
+              <p className="text-sm text-muted-foreground">
+                Player: {char.player}
+                <br />
+                Campaign: {campaign?.name || 'Unassigned'}
+              </p>
             </div>
           ))}
         </div>
+
+        {/* Add Character Dialog */}
+        {isGM && (
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button className="mt-4">+ Add Character to Campaign</Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-md">
+              <h3 className="text-xl font-semibold mb-2">Add a Character</h3>
+              {myCharacters.length > 0 ? (
+                <>
+                  <Select
+                    value={selectedCharId}
+                    onChange={setSelectedCharId}
+                    placeholder="Select a character"
+                    options={myCharacters.map((c) => ({
+                      label: c.name,
+                      value: c.id,
+                    }))}
+                    className="mt-2"
+                  />
+                  <Button onClick={handleAddCharacterToCampaign} className="mt-4">
+                    Add to Campaign
+                  </Button>
+                </>
+              ) : (
+                <p className="text-muted-foreground">You have no unassigned characters.</p>
+              )}
+            </DialogContent>
+          </Dialog>
+        )}
       </div>
 
       {/* Session Notes */}

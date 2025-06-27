@@ -20,6 +20,11 @@ type Character = {
     display_name?: string;
     avatar_url?: string;
   };
+  campaign?: {
+  id: string;
+  name: string;
+  slug: string;
+  };
 };
 
 function getCasteImage(char: { exaltType?: string; caste?: string }): string {
@@ -92,6 +97,10 @@ export default function CharactersPage({ characters }: { characters: Character[]
                 <User className="h-4 w-4 text-steel" />
                 <p className="text-sm">
                   Player: <span className="font-semibold text-steel">{char.profiles?.display_name || 'Unknown'}</span>
+                </p>
+                <div className="flex-1" />
+                <p className="text-sm">
+                  Campaign: <span className="font-semibold">{char.campaign?.name || 'Unassigned'}</span>
                 </p>
               </div>
             </Link>
