@@ -27,9 +27,9 @@ function normalizeExaltType(type: string) {
   if (t.includes('lunar')) return 'Lunar';
   if (t.includes('abyssal')) return 'Abyssal';
   if (t.includes('sidereal')) return 'Sidereal';
-  if (t.includes('getimian')) return 'Getimian';
-  return type.trim();
-}
+    if (t.includes('getimian')) return 'Getimian';
+    return type.trim();
+  }
 
 function normalizeCaste(exalt: string, caste: string) {
   if (!caste) return '';
@@ -328,382 +328,410 @@ export default function CharacterDetailPage() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-3 gap-4">
         {/* Concept */}
         <section>
           <h2 className="text-xl text-steel font-semibold mb-1">Concept</h2>
           {edit ? (
-            <Input
-              value={character.concept}
-              onChange={(e) => setCharacter({ ...character, concept: e.target.value })}
-            />
+        <Input
+          value={character.concept}
+          onChange={(e) => setCharacter({ ...character, concept: e.target.value })}
+        />
           ) : (
-            <p>{character.concept}</p>
+        <p>{character.concept}</p>
           )}
         </section>
+              {/* Motes Tracker */}
+              <section>
+                <h2 className="text-xl font-semibold text-steel mb-1">Motes</h2>
+                <div className="flex gap-4 items-end">
+                  <div>
+                <label className="block text-sm font-medium capitalize mb-1 text-aura-abyssal">Spent</label>
+                {edit ? (
+                  <Input
+                    type="number"
+                    value={character.motes_spent || 0}
+                    onChange={(e) => setCharacter((prev: any) => ({ ...prev, motes_spent: Number(e.target.value) }))}
+                  />
+                ) : (
+                  <p className="text-aura-abyssal">{character.motes_spent ?? '—'}</p>
+                )}
+                  </div>
+                  <span className="text-xl font-bold text-aura-abyssal">/</span>
+                  <div>
+                <label className="block text-sm font-medium capitalize mb-1 text-aura-abyssal">Committed</label>
+                {edit ? (
+                  <Input
+                    type="number"
+                    value={character.motes_committed || 0}
+                    onChange={(e) => setCharacter((prev: any) => ({ ...prev, motes_committed: Number(e.target.value) }))}
+                  />
+                ) : (
+                  <p className="text-aura-abyssal">{character.motes_committed ?? '—'}</p>
+                )}
+                  </div>
+                  <span className="text-xl font-bold text-aura-abyssal">/</span>
+                  <div>
+                <label className="block text-sm font-medium capitalize mb-1 text-aura-abyssal">Total</label>
+                {edit ? (
+                  <Input
+                    type="number"
+                    value={character.motes_total || 0}
+                    onChange={(e) => setCharacter((prev: any) => ({ ...prev, motes_total: Number(e.target.value) }))}
+                  />
+                ) : (
+                  <p className="text-aura-abyssal">{character.motes_total ?? '—'}</p>
+                )}
+                  </div>
+                </div>
+              </section>
 
         {/* Anima Effects */}
         <section>
           <h2 className="text-xl font-semibold text-steel mb-1">Anima Effects</h2>
           <div className="grid md:grid-cols-3 gap-4 text-aura-abyssal">
-            {['anima_passive', 'anima_active', 'anima_iconic'].map((field) => {
-              const label = field.split('_')[1];
-              const animaMap = {
-                anima_passive: 'Passive',
-                anima_active: 'Active',
-                anima_iconic: 'Iconic',
-              } as const;
-              const animaKey = animaMap[field as keyof typeof animaMap]; // "Passive", "Active", or "Iconic"
-              // Priority: explicit field, then effects, then '—'
-              const value =
-                (character[field] && character[field].trim() !== '' ? character[field] : (effects?.[animaKey] ?? '—')) || '—';
-              const shortValue = value.length > 120 ? `${value.slice(0, 120)}…` : value;
+        {['anima_passive', 'anima_active', 'anima_iconic'].map((field) => {
+          const label = field.split('_')[1];
+          const animaMap = {
+            anima_passive: 'Passive',
+            anima_active: 'Active',
+            anima_iconic: 'Iconic',
+          } as const;
+          const animaKey = animaMap[field as keyof typeof animaMap];
+          const value = (character[field] && character[field].trim() !== '' ? character[field] : (effects?.[animaKey] ?? '—')) || '—';
 
-              return (
-                <div key={field} className="space-y-1">
-                  <label className="block font-medium capitalize" htmlFor={field}>{label}</label>
-                  {edit ? (
-                    <Textarea
-                      id={field}
-                      value={character[field] || ''}
-                      onChange={(e) => setCharacter({ ...character, [field]: e.target.value })}
-                    />
-                  ) : (
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <p className="cursor-pointer hover:underline" title="Click to read full effect">
-                          {shortValue}
-                        </p>
-                      </DialogTrigger>
-                      <DialogContent className="max-w-lg">
-                        <DialogTitle className="capitalize">{label} Anima Effect</DialogTitle>
-                        <p className="mt-2 whitespace-pre-wrap">{value}</p>
-                      </DialogContent>
-                    </Dialog>
-                  )}
-                </div>
-              );
-            })}
+          function getUpToColonParen(text: string) {
+            if (!text) return '';
+            const idx = text.indexOf('(');
+            if (idx !== -1) return text.slice(0, idx);
+            return text;
+          }
+
+          return (
+            <div key={field} className="space-y-1">
+          <label className="block font-medium capitalize" htmlFor={field}>{label}</label>
+          {edit ? (
+            <Textarea
+              id={field}
+              value={character[field] || ''}
+              onChange={(e) => setCharacter({ ...character, [field]: e.target.value })}
+            />
+          ) : (
+            <Dialog>
+              <DialogTrigger asChild>
+            <p className="cursor-pointer text-steel hover:text-aura-sidereal" title="Click to read full effect">
+              {getUpToColonParen(value)}
+            </p>
+              </DialogTrigger>
+              <DialogContent className="max-w-lg">
+            <DialogTitle className="text-steel capitalize">{label} Anima Effect</DialogTitle>
+            <p className="mt-2 whitespace-pre-wrap">{value}</p>
+              </DialogContent>
+            </Dialog>
+          )}
+            </div>
+          );
+        })}
+          </div>
+        </section>
+            </div>
+
+      <div className="grid md:grid-cols-2 gap-6">
+        {/* Virtues & Intimacies */}
+        <section>
+          <h2 className="text-xl text-steel font-semibold mb-1">Virtues & Intimacies</h2>
+          {edit ? (
+        <div className="grid gap-4">
+          <Input
+            placeholder="Major Virtue"
+            value={character.major_virtue || ''}
+            onChange={(e) => setCharacter({ ...character, major_virtue: e.target.value })}
+          />
+          <Input
+            placeholder="Minor Virtue"
+            value={character.minor_virtue || ''}
+            onChange={(e) => setCharacter({ ...character, minor_virtue: e.target.value })}
+          />
+          <Textarea
+            placeholder="Intimacies"
+            value={character.intimacies || ''}
+            onChange={(e) => setCharacter({ ...character, intimacies: e.target.value })}
+          />
+        </div>
+          ) : (
+        <div className="space-y-2 text-aura-abyssal">
+          <p><strong>Major Virtue:</strong> {character.major_virtue || '—'}</p>
+          <p><strong>Minor Virtue:</strong> {character.minor_virtue || '—'}</p>
+          <p><strong>Intimacies:</strong> {character.intimacies || '—'}</p>
+        </div>
+          )}
+        </section>
+
+        {/* Combat Stats */}
+        <section>
+          <h2 className="text-xl font-semibold mb-1 text-steel">Combat Stats</h2>
+          <div className="grid md:grid-cols-3 gap-4 text-aura-abyssal">
+        {['power', 'will', 'resolve', 'soak', 'defense', 'hardness'].map((field) => (
+          <div key={field} className="space-y-1">
+            <label className="block font-medium capitalize" htmlFor={field}>{field}</label>
+            {edit ? (
+          <Input
+            id={field}
+            type="number"
+            value={character[field] || ''}
+            onChange={(e) => setCharacter((prev: any) => ({ ...prev, [field]: Number(e.target.value) }))}
+          />
+            ) : (
+          <p>{character[field] ?? '—'}</p>
+            )}
+          </div>
+        ))}
           </div>
         </section>
       </div>
 
-      {/* Motes Tracker */}
-      <section>
-        <h2 className="text-xl font-semibold text-steel mb-1">Motes</h2>
-        <div className="flex gap-4">
-          {['motes_spent', 'motes_total'].map((key) => (
-            <div key={key}>
-              <label className="block text-sm font-medium capitalize mb-1 text-aura-abyssal">{key.replace('motes_', '')}</label>
-              {edit ? (
-                <Input
-                  type="number"
-                  value={character[key] || 0}
-                  onChange={(e) => setCharacter((prev: any) => ({ ...prev, [key]: Number(e.target.value) }))}
+{/* Attributes & Abilities row */}
+<div className="grid md:grid-cols-2 gap-6 mb-8">
+  {/* Attributes */}
+  <section>
+    <h2 className="text-xl text-steel font-semibold mb-1">Attributes</h2>
+    <div className="grid grid-cols-1 gap-4 text-aura-abyssal font-bold">
+      {['finesse', 'force', 'fortitude'].map((attr) => (
+        <div key={attr} className="space-y-1">
+          <label className="block font-medium capitalize" htmlFor={attr}>{attr}</label>
+          {edit ? (
+            <div className="flex items-center gap-1">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setCharacter((prev: any) => ({ ...prev, [attr]: i }))}
+                  className={cn(
+                    'w-6 h-6 rounded-full border border-steel transition-colors',
+                    character[attr] >= i ? 'bg-steel' : 'bg-background'
+                  )}
+                  aria-label={`Set ${attr} to ${i}`}
                 />
-              ) : (
-                <p className="text-aura-abyssal">{character[key] ?? '—'}</p>
-              )}
+              ))}
+              <span className="ml-2 text-sm">{character[attr] || 0}</span>
             </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Notes & Inventory */}
-      <section>
-        <h2 className="text-xl font-semibold text-steel mb-1">Notes</h2>
-        {edit ? (
-          <Textarea
-            value={character.notes || ''}
-            onChange={(e) => setCharacter((prev: any) => ({ ...prev, notes: e.target.value }))}
-          />
-        ) : (
-          <p className="whitespace-pre-wrap text-aura-abyssal">{character.notes || '—'}</p>
-        )}
-      </section>
-      <section>
-        <h2 className="text-xl font-semibold text-steel mb-1">Inventory</h2>
-        {edit ? (
-          <Textarea
-            value={character.inventory || ''}
-            onChange={(e) => setCharacter((prev: any) => ({ ...prev, inventory: e.target.value }))}
-          />
-        ) : (
-          <p className="whitespace-pre-wrap text-aura-abyssal">{character.inventory || '—'}</p>
-        )}
-      </section>
-
-      {/* Virtues & Intimacies */}
-      <section>
-        <h2 className="text-xl text-steel font-semibold mb-1">Virtues & Intimacies</h2>
-        {edit ? (
-          <div className="grid md:grid-cols-2 gap-4">
-            <Input
-              placeholder="Major Virtue"
-              value={character.major_virtue || ''}
-              onChange={(e) => setCharacter({ ...character, major_virtue: e.target.value })}
-            />
-            <Input
-              placeholder="Minor Virtue"
-              value={character.minor_virtue || ''}
-              onChange={(e) => setCharacter({ ...character, minor_virtue: e.target.value })}
-            />
-            <Textarea
-              placeholder="Intimacies"
-              value={character.intimacies || ''}
-              onChange={(e) => setCharacter({ ...character, intimacies: e.target.value })}
-            />
-          </div>
-        ) : (
-          <div className="space-y-2 text-aura-abyssal">
-            <p><strong>Major Virtue:</strong> {character.major_virtue || '—'}</p>
-            <p><strong>Minor Virtue:</strong> {character.minor_virtue || '—'}</p>
-            <p><strong>Intimacies:</strong> {character.intimacies || '—'}</p>
-          </div>
-        )}
-      </section>
-      
-       {/* Combat Stats */}
-      <section>
-        <h2 className="text-xl font-semibold mb-1 text-steel">Combat Stats</h2>
-        <div className="grid md:grid-cols-6 gap-4 text-aura-abyssal">
-          {['power', 'will', 'resolve', 'soak', 'defense', 'hardness'].map((field) => (
-            <div key={field} className="space-y-1">
-              <label className="block font-medium capitalize" htmlFor={field}>{field}</label>
-              {edit ? (
-                <Input
-                  id={field}
-                  type="number"
-                  value={character[field] || ''}
-                  onChange={(e) => setCharacter((prev: any) => ({ ...prev, [field]: Number(e.target.value) }))}
+          ) : (
+            <div className="flex items-center gap-1">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <div
+                  key={i}
+                  className={cn(
+                    'w-5 h-5 rounded-full border border-steel',
+                    character[attr] >= i ? 'bg-steel' : 'bg-background'
+                  )}
                 />
-              ) : (
-                <p>{character[field] ?? '—'}</p>
-              )}
+              ))}
+              <span className="ml-2 text-sm">{character[attr] || 0}</span>
             </div>
-          ))}
+          )}
         </div>
-      </section>
+      ))}
+    </div>
+  </section>
 
-      {/* Attributes */}
-      <section>
-        <h2 className="text-xl text-steel font-semibold mb-1">Attributes</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-1 gap-4 text-aura-abyssal font-bold">
-          {['finesse', 'force', 'fortitude'].map((attr) => (
-            <div key={attr} className="space-y-1">
-              <label className="block font-medium capitalize" htmlFor={attr}>{attr}</label>
-              {edit ? (
-                <div className="flex items-center gap-1">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <button
-                      key={i}
-                      type="button"
-                      onClick={() => setCharacter((prev: any) => ({ ...prev, [attr]: i }))}
-                      className={cn(
-                        'w-6 h-6 rounded-full border border-steel transition-colors',
-                        character[attr] >= i ? 'bg-steel' : 'bg-background'
-                      )}
-                      aria-label={`Set ${attr} to ${i}`}
-                    />
-                  ))}
-                  <span className="ml-2 text-sm">{character[attr] || 0}</span>
-                </div>
-              ) : (
-                <div className="flex items-center gap-1">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <div
-                      key={i}
-                      className={cn(
-                        'w-5 h-5 rounded-full border border-steel',
-                        character[attr] >= i ? 'bg-steel' : 'bg-background'
-                      )}
-                    />
-                  ))}
-                  <span className="ml-2 text-sm">{character[attr] || 0}</span>
-                </div>
-              )}
+  {/* Abilities */}
+  <section>
+    <h2 className="text-xl text-steel font-semibold mb-1">Abilities</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 font-bold text-aura-abyssal">
+      {[
+        "athletics", "awareness", "close_combat", "craft", "embassy", "integrity",
+        "navigate", "performance", "physique", "presence", "ranged_combat",
+        "sagacity", "stealth", "war"
+      ].map((ability) => (
+        <div key={ability} className="space-y-1">
+          <label className="block font-medium capitalize" htmlFor={ability}>{ability.replace('_', ' ')}</label>
+          {edit ? (
+            <div className="flex items-center gap-1">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setCharacter((prev: any) => ({ ...prev, [ability]: i }))}
+                  className={cn(
+                    'w-5 h-5 rounded-full border border-aura-abyssal transition-colors',
+                    character[ability] >= i ? 'bg-aura-abyssal' : 'bg-background'
+                  )}
+                  aria-label={`Set ${ability} to ${i}`}
+                />
+              ))}
+              <span className="ml-2 text-sm">{character[ability] || 0}</span>
             </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Abilities */}
-      <section>
-        <h2 className="text-xl text-steel font-semibold mb-1">Abilities</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 font-bold text-aura-abyssal">
-          {["athletics","awareness","close_combat","craft","embassy","integrity","navigate","performance","physique","presence","ranged_combat","sagacity","stealth","war"].map((ability) => (
-            <div key={ability} className="space-y-1">
-              <label className="block font-medium capitalize" htmlFor={ability}>{ability.replace('_', ' ')}</label>
-              {edit ? (
-                <div className="flex items-center gap-1">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <button
-                      key={i}
-                      type="button"
-                      onClick={() => setCharacter((prev: any) => ({ ...prev, [ability]: i }))}
-                      className={cn(
-                        'w-5 h-5 rounded-full border border-aura-abyssal transition-colors',
-                        character[ability] >= i ? 'bg-aura-abyssal' : 'bg-background'
-                      )}
-                      aria-label={`Set ${ability} to ${i}`}
-                    />
-                  ))}
-                  <span className="ml-2 text-sm">{character[ability] || 0}</span>
-                </div>
-              ) : (
-                <div className="flex items-center gap-1">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <div
-                      key={i}
-                      className={cn(
-                        'w-4 h-4 rounded-full border border-aura-abyssal',
-                        character[ability] >= i ? 'bg-aura-abyssal' : 'bg-background'
-                      )}
-                    />
-                  ))}
-                  <span className="ml-2 text-sm">{character[ability] || 0}</span>
-                </div>
-              )}
+          ) : (
+            <div className="flex items-center gap-1">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <div
+                  key={i}
+                  className={cn(
+                    'w-4 h-4 rounded-full border border-aura-abyssal',
+                    character[ability] >= i ? 'bg-aura-abyssal' : 'bg-background'
+                  )}
+                />
+              ))}
+              <span className="ml-2 text-sm">{character[ability] || 0}</span>
             </div>
-          ))}
+          )}
         </div>
-      </section>
+      ))}
+    </div>
+  </section>
+</div>
 
-       {/* Armor */}
-      <section>
-        <h2 className="text-xl text-steel font-semibold mb-1">Armor</h2>
-        {edit ? (
-          <div className="space-y-4 text-aura-abyssal">
-            {character.armors?.map((armor: any, i: number) => (
-              <div key={i} className="border border-muted rounded p-4">
-                <div className="flex justify-between items-center mb-2">
-                  <h3 className="font-semibold">Armor {i + 1}</h3>
-                  <Button
-                    variant="ghost"
-                    onClick={() => {
+{/* Armor & Weapons row */}
+<div className="grid md:grid-cols-2 gap-6 mb-8">
+  {/* Armor */}
+  <section>
+    <h2 className="text-xl text-steel font-semibold mb-1">Armor</h2>
+    {edit ? (
+      <div className="space-y-4 text-aura-abyssal">
+        {character.armors?.map((armor: any, i: number) => (
+          <div key={i} className="border border-muted rounded p-4">
+            <div className="flex justify-between items-center mb-2">
+              <h3 className="font-semibold">Armor {i + 1}</h3>
+              <Button
+                variant="ghost"
+                onClick={() => {
+                  const updated = [...character.armors];
+                  updated.splice(i, 1);
+                  setCharacter((prev: any) => ({ ...prev, armors: updated }));
+                }}
+              >
+                Remove
+              </Button>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
+              {['type', 'soak', 'hardness', 'mobility_penalty'].map((field) => (
+                <div key={field}>
+                  <label className="block text-sm capitalize mb-1">{field.replace('_', ' ')}</label>
+                  <Input
+                    value={armor[field] || ''}
+                    onChange={(e) => {
                       const updated = [...character.armors];
-                      updated.splice(i, 1);
+                      updated[i][field] = e.target.value;
                       setCharacter((prev: any) => ({ ...prev, armors: updated }));
                     }}
-                  >
-                    Remove
-                  </Button>
+                  />
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
-                  {['type', 'soak', 'hardness', 'mobility_penalty'].map((field) => (
-                    <div key={field}>
-                      <label className="block text-sm capitalize mb-1">{field.replace('_', ' ')}</label>
-                      <Input
-                        value={armor[field] || ''}
-                        onChange={(e) => {
-                          const updated = [...character.armors];
-                          updated[i][field] = e.target.value;
-                          setCharacter((prev: any) => ({ ...prev, armors: updated }));
-                        }}
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-            <Button
-              variant="outline"
-              onClick={() => setCharacter((prev: any) => ({
-                ...prev,
-                armors: [
-                  ...(prev.armors || []),
-                  { type: '', soak: '', hardness: '', mobility_penalty: '' },
-                ],
-              }))}
-            >
-              + Add Armor
-            </Button>
+              ))}
+            </div>
           </div>
-        ) : (
-          <div className="space-y-4">
-            {character.armors?.map((armor: any, i: number) => (
-              <div key={i} className="border border-muted rounded p-4">
-                <h3 className="font-semibold text-steel mb-1">Armor {i + 1}</h3>
-                <ul className="text-sm space-y-1">
-                  {['type', 'soak', 'hardness', 'mobility_penalty'].map((field) => (
-                    <li key={field}>
-                      <strong className="capitalize">{field.replace('_', ' ')}:</strong> {armor[field] || '—'}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+        ))}
+        <Button
+          variant="outline"
+          onClick={() => setCharacter((prev: any) => ({
+            ...prev,
+            armors: [
+              ...(prev.armors || []),
+              { type: '', soak: '', hardness: '', mobility_penalty: '' },
+            ],
+          }))}
+        >
+          + Add Armor
+        </Button>
+      </div>
+    ) : (
+      <div className="space-y-4">
+        {character.armors?.map((armor: any, i: number) => (
+          <div key={i} className="border border-muted rounded p-4">
+            <h3 className="font-semibold text-steel mb-1">Armor {i + 1}</h3>
+            <ul className="text-sm space-y-1">
+              {['type', 'soak', 'hardness', 'mobility_penalty'].map((field) => (
+                <li key={field}>
+                  <strong className="capitalize">{field.replace('_', ' ')}:</strong> {armor[field] || '—'}
+                </li>
+              ))}
+            </ul>
           </div>
-        )}
-      </section>
+        ))}
+      </div>
+    )}
+  </section>
 
-      {/* Weapons */}
-      <section>
-        <h2 className="text-xl text-steel font-semibold mb-1">Weapons</h2>
-        {edit ? (
-          <div className="text-aura-abyssal space-y-4">
-            {character.weapons?.map((weapon: any, i: number) => (
-              <div key={i} className="border border-muted rounded p-4">
-                <div className="flex justify-between items-center mb-2">
-                  <h3 className="font-semibold">Weapon {i + 1}</h3>
-                  <Button
-                    variant="ghost"
-                    onClick={() => {
+  {/* Weapons */}
+  <section>
+    <h2 className="text-xl text-steel font-semibold mb-1">Weapons</h2>
+    {edit ? (
+      <div className="text-aura-abyssal space-y-4">
+        {character.weapons?.map((weapon: any, i: number) => (
+          <div key={i} className="border border-muted rounded p-4">
+            <div className="flex justify-between items-center mb-2">
+              <h3 className="font-semibold">Weapon {i + 1}</h3>
+              <Button
+                variant="ghost"
+                onClick={() => {
+                  const updated = [...character.weapons];
+                  updated.splice(i, 1);
+                  setCharacter((prev: any) => ({ ...prev, weapons: updated }));
+                }}
+              >
+                Remove
+              </Button>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {['type', 'accuracy', 'damage', 'overwhelming', 'defense'].map((field) => (
+                <div key={field}>
+                  <label className="block text-sm capitalize mb-1">{field}</label>
+                  <Input
+                    value={weapon[field] || ''}
+                    onChange={(e) => {
                       const updated = [...character.weapons];
-                      updated.splice(i, 1);
+                      updated[i][field] = e.target.value;
                       setCharacter((prev: any) => ({ ...prev, weapons: updated }));
                     }}
-                  >
-                    Remove
-                  </Button>
+                  />
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {['type', 'accuracy', 'damage', 'overwhelming', 'defense'].map((field) => (
-                    <div key={field}>
-                      <label className="block text-sm capitalize mb-1">{field}</label>
-                      <Input
-                        value={weapon[field] || ''}
-                        onChange={(e) => {
-                          const updated = [...character.weapons];
-                          updated[i][field] = e.target.value;
-                          setCharacter((prev: any) => ({ ...prev, weapons: updated }));
-                        }}
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-            <Button
-              variant="outline"
-              onClick={() => setCharacter((prev: any) => ({
-                ...prev,
-                weapons: [
-                  ...(prev.weapons || []),
-                  { type: '', accuracy: '', damage: '', overwhelming: '', defense: '' },
-                ],
-              }))}
-            >
-              + Add Weapon
-            </Button>
+              ))}
+            </div>
           </div>
-        ) : (
-          <div className="space-y-4">
-            {character.weapons?.map((weapon: any, i: number) => (
-              <div key={i} className="border border-muted rounded p-4">
-                <h3 className="font-semibold mb-1">Weapon {i + 1}</h3>
-                <ul className="text-sm space-y-1">
-                  {['type', 'accuracy', 'damage', 'overwhelming', 'defense'].map((field) => (
-                    <li key={field}>
-                      <strong className="capitalize">{field}:</strong> {weapon[field] || '—'}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+        ))}
+        <Button
+          variant="outline"
+          onClick={() => setCharacter((prev: any) => ({
+            ...prev,
+            weapons: [
+              ...(prev.weapons || []),
+              { type: '', accuracy: '', damage: '', overwhelming: '', defense: '' },
+            ],
+          }))}
+        >
+          + Add Weapon
+        </Button>
+      </div>
+    ) : (
+      <div className="space-y-4">
+        {character.weapons?.map((weapon: any, i: number) => (
+          <div key={i} className="border border-muted rounded p-4">
+            <h3 className="font-semibold mb-1">Weapon {i + 1}</h3>
+            <ul className="text-sm space-y-1">
+              {['type', 'accuracy', 'damage', 'overwhelming', 'defense'].map((field) => (
+                <li key={field}>
+                  <strong className="capitalize">{field}:</strong> {weapon[field] || '—'}
+                </li>
+              ))}
+            </ul>
           </div>
-        )}
-      </section>
+        ))}
+      </div>
+    )}
+  </section>
+</div>
+
+    {/* Inventory */}
+    <section>
+      <h2 className="text-xl font-semibold text-steel mb-1">Inventory</h2>
+      {edit ? (
+        <Textarea
+          value={character.inventory || ''}
+          onChange={(e) => setCharacter((prev: any) => ({ ...prev, inventory: e.target.value }))}
+        />
+      ) : (
+        <p className="whitespace-pre-wrap text-aura-abyssal">{character.inventory || '—'}</p>
+      )}
+    </section>
 
       {/* Merits */}
       <section>
@@ -870,6 +898,19 @@ export default function CharacterDetailPage() {
               </section>
             </div>
 
+             {/* Notes */}
+      <section>
+        <h2 className="text-xl font-semibold text-steel mb-1">Notes</h2>
+        {edit ? (
+          <Textarea
+            value={character.notes || ''}
+            onChange={(e) => setCharacter((prev: any) => ({ ...prev, notes: e.target.value }))}
+          />
+        ) : (
+          <p className="whitespace-pre-wrap text-aura-abyssal">{character.notes || '—'}</p>
+        )}
+      </section>
+   
       {/* Milestones */}
       <section>
         <h2 className="text-xl text-steel font-semibold mb-1">Milestones</h2>
@@ -903,6 +944,7 @@ export default function CharacterDetailPage() {
             <p>{character.description}</p>
           )}
         </section>
-    </div>
+      </div>
+
   );
 }
