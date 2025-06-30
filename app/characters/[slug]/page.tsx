@@ -14,8 +14,33 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  DialogFooter,
 } from '@/components/ui/dialog';
+import { ANIMA_EFFECTS } from '@/lib/animaEffects';
 
+function normalizeExaltType(type: string) {
+  // Accepts "dragon-blooded", "Dragon-Blooded", "Dragonblooded", etc.
+  if (!type) return '';
+  const t = type.trim().toLowerCase();
+  if (t.includes('dragon')) return 'Dragon-Blooded';
+  if (t.includes('solar')) return 'Solar';
+  if (t.includes('lunar')) return 'Lunar';
+  if (t.includes('abyssal')) return 'Abyssal';
+  if (t.includes('sidereal')) return 'Sidereal';
+  if (t.includes('getimian')) return 'Getimian';
+  return type.trim();
+}
+
+function normalizeCaste(exalt: string, caste: string) {
+  if (!caste) return '';
+  if (normalizeExaltType(exalt) === 'Dragon-Blooded') {
+    // "Air", "Earth", etc., sometimes entered as "air aspect", etc.
+    const aspect = caste.trim().split(' ')[0]; // Take first word
+    return aspect.charAt(0).toUpperCase() + aspect.slice(1).toLowerCase();
+  }
+  // Remove extra spaces, make first char uppercase
+  return caste.trim().replace(/\s+/g, ' ').replace(/^./, (c) => c.toUpperCase());
+}
 
 export default function CharacterDetailPage() {
   const { slug } = useParams();
@@ -27,66 +52,85 @@ export default function CharacterDetailPage() {
   const [character, setCharacter] = useState<any | null>(null);
   const [edit, setEdit] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+
+  // Normalize for lookup
+  const exalt = character ? normalizeExaltType(character.exalt_type || character.exaltType) : '';
+  const caste = character ? normalizeCaste(exalt, character.caste) : '';
+
+  // Defensive check for anima effect fallback
+  const effects = (exalt && caste && ANIMA_EFFECTS[exalt] && ANIMA_EFFECTS[exalt][caste])
+    ? ANIMA_EFFECTS[exalt][caste]
+    : null;
 
   useEffect(() => {
     const fetchCharacter = async () => {
       const { data, error } = await supabase
-      .from('characters')
-      .select(`
-        *,
-        profiles:owner_id (
-          display_name,
-          avatar_url
-        )
-        campaign:campaign_id (
-        name,
-        slug
-        )  
-      `)
-      .eq('slug', slug)
-      .single();
+        .from('characters')
+        .select(`
+          *,
+          profiles:owner_id (
+            display_name,
+            avatar_url
+          ),
+          campaign:campaign_id (
+            name,
+            slug
+          )
+        `)
+        .eq('slug', slug)
+        .single();
 
       if (!error) setCharacter(data);
       setLoading(false);
     };
-
     fetchCharacter();
   }, [slug]);
 
   const handleSave = async () => {
-  if (!character) return;
+    if (!character) return;
 
-  const {
-    id, name, concept, description, exalt_type, caste, essence, anima,
-    major_virtue, minor_virtue, intimacies,
-    finesse, force, fortitude,
-    athletics, awareness, close_combat, craft, embassy, integrity,
-    navigate, performance, physique, presence, ranged_combat,
-    sagacity, stealth, war,
-    anima_passive, anima_active, anima_iconic
-  } = character;
+    const {
+      id, name, concept, description, exalt_type, caste, essence, anima,
+      major_virtue, minor_virtue, intimacies,
+      finesse, force, fortitude,
+      athletics, awareness, close_combat, craft, embassy, integrity,
+      navigate, performance, physique, presence, ranged_combat,
+      sagacity, stealth, war,
+      anima_passive, anima_active, anima_iconic,
+      motes_spent, motes_total, notes, inventory, merits,
+      armors, weapons, charms,
+      milestone_minor, milestone_major, milestone_personal, milestone_exalt,
+      // Health
+      health_bruised, health_injured, health_critical, health_incapacitated,
+      image_url
+    } = character;
 
-  const updateData = {
-    name, concept, description, exalt_type, caste, essence, anima,
-    major_virtue, minor_virtue, intimacies,
-    finesse, force, fortitude,
-    athletics, awareness, close_combat, craft, embassy, integrity,
-    navigate, performance, physique, presence, ranged_combat,
-    sagacity, stealth, war,
-    anima_passive, anima_active, anima_iconic,
-    image_url: character.image_url, // ✅ Add this line
-    charms: character.charms || []
-  };
+    const updateData = {
+      name, concept, description, exalt_type, caste, essence, anima,
+      major_virtue, minor_virtue, intimacies,
+      finesse, force, fortitude,
+      athletics, awareness, close_combat, craft, embassy, integrity,
+      navigate, performance, physique, presence, ranged_combat,
+      sagacity, stealth, war,
+      anima_passive, anima_active, anima_iconic,
+      motes_spent, motes_total, notes, inventory, merits,
+      armors: armors || [],
+      weapons: weapons || [],
+      charms: charms || [],
+      milestone_minor, milestone_major, milestone_personal, milestone_exalt,
+      health_bruised, health_injured, health_critical, health_incapacitated,
+      image_url,
+    };
 
-  const { error } = await supabase
-    .from('characters')
-    .update(updateData)
-    .eq('id', id);
+    const { error } = await supabase
+      .from('characters')
+      .update(updateData)
+      .eq('id', id);
 
-     if (!error) setEdit(false);
+    if (!error) setEdit(false);
     else console.error('Supabase update error:', error.message);
   };
-
 
   const handleEditToggle = () => {
     if (edit) {
@@ -122,7 +166,7 @@ export default function CharacterDetailPage() {
       {/* Header */}
       <div className="flex flex-col md:flex-row items-start gap-6 border-b pb-6">
         <section>
-            <h2 className="text-xl text-steel font-semibold mb-1 text-center">Portrait</h2>
+          <h2 className="text-xl text-steel font-semibold mb-1 text-center">Portrait</h2>
           <div className="flex flex-col sm:flex-row gap-6 items-start">
             <div className="w-48 h-48 relative rounded overflow-hidden border border-muted shadow-md">
               <img
@@ -139,17 +183,14 @@ export default function CharacterDetailPage() {
                   onChange={async (e) => {
                     const file = e.target.files?.[0];
                     if (!file) return;
-
                     const fileName = `${character.id}-${Date.now()}.${file.name.split('.').pop()}`;
-                    const { data, error } = await supabase.storage
+                    const { error } = await supabase.storage
                       .from('characters')
                       .upload(fileName, file, { upsert: true });
-
                     if (error) {
                       console.error('Image upload failed:', error.message);
                       return;
                     }
-
                     const { data: urlData } = supabase
                       .storage
                       .from('characters')
@@ -157,22 +198,17 @@ export default function CharacterDetailPage() {
 
                     if (urlData?.publicUrl) {
                       const imageUrl = urlData.publicUrl;
-
-                      // Guardamos inmediatamente en Supabase
                       const { error: updateError } = await supabase
                         .from('characters')
                         .update({ image_url: imageUrl })
                         .eq('id', character.id);
-
                       if (updateError) {
                         console.error('❌ Failed to update character:', updateError);
                       } else {
-                        console.log('✅ Image URL updated in characters table');
                         setCharacter((prev: any) => ({ ...prev, image_url: imageUrl }));
                       }
                     }
                   }}
-
                 />
                 <div className="text-steel space-y-2">
                   <Button
@@ -181,11 +217,9 @@ export default function CharacterDetailPage() {
                       if (!character.image_url) return;
                       const filePath = character.image_url.split('/storage/v1/object/public/characters/')[1];
                       if (!filePath) return;
-
                       const { error } = await supabase.storage
                         .from('characters')
                         .remove([filePath]);
-
                       if (!error) {
                         setCharacter((prev: any) => ({ ...prev, image_url: null }));
                       } else {
@@ -200,7 +234,6 @@ export default function CharacterDetailPage() {
             )}
           </div>
         </section>
-
         <div className="flex-1 space-y-3 text-steel dark:text-dark-steel">
           {edit ? (
             <Input
@@ -211,54 +244,49 @@ export default function CharacterDetailPage() {
           ) : (
             <h1 className="text-4xl font-heading bg-gradient-to-r from-steel to-aura-solar text-transparent bg-clip-text">{character.name}</h1>
           )}
-
-        <div className="text-sm text-aura-abyssal space-y-2">
-          {edit ? (
-            <>
-              <div className="flex gap-2 items-center">
-                <label className="w-20 font-medium">Exalt Type:</label>
-                <Input
-                  value={character.exalt_type}
-                  onChange={(e) => setCharacter({ ...character, exalt_type: e.target.value })}
-                />
-              </div>
-              <div className="flex gap-2 items-center">
-                <label className="w-20 font-medium">Caste:</label>
-                <Input
-                  value={character.caste}
-                  onChange={(e) => setCharacter({ ...character, caste: e.target.value })}
-                />
-              </div>
-              <div className="flex gap-2 items-center">
-                <label className="w-20 font-medium">Essence:</label>
-                <Input
-                  type="number"
-                  value={character.essence}
-                  onChange={(e) => setCharacter({ ...character, essence: Number(e.target.value) })}
-                />
-              </div>
-              <div className="flex gap-2 items-center">
-                <label className="w-20 font-medium">Anima:</label>
-                <Input
-                  value={character.anima}
-                  onChange={(e) => setCharacter({ ...character, anima: e.target.value })}
-                />
-              </div>
-            </>
-          ) : (
-            <>
-              <p>{character.exalt_type} • {character.caste}</p>
-              <p>Essence: <span className="font-semibold">{character.essence}</span></p>
-              <p>Anima: {character.anima}</p>
-            </>
-          )}
-
-          <p> Player: <span className="font-semibold">{character.profiles?.display_name || 'Unknown'}</span>
-          </p>
-          <p> Campaign: <span className="font-semibold">{character.campaign?.name || 'Unassigned'}</span>
-          </p>
-        </div>
-
+          <div className="text-sm text-aura-abyssal space-y-2">
+            {edit ? (
+              <>
+                <div className="flex gap-2 items-center">
+                  <label className="w-20 font-medium">Exalt Type:</label>
+                  <Input
+                    value={character.exalt_type}
+                    onChange={(e) => setCharacter({ ...character, exalt_type: e.target.value })}
+                  />
+                </div>
+                <div className="flex gap-2 items-center">
+                  <label className="w-20 font-medium">Caste:</label>
+                  <Input
+                    value={character.caste}
+                    onChange={(e) => setCharacter({ ...character, caste: e.target.value })}
+                  />
+                </div>
+                <div className="flex gap-2 items-center">
+                  <label className="w-20 font-medium">Essence:</label>
+                  <Input
+                    type="number"
+                    value={character.essence}
+                    onChange={(e) => setCharacter({ ...character, essence: Number(e.target.value) })}
+                  />
+                </div>
+                <div className="flex gap-2 items-center">
+                  <label className="w-20 font-medium">Anima:</label>
+                  <Input
+                    value={character.anima}
+                    onChange={(e) => setCharacter({ ...character, anima: e.target.value })}
+                  />
+                </div>
+              </>
+            ) : (
+              <>
+                <p>{character.exalt_type} • {character.caste}</p>
+                <p>Essence: <span className="font-semibold">{character.essence}</span></p>
+                <p>Anima: {character.anima}</p>
+              </>
+            )}
+            <p> Player: <span className="font-semibold">{character.profiles?.display_name || 'Unknown'}</span></p>
+            <p> Campaign: <span className="font-semibold">{character.campaign?.name || 'Unassigned'}</span></p>
+          </div>
           <div className="flex gap-2">
             <Button variant="outline" onClick={handleEditToggle}>
               {edit ? 'Save' : 'Edit'}
@@ -268,12 +296,40 @@ export default function CharacterDetailPage() {
                 Cancel
               </Button>
             )}
+            <Dialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
+              <DialogTrigger asChild>
+                <Button variant="destructive">Delete</Button>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>Delete Character</DialogTitle>
+                </DialogHeader>
+                <p>This action cannot be undone. Are you sure you want to delete this character?</p>
+                <DialogFooter>
+                  <Button variant="outline" onClick={() => setShowDeleteDialog(false)}>
+                    Cancel
+                  </Button>
+                  <Button
+                    variant="destructive"
+                    onClick={async () => {
+                      const { error } = await supabase
+                        .from('characters')
+                        .delete()
+                        .eq('id', character.id);
+                      if (!error) window.location.href = '/characters';
+                    }}
+                  >
+                    Confirm Delete
+                  </Button>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </div>
 
-      {/* Concept and Description */}
       <div className="grid md:grid-cols-2 gap-6">
+        {/* Concept */}
         <section>
           <h2 className="text-xl text-steel font-semibold mb-1">Concept</h2>
           {edit ? (
@@ -286,18 +342,96 @@ export default function CharacterDetailPage() {
           )}
         </section>
 
+        {/* Anima Effects */}
         <section>
-          <h2 className="text-xl font-semibold text-steel mb-1">Backstory</h2>
-          {edit ? (
-            <Textarea
-              value={character.description}
-              onChange={(e) => setCharacter({ ...character, description: e.target.value })}
-            />
-          ) : (
-            <p>{character.description}</p>
-          )}
+          <h2 className="text-xl font-semibold text-steel mb-1">Anima Effects</h2>
+          <div className="grid md:grid-cols-3 gap-4 text-aura-abyssal">
+            {['anima_passive', 'anima_active', 'anima_iconic'].map((field) => {
+              const label = field.split('_')[1];
+              const animaMap = {
+                anima_passive: 'Passive',
+                anima_active: 'Active',
+                anima_iconic: 'Iconic',
+              } as const;
+              const animaKey = animaMap[field as keyof typeof animaMap]; // "Passive", "Active", or "Iconic"
+              // Priority: explicit field, then effects, then '—'
+              const value =
+                (character[field] && character[field].trim() !== '' ? character[field] : (effects?.[animaKey] ?? '—')) || '—';
+              const shortValue = value.length > 120 ? `${value.slice(0, 120)}…` : value;
+
+              return (
+                <div key={field} className="space-y-1">
+                  <label className="block font-medium capitalize" htmlFor={field}>{label}</label>
+                  {edit ? (
+                    <Textarea
+                      id={field}
+                      value={character[field] || ''}
+                      onChange={(e) => setCharacter({ ...character, [field]: e.target.value })}
+                    />
+                  ) : (
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <p className="cursor-pointer hover:underline" title="Click to read full effect">
+                          {shortValue}
+                        </p>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-lg">
+                        <DialogTitle className="capitalize">{label} Anima Effect</DialogTitle>
+                        <p className="mt-2 whitespace-pre-wrap">{value}</p>
+                      </DialogContent>
+                    </Dialog>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </section>
       </div>
+
+      {/* Motes Tracker */}
+      <section>
+        <h2 className="text-xl font-semibold text-steel mb-1">Motes</h2>
+        <div className="flex gap-4">
+          {['motes_spent', 'motes_total'].map((key) => (
+            <div key={key}>
+              <label className="block text-sm font-medium capitalize mb-1 text-aura-abyssal">{key.replace('motes_', '')}</label>
+              {edit ? (
+                <Input
+                  type="number"
+                  value={character[key] || 0}
+                  onChange={(e) => setCharacter((prev: any) => ({ ...prev, [key]: Number(e.target.value) }))}
+                />
+              ) : (
+                <p className="text-aura-abyssal">{character[key] ?? '—'}</p>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Notes & Inventory */}
+      <section>
+        <h2 className="text-xl font-semibold text-steel mb-1">Notes</h2>
+        {edit ? (
+          <Textarea
+            value={character.notes || ''}
+            onChange={(e) => setCharacter((prev: any) => ({ ...prev, notes: e.target.value }))}
+          />
+        ) : (
+          <p className="whitespace-pre-wrap text-aura-abyssal">{character.notes || '—'}</p>
+        )}
+      </section>
+      <section>
+        <h2 className="text-xl font-semibold text-steel mb-1">Inventory</h2>
+        {edit ? (
+          <Textarea
+            value={character.inventory || ''}
+            onChange={(e) => setCharacter((prev: any) => ({ ...prev, inventory: e.target.value }))}
+          />
+        ) : (
+          <p className="whitespace-pre-wrap text-aura-abyssal">{character.inventory || '—'}</p>
+        )}
+      </section>
 
       {/* Virtues & Intimacies */}
       <section>
@@ -328,22 +462,23 @@ export default function CharacterDetailPage() {
           </div>
         )}
       </section>
-
-      {/* Anima Effects */}
+      
+       {/* Combat Stats */}
       <section>
-        <h2 className="text-xl font-semibold text-steel mb-1">Anima Effects</h2>
-        <div className="grid md:grid-cols-3 gap-4 text-aura-abyssal">
-          {['anima_passive', 'anima_active', 'anima_iconic'].map((field) => (
+        <h2 className="text-xl font-semibold mb-1 text-steel">Combat Stats</h2>
+        <div className="grid md:grid-cols-6 gap-4 text-aura-abyssal">
+          {['power', 'will', 'resolve', 'soak', 'defense', 'hardness'].map((field) => (
             <div key={field} className="space-y-1">
-              <label className="block font-medium capitalize" htmlFor={field}>{field.split('_')[1]}</label>
+              <label className="block font-medium capitalize" htmlFor={field}>{field}</label>
               {edit ? (
-                <Textarea
+                <Input
                   id={field}
+                  type="number"
                   value={character[field] || ''}
-                  onChange={(e) => setCharacter({ ...character, [field]: e.target.value })}
+                  onChange={(e) => setCharacter((prev: any) => ({ ...prev, [field]: Number(e.target.value) }))}
                 />
               ) : (
-                <p>{character[field] || '—'}</p>
+                <p>{character[field] ?? '—'}</p>
               )}
             </div>
           ))}
@@ -353,7 +488,7 @@ export default function CharacterDetailPage() {
       {/* Attributes */}
       <section>
         <h2 className="text-xl text-steel font-semibold mb-1">Attributes</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-aura-abyssal font-bold">
+        <div className="grid grid-cols-1 sm:grid-cols-1 gap-4 text-aura-abyssal font-bold">
           {['finesse', 'force', 'fortitude'].map((attr) => (
             <div key={attr} className="space-y-1">
               <label className="block font-medium capitalize" htmlFor={attr}>{attr}</label>
@@ -434,49 +569,72 @@ export default function CharacterDetailPage() {
         </div>
       </section>
 
-            {/* Combat Stats */}
+       {/* Armor */}
       <section>
-        <h2 className="text-xl font-semibold mb-1 text-steel">Combat Stats</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-aura-abyssal">
-          {['power', 'will', 'resolve', 'soak', 'defense', 'hardness'].map((field) => (
-            <div key={field} className="space-y-1">
-              <label className="block font-medium capitalize" htmlFor={field}>{field}</label>
-              {edit ? (
-                <Input
-                  id={field}
-                  type="number"
-                  value={character[field] || ''}
-                  onChange={(e) => setCharacter((prev: any) => ({ ...prev, [field]: Number(e.target.value) }))}
-                />
-              ) : (
-                <p>{character[field] ?? '—'}</p>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Health Track */}
-      <section>
-        <h2 className="text-xl font-semibold mb-1 text-steel">Health</h2>
-        <div className="grid text-aura-abyssal grid-cols-2 sm:grid-cols-4 gap-4">
-          {['bruised', 'injured', 'critical', 'incapacitated'].map((level) => (
-            <label key={level} className="flex items-center gap-2">
-              <input
-                type="checkbox"
-                checked={character[`health_${level}`] || false}
-                onChange={(e) =>
-                  setCharacter((prev: any) => ({
-                    ...prev,
-                    [`health_${level}`]: e.target.checked,
-                  }))
-                }
-                disabled={!edit}
-              />
-              <span className="capitalize">{level}</span>
-            </label>
-          ))}
-        </div>
+        <h2 className="text-xl text-steel font-semibold mb-1">Armor</h2>
+        {edit ? (
+          <div className="space-y-4 text-aura-abyssal">
+            {character.armors?.map((armor: any, i: number) => (
+              <div key={i} className="border border-muted rounded p-4">
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="font-semibold">Armor {i + 1}</h3>
+                  <Button
+                    variant="ghost"
+                    onClick={() => {
+                      const updated = [...character.armors];
+                      updated.splice(i, 1);
+                      setCharacter((prev: any) => ({ ...prev, armors: updated }));
+                    }}
+                  >
+                    Remove
+                  </Button>
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
+                  {['type', 'soak', 'hardness', 'mobility_penalty'].map((field) => (
+                    <div key={field}>
+                      <label className="block text-sm capitalize mb-1">{field.replace('_', ' ')}</label>
+                      <Input
+                        value={armor[field] || ''}
+                        onChange={(e) => {
+                          const updated = [...character.armors];
+                          updated[i][field] = e.target.value;
+                          setCharacter((prev: any) => ({ ...prev, armors: updated }));
+                        }}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+            <Button
+              variant="outline"
+              onClick={() => setCharacter((prev: any) => ({
+                ...prev,
+                armors: [
+                  ...(prev.armors || []),
+                  { type: '', soak: '', hardness: '', mobility_penalty: '' },
+                ],
+              }))}
+            >
+              + Add Armor
+            </Button>
+          </div>
+        ) : (
+          <div className="space-y-4">
+            {character.armors?.map((armor: any, i: number) => (
+              <div key={i} className="border border-muted rounded p-4">
+                <h3 className="font-semibold text-steel mb-1">Armor {i + 1}</h3>
+                <ul className="text-sm space-y-1">
+                  {['type', 'soak', 'hardness', 'mobility_penalty'].map((field) => (
+                    <li key={field}>
+                      <strong className="capitalize">{field.replace('_', ' ')}:</strong> {armor[field] || '—'}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        )}
       </section>
 
       {/* Weapons */}
@@ -547,74 +705,6 @@ export default function CharacterDetailPage() {
         )}
       </section>
 
-      {/* Armor */}
-      <section>
-        <h2 className="text-xl text-steel font-semibold mb-1">Armor</h2>
-        {edit ? (
-          <div className="space-y-4 text-aura-abyssal">
-            {character.armors?.map((armor: any, i: number) => (
-              <div key={i} className="border border-muted rounded p-4">
-                <div className="flex justify-between items-center mb-2">
-                  <h3 className="font-semibold">Armor {i + 1}</h3>
-                  <Button
-                    variant="ghost"
-                    onClick={() => {
-                      const updated = [...character.armors];
-                      updated.splice(i, 1);
-                      setCharacter((prev: any) => ({ ...prev, armors: updated }));
-                    }}
-                  >
-                    Remove
-                  </Button>
-                </div>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {['type', 'soak', 'hardness', 'mobility_penalty'].map((field) => (
-                    <div key={field}>
-                      <label className="block text-sm capitalize mb-1">{field.replace('_', ' ')}</label>
-                      <Input
-                        value={armor[field] || ''}
-                        onChange={(e) => {
-                          const updated = [...character.armors];
-                          updated[i][field] = e.target.value;
-                          setCharacter((prev: any) => ({ ...prev, armors: updated }));
-                        }}
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-            <Button
-              variant="outline"
-              onClick={() => setCharacter((prev: any) => ({
-                ...prev,
-                armors: [
-                  ...(prev.armors || []),
-                  { type: '', soak: '', hardness: '', mobility_penalty: '' },
-                ],
-              }))}
-            >
-              + Add Armor
-            </Button>
-          </div>
-        ) : (
-          <div className="space-y-4">
-            {character.armors?.map((armor: any, i: number) => (
-              <div key={i} className="border border-muted rounded p-4">
-                <h3 className="font-semibold text-steel mb-1">Armor {i + 1}</h3>
-                <ul className="text-sm space-y-1">
-                  {['type', 'soak', 'hardness', 'mobility_penalty'].map((field) => (
-                    <li key={field}>
-                      <strong className="capitalize">{field.replace('_', ' ')}:</strong> {armor[field] || '—'}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        )}
-      </section>
-
       {/* Merits */}
       <section>
         <h2 className="text-xl font-semibold text-steel mb-1">Merits</h2>
@@ -629,29 +719,53 @@ export default function CharacterDetailPage() {
         )}
       </section>
 
-            {/* Charms */}
+       {/* Health Track */}
       <section>
-        <h2 className="text-2xl text-steel font-bold mb-3">Charms</h2>
-        {edit ? (
-          <div className="space-y-4">
-            {character.charms?.map((charm: any, i: number) => (
-              <div key={i} className="border border-border rounded-md p-4 bg-white/5 space-y-2">
+        <h2 className="text-xl font-semibold mb-1 text-steel">Health</h2>
+        <div className="grid text-aura-abyssal grid-cols-2 sm:grid-cols-6 gap-4">
+          {['bruised', 'injured', 'critical', 'incapacitated'].map((level) => (
+            <label key={level} className="flex items-center gap-2">
+              <input
+                type="checkbox"
+                checked={character[`health_${level}`] || false}
+                onChange={(e) =>
+                  setCharacter((prev: any) => ({
+                    ...prev,
+                    [`health_${level}`]: e.target.checked,
+                  }))
+                }
+                disabled={!edit}
+              />
+              <span className="capitalize">{level}</span>
+            </label>
+          ))}
+        </div>
+      </section>
+
+            {/* Charms */}
+            <div className="col-span-full">
+              <section>
+                <h2 className="text-2xl text-steel font-bold mb-3">Charms</h2>
+                {edit ? (
+              <div className="space-y-4">
+                {character.charms?.map((charm: any, i: number) => (
+                  <div key={i} className="border border-border rounded-md p-4 bg-white/5 space-y-2">
                 <div className="flex justify-between items-center">
                   <Input
                     placeholder="Charm Name"
                     value={charm.name}
                     onChange={(e) => {
-                      const updated = [...character.charms];
-                      updated[i].name = e.target.value;
-                      setCharacter((prev: any) => ({ ...prev, charms: updated }));
+                  const updated = [...character.charms];
+                  updated[i].name = e.target.value;
+                  setCharacter((prev: any) => ({ ...prev, charms: updated }));
                     }}
                   />
                   <Button
                     variant="ghost"
                     onClick={() => {
-                      const updated = [...character.charms];
-                      updated.splice(i, 1);
-                      setCharacter((prev: any) => ({ ...prev, charms: updated }));
+                  const updated = [...character.charms];
+                  updated.splice(i, 1);
+                  setCharacter((prev: any) => ({ ...prev, charms: updated }));
                     }}
                   >
                     Remove
@@ -671,18 +785,18 @@ export default function CharacterDetailPage() {
                     placeholder="Mode"
                     value={charm.mode}
                     onChange={(e) => {
-                      const updated = [...character.charms];
-                      updated[i].mode = e.target.value;
-                      setCharacter((prev: any) => ({ ...prev, charms: updated }));
+                  const updated = [...character.charms];
+                  updated[i].mode = e.target.value;
+                  setCharacter((prev: any) => ({ ...prev, charms: updated }));
                     }}
                   />
                   <Input
                     placeholder="Cost"
                     value={charm.cost}
                     onChange={(e) => {
-                      const updated = [...character.charms];
-                      updated[i].cost = e.target.value;
-                      setCharacter((prev: any) => ({ ...prev, charms: updated }));
+                  const updated = [...character.charms];
+                  updated[i].cost = e.target.value;
+                  setCharacter((prev: any) => ({ ...prev, charms: updated }));
                     }}
                   />
                   <Input
@@ -690,9 +804,9 @@ export default function CharacterDetailPage() {
                     type="number"
                     value={charm.page}
                     onChange={(e) => {
-                      const updated = [...character.charms];
-                      updated[i].page = Number(e.target.value);
-                      setCharacter((prev: any) => ({ ...prev, charms: updated }));
+                  const updated = [...character.charms];
+                  updated[i].page = Number(e.target.value);
+                  setCharacter((prev: any) => ({ ...prev, charms: updated }));
                     }}
                   />
                   <Input
@@ -700,45 +814,45 @@ export default function CharacterDetailPage() {
                     type="number"
                     value={charm.step}
                     onChange={(e) => {
-                      const updated = [...character.charms];
-                      updated[i].step = Number(e.target.value);
-                      setCharacter((prev: any) => ({ ...prev, charms: updated }));
+                  const updated = [...character.charms];
+                  updated[i].step = Number(e.target.value);
+                  setCharacter((prev: any) => ({ ...prev, charms: updated }));
                     }}
                   />
                 </div>
-              </div>
-            ))}
-            <Button
-              variant="outline"
-              onClick={() => setCharacter((prev: any) => ({
+                  </div>
+                ))}
+                <Button
+                  variant="outline"
+                  onClick={() => setCharacter((prev: any) => ({
                 ...prev,
                 charms: [
                   ...(prev.charms || []),
                   { name: '', mode: '', cost: '', page: 0, step: 0, description: '' },
                 ],
-              }))}
-            >
-              + Add Charm
-            </Button>
-          </div>
-        ) : (
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {character.charms?.map((charm: any, i: number) => (
-              <Dialog key={i}>
+                  }))}
+                >
+                  + Add Charm
+                </Button>
+              </div>
+                ) : (
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {character.charms?.map((charm: any, i: number) => (
+                  <Dialog key={i}>
                 <DialogTrigger asChild>
                   <li className="border border-border rounded-md p-4 bg-white/5 cursor-pointer">
                     <p className="font-semibold text-lg line-clamp-1 bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text">{charm.name}</p>
                     <p className="text-sm text-muted-foreground line-clamp-2">
-                      {charm.description || '—'}
+                  {charm.description || '—'}
                     </p>
                   </li>
                 </DialogTrigger>
                 <DialogContent>
                   <DialogHeader>
                     <DialogTitle>
-                      <span className="bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text">
-                        {charm.name}
-                      </span>
+                  <span className="bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text">
+                    {charm.name}
+                  </span>
                     </DialogTitle>
                   </DialogHeader>
                   <div className="text-sm space-y-2 text-aura-abyssal">
@@ -749,16 +863,17 @@ export default function CharacterDetailPage() {
                     <p className="whitespace-pre-wrap">{charm.description || '—'}</p>
                   </div>
                 </DialogContent>
-              </Dialog>
-            ))}
-          </ul>
-        )}
-      </section>
+                  </Dialog>
+                ))}
+              </ul>
+                )}
+              </section>
+            </div>
 
       {/* Milestones */}
       <section>
         <h2 className="text-xl text-steel font-semibold mb-1">Milestones</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-4">
           {['minor', 'major', 'personal', 'exalt'].map((type) => (
             <div key={type}>
               <label className="block text-aura-abyssal text-sm font-medium capitalize mb-1">{type} milestone</label>
@@ -777,6 +892,17 @@ export default function CharacterDetailPage() {
           ))}
         </div>
       </section>
+      <section>
+          <h2 className="text-xl font-semibold text-steel mb-1">Backstory</h2>
+          {edit ? (
+            <Textarea
+              value={character.description}
+              onChange={(e) => setCharacter({ ...character, description: e.target.value })}
+            />
+          ) : (
+            <p>{character.description}</p>
+          )}
+        </section>
     </div>
   );
 }

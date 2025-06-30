@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { useSession } from '@supabase/auth-helpers-react';
 import Image from 'next/image';
-import { Dialog, DialogTrigger, DialogContent } from '@/components/ui/dialog';
+import { Dialog, DialogTrigger, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Select } from '@/components/ui/select';
 
@@ -25,9 +25,9 @@ type Campaign = {
 type Character = {
   id: string;
   name: string;
-  player: string;
-  image: string | null;
-  campaign_name?: string | null;
+  campaign_id?: string | null;
+  owner_id: string;
+  image?: string | null;
 };
 
 export default function CampaignDetailPage() {
@@ -42,9 +42,11 @@ export default function CampaignDetailPage() {
   const [description, setDescription] = useState('');
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [myCharacters, setMyCharacters] = useState<Character[]>([]);
-  const [selectedCharId, setSelectedCharId] = useState<string | null>(null);
 
   useEffect(() => {
+    const userId = session?.user?.id;
+    if (!userId) return;
+
     async function loadCampaignAndCharacters() {
       const { data, error } = await supabase
         .from('campaigns')
@@ -52,15 +54,13 @@ export default function CampaignDetailPage() {
         .eq('slug', slug)
         .single();
 
-      if (session?.user?.id) {
-        const { data: ownedChars } = await supabase
-          .from('characters')
-          .select('id, name, player, image')
-          .eq('user_id', session.user.id)
-          .or(`campaign_id.is.null,campaign_id.eq.`);
+      const { data: ownedChars } = await supabase
+        .from('characters')
+        .select('id, name, campaign_id, owner_id')
+        .eq('owner_id', userId)
+        .is('campaign_id', null);
 
-        setMyCharacters(ownedChars || []);
-      }
+      setMyCharacters(ownedChars || []);
 
       if (data) {
         setCampaign(data);
@@ -68,19 +68,19 @@ export default function CampaignDetailPage() {
         setDescription(data.description || '');
         setNotes(data.session_notes || '');
 
-        const { data: charactersData } = await supabase
+        const { data: chars } = await supabase
           .from('characters')
-          .select('id, name, player, image, campaign_id')
+          .select('id, name, campaign_id, owner_id, image')
           .eq('campaign_id', data.id);
 
-        setCharacters(charactersData || []);
+        setCharacters(chars || []);
       } else {
-        console.error(error?.message);
+        console.error('[DEBUG] Campaign load error:', error?.message);
       }
     }
 
     loadCampaignAndCharacters();
-  }, [slug]);
+  }, [slug, session]);
 
   const isGM = session?.user?.id === campaign?.gm_id;
 
@@ -112,8 +112,7 @@ export default function CampaignDetailPage() {
       })
       .eq('slug', slug);
 
-    if (error) console.error('Error saving campaign changes:', error.message);
-    else setEditMode(false);
+    if (!error) setEditMode(false);
   }
 
   const handleSaveNotes = async () => {
@@ -121,32 +120,36 @@ export default function CampaignDetailPage() {
       .from('campaigns')
       .update({ session_notes: notes })
       .eq('slug', slug);
-
-    if (error) console.error('Failed to save notes:', error.message);
   };
 
-  const handleAddCharacterToCampaign = async () => {
-    if (!selectedCharId || !campaign?.id) return;
+  const handleAddCharacterToCampaign = async (selectedCharId: string) => {
+    if (!selectedCharId || !campaign?.id || !session?.user?.id) return;
 
-    const { data, error } = await supabase
+    await supabase
       .from('characters')
       .update({ campaign_id: campaign.id })
       .eq('id', selectedCharId);
 
-    if (error) {
-      console.error('Error adding character:', error.message);
-      console.log('Supabase error object:', error);
-    } else {
-      console.log('Character successfully added:', data);
-      location.reload();
-    }
+    const { data: updatedChars } = await supabase
+      .from('characters')
+      .select('id, name, campaign_id, owner_id, image')
+      .eq('campaign_id', campaign.id);
+
+    setCharacters(updatedChars || []);
+
+    const { data: unassignedChars } = await supabase
+      .from('characters')
+      .select('id, name, campaign_id, owner_id')
+      .eq('owner_id', session.user.id)
+      .is('campaign_id', null);
+
+    setMyCharacters(unassignedChars || []);
   };
 
   if (!campaign) return <div className="p-6">Loading...</div>;
 
   return (
     <div className="p-6 space-y-8">
-      {/* Campaign Header */}
       <div className="flex flex-col md:flex-row gap-4 items-start md:items-center">
         <Image
           src={campaign.image || '/castes/default.png'}
@@ -159,26 +162,10 @@ export default function CampaignDetailPage() {
         <div className="flex-1">
           {editMode && isGM ? (
             <>
-              <Input
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-                className="mb-2 text-2xl font-bold"
-              />
-              <Textarea
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-                placeholder="Campaign Description"
-              />
-              <Input
-                type="file"
-                accept="image/*"
-                className="mt-2"
-                onChange={(e) => setImageFile(e.target.files?.[0] || null)}
-              />
-              <button
-                onClick={handleSaveCampaignDetails}
-                className="mt-2 px-4 py-2 bg-primary border border-primary text-steel hover:bg-aura-sidereal hover:text-white transition"
-              >
+              <Input value={title} onChange={(e) => setTitle(e.target.value)} className="mb-2 text-2xl font-bold" />
+              <Textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Campaign Description" />
+              <Input type="file" accept="image/*" className="mt-2" onChange={(e) => setImageFile(e.target.files?.[0] || null)} />
+              <button onClick={handleSaveCampaignDetails} className="mt-2 px-4 py-2 bg-primary border border-primary text-steel hover:bg-aura-sidereal hover:text-white transition">
                 Save Changes
               </button>
             </>
@@ -187,10 +174,7 @@ export default function CampaignDetailPage() {
               <h1 className="text-3xl text-steel font-bold">{campaign.name}</h1>
               <p className="text-muted-foreground mt-1">{campaign.description}</p>
               {isGM && (
-                <button
-                  onClick={() => setEditMode(true)}
-                  className="mt-2 text-sm underline text-aura-sidereal"
-                >
+                <button onClick={() => setEditMode(true)} className="mt-2 text-sm underline text-aura-sidereal">
                   Edit Campaign
                 </button>
               )}
@@ -199,52 +183,38 @@ export default function CampaignDetailPage() {
         </div>
       </div>
 
-      {/* Character Grid */}
       <div>
         <h2 className="text-2xl text-aura-abyssal font-semibold mt-6">Characters</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-2">
           {characters.map((char) => (
             <div key={char.id} className="border p-3 rounded shadow-sm bg-card">
-              {char.image && (
-                <img
-                  src={char.image}
-                  alt={char.name}
-                  className="w-full h-32 object-cover rounded mb-2"
-                />
-              )}
+              {char.image && <img src={char.image} alt={char.name} className="w-full h-32 object-cover rounded mb-2" />}
               <h3 className="font-semibold">{char.name}</h3>
               <p className="text-sm text-muted-foreground">
-                Player: {char.player}
+                Owner: {char.owner_id}
                 <br />
-                Campaign: {campaign?.name || 'Unassigned'}
+                Campaign: {campaign.name}
               </p>
             </div>
           ))}
         </div>
 
-        {/* Add Character Dialog */}
         {isGM && (
           <Dialog>
             <DialogTrigger asChild>
               <Button className="mt-4">+ Add Character to Campaign</Button>
             </DialogTrigger>
             <DialogContent className="max-w-md">
-              <h3 className="text-xl font-semibold mb-2">Add a Character</h3>
+              <DialogTitle className="text-steel">Add a Character</DialogTitle>
               {myCharacters.length > 0 ? (
                 <>
                   <Select
-                    value={selectedCharId}
-                    onChange={setSelectedCharId}
                     placeholder="Select a character"
-                    options={myCharacters.map((c) => ({
-                      label: c.name,
-                      value: c.id,
-                    }))}
+                    options={myCharacters.map((c) => ({ label: c.name, value: c.id }))}
+                    value={null}
+                    onChange={(val) => handleAddCharacterToCampaign(val)}
                     className="mt-2"
                   />
-                  <Button onClick={handleAddCharacterToCampaign} className="mt-4">
-                    Add to Campaign
-                  </Button>
                 </>
               ) : (
                 <p className="text-muted-foreground">You have no unassigned characters.</p>
@@ -254,7 +224,6 @@ export default function CampaignDetailPage() {
         )}
       </div>
 
-      {/* Session Notes */}
       <div>
         <h2 className="text-2xl text-steel font-semibold mt-6">Session Notes</h2>
         <Textarea
