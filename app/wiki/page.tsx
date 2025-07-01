@@ -147,7 +147,7 @@ export default function WikiPage() {
 
       {/* Grid of Entries */}
       <div className="pt-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
           {filteredEntries.length === 0 && (
             <div className="col-span-full text-center text-gray-500">
               No entries found for this search.
@@ -161,7 +161,7 @@ export default function WikiPage() {
             >
               <h3 className="text-xl bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text font-semibold">{entry.name}</h3>
               <p className="text-sm text-aura-abyssal line-clamp-3">{entry.description}</p>
-              <p className="text-xs mt-2 text-gray-400">Tags: {entry.tags.join(', ')}</p>
+              <p className="text-xs mt-2 text-aura-lunar">Tags: {entry.tags.join(', ')}</p>
               <p className="text-xs text-gray-500">
                 Source: {entry.sourcebook} – {entry.pageRef}
               </p>

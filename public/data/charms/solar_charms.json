@@ -12,16 +12,16 @@
       }
     ],
     "source": "Exalted Essence Core Rulebook",
-    "page": [197]
+    "page": [272]
   },
   {
     "name": "MEDITATION ON RIVALRY",
     "ability": ["Awareness"],
     "prerequisites": "Awareness 1",
-    "description": "The Solar receives divine intuition when investigating an unlawful act. Ask the Storyteller one question from a provided list. Additional questions cost 1 mote each.",
+    "description": "The Lawgiver feels the unexpected stirring of a divine hunch. The Solar receives divine intuition when investigating an unlawful act. Ask the Storyteller one question from the following list; additional questions cost one mote each: • What is the criminal’s motive? • How far am I from the criminal? • Does the crime oppose one of my Intimacies or Virtues? • What can I do to unravel their plan?.",
     "modes": [],
     "source": "Exalted Essence Core Rulebook",
-    "page": [197]
+    "page": [272]
   },
   {
     "name": "UNCONQUERED SUN’S SIGHT",
@@ -36,18 +36,18 @@
       }
     ],
     "source": "Exalted Essence Core Rulebook",
-    "page": [197]
+    "page": [272]
   },
   {
     "name": "BEHEMOTH-SLAYING ATTITUDE",
     "ability": ["Close Combat"],
     "prerequisites": "Close Combat 4 or War 4",
-    "description": "Commit 2 motes. For the scene, enemies with Legendary Size take −3 dice to attack the Solar, and he ignores the penalty to withering attacks against such foes. Battle groups gain +1 Drill. Gain 1 anima.",
+    "description": "Commit 2 motes. For the scene, enemies with Legendary Size take 3 dice penalty to attack the Solar, and he ignores the penalty to withering attacks against such foes. Battle groups she leads gain +1 Drill. Gain 1 anima.",
     "modes": [
       {
         "name": "Solar",
         "title": "Humbaba-Wrestling Prowess",
-        "effect": "At Close Combat 5 or War 5, allows the Solar to dominate grapples and remove extra cost to gambits against Legendary Size enemies."
+        "effect": "Upgrade. At Close Combat 5 or War 5, allows the Solar to dominate grapples and remove extra cost to gambits against Legendary Size enemies."
       }
     ],
     "source": "Exalted Essence Core Rulebook",
@@ -102,5 +102,356 @@
     ],
     "source": "Exalted Essence Core Rulebook",
     "page": [197]
+  },
+  {  
+    "name": "JOYOUS HANDIWORK GENIUS",  
+    "ability": ["Craft"],  
+    "prerequisites": "Craft 2",  
+    "description": "With a Solar’s handiwork, everyday objects can become masterpieces. Crafted mundane items and creative works are extraordinary by default, granting a two-dice bonus to impressing others. The Solar may improve this bonus using a venture (p. 151) to reflect the time spent on it. This adds an additional obstacle, that if overcome, increases the bonus to three dice which do not count toward the dice limit. Furthermore, spending 1 mote adds Essence in automatic successes to overcome an impress recipient obstacle during a crafting venture, and the Solar gains 2 additional anima.",  
+    "modes": [  
+      {  
+        "name": "Upgrade",  
+        "title": "World-Shaming Wonders",  
+        "effect": "This Charm applies to crafting artifacts and manses, in exchange for increasing the difficulty of keeping these ventures secret by 2. The Solar no longer faces a tarnished reputation as a consequence of failing a craft obstacle unless he chooses to cut corners."  
+      }  
+    ],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [273]
+  },  
+  {  
+    "name": "TECHNIQUE-FROM-TASTE APPROACH",  
+    "ability": ["Craft"],  
+    "prerequisites": "Craft 3",  
+    "description": "If anyone can improve on perfection, it’s the Solar Exalted. Name a crafting discipline at Charm purchase. When using a mundane item or construct from this discipline, ask the Storyteller any of the following, spending 1 mote per question: • How can this be repaired? • How can this be improved? • How can this be replicated?",  
+    "modes": [  
+      {  
+        "name": "Repurchase",  
+        "title": "Legend-Drawing Invocation",  
+        "effect": "This Charm applies its effects to artifacts and other wonders."  
+      }  
+    ],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [274]  
+  },  
+  {  
+    "name": "VACANT STATION SCHEME",  
+    "ability": ["Embassy"],  
+    "prerequisites": "Embassy 3",  
+    "description": "The Lawgiver uses an office’s flaws against it, for a greater purpose. Invoke this Charm as an action to create temporary laws or phantom employees in a target organization. Spend 1 mote to gain false tertiary Backing in the organization. This does not gain the Sanctity of Merits (p. 100).",  
+    "modes": [  
+      {  
+        "name": "Upgrade",  
+        "title": "Red Tape Daiklaive",  
+        "effect": "Reduce the difficulty of overcoming obstacles in the Solar’s ventures by half her fraudulent Backing dice (p. 101), round up, provided the venture aims to somehow improve or degrade the organization. If her venture results in its dissolution or reform, her Backing is revoked. Gain a personal milestone."  
+      },  
+      {  
+        "name": "Upgrade",  
+        "title": "Top-Down Scheme",  
+        "effect": "Spend 2 motes to gain fraudulent secondary Backing."  
+      },  
+      {  
+        "name": "Upgrade",  
+        "title": "Fraudulent Succession Claim",  
+        "effect": "Spend 3 motes to gain false primary Backing."  
+      }  
+    ],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [274]  
+  },  
+  {  
+    "name": "ASPECT OF THE VIRTUOUS WARRIOR",  
+    "ability": ["Integrity"],  
+    "prerequisites": "Integrity 5",  
+    "description": "She is the Sun’s Chosen — she won’t allow things like “the laws of reality” to impede her. When the Solar’s Stunt serves a Principle (p. 130), the reward is four dice, instead of the usual two. These dice can instead be banked to increase the difficulty of the next social influence targeting her by two. Gain 1 anima when this Charm is invoked.",  
+    "modes": [],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [274]  
+  },  
+  {  
+    "name": "PRINCIPLE-MAINTAINING METHOD",  
+    "ability": ["Integrity"],  
+    "prerequisites": "Integrity 1",  
+    "description": "His eyes glow with the color of his anima, reinforcing his will. Spend 2 motes on Step 2. Add 3 to Resolve against instill and weaken actions.",  
+    "modes": [  
+      {  
+        "name": "Upgrade",  
+        "title": "Elusive Dream Defense",  
+        "effect": "When the Solar is targeted by a persuade influence, he may commit the motes to gain the bonus until the end of the scene. The Solar may end this Charm to gain a Major Intimacy opposed to the persuader’s intent. The Intimacy fades at the end of the scene and the committed motes become spent."  
+      }  
+    ],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [274]  
+  },  
+  {  
+    "name": "SUN KING RADIANCE",  
+    "ability": ["Integrity"],  
+    "prerequisites": "Integrity 3",  
+    "description": "His presence alone inspires others to heroism. Commit 1 mote. For the scene, gain 2 Power, 1 anima, or 1 Will each time an ally in the same scene successfully defends against social influence from a nontrivial enemy. Allies with one of the Solar’s Intimacies or Virtues in common treat these as Major for the purposes of resisting social influence.",  
+    "modes": [  
+      {  
+        "name": "Upgrade",  
+        "title": "Sun’s Rallied Might",  
+        "effect": "Allies in the same scene who share his intent may add the Solar’s Integrity bonus to their Resolve."  
+      }  
+    ],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [274]  
+  },  
+  {  
+    "name": "GOD-BEARING JUGGERNAUT",  
+    "ability": ["Navigate"],  
+    "prerequisites": "Navigate 2",  
+    "description": "When she advances while mounted, light blooms in her wake. Spend 1 mote on Step 1 while the Solar’s anima is active. Add the number of range bands traveled by mount or small vehicle this turn to the Solar’s Power, before step 3 of a decisive attack. Gain an additional anima.",  
+    "modes": [  
+      {  
+        "name": "Repurchase",  
+        "title": "Can’t Outrace the Sun",  
+        "effect": "Spend 2 motes while the Solar’s anima is Active to add her Navigate in bonus dice to Step 2 of a mounted clash (p. 147). If her anima is at the Iconic level, add her Navigate in bonus successes instead. If her clash succeeds, her opponent must accept a Minor Tie of awe toward her or accept a hard bargain."  
+      }  
+    ],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [274]  
+  },  
+  {  
+    "name": "SHIP-CLAIMING STANCE",  
+    "ability": ["Navigate"],  
+    "prerequisites": "Navigate 1",  
+    "description": "The Solar’s essence paints her ship with a unique golden signature. Spend 1 mote to claim divine ownership of an unclaimed large vehicle. While the Solar holds a positive Tie (p. 130) to this vessel, it gains a reserve of 2 motes or 2 Will she can use to pay the cost of Charms or sorcery. This reserve refreshes at the beginning of a session, or when she incapacitates an enemy ship.",  
+    "modes": [  
+      {  
+        "name": "Upgrade",  
+        "title": "Ship-Self Awareness",  
+        "effect": "Commit 2 motes to ensure that while the Solar is aboard her vessel it requires no crew and will never wreck regardless of the damage it suffers. This does not render the ship invulnerable, merely unsinkable. A scuttled ship will take on water as soon as she disembarks, falls to Incapacitated, or releases the commitment."  
+      }  
+    ],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [275]  
+  },  
+  {  
+    "name": "WAVES-AND-RIVERS RANGING",  
+    "ability": ["Navigate"],  
+    "prerequisites": "Navigate 3",  
+    "description": "Her orders awaken an uncommon savvy in the caravan. Spend 1 mote. The Solar allows a story-important member of her crew or traveling entourage to use her Navigate rating for one roll. If she has higher Essence, they gain the difference in their Essence ratings in bonus successes. Gain 2 additional Anima.",  
+    "modes": [  
+      {  
+        "name": "Upgrade",  
+        "title": "Loved-and-Feared Command",  
+        "effect": "If the crew member has a Tie of respect or fear to the Solar, they may use her Navigate Excellency on this roll without paying its cost."  
+      }  
+    ],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [275]  
+  },  
+  {  
+    "name": "PHANTOM-CONJURING PERFORMANCE",  
+    "ability": ["Performance"],  
+    "prerequisites": "Presence 1 or Performance 1",  
+    "description": "She sings a tune and whimsical images dance around her. Using a Performance or Presence Charm creates phantom displays from ambient Essence, supplementing the Solar’s actions. Anyone who works the phantoms into a Stunt description gains an additional Stunt die and may restore a spent mote or gain an additional anima once a scene.",  
+    "modes": [],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [275]  
+  },  
+  {  
+    "name": "ROCKS AND STORMS CHORUS",  
+    "ability": ["Performance"],  
+    "prerequisites": "Performance 5, Essence 3",  
+    "description": "When the Solar lifts his voice, the monsoon pauses to listen. Spend 2 motes when the Solar activates this Charm as part of a performance. For the scene, or as long as he performs, all environmental hazards, traps, poisons, and diseases cease inflicting damage, extending protection to ally and enemy alike. Gods and other spirits who hear this song reduce their Resolve by 3. Gain an additional anima.",  
+    "modes": [],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [275]  
+  },  
+  {  
+    "name": "VIRTUE-SHAPING HARMONY",  
+    "ability": ["Performance"],  
+    "prerequisites": "Performance 3",  
+    "description": "The Lawgiver lays his passions bare, fundamentally changing his audience. Spend 1 mote to activate this Charm at the beginning of a performance to have the audience adopt one of the Solar’s Virtues as their Minor Virtue for as long as he performs. At the end of his performance, he may spend 1 anima to attempt social influence with a three-success bonus to instill in his audience one of his own Intimacies. This must be attached to the Virtue adopted by the Charm.",  
+    "modes": [  
+      {  
+        "name": "Upgrade",  
+        "title": "Memory-Reweaving Discipline",  
+        "effect": "Instead of one of his Intimacies, the Solar may instill a belief-based Principle, provided it would not lead to unacceptable influence (p. 134). This ignores the three-dice penalty for influencing multiple targets."  
+      }  
+    ],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [275]  
+  },  
+  {  
+    "name": "ENDURANCE OF A THOUSAND CUTS",  
+    "ability": ["Physique"],  
+    "prerequisites": "Physique 3",  
+    "description": "The flesh she lost was weak — their attacks only made her stronger. Spend 1 anima on Step 5. Add the Solar’s current wound penalty to her Soak for the scene. When her Soak reduces an attack’s damage to zero, she gains 1 Power.",  
+    "modes": [  
+      {  
+        "name": "Repurchase",  
+        "title": "Blade-Cracking Attitude",  
+        "effect": "Spend 1 anima on step 2 to reduce the accuracy or damage rating of her attacker’s weapon by one. Artifacts are dulled until the start of the Solar’s next turn; mundane weapons are permanently damaged."  
+      }  
+    ],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [275]  
+  },   
+  {  
+    "name": "DISSIDENT-SEARING INTENT",  
+    "ability": ["Presence"],  
+    "prerequisites": "Presence 1",  
+    "description": "The Solar channels the raw force of their virtue into their advance. Choose one Intimacy or Virtue to benefit from this Charm. When the Solar undertakes social influence in the name of this Intimacy or Virtue, a target who wishes to resist must tithe a number of motes, Power, anima, or Will equal to the Solar’s Essence, in addition to the usual cost. The benefitting Intimacy or Virtue cannot be changed until achieving a personal or Exalt milestone. Gain an additional anima when the Solar benefits from this Charm.",  
+    "modes": [  
+      {  
+        "name": "Repurchase",  
+        "title": "Enemy-Castigating Solar Judgment",  
+        "effect": "The Solar forces a creature of darkness (p. 61) to tithe motes, Power, anima, or Will even if they do not resist. Alternatively, she may spend 1 anima on Step 6 of a decisive attack against a creature of darkness to deal aggravated damage."  
+      }  
+    ],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [276]  
+  },  
+  {  
+    "name": "HYPNOTIC TONGUE TECHNIQUE",  
+    "ability": ["Presence"],  
+    "prerequisites": "Presence 3",  
+    "description": "As the Lawgiver speaks, his words feel unusual and warm in the target’s ears. Spend 2 motes when the Solar attempts to convince a target he has their best interests at heart and roll a special weaken action with his Essence in bonus successes. Instead of spending successes for the usual effect, he may spend four successes to allow his next persuade action to benefit from their targeted Intimacy as though it were in accordance with it.",  
+    "modes": [  
+      {  
+        "name": "Repurchase",  
+        "title": "Singular Solar Command",  
+        "effect": "Prevent the target from using their Virtues to defend against the special weaken action provided by this Charm."  
+      },  
+      {  
+        "name": "Upgrade",  
+        "title": "Suggestion Burned in Light",  
+        "effect": "The targeted Intimacy is weakened by this Charm indefinitely, or until the target raises their Essence (or completes a story for characters who do not have an Essence rating)."  
+      }  
+    ],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [276]  
+  },  
+  {  
+    "name": "DAZZLING FLARE",  
+    "ability": ["Ranged Combat"],  
+    "prerequisites": "Ranged Combat 1",  
+    "description": "Her anima pours into a single fateful shot. Spend 1 mote on Step 5 to add a four-dice bonus to the damage of a decisive ranged attack. If the Solar’s ammunition is magically created by a Charm or artifact, also ignore one point of the enemy’s Soak. At Essence 3, this bonus increases to five dice, and at Essence 5, it increases to seven dice. Every two dice that would exceed the dice limit become automatic successes. This may be used during a clash. Gain an additional anima.",  
+    "modes": [  
+      {  
+        "name": "Repurchase",  
+        "title": "Righteous Judgment Lance",  
+        "effect": "Spend an additional mote to make the Solar’s decisive ranged attack deal aggravated damage to a creature of darkness (p. 61)."  
+      }  
+    ],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [276]  
+  },   
+  {  
+    "name": "OBSERVER-DECEIVING ATTACK",  
+    "ability": ["Ranged Combat"],  
+    "prerequisites": "Ranged Combat 3 or Stealth 3",  
+    "description": "Wrapped in the absence of light, his movement is imperceptible. Spend 2 motes. The Solar may attempt a distract gambit with a two-dice bonus and immediately follow with a withering ranged attack. This attack does not suffer flurry penalties and cannot be countered.",  
+    "modes": [  
+      {  
+        "name": "Upgrade",  
+        "title": "Mist on Water",  
+        "effect": "Victims of this Charm are supernaturally silenced for three rounds. He may also commit 1 mote on Step 5 to conceal the direction of his attack and its effects, such as blood or bodies. This effect lasts indefinitely, or until someone successfully notices his work."  
+      }  
+    ],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [276]  
+  },  
+  {  
+    "name": "HEALER’S BOUNDLESS GRACE",  
+    "ability": ["Sagacity"],  
+    "prerequisites": "Sagacity 1",  
+    "description": "Tending to the weak is enough to restore the Solar’s spirit. Once a scene, every three successes the Solar earns on a successful roll to treat or heal another restores 1 spent mote. This effect fails if the Solar caused the damage.",  
+    "modes": [  
+      {  
+        "name": "Repurchase",  
+        "title": "Risen Sun Renewal",  
+        "effect": "Improves the Solar’s Power exchange, allowing him to spend 1 mote to grant 3 additional Power to an incapacitated ally. Gain 2 additional anima."  
+      }  
+    ],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [276]  
+  },  
+  {  
+    "name": "WYLD-SHAPING TECHNIQUE",  
+    "ability": ["Sagacity"],  
+    "prerequisites": "Sagacity 3, Essence 2",  
+    "description": "With just wits and words, she forces chaos into the shape she requires. With access to chaotic Wyld essence — usually by immersing herself in it — the Solar may use a magical working venture (p. 162) to create personal-scale and large-scale mundane items, with a time scale in scenes. When selecting advantages, the Solar may choose from the lists under magical working, craft personal-scale and large-scale mundane item. She potentially faces additional, more exotic obstacles, such as Wyld Tides (difficulty 3) or Fair Folk Sabotage (opposed). Items created this way must interact with Creation daily, or risk dissipating into chaotic Essence. Gain 1 anima every time the Solar rolls on this venture.",  
+    "modes": [  
+      {  
+        "name": "Upgrade",  
+        "title": "Wyld Cauldron Technology",  
+        "effect": "The Solar may also create a temporary Merit with a magical working venture. Each rating she wishes to “craft” requires overcoming a number of obstacles equal to its dice bonus — for example, shaping a secondary Familiar for herself requires a venture of at least three obstacles. Cutting corners or failing an obstacle roll represents a flaw in the Merit of the Storyteller’s choice. This Charm may create any of the following:\n• Command\n• Followers\n• Familiar (maximum of 3)\n• Resources\nThese do not improve existing Merits but represent new instances of the Merit. Maintaining the reality of Wyld-created Merits requires a commitment of 1 mote per rating (1 for tertiary, 2 for secondary, 3 for primary). The character may solidify these Merits as permanent with a major milestone as usual."  
+      }  
+    ],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [277]  
+  },  
+  {  
+    "name": "KING OF THIEVES SPIRIT",  
+    "ability": ["Stealth"],  
+    "prerequisites": "Stealth 3",  
+    "description": "Grinning, the Solar reveals items purloined in plain sight. The Solar may attempt to steal mundane items in use, including weapons or clothes. Regardless of who owns these things, the attempt is never more challenging than difficulty 3. The pilfer gambit costs 1 Power. Gain 1 anima if the Solar successfully flees the scene with the stolen goods.",  
+    "modes": [  
+      {  
+        "name": "Repurchase",  
+        "title": "Disappearing Miracle Method",  
+        "effect": "The Solar spends 3 motes on attempts to steal major wonders, even if they are currently in use — for example, an attuned artifact or socketed hearthstone. The difficulty of stealing these things cannot exceed 7. Successfully stealing an attuned wonder breaks the attunement."  
+      }  
+    ],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [277] 
+  },  
+  {  
+    "name": "SHROUD OF NIGHT’S LAW",  
+    "ability": ["Stealth"],  
+    "prerequisites": "Stealth 1",  
+    "description": "The man-shaped shadow compels unwanted observers to avert their eyes. Commit 1 mote. For the scene, the only people capable of noticing the Solar’s actions are those directly affected by them. This does not guarantee their notice — the Solar may still attempt an action to conceal himself from them.",  
+    "modes": [  
+      {  
+        "name": "Upgrade",  
+        "title": "Vanishing from Mind’s Eye",  
+        "effect": "The Solar may activate this Charm retroactively by spending 2 motes. He erases his presence from the applicable witness’ memories of events."  
+      }  
+    ],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [277]  
+  },  
+  {  
+    "name": "BEHEMOTH-SLAYING ATTITUDE",  
+    "ability": ["War"],  
+    "prerequisites": "",  
+    "description": "See p. 272.",  
+    "modes": [],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [272]  
+  },  
+  {  
+    "name": "GENERAL OF THE ALL-SEEING SUN",  
+    "ability": ["War"],  
+    "prerequisites": "War 3, Solar Tactician’s Acumen",  
+    "description": "For a moment, he sees the engagement from the highest possible vantage. Invoke this Charm while the Solar commands units in battle during a dramatic scene. During the scene, spend 1 mote to ask the Storyteller one of the following questions. Additional questions cost 1 mote each:\n• What is the best way through or around the enemy?\n• Which enemy unit is most vulnerable, and which is most dangerous?\n• How can I best protect my soldiers?\n• Is something in the battlefield hidden from me?\n• What is the enemy commander’s next move?",  
+    "modes": [  
+      {  
+        "name": "Repurchase",  
+        "title": "Shrouded Field of War",  
+        "effect": "Block an enemy’s magical attempt to determine the Solar’s own strategy. If they are allowed to ask questions, he may plant false answers by spending 2 motes each. If they must roll, the roll suffers a two-dice penalty if their Essence rating is higher than his, and a two-success penalty if their Essence is lower."  
+      }  
+    ],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [278]  
+  },  
+  {  
+    "name": "SOLAR TACTICIAN’S ACUMEN",  
+    "ability": ["War"],  
+    "prerequisites": "War 1",  
+    "description": "His presence can be felt like sunlight across the battlefield. Commit 1 mote. For the scene, the Solar may flurry rally with other actions and adds his Essence in bonus successes to the roll when he does so. Gain 1 anima whenever an ally gains Power from a flurried rally action.",  
+    "modes": [  
+      {  
+        "name": "Upgrade",  
+        "title": "Shelter Under Sun Technique",  
+        "effect": "When the Solar commands a battle group while this Charm is active, he may trade Power to negate penalties imposed on the group for one action, at a cost of 1 Power per die penalty or 2 Power per success."  
+      }  
+    ],  
+    "source": "Exalted Essence Core Rulebook",  
+    "page": [278]
   }
 ]
