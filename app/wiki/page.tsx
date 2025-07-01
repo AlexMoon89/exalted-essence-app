@@ -169,9 +169,15 @@ export default function WikiPage() {
               <h3 className="text-xl bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text font-semibold">{entry.name}</h3>
               <p className="text-sm text-aura-abyssal line-clamp-3">{entry.description}</p>
               <p className="text-xs mt-2 text-aura-lunar">Tags: {entry.tags.join(', ')}</p>
-              <p className="text-xs text-gray-500">
-                Source: {entry.sourcebook} – {entry.pageRef}
-              </p>
+              {entry.category === "Martial Arts" && entry.full?.complementaryAbilities && Array.isArray(entry.full.complementaryAbilities) && entry.full.complementaryAbilities.length > 0 ? (
+                <p className="text-xs text-steel">
+                  Complementary Abilities: {entry.full.complementaryAbilities.join(', ')}
+                </p>
+              ) : (
+                <p className="text-xs text-gray-500">
+                  Source: {entry.sourcebook} – {entry.pageRef}
+                </p>
+              )}
             </div>
           ))}
         </div>
