@@ -221,6 +221,7 @@ console.log(
 
   const getCasteImage = (char: any): string => {
     const caste = char.caste?.replace(/\s+/g, '');
+    if (!char.exalt_type || !caste) return '/castes/default.png';
     switch (char.exalt_type?.toLowerCase()) {
       case 'solar':
         return `/castes/Caste${caste}3.png`;
@@ -235,7 +236,7 @@ console.log(
       case 'abyssal':
         return `/castes/${caste.replace(/\s+/g, '')}Caste.png`;
       case 'infernal':
-        return `/castes/${caste.replace(/\s+/g, '')}Caste.png`;
+      return `/castes/InfernalCaste${caste.replace(/\s+/g, '')}.png`;
       default:
         return `/castes/default.png`;
     }
