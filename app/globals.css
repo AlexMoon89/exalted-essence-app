@@ -42,7 +42,7 @@ body {
 
 .dark body {
   @apply text-dark-foreground bg-dark-background;
-  background-image: url('/textures/frosted-paper-dark.jpg');
+  background-image: url('/textures/grunge-wall-texture-dark.jpg');
   background-size: cover;
   background-attachment: fixed;
 }

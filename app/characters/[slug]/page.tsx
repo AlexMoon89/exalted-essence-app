@@ -80,9 +80,9 @@ function ExaltAdvantagesModal({ exaltType }: { exaltType: string }) {
             <DialogTitle className="text-xl bg-gradient-to-r from-steel to-aura-solar text-transparent bg-clip-text">{data.name}</DialogTitle>
           </DialogHeader>
           <ul className="space-y-4 px-2">
-            {data.advantages.map((adv: ExaltAdvantage, idx: number) => (
+            {data.advantages.map((adv: { title: string; text: string }, idx: number) => (
               <li key={idx}>
-                <span className="text-steel font-bold">{adv.title}:</span> {adv.text}
+                <span className="font-bold text-steel">{adv.title}:</span> {adv.text}
               </li>
             ))}
           </ul>
