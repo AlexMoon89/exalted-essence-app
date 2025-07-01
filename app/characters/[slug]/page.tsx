@@ -1026,11 +1026,16 @@ console.log(
                 <h2 className="text-xl font-semibold text-steel mb-1">Notes</h2>
                 {edit ? (
                   <Textarea
-                    value={character.notes || ''}
+                    value={
+                      character.notes !== undefined && character.notes !== ''
+                        ? character.notes
+                        : (effects?.description || '')
+                    }
                     onChange={(e) => setCharacter((prev: any) => ({ ...prev, notes: e.target.value }))}
+                    placeholder={effects?.description || 'Enter notes here...'}
                   />
                 ) : (
-                  <p className="whitespace-pre-wrap text-aura-abyssal">{character.notes || '—'}</p>
+                  <p className="whitespace-pre-wrap text-aura-abyssal">{character.notes || effects?.description || '—'}</p>
                 )}
               </section>
             </div>
