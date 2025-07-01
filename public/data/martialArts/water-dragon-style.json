@@ -1,0 +1,55 @@
+{
+  "name": "Water Dragon Style",
+  "category": "Immaculate",
+  "tags": ["Elemental", "Dragon-Blooded", "Immaculate"],
+  "description": "Water Dragon style teaches that all things flow, from fights to Essence to blood in the body. Immaculate students learn to block, impede, and redirect these flows, to better exploit every opportunity for victory.",
+  "weaponTags": ["Natural", "Paired", "Piercing"],
+  "armor": "Water Dragon style is compatible with light armor.",
+  "complementaryAbilities": ["Physique", "Sagacity"],
+  "techniques": [
+    {
+      "name": "Drowning-in-Blood Technique",
+      "prerequisites": "Close Combat 2, Complementary Ability Total 2",
+      "description": "With a rapid barrage of strikes, the Exalt redirects blood flow into an opponent’s lungs. Spend 1 mote on Step 5 of a decisive attack. If the attack deals damage, the opponent’s wound penalties increase by one. As long as the Exalt remains conscious, this effect lasts for the rest of the scene but does not stack with itself. This Charm also redirects Essence in a spirit’s body — the above penalty stacks up to three times for a spirit.",
+      "modes": [
+        {
+          "name": "Dragon-Blooded",
+          "effect": "If the enhanced attack deals damage, the opponent suffers a secondary pool of damage dice equal to the wound penalty they had before the attack, applied on Step 6. This damage pool ignores Soak."
+        }
+      ]
+    },
+    {
+      "name": "Flowing Water Defense",
+      "prerequisites": "Close Combat 3, Complementary Ability Total 4, Drowning in Blood Technique",
+      "description": "The Exalt flows from every attack, becoming impossible to pin down or bind. Spend 1 mote on Step 2. The Exalt’s Defense increases by 1, or by 2 against attacks that would limit or control the Exalt’s movement (e.g., grapples, the ensnare gambit). If the attacker suffers any wound penalties, increase the Exalt’s Defense by 1 again.",
+      "modes": [
+        {
+          "name": "Dragon-Blooded",
+          "effect": "The Dragon-Blood may use this Charm on Step 1 of any attempt to escape physical constraint. This adds automatic successes equal to Finesse."
+        }
+      ]
+    },
+    {
+      "name": "Water Dragon Form",
+      "prerequisites": "Close Combat 4, Complementary Ability Total 5, Flowing Water Defense",
+      "description": "The Exalt drops into a rolling stance, allowing offense and defense to flow together. Commit 1 mote on Step 1 for the scene. The Exalt adds two bonus dice to attacks against opponents with wound penalties. The Exalt may set Soak equal to half her Force, rounded down, before applying bonus Soak from other Charms. Special: Using this Charm allows the Exalt to access Water Aura.",
+      "modes": [
+        {
+          "name": "Dragon-Blooded",
+          "effect": "When the Dragon-Blood suffers damage from a decisive attack, they may add their Fortitude to Soak on Step 7. This does not count toward the usual limit. Once the attack is resolved, this Charm ends, and its committed mote is spent. The DragonBlood can’t reactivate this Charm on the next round."
+        }
+      ]
+    },
+    {
+      "name": "Foe-Restraining Whirlpool",
+      "prerequisites": "Close Combat 5, Complementary Ability Total 6, Essence 2, Water Dragon Form",
+      "description": "The Exalt’s swirling anima draws opponents inexorably inward. Commit 1 mote on Step 1 for the scene. Characters who begin their turn within medium range of the Exalt cannot move reflexively and must flurry an Athletics roll. This affects immaterial spirits as well. Affected spirits materialize immediately, can’t dematerialize or teleport away, and must spend 1 Power to move away from the Exalt. Enemies that successfully move decrease their Defense by 2 until the start of their next turn. Enemies that stay within close range of the Exalt suffer a two-dice penalty to all attacks.",
+      "modes": [
+        {
+          "name": "Dragon-Blooded",
+          "effect": "The Dragon-Blood can end this Charm, spend its committed mote, and spend 2 Power on Step 1 to unleash a shout with the force of a tsunami. This is a one-time environmental damage effect that extends out to medium range. This environmental effect inflicts four damage and is resisted at difficulty 7. Characters who fail their roll are knocked back one range band as described in the knockback gambit (p. 142)."
+        }
+      ]
+    }
+  ]
+}

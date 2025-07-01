@@ -1,0 +1,55 @@
+{
+  "name": "Earth Dragon Style",
+  "category": "Immaculate",
+  "tags": ["Elemental", "Dragon-Blooded", "Immaculate"],
+  "description": "Earth Dragon style is forceful, but deliberate. Immaculate students undergo extreme training for strength and durability, so they might stand toe-to-toe with unruly gods and Anathema.",
+  "weaponTags": ["Natural", "Smashing", "Two-Handed"],
+  "armor": "Earth Dragon style is compatible with all armor.",
+  "complementaryAbilities": ["Integrity", "Physique"],
+  "techniques": [
+    {
+      "name": "Stillness-of-Stone Strike",
+      "prerequisites": "Close Combat 2, Complementary Ability Total 3",
+      "description": "The Exalt beats an opponent with staggering force, as if wielding the weight of the world. Spend 1 mote on Step 1 when enacting the knockback or knockdown gambit. Either gambit costs 2 Power. If the gambit’s attack roll succeeds with at least two extra successes, the Exalt may pay an additional 2 Power on Step 5 to enact both gambits at once.",
+      "modes": [
+        {
+          "name": "Dragon-Blooded",
+          "effect": "An opponent struck with an enhanced gambit acts as if they’re standing on difficult terrain until the end of the Dragon-Blood’s next turn."
+        }
+      ]
+    },
+    {
+      "name": "Earth Dragon Form",
+      "prerequisites": "Close Combat 3, Complementary Ability Total 4, Stillness of Stone Strike",
+      "description": "With slow, deliberate movements, the Exalt crafts a stable stance worthy of the Earth Dragon’s grandeur. Commit 1 mote on Step 1 for the scene. The Exalt’s Soak increases by 3. The Exalt also adds two bonus dice when using knockback or knockdown gambits, or when attacking prone opponents. Special: Using this Charm allows the Exalt to access Earth Aura.",
+      "modes": [
+        {
+          "name": "Dragon-Blooded",
+          "effect": "The Dragon-Blood ignores wound penalties and increases Hardness by 1."
+        }
+      ]
+    },
+    {
+      "name": "Hungry Earth Strike",
+      "prerequisites": "Close Combat 4, Complementary Ability Total 5, Earth Dragon Form",
+      "description": "The Exalt slams an opponent into the very earth. Spend 1 mote on Step 1 of a grapple or decisive attack. If the Exalt initiates the grapple or deals damage with the decisive attack, the opponent becomes partially trapped in the earth. A trapped opponent can’t take movement actions and acts as if prone. To escape entrapment, the opponent must succeed at an appropriate simple action with difficulty equal to the Exalt’s Fortitude.",
+      "modes": [
+        {
+          "name": "Dragon-Blooded",
+          "effect": "The Exalt can target immaterial spirits with an enhanced grapple or decisive attack. If an immaterial spirit would be trapped in the earth, the spirit instead immediately materializes and can’t dematerialize or teleport away for the rest of the scene."
+        }
+      ]
+    },
+    {
+      "name": "Shattering Fist Strike",
+      "prerequisites": "Close Combat 5, Complementary Ability Total 6, Essence 2, Hungry Earth Strike",
+      "description": "Steel buckles before the Exalt’s inexorable might. Spend 1 mote on Step 3 of a destructive feat of strength or a disarm gambit. An enhanced feat of strength adds five automatic successes. An enhanced disarm gambit destroys an opponent’s mundane weapon or forcibly de-attunes an opponent’s artifact weapon. A forcibly de-attuned artifact loses access to Evocations and its inherent ability for the rest of the scene unless the wielder succeeds at an appropriate simple action at difficulty 7.",
+      "modes": [
+        {
+          "name": "Dragon-Blooded",
+          "effect": "After defending against a melee attack, the Dragon-Blood may instead activate this Charm on Step 8 to enact an enhanced disarm gambit as a counterattack."
+        }
+      ]
+    }
+  ]
+}

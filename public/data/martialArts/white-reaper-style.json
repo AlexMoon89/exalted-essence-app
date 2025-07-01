@@ -1,0 +1,53 @@
+{
+  "name": "White Reaper Style",
+  "description": "The White Reaper is a slayer of armies, a long armed destroyer that decimates foes with each sweep of the scythe. Martial artists learn through brutal experience, for the style only truly shines on the battlefield. The style is distinctive from a distance due to the signature white anima halos that Exalted bear.",
+  "weaponTags": ["Balanced", "Reaching", "Natural"],
+  "armor": "White Reaper style is compatible with all armor.",
+  "complementaryAbilities": ["Integrity", "War"],
+  "techniques": [
+    {
+      "name": "White Reaper Form",
+      "prerequisites": "Close Combat 3, Complementary Ability Total 3",
+      "description": "The Exalt rises into a grim and terrible battle posture, looking down upon foes like grass for the scything. Commit 1 mote on Step 1 for the scene. The Exalt doubles 9s on decisive damage rolls. Battle groups lower their Defense by 2 against the Exalt’s attacks. Once per round, after dealing damage with a decisive attack, the Exalt gains one brilliant white halo of temporary anima. Halos last for White Reaper Form’s duration and count toward the Exalt’s total anima but can’t be spent like normal anima. Each halo increases the Exalt’s Resolve by 1. The Exalt can have up to three halos at one time.",
+      "modes": [
+        {
+          "name": "Lunar",
+          "effect": "Each halo increases Soak by 1. When White Reaper Form ends, the Lunar can exchange their halos directly into anima."
+        }
+      ]
+    },
+    {
+      "name": "Bleeding Crescent Strike",
+      "prerequisites": "Close Combat 3, Complementary Ability Total 4, White Reaper Form",
+      "description": "The Exalt’s brilliant corona trails their weapon, cutting bloody ribbons across the battlefield. Spend 1 mote and any number of halos on Step 3. Double 9s on this attack roll, or double 8s if attacking a battle group. For each halo the Exalt spends on an enhanced decisive attack, add one die to the attack’s damage, or one automatic success if attacking a battle group.",
+      "modes": [
+        {
+          "name": "Lunar",
+          "effect": "An enhanced decisive attack may target one additional opponent per halo spent, calculating damage separately for each opponent. The Lunar must pay Power equal to the highest Hardness of any targeted opponents. This counts towards the Lunar’s action limit."
+        }
+      ]
+    },
+    {
+      "name": "Flickering Corona Barrier",
+      "prerequisites": "Close Combat 3, Complementary Ability Total 4, White Reaper Form",
+      "description": "The shimmering aura surrounding the Exalt protects her from harm. Spend 1 mote and any number of halos on Step 2. The Exalt’s Defense increases by 1, plus one per halo spent. For each halo spent, the Exalt also reduces Defense penalties by 1.",
+      "modes": [
+        {
+          "name": "Lunar",
+          "effect": "Increase the Lunar’s Soak by 2 per halo spent."
+        }
+      ]
+    },
+    {
+      "name": "Snow Follows Winter",
+      "prerequisites": "Close Combat 4, Complementary Ability Total 6, Essence 2, Flickering Corona Barrier, Bleeding Crescent Strike",
+      "description": "The Exalt’s brilliant halos bloom with the bright scarlet of fresh blood, then sizzle away, sealing the Exalt’s own wounds. Commit 2 motes on Step 1. The Exalt must spend a halo each turn, and this Charm ends when the Exalt can’t spend halos. For each halo spent this way, the Exalt heals one Health level. While this Charm is active, the Exalt immediately regains any halos spent on Bleeding Crescent Strike and Flickering Corona Barrier.",
+      "modes": [
+        {
+          "name": "Lunar",
+          "effect": "The Exalt’s blood-soaked anima terrifies non-Exalted opponents. The Exalt’s Hardness increases by 2 against these opponents’ attacks. Non-Exalted opponents reduce Hardness by 2 against the Exalt’s attacks."
+        }
+      ]
+    }
+  ]
+}

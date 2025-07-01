@@ -1,0 +1,54 @@
+{
+  "name": "Ebon Shadow Style",
+  "description": "Ebon Shadow martial artists vanish into shadow and strike when least expected. Though righteous killers practiced the style in the First Age, Ebon Shadow style now belongs to knaves and guilds of paid assassins. As the Solar Exalted return, so do memories of Ebon Shadow’s grim legacy.",
+  "weaponTags": ["Concealable", "Flexible", "Natural", "Piercing"],
+  "armor": "Ebon Shadow style is incompatible with armor.",
+  "complementaryAbilities": ["Stealth"],
+  "techniques": [
+    {
+      "name": "Nothing but Shadows",
+      "prerequisites": "Close Combat 1, Stealth 2",
+      "description": "The Exalt dominates the battlefield from hiding, fading in and out of sight. Spend 1 mote on Step 2. Penalize the attack as if the Exalt had concealment. If the Exalt successfully defends against this attack, add a two-dice bonus to the Exalt’s Stealth rolls until their next turn ends. This may be used during a clash as though it were a Step 3 Charm.",
+      "modes": [
+        {
+          "name": "Celestial",
+          "effect": "If the Exalt successfully defends against the above attack, the Exalt may take an extra reflexive move action on Step 8."
+        },
+        {
+          "name": "Terrestrial",
+          "effect": "While Nothing but Shadows enhances the Exalt’s Stealth rolls, the Exalt can hide in plain sight by faking their own death. Observers suffer a three-dice penalty when trying to diagnose or otherwise notice that the Exalt is still alive."
+        }
+      ]
+    },
+    {
+      "name": "Ebon Shadow Form",
+      "prerequisites": "Close Combat 2, Stealth 3, Nothing but Shadows",
+      "description": "The Exalt’s outline distorts and flickers like an inhuman shadow cast by an unsteady flame. Commit 1 mote on Step 1 for the scene. The Exalt may calculate Evasion using Stealth instead of Athletics. When the Exalt makes a decisive attack from concealment, that attack ignores Soak equal to the Exalt’s Essence. The Exalt’s anima becomes dark and murky, and if the Exalt dies, their body evaporates into greasy smoke, leaving behind no evidence of their identity.",
+      "modes": [
+        {
+          "name": "Celestial",
+          "effect": "At the end of each round, if the Exalt is hidden from all opponents or has successfully evaded all attacks made against them that round, the Exalt gains 1 Power."
+        },
+        {
+          "name": "Terrestrial",
+          "effect": "The Exalt may end Ebon Shadow Form and spend its committed mote on Step 6 of an opponent’s decisive attack to add their Essence to Soak. The Exalt can’t reactivate this Charm on the next round."
+        }
+      ]
+    },
+    {
+      "name": "Throat-Slitting Shadow Strike",
+      "prerequisites": "Close Combat 3, Stealth 4, Essence 2, Ebon Shadow Form",
+      "description": "The Exalt’s weapon is shrouded in darkness, closer and deadlier than their opponent can see. Spend 1 mote on Step 5 of a decisive attack. Each extra success on the attack roll converts one damage die into an automatic success. The Exalt can convert up to five dice into automatic successes when attacking from concealment, or two dice otherwise. If this attack kills the Exalt’s opponent, the corpse vanishes into smoke as described in Ebon Shadow Form.",
+      "modes": [
+        {
+          "name": "Celestial",
+          "effect": "If the enhanced attack deals damage, the Exalt cuts away part of their opponent’s shadow. The Exalt steals 1 mote, if the opponent has any motes. If the opponent does not, gain Power instead."
+        },
+        {
+          "name": "Terrestrial",
+          "effect": "If the Exalt is in concealment, they may fashion a weapon from their opponent’s shadow to wield in the enhanced attack. If the enhanced attack deals damage, the Exalt may keep the shadow weapon for the scene, or until disarmed."
+        }
+      ]
+    }
+  ]
+}

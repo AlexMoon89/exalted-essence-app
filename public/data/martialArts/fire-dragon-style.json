@@ -1,0 +1,55 @@
+{
+  "name": "Fire Dragon Style",
+  "category": "Immaculate",
+  "tags": ["Elemental", "Dragon-Blooded", "Immaculate"],
+  "description": "Fire Dragon style weds abrupt violence and immense self-discipline. Immaculate students perform intense weapon drills to the beat of music, that they might battle with speed and grace.",
+  "weaponTags": ["Balanced", "Paired", "Natural"],
+  "armor": "Fire Dragon style is compatible with light armor.",
+  "complementaryAbilities": ["Performance", "Athletics"],
+  "techniques": [
+    {
+      "name": "Searing Edge Attack",
+      "prerequisites": "Close Combat 2, Complementary Ability Total 1",
+      "description": "The Exalt’s killing intent expresses itself through the overwhelming heat of each strike. Spend 1 mote on Step 3. If an enhanced attack hits, the opponent loses 1 Power or 1 mote.",
+      "modes": [
+        {
+          "name": "Dragon-Blooded",
+          "effect": "If the target opponent’s Power is lower than the Dragon-Blood’s, they lose 1 Power and 1 mote when hit. If they do not have motes, the Exalt gains 1 anima instead."
+        }
+      ]
+    },
+    {
+      "name": "Fire Dragon Form",
+      "prerequisites": "Close Combat 3, Complementary Ability Total 4, Searing Edge Attack",
+      "description": "The Exalt’s eyes glow with heat as they slip into a deadly, graceful dance. Commit 1 mote on Step 1 for the scene. If the Exalt makes any withering attacks on her turn, decrease the target’s Hardness by another 1 after all attacks resolve. When the Exalt successfully defends against decisive attacks, the attacker loses 1 Power. Special: Using this Charm allows the Exalt to access Fire Aura.",
+      "modes": [
+        {
+          "name": "Dragon-Blooded",
+          "effect": "Whenever the Dragon-Blood incapacitates a non-extra opponent or routs a battle group, the Dragon-Blooded gains 1 anima."
+        }
+      ]
+    },
+    {
+      "name": "Fiery Blade Attack",
+      "prerequisites": "Close Combat 4, Complementary Ability Total 5, Fire Dragon Form",
+      "description": "The Exalt attacks with speed enough to set an opponent alight. Spend 1 mote on Step 5 of a decisive attack. If the attack deals any damage, the opponent catches aflame. This fire is an environmental damage effect which deals three damage per round and has difficulty equal to the Exalt’s Force. The fire lasts until someone puts it out with an appropriate simple action at the same difficulty. Spirits suffer aggravated damage from this fire. This may be used during a clash.",
+      "modes": [
+        {
+          "name": "Dragon-Blooded",
+          "effect": "The Dragon-Blood may target immaterial spirits with this Charm. If an immaterial spirit catches fire, they materialize for the rest of the scene."
+        }
+      ]
+    },
+    {
+      "name": "Overwhelming Fire Majesty Stance",
+      "prerequisites": "Close Combat 5, Complementary Ability Total 6, Essence 2, Fire Dragon Form",
+      "description": "The Exalt’s brilliant, burning aura cows even the bravest foe. Commit 1 mote on Step 2 for the scene. Opponents in close range suffer a three-dice penalty when attacking the Exalt, opponents at medium range suffer a two-dice penalty, and opponents at long range suffer a one-die penalty. If the Exalt suffers damage from a close-range attack, the searing heat lowers the attacker’s Defense by 2 until the start of their next turn.",
+      "modes": [
+        {
+          "name": "Dragon-Blooded",
+          "effect": "Spend 3 Power to exhale a gout of flame that sears the Dragon-Blood’s surroundings out to short range, as a simple action. This is a one-time environmental damage effect that deals three damage and is resisted at difficulty 5."
+        }
+      ]
+    }
+  ]
+}

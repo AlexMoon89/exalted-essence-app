@@ -1,0 +1,62 @@
+{
+  "name": "Crane Style",
+  "description": "Crane style emulates the defensive grace of the crane, which warns attackers before punishing their hostility. Crane students practice empathy, philosophy, and debate as rigorously as any form or strike, for a well-placed admonition can halt a foe where fists might fail.",
+  "weaponTags": ["Disarming", "Natural", "Shield"],
+  "armor": "Crane style is incompatible with armor.",
+  "complementaryAbilities": ["Embassy", "Presence", "Sagacity"],
+  "techniques": [
+    {
+      "name": "Empowering Justice Redirection",
+      "prerequisites": "Close Combat 1, Complementary Ability Total 2",
+      "description": "The Exalt exploits an opponent’s aggression. Spend 1 mote on Step 3 of a withering attack against an opponent that attacked the Exalt (or an ally the Exalt defended) since the Exalt’s last turn. The Exalt adds one success to their attack roll and gains 1 additional Power if the attack succeeds. If the opponent’s attack succeeded, double the successes and Power granted by this Charm.",
+      "modes": [
+        {
+          "name": "Terrestrial",
+          "effect": "If an opponent attacks a mortal or one of the Exalt’s Circlemates, this Charm’s effects apply as if the opponent had attacked the Exalt."
+        }
+      ],
+      "page": [285]
+    },
+    {
+      "name": "Fluttering Cry of Warning",
+      "prerequisites": "Close Combat 2, Complementary Ability Total 3, Empowering Justice Redirection",
+      "description": "The Exalt shelters allies with preternatural alertness. Spend 1 mote on Step 1 when taking the defend other action. Increase the Exalt’s Defense by 1 until the start of Exalt’s next turn. If the Exalt can defend others reflexively, she may declare this Charm on Step 2 instead.",
+      "modes": [
+        {
+          "name": "Celestial",
+          "effect": "The Exalt can activate this Charm on Step 2 of an attack against an ally to reflexively defend that ally until the end of the Exalt’s next turn. Increase the defending Exalt’s Soak by 1."
+        }
+      ]
+    },
+    {
+      "name": "Crane Form",
+      "prerequisites": "Close Combat 3, Complementary Abilities Total 5, Fluttering Cry of Warning",
+      "description": "The Exalt assumes the bearing of the Crane, embodying elegance, not violence. Commit 1 mote on Step 1 for the scene. The Exalt’s Defense increases by 1, or by 2 against opponents acting in opposition to the Exalt’s Virtues. The Exalt’s presentation is immaculate, protecting their clothing and hair from stains and tearing. Once per round, when the Exalt successfully defends against a close-range attack, they can spend 1 Power to make a counterattack against the attacker on Step 8.",
+      "modes": [
+        {
+          "name": "Celestial",
+          "effect": "The Exalt can glide horizontally as a reflexive move action. While gliding, the Exalt can carry one ally they are defending."
+        },
+        {
+          "name": "Terrestrial",
+          "effect": "The Exalt can counterattack ranged attacks by redirecting projectiles back to their source. The Exalt uses Close Combat to do so and must successfully defend first. This attack is treated as an unarmed attack out to long range."
+        }
+      ]
+    },
+    {
+      "name": "Humbling Enlightenment Commentary",
+      "prerequisites": "Close Combat 4, Essence 2, Complementary Abilities Total 8, Crane Form",
+      "description": "The Exalt’s greatest weapon is wisdom, wielded with razor-sharp acuity. Spend 1 mote on Step 1 of a decisive attack. When Stunting this attack with analysis or lecturing about an opponent’s fighting style and temperament, add two additional dice to the attack’s damage roll. If the attack deals three or more damage, the Exalt may instill a Minor Intimacy by educating the opponent. This attack is never fatal, always leaving the opponent with one Health level remaining. This may be used during a clash.",
+      "modes": [
+        {
+          "name": "Celestial",
+          "effect": "If the above Stunt exploits an opponent’s Virtues or Intimacies, apply the highest relevant Virtue or Intimacy penalty to the opponent’s Defense. The opponent can call on other Virtues or Intimacies to counter this penalty, but not to increase their Defense."
+        },
+        {
+          "name": "Terrestrial",
+          "effect": "If the enhanced attack is a decisive counterattack against an opponent’s decisive attack, the Exalt can use the Power that the opponent spent on the initial attack, instead of spending the Exalt’s own Power."
+        }
+      ]
+    }
+  ]
+}

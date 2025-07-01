@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Sparkle, Sparkles, X } from 'lucide-react';
 import { type WikiEntry, loadAllCharmsAsWikiEntries } from '@/lib/wikiData';
+import { type Technique, loadAllMartialArtsAsWikiEntries } from '@/lib/wikiData';
 
 const categories = ['Charms', 'Martial Arts', 'Spells', 'Merits', 'Artifacts', 'Resources'];
 const exaltTypes = ['Solar', 'Lunar', 'Abyssal', 'Alchemical', 'Dragon Blooded', 'Sidereal', 'Infernal', 'Getimian', 'Universal'];
@@ -17,12 +18,18 @@ export default function WikiPage() {
   const [entries, setEntries] = useState<WikiEntry[]>([]);
 
   useEffect(() => {
-    async function loadData() {
+  async function loadData() {
+    if (selectedCategory === 'Charms') {
       const charms = await loadAllCharmsAsWikiEntries();
       setEntries(charms);
+    } else if (selectedCategory === 'Martial Arts') {
+      const martialArts = await loadAllMartialArtsAsWikiEntries();
+      setEntries(martialArts);
     }
-    loadData();
-  }, []);
+    // ...add logic for other categories as you implement them
+  }
+  loadData();
+}, [selectedCategory]);
 
   const allAbilities = Array.from(
     new Set(entries.flatMap((entry) => entry.ability?.split(',').map((a) => a.trim()) || []))
@@ -183,19 +190,64 @@ export default function WikiPage() {
 
             <div className="p-6 space-y-4">
               <h2 className="text-3xl font-bold bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text">{openEntry.name}</h2>
+              {/* Martial Arts Style Details */}
+              {openEntry.category === "Martial Arts" && (
+                <div className="mb-4">
+                  {openEntry.full?.armor && (
+                    <p className="text-sm text-aura-lunar"><strong>Armor:</strong> {openEntry.full.armor}</p>
+                  )}
+                  {openEntry.full?.weaponTags && Array.isArray(openEntry.full.weaponTags) && openEntry.full.weaponTags.length > 0 && (
+                    <p className="text-sm text-aura-lunar"><strong>Weapon Tags:</strong> {openEntry.full.weaponTags.join(', ')}</p>
+                  )}
+                </div>
+              )}
               <div className="text-sm text-steel space-y-1">
                 <p><strong>Category:</strong> {openEntry.category}</p>
                 {openEntry.ability && <p><strong>Ability:</strong> {openEntry.ability}</p>}
                 {openEntry.full?.prerequisites && <p><strong>Prerequisites:</strong> {openEntry.full?.prerequisites}</p>}
                 {openEntry.essenceCost && <p><strong>Essence Cost:</strong> {openEntry.essenceCost}</p>}
                 {openEntry.mode && <p><strong>Mode:</strong> {openEntry.mode}</p>}
-                {openEntry.sourcebook && (
-                  <p><strong>Source:</strong> {openEntry.sourcebook} ({openEntry.pageRef})</p>
+                {openEntry.category === "Martial Arts" && openEntry.full?.complementaryAbilities && Array.isArray(openEntry.full.complementaryAbilities) && openEntry.full.complementaryAbilities.length > 0 ? (
+                  <p><strong>Complementary Abilities:</strong> {openEntry.full.complementaryAbilities.join(', ')}</p>
+                ) : (
+                  openEntry.sourcebook && (
+                    <p><strong>Source:</strong> {openEntry.sourcebook} ({openEntry.pageRef})</p>
+                  )
                 )}
               </div>
 
               <div className="space-y-4 text-aura-abyssal">
                 <p>{openEntry.description}</p>
+                {/* Martial Arts Techniques Display */}
+                {openEntry.category === "Martial Arts" && (openEntry.full?.techniques?.length ?? 0) > 0 && (
+                  <div>
+                    <h3 className="text-2xl font-semibold mt-6 mb-2 text-aura-lunar">Techniques</h3>
+                    <div className="grid gap-4">
+                      {openEntry.full?.techniques?.map((tech, idx) => (
+                        <div key={tech.name} className="bg-aura-lunar/10 border border-aura-lunar rounded-lg p-4">
+                          <div className="font-bold text-lg mb-1">{tech.name}</div>
+                          {tech.prerequisites && (
+                            <div className="text-sm italic text-steel mb-1">{tech.prerequisites}</div>
+                          )}
+                          <div className="mb-2">{tech.description}</div>
+                          {(tech.modes?.length ?? 0) > 0 && (
+                            <div className="pl-2">
+                              <strong>Modes:</strong>
+                              <ul className="list-disc list-inside space-y-1">
+                                {tech.modes?.map((mode, i) => (
+                                  <li key={i}>
+                                    <strong>{mode.name}:</strong> {mode.effect}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {/* End Martial Arts Techniques Display */}
                 {(openEntry.full?.modes?.length ?? 0) > 0 && (
                   <div>
                     <strong className="bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text">Modes:</strong>

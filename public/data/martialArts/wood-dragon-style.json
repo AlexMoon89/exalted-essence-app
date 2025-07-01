@@ -1,0 +1,55 @@
+{
+  "name": "Wood Dragon Style",
+  "category": "Immaculate",
+  "tags": ["Elemental", "Dragon-Blooded", "Immaculate"],
+  "description": "Wood Dragon style seeks enlightenment through understanding the cycle of life and death. Immaculate students practice fasting and consume hallucinogenic drugs to discover esoteric mysteries about their bodies, souls, and place in Creation.",
+  "weaponTags": ["Natural", "Reaching", "Two-Handed"],
+  "armor": "Wood Dragon style is compatible with light armor.",
+  "complementaryAbilities": ["Awareness", "Sagacity"],
+  "techniques": [
+    {
+      "name": "Soul-Marking Strike",
+      "prerequisites": "Close Combat 2, Complementary Ability Total 3",
+      "description": "The Exalt strikes an opponent’s pressure points to inject a seed of essence. Spend 1 mote on Step 3 of a decisive attack. If the attack deals damage, the Exalt invisibly marks the opponent and knows the opponent’s rough location for the rest of the scene. The target cannot benefit from concealment or cover while marked. If there is not cover or concealment to benefit from, the target instead decreases their Defense by 1 until the start of their next turn. Marked spirits find the experience painfully distracting and increase their wound penalties by one.",
+      "modes": [
+        {
+          "name": "Dragon-Blooded",
+          "effect": "The Dragon-Blood can target an immaterial spirit with an enhanced attack. If the Dragon-Blooded deals damage, she can clearly perceive and attack the spirit while the mark remains."
+        }
+      ]
+    },
+    {
+      "name": "Wood Dragon Form",
+      "prerequisites": "Close Combat 3, Complementary Ability Total 4, Soul-Marking Strike",
+      "description": "The Exalt strikes their own pressure points, bringing their essence into perfect alignment. Commit 1 mote on Step 1 for the scene. The Exalt increases their Defense and Soak by 1. Against opponents marked with Soul-Marking Strike, increase these values by 2 instead. On the Exalt’s turn, they can spend 1 anima on Step 1 to restore a Health level. In addition, wooden form weapons gain the flexible tag. Special: Using this Charm allows the Exalt to access Wood Aura.",
+      "modes": [
+        {
+          "name": "Dragon-Blooded",
+          "effect": "The Dragon-Blood can deactivate this Charm on Step 1, spend its committed mote, and spend up to 3 Power. For each Power spent, the Dragon-Blood or an ally within close range regains one Health level. The Dragon-Blood can’t reactivate this Charm on the next round."
+        }
+      ]
+    },
+    {
+      "name": "Unbreakable Fascination Exercise",
+      "prerequisites": "Close Combat 4, Complementary Ability Total 5, Wood Dragon Form",
+      "description": "With sinuous, vine-like movements, the Exalt entrances foes until it’s time to strike. Commit 1 mote on Step 2 for the scene. Opponents with Power lower than the Exalt’s Finesse + 1 suffer a two-dice penalty to attacks against the Exalt. If any opponent in close or short range misses the Exalt with an attack, that opponent must pay 2 Power to move away from the Exalt until the start of the Exalt’s next turn.",
+      "modes": [
+        {
+          "name": "Dragon-Blooded",
+          "effect": "The Dragon-Blood may end this Charm on Step 1 and spend its committed mote to make a decisive area of effect attack against all opponents within close range. This may not be activated again on the next round."
+        }
+      ]
+    },
+    {
+      "name": "Soul Mastery",
+      "prerequisites": "Close Combat 5, Complementary Ability Total 6, Essence 2, Unbreakable Fascination Exercise",
+      "description": "The Exalt stands at the center of life and death and unleashes the Wood Dragon’s ultimate judgment. Spend 2 motes and 2 anima on Step 1 to make a special gambit. The gambit can target any living, spiritual, or undead entity and costs 5 Power. If successful, the target is disabled as though incapacitated for the attack’s extra successes in rounds. If the gambit would knock an Exalt out for five or more rounds, or any other entity for three or more rounds, the Exalt may force a dramatic injury or kill their opponent instantly. If the target is capable of taking dramatic injuries, the player determines how the target takes the injury instead. If a target has a perfect effect that prevents them from being rendered unconscious, this provokes a roll off (p. 182).",
+      "modes": [
+        {
+          "name": "Dragon-Blooded",
+          "effect": "If the Dragon-Blood kills a god, elemental, demon, or other spirit with Soul Mastery, that spirit is permanently destroyed. This Charm sends slain living opponents and ghosts directly to Lethe."
+        }
+      ]
+    }
+  ]
+}

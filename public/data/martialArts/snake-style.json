@@ -1,0 +1,54 @@
+{
+  "name": "Snake Style",
+  "description": "Snake style emphasizes swiftness and agility over strength. Students learn to target pressure points and express venomous essence through their fingertips. Snake style is most popular in the South and East, but as one of the oldest martial arts in Creation, it has practitioners everywhere.",
+  "weaponTags": ["Disarming", "Flexible", "Natural"],
+  "armor": "Snake style is incompatible with armor.",
+  "complementaryAbilities": ["Athletics"],
+  "techniques": [
+    {
+      "name": "Serpentine Evasion",
+      "prerequisites": "Close Combat 2, Athletics 1",
+      "description": "Ducking and weaving, the Exalt confounds all attackers. Spend 2 motes on Step 2. Add 1 to the Exalt’s Defense and 2 to Soak.",
+      "modes": [
+        {
+          "name": "Celestial",
+          "effect": "If the attacker has less Power than the Exalt, the Exalt may activate Serpentine Evasion on Step 4."
+        },
+        {
+          "name": "Terrestrial",
+          "effect": "If the Exalt successfully defends against a decisive attack from an opponent with lower Power, the Exalt gains 1 Power."
+        }
+      ]
+    },
+    {
+      "name": "Snake Form",
+      "prerequisites": "Close Combat 2, Athletics 2, Serpentine Evasion",
+      "description": "The Exalt assumes the sinuous and hypnotic movements of the snake, ready for attack and retreat. Commit 1 mote on Step 1 for the scene. Set the Exalt’s base Soak equal to half their Finesse, rounded down, before adding Soak bonuses from other Charms. Opponents who can see the Exalt suffer a one-die penalty when attacking the Exalt, or a three-dice penalty if the Exalt has more Power than them.",
+      "modes": [
+        {
+          "name": "Celestial",
+          "effect": "The Exalt can use a special enervate gambit by targeting pressure points. For 2 Power, the Exalt can disable an opponent’s eye (removing their ability to take the aim action); for 3 Power, an arm (causing them to drop their weapon or another held object); and for 4 Power, both legs (preventing them from taking a reflexive move). This effect lasts for the scene, or until an enervated opponent receives medical care at difficulty 5."
+        },
+        {
+          "name": "Terrestrial",
+          "effect": "An opponent with less Power than the Exalt loses 1 Soak and 1 Hardness against the Exalt’s attacks."
+        }
+      ]
+    },
+    {
+      "name": "Uncoiling Serpent Aura",
+      "prerequisites": "Close Combat 3, Athletics 3, Essence 2, Snake Form",
+      "description": "The Exalt lashes out with a serpentine ribbon of anima, striking an opponent from afar. The Exalt may make unarmed or form weapon attacks out to short range, including clashes. While in Snake Form, extend this to long range. If the Exalt initiates a grapple with this Charm, they can immediately pull the grappled opponent into close range without needing to utilize the pull gambit.",
+      "modes": [
+        {
+          "name": "Celestial",
+          "effect": "If an enhanced decisive attack damages an opponent, the Exalt may spend 1 mote on Step 7 to poison the opponent with Essence. This poison deals three damage per round, has difficulty equal to the Exalt’s Fortitude, and has duration equal to the Exalt’s Finesse."
+        },
+        {
+          "name": "Terrestrial",
+          "effect": "The Exalt may spend 1 mote on Step 3 of an enhanced decisive attack to reduce the opponent’s Soak by 3."
+        }
+      ]
+    }
+  ]
+}

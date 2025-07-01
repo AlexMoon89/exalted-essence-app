@@ -1,3 +1,14 @@
+export type Technique = {
+  name: string;
+  prerequisites?: string;
+  description: string;
+  modes?: {
+    name: string;
+    effect: string;
+    title?: string;
+  }[];
+};
+
 export type WikiEntry = {
   slug: string;
   name: string;
@@ -9,14 +20,17 @@ export type WikiEntry = {
   sourcebook?: string;
   ability?: string;
   pageRef?: string;
-
   full?: {
     prerequisites?: string;
     modes?: {
       name: string;
-      title: string;
       effect: string;
+      title?: string;
     }[];
+    techniques?: Technique[];
+    armor?: string;
+    weaponTags?: string[];
+    complementaryAbilities?: string[];
   };
 };
 
@@ -71,9 +85,45 @@ export async function loadAllCharmsAsWikiEntries(): Promise<WikiEntry[]> {
           modes: entry.modes || [],
         },
         sourcebook: entry.source,
-        pageRef: entry.page?.join(', '),
+        pageRef: Array.isArray(entry.page) ? entry.page.join(', ') : (entry.page?.toString() || ''),
       });
     }
+  }
+
+  return allEntries;
+}
+
+export async function loadAllMartialArtsAsWikiEntries(): Promise<WikiEntry[]> {
+  const indexRes = await fetch('/data/martialArts/index.json', { cache: 'no-store' });
+  const files: string[] = await indexRes.json();
+  const allEntries: WikiEntry[] = [];
+  const seenSlugs = new Set<string>();
+
+  for (const file of files) {
+    const res = await fetch(`/data/martialArts/${file}`, { cache: 'no-store' });
+    const style = await res.json();
+
+    const slug = style.name.toLowerCase().replace(/\s+/g, '-');
+    if (seenSlugs.has(slug)) continue;
+    seenSlugs.add(slug);
+
+    const tags = Array.isArray(style.tags) ? style.tags : [];
+
+    allEntries.push({
+      slug,
+      name: style.name,
+      category: 'Martial Arts',
+      description: style.description,
+      tags,
+      sourcebook: style.source || 'Exalted Essence Core Rulebook',
+      pageRef: Array.isArray(style.page) ? style.page.join(', ') : (style.page?.toString() || ''),
+      full: {
+        techniques: style.techniques,
+        armor: style.armor,
+        weaponTags: style.weaponTags,
+        complementaryAbilities: style.complementaryAbilities,
+      }
+    });
   }
 
   return allEntries;

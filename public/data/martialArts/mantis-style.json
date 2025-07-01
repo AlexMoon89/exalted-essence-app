@@ -1,0 +1,61 @@
+{
+  "name": "Mantis Style",
+  "description": "Mantis style leverages painful joint-locks and forceful deflections to render opponents harmless. Immaculate monks favor Mantis style as a nonlethal deterrent, but its strong fundamentals give it widespread popularity.",
+  "weaponTags": ["Balanced", "Flexible", "Natural"],
+  "armor": "Mantis style is incompatible with armor.",
+  "complementaryAbilities": ["Physique"],
+  "techniques": [
+    {
+      "name": "Iron-Arm Block",
+      "prerequisites": "Close Combat 1, Physique 2",
+      "description": "The Exalt diverts enemy hostility with firm block counters. Spend 1 mote on Step 2. The Exalt increases Defense by one and doesn’t lose Hardness from concentrated attacks until the end of their next turn. When the Exalt flurries a defend other action with an attack, reduce the dice penalty to one die.",
+      "modes": [
+        {
+          "name": "Terrestrial",
+          "effect": "If the Exalt successfully defends against an attack with Iron-Arm Block, they may attempt a disarm gambit as a counterattack on Step 8."
+        }
+      ]
+    },
+    {
+      "name": "Crushing Claw Technique",
+      "prerequisites": "Close Combat 3, Physique 2, Iron Arm Block",
+      "description": "The mantis catches prey with deadly speed and an implacable grip. Commit 1 mote on Step 3 when initiating a grapple. If the grapple succeeds, add one success when rolling to establish dominance or pin the Exalt’s opponent. While the Exalt dominates the grapple, reduce their opponent’s Hardness and Soak by 2 against the Exalt’s attacks.",
+      "modes": [
+        {
+          "name": "Celestial",
+          "effect": "While the Exalt dominates the grapple, add the Exalt’s Force in bonus successes to contested defense rolls."
+        }
+      ]
+    },
+    {
+      "name": "Mantis Form",
+      "prerequisites": "Close Combat 3, Physique 3, Crushing Claw Technique",
+      "description": "The Exalt assumes the fabled Mantis stance, arms outstretched and legs ready to spring forward. Commit 1 mote on Step 1 for the scene. Increase the Exalt’s Defense and Soak by 1 each. If an opponent has lower Power than the Exalt, or if the opponent is grappling with the Exalt, double 9s on the Exalt’s damage rolls against that opponent.",
+      "modes": [
+        {
+          "name": "Celestial",
+          "effect": "When the Exalt deals damage with a decisive attack during a grapple, they may end Mantis Form, spend its committed mote, and halve the attack’s damage in Step 7, rounding down. This inflicts a wrenching injury that keeps the opponent from using one of their limbs until the scene ends, or until they heal the injury’s Health levels. The Exalt can’t reactivate Mantis Form on the next round."
+        },
+        {
+          "name": "Terrestrial",
+          "effect": "When the Exalt makes a decisive rush attack, add three dice to the attack’s damage."
+        }
+      ]
+    },
+    {
+      "name": "Unfolding Retribution Strike",
+      "prerequisites": "Close Combat 4, Physique 4, Mantis Form",
+      "description": "The Exalt unleashes countless blows sufficient to wear down the mightiest foe. Spend 2 motes on Step 1 of a decisive attack. Halve the opponent’s Hardness and Soak against this attack, rounding down. If the Exalt attacks a grappled opponent, this attack roll gains three automatic successes. This may be used during a clash.",
+      "modes": [
+        {
+          "name": "Celestial",
+          "effect": "If the enhanced attack inflicts damage against an opponent, set the opponent’s Hardness to 0 as if they’d suffered countless concentrated attacks until the start of their next turn."
+        },
+        {
+          "name": "Terrestrial",
+          "effect": "If the enhanced attack incapacitates an opponent, the Exalt regains half the Power spent on the attack, round up."
+        }
+      ]
+    }
+  ]
+}

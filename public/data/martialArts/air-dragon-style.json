@@ -1,0 +1,55 @@
+{
+  "name": "Air Dragon Style",
+  "category": "Immaculate",
+  "tags": ["Elemental", "Dragon-Blooded", "Immaculate"],
+  "description": "Air Dragon style is elusive, intangible, and devastating in its sudden fury. Immaculate students of the Air Dragon undergo acrobatic training to help them move lightly and silently, and master ranged weapons to challenge spirits from afar.",
+  "weaponTags": ["Natural", "Thrown"],
+  "armor": "Air Dragon style is compatible with light armor.",
+  "complementaryAbilities": ["Ranged Combat", "Athletics"],
+  "techniques": [
+    {
+      "name": "Cloud-Treading Method",
+      "prerequisites": "Close Combat 2, Complementary Ability Total 3",
+      "description": "The Exalt moves as lightly as a cloud, leaving hardly a breeze in her wake. Commit 1 mote on Step 1 for the scene. The Exalt moves over difficult terrain as easily as normal terrain and can flurry an attack and a sprint action.",
+      "modes": [
+        {
+          "name": "Dragon-Blooded",
+          "effect": "The Dragon-Blood can move over liquid and vapor, as long as they end their movement on solid terrain."
+        }
+      ]
+    },
+    {
+      "name": "Air Dragon Form",
+      "prerequisites": "Close Combat 3, Complementary Ability Total 4, Cloud-Treading Method",
+      "description": "With a deep cleansing breath, the Exalt assumes the clarity and speed of the Air Dragon. Commit 1 mote on Step 1 for the scene. The Exalt ignores environmental penalties to Defense and adds one bonus success to all movement-based rolls. Increase the cost of all forced movement gambits targeting the Exalt by one. When wielding a form weapon with Close Combat, that weapon gains the balanced tag. Special: Using this Charm allows the Exalt to access Air Aura.",
+      "modes": [
+        {
+          "name": "Dragon-Blooded",
+          "effect": "Concentrated withering attacks don’t reduce the Dragon-Blood’s Hardness if the Exalt successfully evades them."
+        }
+      ]
+    },
+    {
+      "name": "Lightning Strike Style",
+      "prerequisites": "Close Combat 3, Complementary Ability Total 5, Air Dragon Form",
+      "description": "Lightning arcs from the Exalt’s anima and strikes with explosive force. Spend 1 mote on Step 1. This modifies a decisive attack, making an area of effect attack (p. 146) on all characters within close range of the Exalt’s target, who must be within range of the Exalt’s weapon.",
+      "modes": [
+        {
+          "name": "Dragon-Blooded",
+          "effect": "The Exalt may attack a target one range band further than their weapon’s usual range."
+        }
+      ]
+    },
+    {
+      "name": "Wrathful Winds Roar",
+      "prerequisites": "Close Combat 5, Complementary Ability Total 6, Essence 2, Lightning Strike Style",
+      "description": "The Exalt unleashes a deafening roar accompanied by hurricane winds. Spend 1 mote and 2 Power on Step 1. The Exalt’s roar creates a one-time reflexively resisted environmental hazard that affects all other characters within medium range of the Exalt, including dematerialized spirits. This hazard deals damage equal to the Exalt’s Force + Essence, resisted at difficulty 5.",
+      "modes": [
+        {
+          "name": "Dragon-Blooded",
+          "effect": "The Dragon-Blood may extend this Charm’s effects to long range."
+        }
+      ]
+    }
+  ]
+}

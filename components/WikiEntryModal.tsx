@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { X } from 'lucide-react';
 import type { WikiEntry } from '@/lib/wikiData';
+import type { Technique } from '@/lib/wikiData';
 
 type WikiEntryModalProps = {
   entry: WikiEntry;
@@ -32,6 +33,18 @@ export default function WikiEntryModal({ entry, onClose }: WikiEntryModalProps) 
         <div className="p-6 space-y-4">
           <h2 className="text-3xl font-bold text-aura-solar">{entry.name}</h2>
 
+          {/* Martial Arts Style Details */}
+          {entry.category === "Martial Arts" && (
+            <div className="mb-4">
+              {entry.full?.armor && (
+                <p className="text-sm text-gray-400"><strong>Armor:</strong> {entry.full.armor}</p>
+              )}
+              {entry.full?.weaponTags && Array.isArray(entry.full.weaponTags) && entry.full.weaponTags.length > 0 && (
+                <p className="text-sm text-gray-400"><strong>Weapon Tags:</strong> {entry.full.weaponTags.join(', ')}</p>
+              )}
+            </div>
+          )}
+
           <div className="text-sm text-gray-400 space-y-1">
             <p><strong>Category:</strong> {entry.category}</p>
             {entry.ability && <p><strong>Ability:</strong> {entry.ability}</p>}
@@ -43,6 +56,36 @@ export default function WikiEntryModal({ entry, onClose }: WikiEntryModalProps) 
           </div>
 
           <p className="text-gray-300 text-lg">{entry.description}</p>
+
+          {/* Martial Arts Techniques Display */}
+          {entry.category === "Martial Arts" && (entry.full?.techniques?.length ?? 0) > 0 && (
+            <div>
+              <h3 className="text-2xl font-semibold mt-6 mb-2 text-aura-lunar">Techniques</h3>
+              <div className="grid gap-4">
+                {entry.full?.techniques?.map((tech, idx) => (
+                  <div key={tech.name} className="bg-aura-lunar/10 border border-aura-lunar rounded-lg p-4">
+                    <div className="font-bold text-lg mb-1">{tech.name}</div>
+                    {tech.prerequisites && (
+                      <div className="text-sm italic text-steel mb-1">{tech.prerequisites}</div>
+                    )}
+                    <div className="mb-2">{tech.description}</div>
+                    {(tech.modes?.length ?? 0) > 0 && (
+                      <div className="pl-2">
+                        <strong>Modes:</strong>
+                        <ul className="list-disc list-inside space-y-1">
+                          {tech.modes?.map((mode, i) => (
+                            <li key={i}>
+                              <strong>{mode.name}:</strong> {mode.effect}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {entry.tags.length > 0 && (
             <div>
