@@ -1,0 +1,53 @@
+{
+  "name": "Righteous Devil Style",
+  "description": "Righteous Devils are figures of burning fury and solemn judgment, scourges of the wicked and the lawless. Students from all walks of life uphold the Righteous Devil’s duty to judge evildoers. Righteous Devil martial artists who embrace wickedness remain just as dangerous, creating Creation-spanning rivalries.",
+  "weaponTags": ["Flame", "Balanced"],
+  "armor": "Righteous Devil style is compatible with light armor.",
+  "complementaryAbilities": ["Presence", "Ranged Combat"],
+  "techniques": [
+    {
+      "name": "Blossom of Inevitable Demise",
+      "prerequisites": "Presence 1, Ranged Combat 2",
+      "description": "The Exalt’s hands move faster than the eye can follow, raining fire upon the wicked. Spend 1 mote on Step 1 when aiming a firewand attack. The Exalt may either double 9s on damage or extend the firewand’s maximum range by one range band. If the firewand requires reloading, the Exalt may also reflexively reload while aiming.",
+      "modes": [
+        {
+          "name": "Solar",
+          "effect": "The Solar may activate this Charm when rolling Join Battle with Ranged Combat. This adds automatic successes to the Join Battle roll equal to the Solar’s Finesse or Ranged Combat, whichever is lower. Opponents with lower Join Battle results can’t use an interrupt to act before the Solar during the first round of combat."
+        }
+      ]
+    },
+    {
+      "name": "Righteous Devil Form",
+      "prerequisites": "Presence 2, Ranged Combat 2, Blossom of Inevitable Demise",
+      "description": "The Exalt dons the majestic and terrible stillness of the Righteous Devil, whom the wicked dread. Commit 1 mote on Step 1 for the scene. Opponents with Power lower than the Exalt’s Force who begin their turn in close range of the Exalt cannot move away from her reflexively and cannot gain the benefits of cover or concealment. In addition, the Exalt may wield form weapons with Close Combat as if they had the melee tag, similar to a staff, club, or spear.",
+      "modes": [
+        {
+          "name": "Solar",
+          "effect": "The Solar gains extra attack dice when aiming: three dice at close range, two dice at short range, and one die at medium range. She increases her accuracy and damage by 1 against creatures of darkness (p. 61)."
+        }
+      ]
+    },
+    {
+      "name": "Burning Judgment Halo",
+      "prerequisites": "Presence 2, Ranged Combat 3, Righteous Devil Form",
+      "description": "The Exalt rains fire upon the earth and walks through the purifying heat unscathed. Spend 1 mote and 2 Power on Step 1. The Exalt creates a bonfire centered around herself and extending out to short range. This bonfire is an environmental hazard that deals 3 damage per round, has difficulty equal to the Exalt’s Force, and has a duration of three rounds. The bonfire doesn’t harm the Exalt or interfere with the Exalt’s visibility but counts as concealment for attacks targeting her.",
+      "modes": [
+        {
+          "name": "Solar",
+          "effect": "The Solar may spend 1 anima and extend the bonfire out to long range, with damage and difficulty reduced by one for each range band past short range."
+        }
+      ]
+    },
+    {
+      "name": "Caress of 1,000 Hells",
+      "prerequisites": "Presence 3, Ranged Combat 4, Essence 2, Burning Judgment Halo",
+      "description": "The Exalt’s flame is righteous and won’t harm those who repent. Spend 2 motes on Step 5 of a decisive attack against an opponent that’s violated the Exalt’s Virtues or Intimacies. The opponent may repent for their crimes and immediately form an appropriate Major Intimacy, then pass out without taking damage from the attack, treating them as though they were Incapacitated. If the opponent doesn’t repent, they suffer four dice of aggravated damage in addition to the attack’s normal damage. These dice do not count toward the usual limit and ignore Soak.",
+      "modes": [
+        {
+          "name": "Solar",
+          "effect": "An opponent who wishes to repent must also accept an Intimacy of fear, awe, or guilt toward the Solar. If the target is also a creature of darkness (p. 61) all damage dealt is aggravated."
+        }
+      ]
+    }
+  ]
+}

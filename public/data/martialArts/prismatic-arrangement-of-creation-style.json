@@ -1,0 +1,63 @@
+{
+  "name": "Prismatic Arrangement of Creation Style",
+  "category": "Sidereal",
+  "tags": ["Sidereal", "Advanced", "Exalted Martial Arts"],
+  "description": "Through the Prismatic Arrangement of Creation, martial artists comprehend, master, and embody the Essence of creation’s flow through heaven and earth. Martial artists practice subtle movements that seem effortlessly graceful, though in truth their forms express esoteric geomancy and sorcerous Essence flows.",
+  "weaponTags": ["Natural"],
+  "armor": "Prismatic Arrangement of Creation style is incompatible with armor.",
+  "complementaryAbilities": ["Awareness", "Embassy", "Sagacity"],
+  "techniques": [
+    {
+      "name": "Four Magical Materials Form",
+      "prerequisites": "Close Combat 4, Complimentary Abilities 4, Essence 2, any three martial arts Charms",
+      "description": "The Exalt’s stance, breathing, and footwork channel the Essence of the magical materials through her body. Commit 2 motes on Step 1 for the scene. The Exalt chooses one of the following benefits, which they may change reflexively on Step 1 on their turn:\n• Jade: The Exalt’s stances express geomantic power. The knockback and knockdown gambits cost 1 Power each. Reduce the cost of any other forced-movement gambits by 2.\n• Moonsilver: Silvery essence ripples outward from the Exalt’s blows. The Exalt can attack opponents from short range. She may initiate grapples or clashes from this distance.\n• Orichalcum: The Exalt’s skin takes on a golden sheen. The Exalt’s Hardness increases by 2 and their Soak increases by 3. Her Hardness does not decrease from concentrated attacks.\n• Starmetal: The Exalt’s hair and fingernails bear the gleam and sharpness of starmetal. The Exalt’s unarmed attacks gain the artifact tag and are treated as a secondary Artifact regardless of her Essence rating. Increase the accuracy and damage values of her unarmed attacks by 1. She gains an inherent artifact property appropriate to her character. Define this when she purchases this Charm.",
+      "modes": [
+        {
+          "name": "Sidereal",
+          "effect": "The Sidereal is as unbreakable as the magical materials. If an attack would incapacitate the Sidereal or render them unconscious, the Sidereal may deactivate this Charm in Step 7 and spend its committed motes. The Sidereal remains conscious and negates all damage that would remove their last Health level. The Sidereal can’t reactivate this Charm on the next round."
+        }
+      ]
+    },
+    {
+      "name": "Soul Fire Shaper Form",
+      "prerequisites": "Close Combat 4, Complimentary Abilities 6, Essence 2, any three martial arts Charms",
+      "description": "The Exalt embraces their place in the world’s invisible Essence flows, breathing Essence as spirits do. Commit 2 motes on Step 1 for the scene. While in this form, for the purposes of all static value calculations, rolls, or costs, the Exalt treats her Essence as though it were 2 higher. This does not grant additional motes. Additionally, the Exalt may use a special disrupt gambit. Disrupt (Essence + 2): Forcibly end a currently active Charm, quality, or spell affecting the Exalt’s target. A disrupted effect’s mote cost remains committed until the end of user’s next turn. An already committed mote is spent at the end of this effect. The Exalt must target a specific quality, Charm, or spell, even if the Exalt doesn’t know all of the target’s effects.",
+      "modes": [
+        {
+          "name": "Sidereal",
+          "effect": "Once per round, when the Sidereal successfully defends against an attack, they can attempt a disrupt gambit against the attacker as a counterattack in Step 8."
+        },
+        {
+          "name": "Getimian",
+          "effect": "Spend an additional mote when making the disrupt gambit. By enacting the hidden technique, Astrology Interruption Method, the Getimian suppresses the benefit of Weaving Destiny (p. 56) or any Active Sidereal anima effect until the start of her next turn."
+        }
+      ]
+    },
+    {
+      "name": "Games of Divinity Form",
+      "prerequisites": "Close Combat 4, Complimentary Abilities 7, Essence 2, any three martial arts Charms",
+      "description": "The Exalt channels the addictive allure of the Games of Divinity, embodying perfection beyond the dreams of gods. Commit 2 motes on Step 1 for the scene. The Exalt calculates Defense with Embassy or Sagacity instead of Athletics or Close Combat. Extras and spirits with Essence lower than the Exalt’s can’t attack the Exalt. All other targets must flurry an Integrity roll to attack her. Once per round, when the Exalt successfully defends against an attack, they may attempt social influence against the attacker as a counterattack on Step 8.",
+      "modes": [
+        {
+          "name": "Sidereal",
+          "effect": "The Sidereal’s decisive attacks add two automatic successes on damage rolls against opponents with Intimacies toward the Exalt."
+        }
+      ]
+    },
+    {
+      "name": "Prismatic Arrangement of Creation Form",
+      "prerequisites": "Close Combat 5, Complementary Ability Total 12, Essence 3, Four Magical Materials Form, Games of Divinity Form, Soul Fire Shaper Form",
+      "description": "The Exalt briefly vanishes from existence, then assumes the bearing of one who exists, gaining perfect self-knowledge in the process. Commit 2 motes on Step 1 for the scene. While this Form is active, the Exalt cannot be ambushed, enemies do not gain the benefit of Stealth-based concealment, and she ignores any penalties to Awareness rolls. She may spend 1 Power to cancel an enemy interrupt and take her action instead. While in this Form, she may use the form weapon benefits and tags of any other martial art she knows as form weapons for any other style’s Charms, including this one.",
+      "modes": [
+        {
+          "name": "Sidereal",
+          "effect": "When the Sidereal activates this Charm, she may commit an additional mote to activate any one other Form Charm she knows at the same time. She may change the benefits of this form as a simple action on Step 1."
+        },
+        {
+          "name": "Getimian",
+          "effect": "When assuming this form, the Getimian activates Demesne-and-Manse Emulation. This brings the Essence of their origin into Creation, manifesting as a primary Hearthstone (regardless of Essence rating) upon their brow, which grants an Evocation and effect that matches the Getimian’s personality and thwarted destiny. The Getimian treats anything up to extreme range as their domain."
+        }
+      ]
+    }
+  ]
+}
