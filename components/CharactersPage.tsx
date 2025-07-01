@@ -43,6 +43,10 @@ function getCasteImage(char: { exaltType?: string; caste?: string }): string {
       return `/castes/${caste.replace(/\s+/g, '')}Caste.png`;
     case 'getimian':
       return `/castes/GetimianCaste${caste.replace(/\s+/g, '')}.png`;
+    case 'abyssal':
+      return `/castes/${caste.replace(/\s+/g, '')}Caste.png`;
+    case 'infernal':
+      return `/castes/${caste.replace(/\s+/g, '')}Caste.png`;
     default:
       return `/castes/default.png`;
   }

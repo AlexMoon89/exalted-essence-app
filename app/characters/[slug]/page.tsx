@@ -1,9 +1,12 @@
 'use client';
 
+import { ExaltAdvantage } from '@/lib/exaltAdvantages';
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import { createBrowserClient } from '@supabase/ssr';
 import Image from 'next/image';
+import { exaltAdvantages } from '@/lib/exaltAdvantages';
+console.log('DEBUG: exaltAdvantages imported:', exaltAdvantages);
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
@@ -18,8 +21,15 @@ import {
 } from '@/components/ui/dialog';
 import { ANIMA_EFFECTS } from '@/lib/animaEffects';
 
+const healthLevels = [
+  { key: "bruised", label: "0: Bruised", boxes: 10 },
+  { key: "injured1", label: "-1: Injured", boxes: 10 },
+  { key: "injured2", label: "-1: Injured", boxes: 10 },
+  { key: "critical", label: "-2: Critical", boxes: 10 },
+  { key: "incapacitated", label: "Incapacitated", boxes: 1 },];
+
+
 function normalizeExaltType(type: string) {
-  // Accepts "dragon-blooded", "Dragon-Blooded", "Dragonblooded", etc.
   if (!type) return '';
   const t = type.trim().toLowerCase();
   if (t.includes('dragon')) return 'Dragon-Blooded';
@@ -27,9 +37,12 @@ function normalizeExaltType(type: string) {
   if (t.includes('lunar')) return 'Lunar';
   if (t.includes('abyssal')) return 'Abyssal';
   if (t.includes('sidereal')) return 'Sidereal';
-    if (t.includes('getimian')) return 'Getimian';
-    return type.trim();
-  }
+  if (t.includes('getimian')) return 'Getimian';
+  if (t.includes('infernal')) return 'Infernal';
+  if (t.includes('liminal')) return 'Liminal';
+  if (t.includes('alchemical')) return 'Alchemical';
+  return '';
+}
 
 function normalizeCaste(exalt: string, caste: string) {
   if (!caste) return '';
@@ -40,6 +53,43 @@ function normalizeCaste(exalt: string, caste: string) {
   }
   // Remove extra spaces, make first char uppercase
   return caste.trim().replace(/\s+/g, ' ').replace(/^./, (c) => c.toUpperCase());
+}
+
+function ExaltAdvantagesModal({ exaltType }: { exaltType: string }) {
+  const [open, setOpen] = useState(false);
+  // Defensive: if undefined/null/empty, will not throw
+  const data = exaltAdvantages?.[exaltType];
+
+  // Don't show button if no data (so avoids error too)
+  if (!data) return (
+    <span className="text-sm text-muted-foreground italic">No advantages found for this Exalt type.</span>
+  );
+
+  return (
+    <>
+      <button
+        className="text-aura-abyssal font-semibold hover:text-aura-sidereal transition"
+        onClick={() => setOpen(true)}
+        type="button"
+      >
+        Click to view Exalt Advantages
+      </button>
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle className="text-xl bg-gradient-to-r from-steel to-aura-solar text-transparent bg-clip-text">{data.name}</DialogTitle>
+          </DialogHeader>
+          <ul className="space-y-4 px-2">
+            {data.advantages.map((adv: ExaltAdvantage, idx: number) => (
+              <li key={idx}>
+                <span className="text-steel font-bold">{adv.title}:</span> {adv.text}
+              </li>
+            ))}
+          </ul>
+        </DialogContent>
+      </Dialog>
+    </>
+  );
 }
 
 export default function CharacterDetailPage() {
@@ -54,38 +104,67 @@ export default function CharacterDetailPage() {
   const [loading, setLoading] = useState(true);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
 
-  // Normalize for lookup
+    // Normalize for lookup
   const exalt = character ? normalizeExaltType(character.exalt_type || character.exaltType) : '';
   const caste = character ? normalizeCaste(exalt, character.caste) : '';
 
+  console.log(
+  'character.exalt_type:', character?.exalt_type,
+  '| normalized:', exalt
+);
+console.log(
+  'Available Exalt types in data:',
+  exaltAdvantages ? Object.keys(exaltAdvantages) : '(exaltAdvantages is undefined)'
+);
   // Defensive check for anima effect fallback
   const effects = (exalt && caste && ANIMA_EFFECTS[exalt] && ANIMA_EFFECTS[exalt][caste])
     ? ANIMA_EFFECTS[exalt][caste]
     : null;
 
   useEffect(() => {
-    const fetchCharacter = async () => {
-      const { data, error } = await supabase
-        .from('characters')
-        .select(`
-          *,
-          profiles:owner_id (
-            display_name,
-            avatar_url
-          ),
-          campaign:campaign_id (
-            name,
-            slug
-          )
-        `)
-        .eq('slug', slug)
-        .single();
+  const fetchCharacter = async () => {
+    const { data, error } = await supabase
+      .from('characters')
+      .select(`
+        *,
+        profiles:owner_id (
+          display_name,
+          avatar_url
+        ),
+        campaign:campaign_id (
+          name,
+          slug
+        )
+      `)
+      .eq('slug', slug)
+      .single();
 
-      if (!error) setCharacter(data);
-      setLoading(false);
-    };
-    fetchCharacter();
-  }, [slug]);
+    if (!error) {
+      // Safe initialization of health property if missing
+      let updated = { ...data };
+      if (!updated.health) {
+        const healthObj: Record<string, boolean[]> = {};
+        healthLevels.forEach((lvl) => {
+          healthObj[lvl.key] = Array(lvl.boxes).fill(false);
+        });
+        updated.health = healthObj;
+      }
+      setCharacter(updated);
+    }
+    setLoading(false);
+  };
+  fetchCharacter();
+}, [slug]);
+
+  useEffect(() => {
+  if (character && !character.health) {
+    const healthObj: Record<string, boolean[]> = {};
+    healthLevels.forEach((lvl) => {
+      healthObj[lvl.key] = Array(lvl.boxes).fill(false);
+    });
+    setCharacter((prev: any) => ({ ...prev, health: healthObj }));
+  }
+}, [character]);
 
   const handleSave = async () => {
     if (!character) return;
@@ -101,7 +180,6 @@ export default function CharacterDetailPage() {
       motes_spent, motes_total, notes, inventory, merits,
       armors, weapons, charms,
       milestone_minor, milestone_major, milestone_personal, milestone_exalt,
-      // Health
       health_bruised, health_injured, health_critical, health_incapacitated,
       image_url
     } = character;
@@ -118,6 +196,7 @@ export default function CharacterDetailPage() {
       armors: armors || [],
       weapons: weapons || [],
       charms: charms || [],
+      health: character.health || null,
       milestone_minor, milestone_major, milestone_personal, milestone_exalt,
       health_bruised, health_injured, health_critical, health_incapacitated,
       image_url,
@@ -153,6 +232,10 @@ export default function CharacterDetailPage() {
         return `/castes/${caste}Caste.png`;
       case 'getimian':
         return `/castes/GetimianCaste${caste}.png`;
+      case 'abyssal':
+        return `/castes/${caste.replace(/\s+/g, '')}Caste.png`;
+      case 'infernal':
+        return `/castes/${caste.replace(/\s+/g, '')}Caste.png`;
       default:
         return `/castes/default.png`;
     }
@@ -436,41 +519,43 @@ export default function CharacterDetailPage() {
         </section>
             </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
-        {/* Virtues & Intimacies */}
+      <div className="grid md:grid-cols-3 gap-4">
+        {/* Health Track */}
         <section>
-          <h2 className="text-xl text-steel font-semibold mb-1">Virtues & Intimacies</h2>
-          {edit ? (
-        <div className="grid gap-4">
-          <Input
-            placeholder="Major Virtue"
-            value={character.major_virtue || ''}
-            onChange={(e) => setCharacter({ ...character, major_virtue: e.target.value })}
-          />
-          <Input
-            placeholder="Minor Virtue"
-            value={character.minor_virtue || ''}
-            onChange={(e) => setCharacter({ ...character, minor_virtue: e.target.value })}
-          />
-          <Textarea
-            placeholder="Intimacies"
-            value={character.intimacies || ''}
-            onChange={(e) => setCharacter({ ...character, intimacies: e.target.value })}
-          />
+    <h2 className="text-xl font-semibold mb-1 text-steel">Health</h2>
+    <div className="space-y-2">
+      {healthLevels.map((level) => (
+        <div key={level.key} className="flex items-center gap-2 flex-nowrap">
+          <span className="min-w-[100px] text-right text-aura-abyssal font-medium whitespace-nowrap">{level.label}</span>
+          <div className="flex gap-1 flex-wrap">
+            {character.health[level.key].map((box: boolean, i: number) => (
+              <input
+                key={i}
+                type="checkbox"
+                className="w-4 h-4 border-2 border-steel rounded bg-background checked:bg-steel accent-steel"
+                checked={box}
+                disabled={!edit}
+                onChange={e => {
+                  if (!edit) return;
+                  setCharacter((prev: any) => {
+                    const updated = { ...prev };
+                    updated.health = { ...updated.health };
+                    updated.health[level.key] = [...updated.health[level.key]];
+                    updated.health[level.key][i] = e.target.checked;
+                    return updated;
+                  });
+                }}
+              />
+            ))}
+          </div>
         </div>
-          ) : (
-        <div className="space-y-2 text-aura-abyssal">
-          <p><strong>Major Virtue:</strong> {character.major_virtue || '—'}</p>
-          <p><strong>Minor Virtue:</strong> {character.minor_virtue || '—'}</p>
-          <p><strong>Intimacies:</strong> {character.intimacies || '—'}</p>
-        </div>
-          )}
-        </section>
-
+      ))}
+    </div>
+  </section>
         {/* Combat Stats */}
         <section>
           <h2 className="text-xl font-semibold mb-1 text-steel">Combat Stats</h2>
-          <div className="grid md:grid-cols-3 gap-4 text-aura-abyssal">
+          <div className="grid md:grid-cols-3 gap-2 text-aura-abyssal">
         {['power', 'will', 'resolve', 'soak', 'defense', 'hardness'].map((field) => (
           <div key={field} className="space-y-1">
             <label className="block font-medium capitalize" htmlFor={field}>{field}</label>
@@ -488,6 +573,11 @@ export default function CharacterDetailPage() {
         ))}
           </div>
         </section>
+        {/* Exalt Advantages Section */}
+      <section>
+        <h2 className="text-xl font-semibold text-steel mb-1">Exalt Advantages</h2>
+        <ExaltAdvantagesModal exaltType={exalt} />
+      </section>
       </div>
 
 {/* Attributes & Abilities row */}
@@ -638,7 +728,7 @@ export default function CharacterDetailPage() {
         {character.armors?.map((armor: any, i: number) => (
           <div key={i} className="border border-muted rounded p-4">
             <h3 className="font-semibold text-steel mb-1">Armor {i + 1}</h3>
-            <ul className="text-sm space-y-1">
+            <ul className="text-sm text-aura-abyssal space-y-1">
               {['type', 'soak', 'hardness', 'mobility_penalty'].map((field) => (
                 <li key={field}>
                   <strong className="capitalize">{field.replace('_', ' ')}:</strong> {armor[field] || '—'}
@@ -705,8 +795,8 @@ export default function CharacterDetailPage() {
       <div className="space-y-4">
         {character.weapons?.map((weapon: any, i: number) => (
           <div key={i} className="border border-muted rounded p-4">
-            <h3 className="font-semibold mb-1">Weapon {i + 1}</h3>
-            <ul className="text-sm space-y-1">
+            <h3 className="font-semibold text-steel mb-1">Weapon {i + 1}</h3>
+            <ul className="text-sm text-aura-abyssal space-y-1">
               {['type', 'accuracy', 'damage', 'overwhelming', 'defense'].map((field) => (
                 <li key={field}>
                   <strong className="capitalize">{field}:</strong> {weapon[field] || '—'}
@@ -733,45 +823,54 @@ export default function CharacterDetailPage() {
       )}
     </section>
 
-      {/* Merits */}
-      <section>
-        <h2 className="text-xl font-semibold text-steel mb-1">Merits</h2>
-        {edit ? (
-          <Textarea
-            placeholder="List your character's merits here..."
-            value={character.merits || ''}
-            onChange={(e) => setCharacter((prev: any) => ({ ...prev, merits: e.target.value }))}
-          />
-        ) : (
-          <p>{character.merits || '—'}</p>
-        )}
-      </section>
+    {/* Merits & Virtues */}
+<div className="grid md:grid-cols-2 gap-6 mb-8">
+  {/* Merits */}
+  <section>
+    <h2 className="text-xl font-semibold text-steel mb-1">Merits</h2>
+    {edit ? (
+      <Textarea
+        placeholder="List your character's merits here..."
+        value={character.merits || ''}
+        onChange={(e) => setCharacter((prev: any) => ({ ...prev, merits: e.target.value }))}
+      />
+    ) : (
+      <p>{character.merits || '—'}</p>
+    )}
+  </section>
 
-       {/* Health Track */}
-      <section>
-        <h2 className="text-xl font-semibold mb-1 text-steel">Health</h2>
-        <div className="grid text-aura-abyssal grid-cols-2 sm:grid-cols-6 gap-4">
-          {['bruised', 'injured', 'critical', 'incapacitated'].map((level) => (
-            <label key={level} className="flex items-center gap-2">
-              <input
-                type="checkbox"
-                checked={character[`health_${level}`] || false}
-                onChange={(e) =>
-                  setCharacter((prev: any) => ({
-                    ...prev,
-                    [`health_${level}`]: e.target.checked,
-                  }))
-                }
-                disabled={!edit}
-              />
-              <span className="capitalize">{level}</span>
-            </label>
-          ))}
-        </div>
-      </section>
-
+  {/* Virtues & Intimacies */}
+  <section>
+    <h2 className="text-xl text-steel font-semibold mb-1">Virtues & Intimacies</h2>
+    {edit ? (
+      <div className="grid gap-4">
+        <Input
+          placeholder="Major Virtue"
+          value={character.major_virtue || ''}
+          onChange={(e) => setCharacter({ ...character, major_virtue: e.target.value })}
+        />
+        <Input
+          placeholder="Minor Virtue"
+          value={character.minor_virtue || ''}
+          onChange={(e) => setCharacter({ ...character, minor_virtue: e.target.value })}
+        />
+        <Textarea
+          placeholder="Intimacies"
+          value={character.intimacies || ''}
+          onChange={(e) => setCharacter({ ...character, intimacies: e.target.value })}
+        />
+      </div>
+    ) : (
+      <div className="space-y-2 text-aura-abyssal">
+        <p><strong>Major Virtue:</strong> {character.major_virtue || '—'}</p>
+        <p><strong>Minor Virtue:</strong> {character.minor_virtue || '—'}</p>
+        <p><strong>Intimacies:</strong> {character.intimacies || '—'}</p>
+      </div>
+    )}
+  </section>
+</div>
             {/* Charms */}
-            <div className="col-span-full">
+            <div className="grid md:grid-cols-1 gap-6 mb-8">
               <section>
                 <h2 className="text-2xl text-steel font-bold mb-3">Charms</h2>
                 {edit ? (
@@ -896,43 +995,46 @@ export default function CharacterDetailPage() {
               </ul>
                 )}
               </section>
+
+            {/* Notes & Milestones */}
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              {/* Milestones */}
+              <section>
+                <h2 className="text-xl text-steel font-semibold mb-1">Milestones</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {['major', 'minor', 'personal', 'exalt'].map((type) => (
+                    <div key={type}>
+                      <label className="block text-aura-abyssal text-sm font-medium capitalize mb-1">{type} milestone</label>
+                      {edit ? (
+                        <Input
+                          value={character[`milestone_${type}`] || ''}
+                          onChange={(e) => setCharacter((prev: any) => ({
+                            ...prev,
+                            [`milestone_${type}`]: e.target.value,
+                          }))}
+                        />
+                      ) : (
+                        <p>{character[`milestone_${type}`] || '—'}</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </section>
+              {/* Notes */}
+              <section>
+                <h2 className="text-xl font-semibold text-steel mb-1">Notes</h2>
+                {edit ? (
+                  <Textarea
+                    value={character.notes || ''}
+                    onChange={(e) => setCharacter((prev: any) => ({ ...prev, notes: e.target.value }))}
+                  />
+                ) : (
+                  <p className="whitespace-pre-wrap text-aura-abyssal">{character.notes || '—'}</p>
+                )}
+              </section>
             </div>
 
-             {/* Notes */}
-      <section>
-        <h2 className="text-xl font-semibold text-steel mb-1">Notes</h2>
-        {edit ? (
-          <Textarea
-            value={character.notes || ''}
-            onChange={(e) => setCharacter((prev: any) => ({ ...prev, notes: e.target.value }))}
-          />
-        ) : (
-          <p className="whitespace-pre-wrap text-aura-abyssal">{character.notes || '—'}</p>
-        )}
-      </section>
-   
-      {/* Milestones */}
-      <section>
-        <h2 className="text-xl text-steel font-semibold mb-1">Milestones</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-4">
-          {['minor', 'major', 'personal', 'exalt'].map((type) => (
-            <div key={type}>
-              <label className="block text-aura-abyssal text-sm font-medium capitalize mb-1">{type} milestone</label>
-              {edit ? (
-                <Input
-                  value={character[`milestone_${type}`] || ''}
-                  onChange={(e) => setCharacter((prev: any) => ({
-                    ...prev,
-                    [`milestone_${type}`]: e.target.value,
-                  }))}
-                />
-              ) : (
-                <p>{character[`milestone_${type}`] || '—'}</p>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* Backstory */}
       <section>
           <h2 className="text-xl font-semibold text-steel mb-1">Backstory</h2>
           {edit ? (
@@ -944,7 +1046,7 @@ export default function CharacterDetailPage() {
             <p>{character.description}</p>
           )}
         </section>
-      </div>
-
+    </div>
+    </div>
   );
 }
