@@ -157,7 +157,7 @@ export default function WikiPage() {
           <select
             value={selectedAbility || ''}
             onChange={(e) => setSelectedAbility(e.target.value || null)}
-            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md"
+            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-aura-lunar"
           >
             <option value="">All Abilities</option>
             {allAbilities.map((ability) => (
@@ -169,7 +169,7 @@ export default function WikiPage() {
           <select
             value={selectedExaltType || ''}
             onChange={(e) => setSelectedExaltType(e.target.value || null)}
-            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md"
+            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-aura-lunar"
           >
             <option value="">All Exalt Types</option>
             {exaltTypes.map((type) => (
@@ -181,7 +181,7 @@ export default function WikiPage() {
           <select
             value={selectedCharmCategory || ''}
             onChange={(e) => setSelectedCharmCategory(e.target.value || null)}
-            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md"
+            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-aura-lunar"
           >
             <option value="">All Charm Categories</option>
             {allCharmCategories.map((cat) => (
@@ -197,7 +197,7 @@ export default function WikiPage() {
           <select
             value={selectedSpellCategory || ''}
             onChange={(e) => setSelectedSpellCategory(e.target.value || null)}
-            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md"
+            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-aura-lunar"
           >
             <option value="">All Spell Categories</option>
             {allSpellCategories.map((cat) => (
@@ -207,7 +207,7 @@ export default function WikiPage() {
           <select
             value={selectedSpellCircle || ''}
             onChange={(e) => setSelectedSpellCircle(e.target.value || null)}
-            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md"
+            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-aura-lunar"
           >
             <option value="">All Circles</option>
             {allSpellCircles.map((circle) => (
@@ -224,7 +224,7 @@ export default function WikiPage() {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Search..."
-          className="w-full md:w-1/2 px-4 py-2 rounded-md bg-background border border-border text-foreground dark:bg-dark-background dark:border-dark-border"
+          className="w-full md:w-1/2 px-4 py-2 rounded-md bg-background border border-border text-foreground dark:bg-dark-background dark:border-dark-border focus:outline-none focus:ring-2 focus:ring-aura-lunar"
         />
         <p className="text-lg text-aura-abyssal text-center mt-6">
           Showing <strong>{selectedCategory}</strong> matching “{searchQuery}”

@@ -21,7 +21,7 @@ export function Select({ options, value, placeholder, onChange, className }: Sel
           console.log('[DEBUG] Native select onChange', e.target.value);
           onChange(e.target.value);
         }}
-        className="appearance-none w-full border border-muted bg-card text-foreground py-2 px-3 pr-10 rounded-md focus:outline-none focus:ring-2 focus:ring-aura-sidereal"
+        className="appearance-none w-full border border-muted bg-card text-foreground py-2 px-3 pr-10 rounded-md focus:outline-none focus:ring-aura-lunar"
       >
         <option value="">
           {placeholder || 'Select...'}
