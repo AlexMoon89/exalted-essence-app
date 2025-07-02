@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Flames of Unyielding Purity",
+    "circle": "First",
+    "type": "Sorcery",
+    "description": "You spread a web of colorless fire that burns only the impure. Spend 3 Will. Toxins, diseases, and other physical corruptions burn away at up to medium range, purifying spoiled food or water and sterilizing any wounds. Illnesses are not cured but cannot spread for the rest of the session. Impure creatures, such as diseased undead or plague gods, suffer a one-time, reflexively resisted environmental hazard (difficulty 3, 2 damage).",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [305]
+  },
+  {
+    "name": "Silent Words of Dreams and Nightmares",
+    "circle": "First",
+    "type": "Sorcery",
+    "description": "Staring into a mirror and brandishing an object linked to another person, you gain power over their dreams. This spell requires the sorcerer to acquire a scrap of clothing, piece of hair, drop of blood, or similar symbolic link to someone else. This may mean a single Stealth or Sagacity roll, or an appropriate venture, depending on how difficult the object is to attain. After acquiring the link, spend 3 Will. The next time the target sleeps, they experience an especially vivid dream created by the sorcerer, allowing the sorcerer to make a remote social influence action to incept an idea or belief into their target. The target may not add Intimacies to their Resolve to resist this influence, though they may still add Virtues. The symbolic link burns to ash at the end of the spell, necessitating the acquisition of another one before it may be cast again.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [305]
+  },
+  {
+    "name": "Spoke the Wooden Face",
+    "circle": "First",
+    "type": "Sorcery",
+    "description": "You transform a living tree into a conduit for long distance communication. Spend 4 Will. The sorcerer must carve a likeness of her own face into a living tree (this requires no roll). For as long as the tree lives, the sorcerer may spend a mote or 1 Will to see and hear from the carved image and speak with her voice through the tree. A sorcerer can create as many wooden faces as she pleases, and a tree can host more than one wooden face; an ancient grove on the Blessed Isle contains many such trees and faces that are now forever silent.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [306]
+  },
+  {
+    "name": "Unbreakable Bones of Stone",
+    "circle": "First",
+    "type": "Sorcery",
+    "description": "You sing the Irresistible Song of Stone, but you do so off-key, prompting local earth elementals to correct the song deep in your bones. Spend 4 Will. The sorcerer’s eyes become granite, her skin becomes ashen and cold, and her weight dramatically increases as her bones turn to stone. Reduce all wound penalties by one (to a minimum of zero); the sorcerer adds 2 to her base Soak and her dice pools for feats of strength, which do not count toward the limit. She does not take damage from falling regardless of height.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [306]
+  },
+  {
+    "name": "Wood Dragon’s Claw",
+    "circle": "First",
+    "type": "Sorcery",
+    "description": "One of your arms transforms into a twisted bough of vine, muscle, and thorns. Spend 3 Will. The sorcerer treats her transformed arm as a medium melee weapon with the natural, pulling, and reaching tags. She can spend 1 mote to extend the limb out to medium range for an action to make an attack or gambit. Lasts until released.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [306]
+  },
+  {
+    "name": "Magma Kraken",
+    "circle": "Second",
+    "type": "Sorcery",
+    "description": "Combining the Prayer to the Kraken with the Sign of the Burning Earth, you cause red strands of volcanic Essence to erupt from the ground, striking at your foes. Spend 7 Will. You cause the ground within close range to erupt with magma tentacles, writhing and smashing any who oppose you, with the broken earth making everything up to long range into difficult terrain. This creates an environmental hazard equivalent to lava; on the sorcerer’s turn, the tentacles may initiate a grapple with a dice pool of 12 against any foe within long range of the original casting point, inflicting environmental damage as long as the tentacle controls the grapple.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [306]
+  },
+  {
+    "name": "Travel Without Distance",
+    "circle": "Second",
+    "type": "Sorcery",
+    "description": "Gathering a blazing corona of Essence around yourself, you teleport with a flash of light. Spend 7 Will. The sorcerer may choose to transport themselves to any location they have been to or seen before, whether through their own eyes or through scrying, within the same direction. If cast during combat, this teleportation occurs across two rounds — one to leave and one to arrive. Once per session, the sorcerer may teleport their Circle along with them, so long as they’re within short range of the sorcerer.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [306]
+  },
+  {
+    "name": "Unity of Dreams",
+    "circle": "Second",
+    "type": "Sorcery",
+    "description": "Binding your dreams with another’s using the Sign of Mercury, you may communicate while sleeping. Spend 5 Will. The sorcerer must cast this with up to five participants, who must all be present when the spell is cast. Afterwards, the participants may commune in a shared dream space, communicating while they are asleep regardless of distance. If the participants have Intimacies toward one another, the shared sense of community adds two to their Resolve against influence actions to weaken the Intimacy. This effect lasts for the rest of the story. At any time when all participants are asleep, one of the dreamers may ask for the others to join him; if all agree, they jolt awake moments later in the same location as the requestor, though this ends the spell prematurely.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [306]
+  },
+  {
+    "name": "Chariot of the Blazing Sun",
+    "circle": "Third",
+    "type": "Sorcery",
+    "description": "Sending a helix of Solar and worldly Essence to heaven, you conjure a chariot pulled by one of the Unconquered Sun’s own stallions. Spend 7 Will. The chariot can carry up to one ton of cargo and passengers and can travel to any point in Creation at rapid speeds, even from other realms such as Malfeas. At the end of the journey, the horse and chariot disappear in a blaze of sunfire visible for miles around. When used as part of a travel venture, the total number of obstacles cannot exceed three, and the total amount of downtime spent on the venture is never longer than five hours.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [306]
+  },
+  {
+    "name": "Total Annihilation",
+    "circle": "Third",
+    "type": "Sorcery",
+    "description": "Uttering the secret name of Ligier, the fetich soul of Malfeas, you unleash an orb of pure destruction. Spend 10 Will. The sorcerer may target any location up to extreme range and hurl a fiery crystal sphere of emerald Essence to the location. Anything within long range of that location, sorcerer excepted, explodes in a towering, verdant blast of energy that destroys anything in its path. Anyone within that area suffers from a unique environmental hazard (5 aggravated damage per round, duration 10 rounds, difficulty 8 to resist with Integrity or Physique), while anything within extreme range of the blast suffers a shockwave (1 aggravated damage per round for 2 rounds, difficulty 5 to resist with Integrity or Physique). Trivial characters simply perish. This spell typically results in a smoking crater and shattered countryside.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [307]
+  }
+]

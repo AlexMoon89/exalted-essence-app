@@ -106,5 +106,42 @@
     "modes": [],
     "source": "Exalted Essence Core Rulebook",
     "page": [212]
+  },
+    {
+    "name": "SORCEROUS INITIATION",
+    "ability": ["Sagacity"],
+    "prerequisites": "Sagacity 1",
+    "description": "The Exalt has internalized the inner workings of Creation’s Essence, giving the power to reshape the world at its fundament. The sorcerer gains the ability to learn and cast First Circle spells, as well as a free spell and a shaping ritual. Not every Exalt can use every circle; see p. 300",
+    "modes": [{
+        "name": "Repurchase",
+        "title": "Second Cirlce Spells",
+        "effect": "Repurchase (Sagacity 3, Essence 3) Gain access to Second Circle spells, a free spell, and a shaping ritual."
+      },
+	  {
+        "name": "Repurchase",
+        "title": "Third Cirlce Spells",
+        "effect": "Repurchase (Sagacity 5, Essence 5): Gain access to Third Circle spells, a free spell, and a shaping ritual."
+      }
+	  ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [211]
+  },
+    {
+    "name": "NECROMANTIC INITIATION",
+    "ability": ["Sagacity"],
+    "prerequisites": "Sagacity 1",
+    "description": "The Exalt has dredged up dark secrets from the Underworld — secrets which grant tremendous power. The necromancer gains the ability to learn and cast First Circle spells, as well as a free spell and a shaping ritual. Not every Exalt can use every circle, see p. 300.",
+    "modes": [{
+        "name": "Repurchase",
+        "title": "Second Cirlce Spells",
+        "effect": "Repurchase (Sagacity 3, Essence 3) Gain access to Second Circle spells, a free spell, and a shaping ritual."
+      },
+	  {
+        "name": "Repurchase",
+        "title": "Third Cirlce Spells",
+        "effect": "Repurchase (Sagacity 5, Essence 5): Gain access to Third Circle spells, a free spell, and a shaping ritual."
+      }],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [210]
   }
 ]

@@ -20,6 +20,7 @@ export type WikiEntry = {
   sourcebook?: string;
   ability?: string;
   pageRef?: string;
+  circle?: string; // <-- Add this line
   full?: {
     prerequisites?: string;
     modes?: {
@@ -126,5 +127,73 @@ export async function loadAllMartialArtsAsWikiEntries(): Promise<WikiEntry[]> {
     });
   }
 
+  return allEntries;
+}
+
+export async function loadAllSpellsAsWikiEntries(): Promise<WikiEntry[]> {
+  const indexRes = await fetch('/data/spells/index.json', { cache: 'no-store' });
+  const files: string[] = await indexRes.json();
+  const allEntries: WikiEntry[] = [];
+  const seenSlugs = new Set<string>();
+
+  for (const file of files) {
+    // e.g. "necromancySpells"
+    const res = await fetch(`/data/spells/${file}.json`, { cache: 'no-store' });
+    const spells = await res.json();
+
+    // Category and type
+    let spellType = 'Universal';
+    if (file.toLowerCase().includes('necromancy')) spellType = 'Necromancy';
+    else if (file.toLowerCase().includes('sorcery')) spellType = 'Sorcery';
+    else if (file.toLowerCase().includes('universal')) spellType = 'Universal';
+
+    for (const spell of spells) {
+      const slug = spell.name.toLowerCase().replace(/\s+/g, '-');
+      if (seenSlugs.has(slug)) continue;
+      seenSlugs.add(slug);
+      allEntries.push({
+        slug,
+        name: spell.name,
+        category: 'Spell',
+        description: spell.description,
+        tags: [
+          spellType,
+          ...(spell.circle ? [spell.circle + ' Circle'] : []),
+          ...(spell.type && spell.type !== spellType ? [spell.type] : [])
+        ],
+        circle: spell.circle || '', // <-- Add this line
+        sourcebook: spell.source || 'Exalted Essence Core Rulebook',
+        pageRef: Array.isArray(spell.page) ? spell.page.join(', ') : (spell.page?.toString() || ''),
+        full: {
+          modes: spell.modes || []
+        }
+      });
+    }
+  }
+  return allEntries;
+}
+
+export async function loadAllShapingRitualsAsWikiEntries(): Promise<WikiEntry[]> {
+  const res = await fetch('/data/spells/shapingRituals.json', { cache: 'no-store' });
+  const rituals = await res.json();
+  const allEntries: WikiEntry[] = [];
+  for (const ritual of rituals) {
+    const slug = ritual.name.toLowerCase().replace(/\s+/g, '-');
+    allEntries.push({
+      slug,
+      name: ritual.name,
+      category: 'Spell', // Ensure this!
+      description: ritual.description,
+      tags: [
+        'Shaping Ritual',   // Must appear here!
+        ...(ritual.type ? [ritual.type] : []),
+        ...(ritual.circle ? [ritual.circle + ' Circle'] : []),
+      ],
+      circle: ritual.circle || '',
+      sourcebook: ritual.source || 'Exalted Essence Core Rulebook',
+      pageRef: Array.isArray(ritual.page) ? ritual.page.join(', ') : (ritual.page?.toString() || ''),
+      full: {}
+    });
+  }
   return allEntries;
 }

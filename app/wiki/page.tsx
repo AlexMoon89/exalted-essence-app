@@ -2,35 +2,72 @@
 
 import { useState, useEffect } from 'react';
 import { Sparkle, Sparkles, X } from 'lucide-react';
-import { type WikiEntry, loadAllCharmsAsWikiEntries } from '@/lib/wikiData';
-import { type Technique, loadAllMartialArtsAsWikiEntries } from '@/lib/wikiData';
+import {
+  loadAllCharmsAsWikiEntries,
+  loadAllMartialArtsAsWikiEntries,
+  loadAllSpellsAsWikiEntries,
+  loadAllShapingRitualsAsWikiEntries,
+  type WikiEntry,
+  type Technique
+} from '@/lib/wikiData';
 
 const categories = ['Charms', 'Martial Arts', 'Spells', 'Merits', 'Artifacts', 'Resources'];
 const exaltTypes = ['Solar', 'Lunar', 'Abyssal', 'Alchemical', 'Dragon Blooded', 'Sidereal', 'Infernal', 'Getimian', 'Universal'];
+const spellCategories = ["Shaping Ritual", "Universal", "Sorcery", "Necromancy"];
+const spellCircles = ["First Circle", "Second Circle", "Third Circle"];
 
 export default function WikiPage() {
   const [selectedCategory, setSelectedCategory] = useState('Charms');
-  const [searchQuery, setSearchQuery] = useState('');
   const [selectedAbility, setSelectedAbility] = useState<string | null>(null);
   const [selectedExaltType, setSelectedExaltType] = useState<string | null>(null);
   const [selectedCharmCategory, setSelectedCharmCategory] = useState<string | null>(null);
+  const [selectedSpellCategory, setSelectedSpellCategory] = useState<string | null>(null);
+  const [selectedSpellCircle, setSelectedSpellCircle] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
   const [openEntry, setOpenEntry] = useState<WikiEntry | null>(null);
   const [entries, setEntries] = useState<WikiEntry[]>([]);
 
   useEffect(() => {
-  async function loadData() {
-    if (selectedCategory === 'Charms') {
-      const charms = await loadAllCharmsAsWikiEntries();
-      setEntries(charms);
-    } else if (selectedCategory === 'Martial Arts') {
-      const martialArts = await loadAllMartialArtsAsWikiEntries();
-      setEntries(martialArts);
-    }
-    // ...add logic for other categories as you implement them
-  }
-  loadData();
-}, [selectedCategory]);
+    async function loadData() {
+      if (selectedCategory === 'Charms') {
+        const charms = await loadAllCharmsAsWikiEntries();
+        setEntries(charms);
+      } else if (selectedCategory === 'Martial Arts') {
+        const martialArts = await loadAllMartialArtsAsWikiEntries();
+        setEntries(martialArts);
+      } else if (selectedCategory === 'Spells') {
+        const spells = await loadAllSpellsAsWikiEntries();
+        const rituals = await loadAllShapingRitualsAsWikiEntries();
 
+        // Ensure all entries have category 'Spell' and proper tags
+        const allSpells = [...spells, ...rituals].map(entry => {
+          // Force all entries to category 'Spell'
+          let tags = Array.isArray(entry.tags) ? entry.tags : [];
+          // Add 'Shaping Ritual' to rituals
+          if (entry.name && rituals.find(r => r.name === entry.name)) {
+            if (!tags.includes('Shaping Ritual')) tags = ['Shaping Ritual', ...tags];
+          }
+          return { ...entry, category: 'Spell', tags };
+        });
+
+        // Deduplicate by slug (spell names must be unique in your data)
+        const uniqueEntries = Array.from(new Map(allSpells.map(e => [e.slug, e])).values());
+        setEntries(uniqueEntries);
+      } else {
+        setEntries([]); // For categories not yet implemented
+      }
+    }
+    loadData();
+    // Reset filters when changing main tab
+    setSelectedAbility(null);
+    setSelectedExaltType(null);
+    setSelectedCharmCategory(null);
+    setSelectedSpellCategory(null);
+    setSelectedSpellCircle(null);
+    setSearchQuery('');
+  }, [selectedCategory]);
+
+  // --- FILTER SETUP ---
   const allAbilities = Array.from(
     new Set(entries.flatMap((entry) => entry.ability?.split(',').map((a) => a.trim()) || []))
   ).sort();
@@ -39,31 +76,56 @@ export default function WikiPage() {
     new Set(entries.map((entry) => entry.category))
   ).sort();
 
+  const allSpellCategories = Array.from(
+    new Set(
+      entries
+        .filter((entry) => entry.category === 'Spell')
+        .flatMap((entry) => (entry.tags || []).filter((tag) => spellCategories.includes(tag)))
+    )
+  ).sort();
+
+  const allSpellCircles = Array.from(
+    new Set(
+      entries
+        .filter((entry) => entry.category === 'Spell')
+        .map((entry) => entry.circle)
+        .filter(Boolean)
+    )
+  ).sort();
+
+  // --- MAIN FILTERED ENTRIES ---
   const filteredEntries = entries
     .filter((entry) => {
       if (!entry.category) return false;
-      const normalized = entry.category.toLowerCase();
-      if (selectedCategory === 'Charms') return normalized.includes('charm');
-      return normalized === selectedCategory.toLowerCase();
+      if (selectedCategory === 'Charms') return entry.category && entry.category.toLowerCase().includes('charm');
+      if (selectedCategory === 'Martial Arts') return entry.category === 'Martial Arts';
+      if (selectedCategory === 'Spells') return entry.category === 'Spell'; // STRICT match
+      return entry.category === selectedCategory;
     })
     .filter(
       (entry) =>
         entry.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         entry.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
+    // CHARMS: ability/exalt/category
     .filter((entry) => {
-      if (!selectedAbility) return true;
-      return entry.ability?.includes(selectedAbility);
+      if (selectedCategory === 'Charms') {
+        if (selectedAbility && !entry.ability?.includes(selectedAbility)) return false;
+        if (selectedExaltType && !entry.tags.includes(selectedExaltType)) return false;
+        if (selectedCharmCategory && entry.category !== selectedCharmCategory) return false;
+      }
+      return true;
     })
+    // SPELLS: spellCategory/circle
     .filter((entry) => {
-      if (!selectedExaltType) return true;
-      return entry.tags.includes(selectedExaltType);
-    })
-    .filter((entry) => {
-      if (!selectedCharmCategory) return true;
-      return entry.category === selectedCharmCategory;
+      if (selectedCategory === 'Spells') {
+        if (selectedSpellCategory && !(entry.tags || []).includes(selectedSpellCategory)) return false;
+        if (selectedSpellCircle && entry.circle !== selectedSpellCircle) return false;
+      }
+      return true;
     });
 
+  // --- UI ---
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-6 text-aura-abyssal dark:text-dark-foreground">
       <h1 className="text-4xl font-bold text-center mb-4 flex items-center justify-center gap-3 bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text">
@@ -77,12 +139,7 @@ export default function WikiPage() {
         {categories.map((cat) => (
           <button
             key={cat}
-            onClick={() => {
-              setSelectedCategory(cat);
-              setSelectedAbility(null);
-              setSelectedExaltType(null);
-              setSelectedCharmCategory(null);
-            }}
+            onClick={() => setSelectedCategory(cat)}
             className={`px-4 py-2 rounded-full ${
               selectedCategory === cat
                 ? 'bg-ice text-steel font-semibold'
@@ -100,7 +157,7 @@ export default function WikiPage() {
           <select
             value={selectedAbility || ''}
             onChange={(e) => setSelectedAbility(e.target.value || null)}
-            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-aura-lunar dark:bg-dark-steel dark:text-dark-foreground dark:border-dark-border transition-colors"
+            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md"
           >
             <option value="">All Abilities</option>
             {allAbilities.map((ability) => (
@@ -109,11 +166,10 @@ export default function WikiPage() {
               </option>
             ))}
           </select>
-
           <select
             value={selectedExaltType || ''}
             onChange={(e) => setSelectedExaltType(e.target.value || null)}
-            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-aura-lunar dark:bg-dark-steel dark:text-dark-foreground dark:border-dark-border transition-colors"
+            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md"
           >
             <option value="">All Exalt Types</option>
             {exaltTypes.map((type) => (
@@ -122,17 +178,40 @@ export default function WikiPage() {
               </option>
             ))}
           </select>
-
           <select
             value={selectedCharmCategory || ''}
             onChange={(e) => setSelectedCharmCategory(e.target.value || null)}
-            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-aura-lunar dark:bg-dark-steel dark:text-dark-foreground dark:border-dark-border transition-colors"
+            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md"
           >
             <option value="">All Charm Categories</option>
             {allCharmCategories.map((cat) => (
               <option key={cat} value={cat}>
                 {cat}
               </option>
+            ))}
+          </select>
+        </div>
+      )}
+      {selectedCategory === 'Spells' && (
+        <div className="flex flex-wrap justify-center gap-4 mt-4">
+          <select
+            value={selectedSpellCategory || ''}
+            onChange={(e) => setSelectedSpellCategory(e.target.value || null)}
+            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md"
+          >
+            <option value="">All Spell Categories</option>
+            {allSpellCategories.map((cat) => (
+              <option key={cat} value={cat}>{cat}</option>
+            ))}
+          </select>
+          <select
+            value={selectedSpellCircle || ''}
+            onChange={(e) => setSelectedSpellCircle(e.target.value || null)}
+            className="border border-steel bg-gray-200 text-steel font-semibold px-4 py-2 rounded-md"
+          >
+            <option value="">All Circles</option>
+            {allSpellCircles.map((circle) => (
+              <option key={circle} value={circle}>{circle}</option>
             ))}
           </select>
         </div>
@@ -145,7 +224,7 @@ export default function WikiPage() {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Search..."
-          className="w-full md:w-1/2 px-4 py-2 rounded-md bg-background border border-border text-foreground dark:bg-dark-background dark:border-dark-border focus:outline-none focus:ring-2 focus:ring-aura-solar transition-colors"
+          className="w-full md:w-1/2 px-4 py-2 rounded-md bg-background border border-border text-foreground dark:bg-dark-background dark:border-dark-border"
         />
         <p className="text-lg text-aura-abyssal text-center mt-6">
           Showing <strong>{selectedCategory}</strong> matching “{searchQuery}”
@@ -168,7 +247,9 @@ export default function WikiPage() {
             >
               <h3 className="text-xl bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text font-semibold">{entry.name}</h3>
               <p className="text-sm text-aura-abyssal line-clamp-3">{entry.description}</p>
-              <p className="text-xs mt-2 text-aura-lunar">Tags: {entry.tags.join(', ')}</p>
+              <p className="text-xs mt-2 text-aura-lunar">
+                Tags: {Array.isArray(entry.tags) ? entry.tags.join(', ') : ''}
+              </p>
               {entry.category === "Martial Arts" && entry.full?.complementaryAbilities && Array.isArray(entry.full.complementaryAbilities) && entry.full.complementaryAbilities.length > 0 ? (
                 <p className="text-xs text-steel">
                   Complementary Abilities: {entry.full.complementaryAbilities.join(', ')}

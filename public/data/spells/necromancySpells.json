@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Door of the Dead",
+    "circle": "First",
+    "type": "Necromancy",
+    "description": "Your hands trace a bleeding portal in the air, opening to the lands of the dead. Spend 4 Will. The necromancer opens a doorway to the Underworld that remains open for the rest of the scene, or three rounds in combat. It leads to a roughly equivalent area in the Underworld chosen by the Storyteller based on the necromancer’s current location — though the two worlds are not contiguous outside shadowlands. The location is always safe and secure, at least for the character’s arrival — the spell never leads the necromancer into an ambush, or into immediate danger.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [307]
+  },
+  {
+    "name": "Five Gifts",
+    "circle": "First",
+    "type": "Necromancy",
+    "description": "Anointing a willing ghost with five drops of blood, you let them experience the world without senses dulled by death, as if they were still alive. Spend 5 Will. Any ghost so anointed gains two dice to all dice pools and may manifest within a shadowland for free; this lasts until the next sunrise or the end of the session. They also get an Intimacy of devotion toward the necromancer and remember forevermore the taste of life from the blood, giving the necromancer a one-success bonus on persuade actions.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [307]
+  },
+  {
+    "name": "Raise the Skeletal Horde",
+    "circle": "First",
+    "type": "Necromancy",
+    "description": "With a gesture of upraised arms, you command the dead to rise and obey. Spend 4 Will. Every corpse — human, animal, or otherwise — within medium range without enormous or legendary size animates as mindless dead. They count as a battle group with an equivalent Command rating appropriate to the summoner’s Essence + 1, though the group may be smaller in areas that have few corpses, at the Storyteller’s discretion. The battle group has poor Drill but is mindless. The walking dead burst forth from topsoil graves or simply lurch to their feet in an action. They crumble to dust at the end of the scene if the spell is cast in daylight, or until the end of the session if cast at night. A second purchase of this spell with Second Circle necromancy grants an enhanced spell called Arisen Dead Legion, which costs 7 Will, improves Drill to regular and summons undead from a vast distance, making the availability of corpses a non-issue.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [307]
+  },
+  {
+    "name": "Stones Worn Smooth",
+    "circle": "First",
+    "type": "Necromancy",
+    "description": "Shaping one arm into a spectral claw, you gesture towards a nearby ghost, who is compelled to throw themselves upon your talons. Grasping their pale pink heart, you crush it into a black diamond. Spend 3 Will. This spell targets a nontrivial ghost the necromancer has bound through a summoning, and they cannot resist. This spell instantly dissipates the ghost (who may reform normally and is still bound to you) and grants the Hearthstone Merit (secondary normally, primary for heroic or significant ghosts) of Abyssal aspect. This stone confers a base power determined by the nature of the wounded ghost but does not confer Evocations. The necromancer may only have one hearthstone from this spell active at a time.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [307]
+  },
+  {
+    "name": "Trawling the Dark Waters",
+    "circle": "First",
+    "type": "Necromancy",
+    "description": "Drawing violet threads of Essence from the Underworld, you weave a net across a large area, revealing any ghosts. Spend 2 Will. This spell affects any dematerialized ghosts or Underworld denizens within long range. They immediately become visible to the caster; the necromancer may then spend a mote or an additional Will to force all affected to materialize, even if they cannot normally do so.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [307]
+  },
+  {
+    "name": "Gentle Call of Lethe",
+    "circle": "Second",
+    "type": "Necromancy",
+    "description": "You mark a living person’s forehead with a stylized cicada and utter the Five Words of Release, binding their soul to the cycle of reincarnation. Spend 2 Will. You may mark a living person’s body and higher soul; when they die, the cicada rune shines again, and they do not become a ghost but are instead reincarnated. By inverting the rune and painting the symbol with honey, blood, and graveyard earth, this spell becomes the Rune of Sweet Passing, ensuring the target will become a ghost when they perish. The necromancer is automatically aware when the target dies, in either case.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [308]
+  },
+  {
+    "name": "Shield of Shattering Bones",
+    "circle": "Second",
+    "type": "Necromancy",
+    "description": "Crimson Essence flows to your outstretched hand, then expands outward to touch nearby undead, dispersing any wounds you suffer to their dead frames. Spend 6 Will. This spell targets a battle group of unintelligent undead up to Size 3 within medium range of the necromancer. Any damage the necromancer would suffer is borne instead by the battle group, instantly transferred to them by bands of shining crimson. A hit from a warhammer would cause a skeleton to shatter, while a sword’s slice to the guts instead spills those of a nearby animated corpse. This spell lasts until the battle group is destroyed or until the end of the scene, whichever comes first.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [308]
+  },
+  {
+    "name": "Slumber of the Wandering Shade",
+    "circle": "Second",
+    "type": "Necromancy",
+    "description": "You sleep while a fragment of your soul is free to walk the world. Spend 4 Will. The necromancer controls a spectral facsimile of herself while their true body slumbers. This facsimile cannot use motes and suffers the usual drawbacks for being a ghost but is otherwise identical to the character. The player may end this effect automatically, sensing any danger to the necromancer’s true body.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [308]
+  },
+  {
+    "name": "Barless Gate",
+    "circle": "Third",
+    "type": "Necromancy",
+    "description": "You step into a mirror, then explode out of another mirror in a cloud of dark Essence. Spend 7 Will. This requires the necromancer to know the location of a destination mirror exactly; they need only see it and know it is there. The necromancer may step through a mirror and arrive at their target location, so long as it is on the same plane of existence (shadowlands count as both Creation and the Underworld).",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [309]
+  },
+  {
+    "name": "Inauspicious Citadel",
+    "circle": "Third",
+    "type": "Necromancy",
+    "description": "Cutting the Last Sign of the Labyrinth into your own heart, you hurl yourself into a desecrated pit and rise up atop a fortress of black iron erupting from the Underworld. After a dramatic scene preparing a ritual pit and making a suitably inauspicious sacrifice, spend 10 Will. This citadel of black iron, basalt, and obsidian is adorned with the mazy marks of the labyrinth and features every manner of comfort suitable for housing an army or small city. It functions as a shadowland. The lowest chamber holds a shrine to the Neverborn, rendering the citadel an ideal location for necromantic workings. This grants the necromancer or anyone else performing the working four bonus dice to working rolls, which do not count toward the limit. Any effect which summons any kind of undead is treated as always having plenty of corpses available. Undead raised within the citadel increase all traits by 1 and may take another quality. Besides instantly creating a stronghold on short notice, the citadel contains its own perverted geomancy; it functions as a primary Hearthstone with accompanying manse properties. The unique power and Evocation conferred are designed by the player and Storyteller and should fit the character or the circumstance that led to casting this spell. A character may only have one Inauspicious Citadel active at any time. Casting the spell in a new location consigns the old, and all within, to nothingness.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [309]
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Bargain with Mara",
+    "type": "Sorcery",
+    "circle": "Any",
+    "description": "You learned sorcery at the cloven feet of Mara, the demon-queen of love betrayed. When a nontrivial character expresses unrequited love, admiration, or obsession for the sorcerer, she gains 3 Will.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [300]
+  },
+  {
+    "name": "Machine-God Weaving Engine",
+    "type": "Sorcery",
+    "circle": "Any",
+    "description": "A fusion of Autochthonian god-technology and mysticism manifests as two spinning adamant rings embedded in your forehead, one inside the other, together granting access to reality-altering command protocols. When the sorcerer incorporates local spirits or other subservient supernatural entities into creating a spell, such as commanding fire elementals into a casting of Flight of the Burning Raptor, gain 3 Will.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [300]
+  },
+  {
+    "name": "Ifrit Pact",
+    "type": "Sorcery",
+    "circle": "Any",
+    "description": "You offered three labors to an Ifrit Lord — a prince of fire — in exchange for the secrets of sorcery. The sorcerer gathers strength from burning ritual offerings. Tokens grant 1 Will; valuable sacrifices grant 2; and exotic, unique, or powerful sacrifices generate 3.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [301]
+  },
+  {
+    "name": "The Jasmine Gems of Mishiko",
+    "type": "Sorcery",
+    "circle": "Any",
+    "description": "The gems holding the thoughts and lessons of a Moon-Touched sorcerer have come into your possession, teaching you to channel Essence into spells. Mishiko’s spirit appears at dawn or dusk to pose a seemingly nonsensical riddle to the sorcerer. Answering this twilight kōan correctly (or correctly recognizing the lesson it means to impart) involves a Sagacity roll at difficulty 3 and grants the sorcerer 2 Will.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [301]
+  },
+  {
+    "name": "Raksi’s Teachings",
+    "type": "Sorcery",
+    "circle": "Any",
+    "description": "The secrets of sorcery revealed themselves to you under the cruel tutelage of the Lunar Queen of Mahalanka, a fabulous and ruined city of sorcerers. When a nontrivial character expresses fear of the sorcerer, or upon success of an intimidation roll against them, gain 3 Will.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [301]
+  },
+  {
+    "name": "Soul-Perfecting Elixir",
+    "type": "Sorcery",
+    "circle": "Any",
+    "description": "You found enlightenment at the bottom of a cauldron, concocting awareness-expanding potions. When the sorcerer has the opportunity to retrieve complicated or unusual ingredients and render them into an elixir through intricate procedures, she gains 3 Will.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [301]
+  },
+  {
+    "name": "Student of the Heptagram",
+    "type": "Sorcery",
+    "circle": "Any",
+    "description": "You learned sorcery at the Heptagram, the preeminent institution of sorcerous learning in the Realm and the origin of most Realm sorcerers. Students of the Heptagram learn to recognize dragon lines and the hidden geomantic mandalas in the world, using them to puissant magical effect. When the sorcerer spends a dramatic scene studying the local geomancy of an area, she gains 2 Will.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [301]
+  },
+  {
+    "name": "The Talisman of Ten Thousand Eyes",
+    "type": "Sorcery",
+    "circle": "Any",
+    "description": "A great gleaming ruby with ten facets, set in a rune etched orichalcum amulet, allows you to channel baleful sorceries. The sorcerer may imbue a fraction of their Will inside the talisman, banking 1 Will from a Focus Will action to use later. This Will persists until it’s used. The sorcerer may also use Evocations of the talisman (see p. 344).",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [301]
+  },
+  {
+    "name": "Theanoan Method",
+    "type": "Sorcery",
+    "circle": "Any",
+    "description": "You apply divine numerology and written sigils toward calculating the strange, unintuitive truths of Creation. The sorcerer gathers strength from arcane mathematics. As long as they’re able to inscribe some element of the spell they’re casting as a reflexive action, they gain 1 additional Will for every Focus Will action they take to a maximum of 3 per session.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [301]
+  },
+  {
+    "name": "Wanaasan Exorcist",
+    "type": "Sorcery",
+    "circle": "Any",
+    "description": "The Wanasaan, an outcast lineage of Dragon-Blooded sorcerer-exorcists, initiate into sorcery through a ritual of ceremonial drowning. When the sorcerer spends a scene fully immersed in a body of water to relive this experience, she gains 2 Will.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": []
+  },
+  {
+    "name": "Wyld Wisdom",
+    "type": "Sorcery",
+    "circle": "Any",
+    "description": "You wandered the nightmare-tides of the Wyld in search of enlightenment. When the sorcerer wakes from slumber, her player may ask the Storyteller for a strange taboo — something she must not do or, alternatively, must always do. The impact of this taboo determines how much Will she gains, up to 3. If she violates the taboo, she loses all Will and the difficulty of Focus Will actions increases by 2 for the rest of the session.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [301]
+  },
+  {
+    "name": "Disciple of the Neverborn",
+    "type": "Necromancy",
+    "circle": "Any",
+    "description": "An intricate tattoo made of softly-moaning soulsteel adorns your body and recites a warped Old Law — the mystical principles that govern the Underworld — to grant you sinister insights. The necromancer gathers strength from death; use the conditions for the Abyssal Advantage Cruel Banquet (p. 64) but gain Will instead of motes. An Abyssal necromancer may only benefit from one or the other once per scene.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [301]
+  },
+  {
+    "name": "Half-Souled",
+    "type": "Necromancy",
+    "circle": "Any",
+    "description": "You forged a small portion of your higher soul into soulsteel, leaving a token physical remnant and a spiritual hollow filled by necromantic energies. Incorporating the physical representation of your sundered soul into the ritual of casting a spell grants 1 Will.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [301]
+  },
+  {
+    "name": "Skull Diarist",
+    "type": "Necromancy",
+    "circle": "Any",
+    "description": "Ancient and inhuman skulls, adorned with necromantic runes, constantly babble with soft whispers and teach you the secrets of the dead. When a necromancer makes a sacrifice of a living thing and anoints the skulls with blood, gain 1 Will for sacrificing minor or trivial creatures; 2 for important personages; and 3 for powerful characters.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [301]
+  },
+  {
+    "name": "Student of the Raiton Academy",
+    "type": "Necromancy",
+    "circle": "Any",
+    "description": "You learned necromancy at the Raiton Academy, an ancient and preeminent school based on Nightfall Island. The Academy gleans arcane insights from understanding the history of death. When the necromancer spends a dramatic scene to understand the funerary customs and overall history of death in an area (plagues, battles, major burial grounds, etc.), gain 2 Will.",
+    "source": "Exalted Essence Core Rulebook",
+    "page": [302]
+  }
+]
