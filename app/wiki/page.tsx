@@ -7,6 +7,7 @@ import {
   loadAllMartialArtsAsWikiEntries,
   loadAllSpellsAsWikiEntries,
   loadAllShapingRitualsAsWikiEntries,
+  loadAllMeritsAsWikiEntries,
   type WikiEntry,
   type Technique
 } from '@/lib/wikiData';
@@ -27,7 +28,7 @@ export default function WikiPage() {
   const [openEntry, setOpenEntry] = useState<WikiEntry | null>(null);
   const [entries, setEntries] = useState<WikiEntry[]>([]);
 
-  useEffect(() => {
+    useEffect(() => {
     async function loadData() {
       if (selectedCategory === 'Charms') {
         const charms = await loadAllCharmsAsWikiEntries();
@@ -53,18 +54,21 @@ export default function WikiPage() {
         // Deduplicate by slug (spell names must be unique in your data)
         const uniqueEntries = Array.from(new Map(allSpells.map(e => [e.slug, e])).values());
         setEntries(uniqueEntries);
+      } else if (selectedCategory === 'Merits') {
+        const merits = await loadAllMeritsAsWikiEntries();
+        setEntries(merits);
       } else {
-        setEntries([]); // For categories not yet implemented
+        setEntries([]);
       }
+      // Reset filters when changing main tab
+      setSelectedAbility(null);
+      setSelectedExaltType(null);
+      setSelectedCharmCategory(null);
+      setSelectedSpellCategory(null);
+      setSelectedSpellCircle(null);
+      setSearchQuery('');
     }
     loadData();
-    // Reset filters when changing main tab
-    setSelectedAbility(null);
-    setSelectedExaltType(null);
-    setSelectedCharmCategory(null);
-    setSelectedSpellCategory(null);
-    setSelectedSpellCircle(null);
-    setSearchQuery('');
   }, [selectedCategory]);
 
   // --- FILTER SETUP ---
@@ -98,8 +102,13 @@ export default function WikiPage() {
     .filter((entry) => {
       if (!entry.category) return false;
       if (selectedCategory === 'Charms') return entry.category && entry.category.toLowerCase().includes('charm');
+      if (selectedCategory === 'Artifacts') return entry.category === 'Artifact';
+      if (selectedCategory === 'Resources') return entry.category === 'Resource';
+      if (selectedCategory === 'Merits') {
+        return entry.category === 'Merit' || entry.category === 'Merits';
+      }
       if (selectedCategory === 'Martial Arts') return entry.category === 'Martial Arts';
-      if (selectedCategory === 'Spells') return entry.category === 'Spell'; // STRICT match
+      if (selectedCategory === 'Spells') return entry.category === 'Spell'; // STRICT match 
       return entry.category === selectedCategory;
     })
     .filter(
@@ -335,13 +344,18 @@ export default function WikiPage() {
                   </div>
                 )}
                 {/* End Martial Arts Techniques Display */}
+
+                {/* --- MODES, for Merits and anything else --- */}
                 {(openEntry.full?.modes?.length ?? 0) > 0 && (
                   <div>
                     <strong className="bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text">Modes:</strong>
                     <ul className="mt-2 space-y-1 list-disc list-inside text-sm text-aura-abyssal">
                       {openEntry.full?.modes?.map((mode, i) => (
                         <li key={i}>
-                          <strong>{mode.name} – {mode.title}:</strong> {mode.effect}
+                          <strong>
+                            {mode.name}
+                            {mode.title ? ` – ${mode.title}` : ''}
+                          :</strong> {mode.effect}
                         </li>
                       ))}
                     </ul>

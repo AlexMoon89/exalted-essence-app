@@ -197,3 +197,36 @@ export async function loadAllShapingRitualsAsWikiEntries(): Promise<WikiEntry[]>
   }
   return allEntries;
 }
+
+export async function loadAllMeritsAsWikiEntries(): Promise<WikiEntry[]> {
+  const indexRes = await fetch('/data/merits/index.json', { cache: 'no-store' });
+  const files: string[] = await indexRes.json();
+  const allEntries: WikiEntry[] = [];
+  const seenSlugs = new Set<string>();
+
+  for (const file of files) {
+    const res = await fetch(`/data/merits/${file}`, { cache: 'no-store' });
+    const data = await res.json();
+
+    for (const entry of data) {
+      const slug = entry.name.toLowerCase().replace(/\s+/g, '-');
+      if (seenSlugs.has(slug)) continue; // Avoid duplicates
+      seenSlugs.add(slug);
+
+      allEntries.push({
+        slug,
+        name: entry.name,
+        category: 'Merit',
+        description: entry.description,
+        tags: [entry.name, 'Merit'],
+        sourcebook: entry.source || 'Exalted Essence Core Rulebook',
+        pageRef: Array.isArray(entry.page) ? entry.page.join(', ') : (entry.page?.toString() || ''),
+        full: {
+          modes: entry.modes || [],
+        }
+      });
+    }
+  }
+
+  return allEntries;
+}

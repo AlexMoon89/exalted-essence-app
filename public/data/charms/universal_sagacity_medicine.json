@@ -31,7 +31,7 @@
   },
   {
     "name": "FLAWLESS DIAGNOSIS TECHNIQUE",
-    "ability": ["Sagacity"],
+    "ability": ["Sagacity", "Medicine"],
     "prerequisites": "Sagacity 3",
     "description": "The Exalt’s expertise reveals the truths of bodies living and dead. By examining a subject closely, the Exalt may flawlessly diagnose what ails them, or discern what lead to their death. Spend 1 mote as a simple action. Within moments, the Exalt may automatically diagnose a mundane illness, allowing her to determine what the illness is, its typical symptoms, and whether it is supernatural or not. For unknown, esoteric, or supernatural illnesses, make a Sagacity roll for the same result. Although they may not always know what disease their patient carries, the Exalt will never misdiagnose it.\n\nAlternatively, the Exalt may use this Charm while examining a corpse, allowing her to automatically determine how recently they died, the cause of death, or other unusual qualities of the corpse. If the corpse is unusual, tampered with, or slain through esoteric means, the Exalt must make a Sagacity roll to determine the same result. If applicable, the Exalt gains her Essence in bonus dice on the next roll to treat the diagnosed illness, or to further investigate the corpse.",
     "modes": [

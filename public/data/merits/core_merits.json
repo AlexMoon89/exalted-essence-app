@@ -1,0 +1,178 @@
+[
+  {
+    "name": "Allies",
+    "category": "Merit",
+    "description": "Everyone makes friends. This Merit represents a loyal friend or companion willing to put themselves in harm’s way if need be. Allies assist with rolls that suit their capabilities. When choosing this Merit, discuss with the Storyteller what this ally can and cannot do. The daughter of a Goddess of Etiquette won’t join in physical combat, but she can help writing a petition to another god. Meanwhile, a brash Dragon-Blood is far more likely to join on a quest.\nAllies have a life of their own, so cannot be at your character’s side all the time. They might also ask your character for favors in return.",
+    "modes": [
+      {
+        "name": "Tertiary",
+        "effect": "Your friend is an ordinary mortal or minor magical character, such as the daughter of a lesser god."
+      },
+      {
+        "name": "Secondary",
+        "effect": "Your friend is as powerful as a young Exalt or First Circle demon (see p. 336)."
+      },
+      {
+        "name": "Primary",
+        "effect": "Your friend is as powerful as an experienced Exalt or Celestial god (see p. 334)."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [101]
+  },
+  {
+    "name": "Artifact",
+    "category": "Merit",
+    "description": "Your character owns an artifact with a rating equal to this Merit’s rating (see p. 344 for a list of artifacts to choose from). This artifact may grant Evocations, which you can take as a starting Charm. Artifacts are equipment and have their own bonuses, the blanket Merit dice bonus does not apply here.",
+    "modes": [
+      {
+        "name": "Tertiary",
+        "effect": "Lets you take a Lesser Wonder (p. 346)."
+      },
+      {
+        "name": "Secondary",
+        "effect": "Covers most weapons and armor and should be used for a player who wants an artifact but cannot think of Evocations or history right away."
+      },
+      {
+        "name": "Primary",
+        "effect": "Grants a world-shaking wonder."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [101]
+  },
+  {
+    "name": "Backing",
+    "category": "Merit",
+    "description": "Your character has standing in an organization, whether it’s a trade guild, the Celestial Bureaucracy, or a conspiracy to overthrow the Perfect of Paragon. Backing typically assists with Craft, Embassy, or Navigate ventures. You define which organization supports you when you purchase this Merit. You add dice equal to this Merit’s rating to all rolls made through the organization — for example, when your character exerts influence by leveraging their position.\nOnce per story, they can loan equipment with a total Resource rating equal to the rating of this Merit, provided it makes sense for the organization to have access. A supernatural organization (such as the Bureau of Destiny or the court of a Deathlord) may also loan out Lesser Wonders or artifacts equivalent to this Merit’s rating.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [101]
+  },
+  {
+    "name": "Command",
+    "category": "Merit",
+    "description": "Your character commands a militant group, whether they’re actual soldiers or zealous cultists. Command grants you a battle group (p. 322), which has its own combat functions. It does not add its dice bonus unless the character commanding them engages in a War venture.",
+    "modes": [
+      {
+        "name": "Tertiary",
+        "effect": "A Size 0 group with elite Drill or a Size 1 group with regular Drill."
+      },
+      {
+        "name": "Secondary",
+        "effect": "Up to a Size 3 group with elite Drill and the traits of Champions, a Size 4 or 5 group with regular Drill, or two battle groups with Size no greater than 3 and Drill no greater than veteran."
+      },
+      {
+        "name": "Primary",
+        "effect": "Up to a Size 5 group with elite Drill and the traits of Champions, two Size 5 groups with elite Drill, or five Size 5 groups with average Drill. At Storyteller discretion, a player may arrange a different combination of battle group traits, so long as it adequately reflects the pinnacle of command."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [101]
+  },
+  {
+    "name": "Contacts",
+    "category": "Merit",
+    "description": "Maybe your character has the kind of face that wins trust. Maybe they have the kind of coin that buys friends. Either way, people tell them things — including information they probably shouldn’t. Contacts typically assist with Awareness, Embassy, and Stealth ventures.\nName a group when you purchase this Merit such as House V’Neef or the Hastlanti League. When gathering information on a subject, if that group could feasibly know, add dice equal to this Merit’s rating to your roll.\nThe Storyteller can, and should, also have contacts come forth with information unprompted.",
+    "modes": [
+      {
+        "name": "Tertiary",
+        "effect": "A handful of friends in local places."
+      },
+      {
+        "name": "Secondary",
+        "effect": "A significant number of useful connections across a Direction."
+      },
+      {
+        "name": "Primary",
+        "effect": "A network the character can contact just about anywhere."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [101]
+  },
+  {
+    "name": "Familiar",
+    "category": "Merit",
+    "description": "Your character has a magically bonded animal companion. They understand their familiar and share its senses. Touching the familiar restores one mote if tertiary and two if secondary. The familiar’s Essence replenishes at the start of each session. The familiar ages as your character does and cannot die of natural causes until they do. Familiars used as mounts provide existing bonuses and do not benefit from the Merit dice. Familiars assisting with appropriate ventures (typically Navigate) add dice as stated on p.100.",
+    "modes": [
+      {
+        "name": "Tertiary",
+        "effect": "The Familiar is an ordinary animal, such as a horse, a cat, an owl or a hedgehog. It usually has the trained quality (p. 325)."
+      },
+      {
+        "name": "Secondary",
+        "effect": "The Familiar is a dangerous or magical animal, such as a war elephant or a grave hound. It may have the blessed creature, magical, or strange beast quality (p. 324). Familiars use the Familiar Template and may have up to two additional animal qualities appropriate to its type of creature. Magical familiars may use supernatural qualities (p. 320)."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [102]
+  },
+  {
+    "name": "Followers",
+    "category": "Merit",
+    "description": "Your character’s heroic exploits attracted a band of mortal followers. These may be people who travel with the Exalt, but they might also be people who venerate them from afar. You specify who your followers are — merchants, spies, entertainers — when you purchase this Merit. A higher Merit rating denotes your choice of either better trained followers or more followers. Your character can set their followers to any task, which they perform with this Merit’s dice bonus plus three additional dice for tasks they’re suited to (spies spying), or the Merit’s rating plus one additional dice for other tasks (spies baking a cake).\nIf your character oversees the work, instead add those dice to your roll. Followers act independently of you and use their dice pool to accomplish tasks during any appropriate venture. Additionally, Followers always make their rolls at difficulty 2.",
+    "modes": [],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [102]
+  },
+  {
+    "name": "Hearthstone",
+    "category": "Merit",
+    "description": "Creation teems with leylines rich with Essence. Fiery volcanoes, moonlit glades, and dark graveyards are all places where this power may come to the surface. Hearthstones arise from demesnes and manses, and share their geomantic aspect. You design the demesne or manse and choose a corresponding hearthstone when you pick this Merit. This hearthstone may grant an Evocation, which you may take during character creation. Some greater manses also provide benefits to certain actions taken within them. Taking this Merit also provides hearthstone jewelry of your choice, which allows the manse’s owner to benefit from the hearthstone, unless it specifically says it must be socketed in a weapon. Hearthstones are equipment and have their own bonuses, the blanket Merit dice bonus does not apply here.",
+    "modes": [
+      {
+        "name": "Secondary",
+        "effect": "Your character owns a demesne or manse, and a standard hearthstone. Your character regains two additional motes at the end of any scene taking place within their demesne or manse. They also regain one additional mote per scene outside their place of power if they wear the hearthstone in an attuned artifact. Your character may make an automatic Character Creation 103 Awareness check at difficulty 3 to detect Essence expenditure within their demesne or manse."
+      },
+      {
+        "name": "Primary",
+        "effect": "Your character owns a demesne or manse, and a greater hearthstone. Your character regains three additional motes at the end of any scene taking place within their demesne or manse. They also regain one additional mote per scene outside their place of power if they wear the hearthstone in an attuned artifact. Your character automatically detects Essence expenditure within their demesne or manse."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [102]
+  },
+  {
+    "name": "Influence",
+    "category": "Merit",
+    "description": "Your character is a person of renown. They might be nobility, a celebrated war hero, or a venerated philosopher. When they speak, people listen. You make an applicable social roll to sway people as normal, but your character’s words carry much farther. When leveraging your Influence, it adds a dice bonus to social influence rolls as per Bonuses and Penalties (p. 118). You may add its Merit bonus to Embassy, Performance, or Presence ventures.",
+    "modes": [
+      {
+        "name": "Tertiary",
+        "effect": "Your character carries sway in up to a minor city-state or satrapy."
+      },
+      {
+        "name": "Secondary",
+        "effect": "Your character carries sway in an area from a powerful city-state or kingdom to a region such as the Hundred Kingdoms."
+      },
+      {
+        "name": "Primary",
+        "effect": "Your character carries sway throughout much of a Direction."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [103]
+  },
+  {
+    "name": "Resources",
+    "category": "Merit",
+    "description": "Exalted don’t need money to provide for themselves. They have the skill to earn or create basic necessities. This Merit, however, describes wealth beyond the basics. This need not represent hard cash but can also mean a stake in a V’Neef shipping company or standing to call in financial favors. Whenever you’re making a roll that involves money, such as bribing someone or haggling for equipment, add your Resources rating as bonus dice. Resources typically adds dice when funding would apply to any Ability venture.",
+    "modes": [
+      {
+        "name": "Tertiary",
+        "effect": "A modest flow of cash, more a side hustle than a business, such as being a silent partner in a successful inn or bath house. Alternatively, they may have a broad range of investments, or a budding monopoly in a city of choice. The Exalt enjoys a modestly comfortable lifestyle — good food, a nice apartment, and a few servants, but no extraordinary wealth. They can gain audiences with anyone in their line of business by leveraging their economic status."
+      },
+      {
+        "name": "Secondary",
+        "effect": "The Exalt holds a monopoly or impressive portfolio of businesses. Alternatively, they may hold a substantial stake in a thriving, widespread business. The Exalt owns several apartments, or one large estate, and their choice of fine mounts. They can gain an audience with kings, minor satraps and young Dynastic scions by leveraging their economic power."
+      },
+      {
+        "name": "Primary",
+        "effect": "The Exalt is a major business power throughout much of a Direction. They can outfit a trading ship in the West or equip an army in the Hundred Kingdoms. They can gain an audience with important satraps and the leaders of Dynastic Houses by leveraging their economic power."
+      }
+    ],
+    "source": "Exalted Essence Core Rulebook",
+    "page": [103]
+  }
+]
