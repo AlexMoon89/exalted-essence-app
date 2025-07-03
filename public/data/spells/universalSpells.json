@@ -6,7 +6,7 @@
     "description": "The sorcerer calls down a cloud to serve as their personal ferry. Spend 4 Will. The cirrus skiff can carry up to 1,000 pounds of cargo and passengers, and travels as fast as a horse. It can fly up to a mile off the ground, and disappears if the caster travels underground, falls asleep, or is rendered unconscious. When used as part of a travel venture, it reduces the number of obstacles by one.",
     "modes": [
       {
-        "mode": "Sorcery",
+        "name": "Sorcery",
         "title": "Conjuring the Azure Chariot",
         "effect": "This spell summons a bright blue sphere eight feet in diameter around the sorcerer and her possessions. In addition to reducing the number of obstacles, the chariot remains unaffected by any obstacles related to inclement weather. The sphere only persists from dawn until dusk (or the duration of a session, whichever comes first) and may not be cast at night."
       }
@@ -21,12 +21,12 @@
     "description": "Sculpting Essence into volant black glass, you unleash a torrent of razor-sharp obsidian butterflies. Spend 5 Will. Make a decisive area of affect attack as a medium ranged weapon that affects every range band up to long range, so long as it is within the character’s field of perception. This attack reduces heavy cover to light and destroys light cover. The player may optionally treat the character’s remaining Will as though it were Power. The butterflies remain after the spell is cast, creating difficult terrain.",
     "modes": [
       {
-        "mode": "Sorcery",
+        "name": "Sorcery",
         "title": "Flight of the Brilliant Raptor",
         "effect": "The sorcerer conjures an eagle-sized bird of diamond and ruby flame that possesses the flame tag. The bird explodes when it reaches a target within long range, making an attack against everything in the target’s close range and creating an environmental hazard equivalent to a burning building that persists for three rounds."
       },
       {
-        "mode": "Necromancy",
+        "name": "Necromancy",
         "title": "Flesh-Sloughing Wave",
         "effect": "The necromancer unleashes a wave of ivory light teeming with fanged ghostly creatures, ripping flesh from bone while leaving inorganic structures intact. This wave emanates from the necromancer in every direction up to medium range, adding the piercing tag to the attack and ignoring all cover, light or heavy."
       }
@@ -49,7 +49,7 @@
     "description": "You conjure an enormous wolf from raw air Essence — a fine mount, companion, guardian, and bloodhound. Spend 3 Will. The Hound of the Five Winds is treated as Familiar with the wolf’s special ability, adding tracking to its primary pool. The hound is large enough to use as a mount, immune to fear, and never tires. It also gains a one-success bonus on scent based tracking rolls. It serves loyally and eagerly for one day (or until the end of the session) before disappearing. A sorcerer may summon up to her Essence in hounds. If a hound is dispelled or slain before its duration ends, she cannot replace it until the next scene.",
     "modes": [
       {
-        "mode": "Necromancy",
+        "name": "Necromancy",
         "title": "Bone Lion",
         "effect": "The necromancer conjures a skeletal lion with diamond-fire eyes. It will not bear her as a mount, but it will serve for up to seven days (or three consecutive sessions, whichever comes first) before decaying, hunting its quarry without rest."
       }
@@ -72,7 +72,7 @@
     "description": "Placing a crystal on the target’s skin, you coax out the memory of a single event or character — trapping it within the shimmering facets. Spend 3 Will. Make a Sagacity or Stealth roll to steal the character’s memories of an event or a character in up to the previous year. The standard difficulty is 5 but stealing especially important events or characters increases the difficulty by 1, or 2 if the target has Essence 5 or higher. The target cannot recover the memory until the crystal is destroyed. In combat, this spell may be used as a pilfer gambit which may always be used with Sagacity and gains the sorcerer’s Essence in bonus dice.",
     "modes": [
       {
-        "mode": "Necromancy",
+        "name": "Necromancy",
         "title": "Shade Prison Amulet",
         "effect": "When used on a ghost, the necromancer may extract up to her Essence × 10 years of memory and explore them while touching the crystal, using Sagacity to sift through and find specific details."
       }
@@ -95,7 +95,7 @@
     "description": "You make the Sign of the Tomb-Harp, creating crystalline entities that sing a deadly song and resonate on a frequency inimical to life. Spend 7 Will. Every living being within long range of you begins weeping and suffers a −2 penalty to dice rolls and suffers unique environmental damage (1 damage per round, duration 10 rounds, difficulty 5) as the piercing song causes deep hemorrhages and internal bleeding. Cantata of Empty Voices cannot be stacked with itself or re-cast while the hazard persists.",
     "modes": [
       {
-        "mode": "Necromancy",
+        "name": "Necromancy",
         "title": "Silenced Whispered Prayers",
         "effect": "Instead of causing damage, the dark harmonies of the Underworld sing once and fall silent, removing any benefits conferred by the Hearthstone Merit and imposing a two-dice penalty to social influence and Build Power actions for a night and a day (or until the end of the session). Any prayers made by those within range are stifled as they are uttered, for the same duration."
       }
@@ -118,7 +118,7 @@
     "description": "A white flower emerges from the ground and shapes itself into a grand palace complex. Spend 7 Will. The conjured palace provides food and comfortable lodging for up to 100 guests. Those within its walls gain a two-success bonus against hostile mind-altering effects and ignore all penalties from pain, wounds, or illness. After five days of dramatic time or the duration of the session, the palace disappears in a puff of white petals.",
     "modes": [
       {
-        "mode": "Necromancy",
+        "name": "Necromancy",
         "title": "Ivory Razor Mausoleum",
         "effect": "The palace is a construct of elegant bone. It provides sustenance fit only for creatures of death. Rather than protect against mind-altering effects, the grounds count as a shadowland, allowing guests to enter or leave Creation or the Underworld at their pleasure."
       }
@@ -133,7 +133,7 @@
     "description": "Spectral images play out a farce of what has occurred here before. Spend 6 Will. The sorcerer can replay any event that has happened at their location within a decade. If they know the event or the period to be replayed, this is automatic; otherwise, this requires an act under pressure venture using Sagacity, with each obstacle representing an hour of sifting and searching.",
     "modes": [
       {
-        "mode": "Necromancy",
+        "name": "Necromancy",
         "title": "Golden Shadow Frieze",
         "effect": "The necromancer may retrieve an event up to a century old, but can only those that happened at night, in complete darkness, or within shadowlands or the Underworld."
       }
@@ -164,7 +164,7 @@
     "description": "Pulling a shroud of phantasmagoria across your sanctuary, you protect it from outsiders. Spend 7 Will. An area up to five miles wide becomes wrapped in powerful illusions. Significant intruders must make a difficulty 10 Fortitude + Integrity roll to enter the area or else become hopelessly lost. Even on success, they treat it as difficult terrain and travel at half speed. Trivial characters fail to notice the concealed area at all. This adds an obstacle to any travel ventures or applies a significant narrative delay to any Storyteller characters traveling through a protected area. This protection lasts for up to a year or the duration of a story.",
     "modes": [
       {
-        "mode": "Necromancy",
+        "name": "Necromancy",
         "title": "Mirage of Anguished Shadows",
         "effect": "Rather than difficult terrain, the area endangers intruders with dark phenomena as an environmental hazard (difficulty 5, 3 damage every round)."
       }
@@ -179,7 +179,7 @@
     "description": "You summon a supernatural storm of vast proportions to blight the land. This spell requires a magical working to prime the area, which involves tracing a circuit around an affected area over the course of dramatic scene lasting a full day. When the sorcerer completes their circuit by dusk, spend 9 Will. A rain of corrosive venom falls from the jet-black clouds in the sky, while sickly green lightning lashes the ground. The venom falls in sheets for the rest of the session, creating an environmental hazard within the area equivalent to a severe thunderstorm and inflicting contact poison damage to anyone caught outside. Any material not made of a magical material is corroded and permanently destroyed by exposure to the rain; nothing but stunted scrub and strange, poisonous giant mushrooms will grow on the land washed by the rain.",
     "modes": [
       {
-        "mode": "Necromancy",
+        "name": "Necromancy",
         "title": "Blood Monsoon",
         "effect": "The rain is sanguine, and the lightning is similarly crimson; while the environmental hazard is the same, the sun is blotted out, ghosts become material in the rainfall, and exposed animals become permanently maddened. Undead materialized by this spell are unaffected by the blight. The land is diseased after the rain stops, making agriculture impossible, while the pools of blood mystically animate and attract undead for miles around. Removing the blight requires a magical venture with all difficulties equal to the necromancer’s Essence."
       }

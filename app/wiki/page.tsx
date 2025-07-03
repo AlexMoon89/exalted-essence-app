@@ -312,56 +312,102 @@ export default function WikiPage() {
                 )}
               </div>
 
-              <div className="space-y-4 text-aura-abyssal">
+                <div className="space-y-4 text-aura-abyssal">
                 <p>{openEntry.description}</p>
                 {/* Martial Arts Techniques Display */}
                 {openEntry.category === "Martial Arts" && (openEntry.full?.techniques?.length ?? 0) > 0 && (
                   <div>
-                    <h3 className="text-2xl font-semibold mt-6 mb-2 text-aura-lunar">Techniques</h3>
-                    <div className="grid gap-4">
-                      {openEntry.full?.techniques?.map((tech, idx) => (
-                        <div key={tech.name} className="bg-aura-lunar/10 border border-aura-lunar rounded-lg p-4">
-                          <div className="font-bold text-lg mb-1">{tech.name}</div>
-                          {tech.prerequisites && (
-                            <div className="text-sm italic text-steel mb-1">{tech.prerequisites}</div>
-                          )}
-                          <div className="mb-2">{tech.description}</div>
-                          {(tech.modes?.length ?? 0) > 0 && (
-                            <div className="pl-2">
-                              <strong>Modes:</strong>
-                              <ul className="list-disc list-inside space-y-1">
-                                {tech.modes?.map((mode, i) => (
-                                  <li key={i}>
-                                    <strong>{mode.name}:</strong> {mode.effect}
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
-                        </div>
-                      ))}
+                  <h3 className="text-2xl font-semibold mt-6 mb-2 text-aura-lunar">Techniques</h3>
+                  <div className="grid gap-4">
+                  {openEntry.full?.techniques?.map((tech, idx) => (
+                  <div key={tech.name} className="bg-aura-lunar/10 border border-aura-lunar rounded-lg p-4">
+                    <div className="font-bold text-lg mb-1">{tech.name}</div>
+                    {tech.prerequisites && (
+                    <div className="text-sm italic text-steel mb-1">{tech.prerequisites}</div>
+                    )}
+                    <div className="mb-2">{tech.description}</div>
+                    {(tech.modes?.length ?? 0) > 0 && (
+                    <div className="pl-2">
+                    <strong>Modes:</strong>
+                    <ul className="list-disc list-inside space-y-1">
+                    {tech.modes?.map((mode, i) => (
+                      <li key={i}>
+                      <strong>{mode.name}:</strong> {mode.effect}
+                      </li>
+                    ))}
+                    </ul>
                     </div>
+                    )}
+                  </div>
+                  ))}
+                  </div>
                   </div>
                 )}
                 {/* End Martial Arts Techniques Display */}
 
-                {/* --- MODES, for Merits and anything else --- */}
+                {/* --- MODES, for Merits, Spells, and anything else --- */}
                 {(openEntry.full?.modes?.length ?? 0) > 0 && (
                   <div>
-                    <strong className="bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text">Modes:</strong>
-                    <ul className="mt-2 space-y-1 list-disc list-inside text-sm text-aura-abyssal">
-                      {openEntry.full?.modes?.map((mode, i) => (
-                        <li key={i}>
-                          <strong>
-                            {mode.name}
-                            {mode.title ? ` – ${mode.title}` : ''}
-                          :</strong> {mode.effect}
-                        </li>
-                      ))}
-                    </ul>
+                  <strong className="bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text">Modes:</strong>
+                  <ul className="mt-2 space-y-1 list-disc list-inside text-sm text-aura-abyssal">
+                  {openEntry.full?.modes?.map((mode, i) => (
+                  <li key={i}>
+                    <strong>
+                    {/* Show mode.mode or mode.name */}
+                    {mode.name}
+                    {mode.title ? ` – ${mode.title}` : ''}
+                    :
+                    </strong> {mode.effect}
+                  </li>
+                  ))}
+                  </ul>
                   </div>
                 )}
-              </div>
+                {/* --- MODES for Spells (if modes are directly on openEntry) --- */}
+                {Array.isArray(openEntry.mode) && openEntry.mode.length > 0 && (
+                  <div>
+                  <strong className="bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text">Modes:</strong>
+                  <ul className="mt-2 space-y-1 list-disc list-inside text-sm text-aura-abyssal">
+                    {openEntry.mode.map((mode, i) => (
+                    <li key={i}>
+                      <strong>
+                      {/* Show mode.mode or mode.name */}
+                      {mode.mode || mode.name}
+                      {mode.title ? ` – ${mode.title}` : ''}
+                      :
+                      </strong> {mode.effect}
+                    </li>
+                    ))}
+                  </ul>
+                  </div>
+                )}
+                {/* If mode is a single object, display it */}
+                {typeof openEntry.mode === 'object' &&
+                  openEntry.mode !== null &&
+                  !Array.isArray(openEntry.mode) &&
+                  ('name' in openEntry.mode || 'mode' in openEntry.mode) &&
+                  ((openEntry.mode as { name?: string; mode?: string }).name || (openEntry.mode as { mode?: string }).mode) && (
+                  <div>
+                  <strong className="bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text">Mode:</strong>
+                  <ul className="mt-2 space-y-1 list-disc list-inside text-sm text-aura-abyssal">
+                    <li>
+                    <strong>
+                      {(openEntry.mode as { mode?: string; name?: string }).mode || (openEntry.mode as { name?: string }).name}
+                      {(openEntry.mode as { title?: string }).title ? ` – ${(openEntry.mode as { title?: string }).title}` : ''}
+                      :
+                    </strong> {(openEntry.mode as { effect?: string }).effect}
+                    </li>
+                  </ul>
+                  </div>
+                )}
+                {/* If mode is a string, display it as plain text */}
+                {typeof openEntry.mode === 'string' && openEntry.mode.trim().length > 0 && (
+                  <div>
+                  <strong className="bg-gradient-to-r from-steel to-aura-lunar text-transparent bg-clip-text">Mode:</strong>
+                  <p className="mt-2 text-sm text-aura-abyssal">{openEntry.mode}</p>
+                  </div>
+                )}
+                </div>
 
               {openEntry.tags.length > 0 && (
                 <div>
